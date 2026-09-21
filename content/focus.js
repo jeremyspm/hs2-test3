@@ -11,9 +11,12 @@
  *   pts  marks of the unique questions      qz  how many separate quizzes touch it      saq  how many are written (essay or drop-down)
  * and the TIER from pts (1: 30+ marks · 2: 12-29 · 3: under 12). `tier:0` here overrides that — see below.
  *
- * TIER 0 = SHE SAID SO, in her own words. Today that is ONE row: six of her quiz stems carry the line
- * "PEDIGREE CHARTS WILL BE TESTED IN TEST 3". Her Test 3 focus post, helpline and revision sessions do not exist yet
- * (21 Sep 2026); when they do, whatever she names moves up here. Nothing is in tier 0 on my say-so.
+ * TIER 0 = SHE NAMED IT, in her own words. Four rows (21 Sep 2026): six of her quiz stems carry the line
+ * "PEDIGREE CHARTS WILL BE TESTED IN TEST 3"; her HELP WITH MODULE 3 TOPICS board names three topics, each with a recorded
+ * session of hers — glaucoma + cataract, conduction + mild sensorineural hearing loss, genetic disease (Huntington's). `said` carries
+ * her board's words verbatim, `flag:'H'` the chip. Her MODULE 3 HELPLINE board holds only a link to her "Module 3 Learning
+ * Checklist" page — he saved it 21 Sep: it is word for word the criteria list these rows are built on, so it names nothing new.
+ * A Test 3 focus post or revision sessions, when they come, move up here too. Nothing is in tier 0 on my say-so.
  *
  * (No D/P/R/T flags here: in Module 2 those were the rows of HER focus post. She has not posted one for Test 3, so none are claimed.)
  * `rev`  = the slides of her own Module 3 revision deck that cover the row (what she chose to revise, not a promise).
@@ -57,7 +60,8 @@ export const FOCUS = [
   done:'DNA → coiled into a chromosome; a gamete has 23 chromosomes and a zygote 46, half from each parent; crossing over (chiasmata) separates linked genes in meiosis.',
   ask:'A handful of one-mark MCQs and one matching table (DNA, chromosome, gene…).',
   cap:'Her criteria call it "review from BN1". No DNA replication, transcription or translation anywhere in her Module 3 bank.' },
-{ id:'gen-disorders', sys:'gen', crit:'Genetics 2', t:'Mutations and single-gene disorders', rev:'deck · slide 14',
+{ id:'gen-disorders', sys:'gen', tier:0, flag:'H', crit:'Genetics 2', t:'Mutations and single-gene disorders', rev:'deck · slide 14',
+  said:'genetic disease (like Huntington\'s, due to an abnormal gene on chromosome 4 (Humans have 46 chromosomes- 44 autosomes and 2 sex chromosomes) that is inherited in an autosomal (non-sex) dominant (when it is present in the genes, the person will get the disease) way)',
   done:'A mutation is a permanent change in the structure of a gene. Know Tay-Sachs as her recessive example, and that schizophrenia and Down syndrome are NOT simple recessive traits.',
   ask:'One-mark questions. The disease names mostly turn up as costumes on Punnett-square problems (that row).', cap:'Thin in her bank — see the count on this row.' },
 { id:'gen-therapy', sys:'gen', crit:'Genetics 9', t:'Gene therapy and genetic engineering',
@@ -83,7 +87,8 @@ export const FOCUS = [
   done:'Myopia: eyeball too long or lens too strong → image falls in FRONT of the retina → concave (diverging) lens. Hyperopia: too short or too weak → behind the retina → convex (converging) lens. Emmetropia = normal. Astigmatism = irregular cornea or lens → several focal points.',
   ask:'Two matching tables (condition ↔ description, condition ↔ corrective measure) and four written questions with her own answers, including "Explain how myopia, emmetropia and hyperopia are different" for 3 marks.',
   cap:'Four written questions on six items — this is where she makes you write. Presbyopia appears only inside a matching table.' },
-{ id:'eye-imbalances', sys:'senses', crit:'Special senses 4', t:'Glaucoma, cataracts and pinkeye',
+{ id:'eye-imbalances', sys:'senses', tier:0, flag:'H', crit:'Special senses 4', t:'Glaucoma, cataracts and pinkeye',
+  said:'glaucoma (affecting the pressure in the eye and damaging the optic nerve) · cataract (affecting the clarity of the lens)',
   done:'Glaucoma = aqueous humour does not drain → intraocular pressure rises → damages the optic nerve. Cataract = the lens goes cloudy (its proteins denature). Pinkeye = infection of the conjunctiva. Diabetes can cause all of cataracts, glaucoma and retinopathy.',
   ask:'Definition MCQs, one true/false, and her written "Briefly explain what glaucoma and cataracts are" (2 marks).', cap:'Definitions and the one causal line each.' },
 { id:'ear-anatomy', sys:'senses', crit:'Special senses 5', t:'The three regions of the ear', rev:'deck · slides 18–20',
@@ -94,7 +99,8 @@ export const FOCUS = [
   done:'Put it in order: canal → eardrum → ossicles → oval window → perilymph of the scala vestibuli and tympani → basilar membrane → hair cells bend against the tectorial membrane → neurotransmitter → cochlear nerve. Different parts of the basilar membrane answer different frequencies. Mechanical → electrical = transduction, by the hair cells of the organ of Corti in the scala media.',
   ask:'Two arrange-in-order questions, a nine-blank drop-down paragraph of the whole pathway, "what are the receptors for sound and where exactly are they found?", and her 4-mark written "Discuss how hearing occurs in humans".',
   cap:'The sequence. No question asks for the ion channels or the membrane potentials of the hair cell.' },
-{ id:'ear-deafness', sys:'senses', crit:'Special senses 7', t:'Conduction versus sensorineural deafness', rev:'deck · slide 22',
+{ id:'ear-deafness', sys:'senses', tier:0, flag:'H', crit:'Special senses 7', t:'Conduction versus sensorineural deafness', rev:'deck · slide 22',
+  said:'conduction hearing loss (affecting the outer and middle ear like glue ear, wax in the ear, middle ear infection) · mild sensory-neural hearing loss (affecting the inner ear like those due to certain medications, loud noise)',
   done:'Conduction deafness = sound cannot get THROUGH (wax from the ceruminous glands, perforated eardrum, stiff ossicles). Sensorineural = hair cells or nerve damaged — noise-induced hearing loss and ototoxic drugs (gentamicin, some TB drugs) belong here. Loud sound can be FELT because it is vibration picked up by mechanoreceptors.',
   ask:'"The following is NOT a cause of conductive hearing loss", true/false on ototoxic drugs, the sound-shirt MCQ, and her written "What is the difference between sensorineural and conduction deafness? Which does noise-induced hearing loss belong to?".',
   cap:'Sorting a cause into one of the two bins.' },
