@@ -5,15 +5,16 @@ Module 3 = reproduction · genetics · special senses · light & sound. Cold-sta
 
 ## State on 21 Sep 2026
 
-- `node bind-images.mjs` then `node build.mjs` → **394 questions ship, 11 held**, from his 23 graded quiz pages
-  (`../_inbox/HS2 Module 3 Capture`, bank `../hs2-anki/m3/questions.json`). 85 of her figures ship.
+- `node bind-images.mjs` then `node build.mjs` → **402 questions ship, 3 held** (21 Sep 2026, evening), from his 23 graded quiz
+  pages (`../_inbox/HS2 Module 3 Capture`, bank `../hs2-anki/m3/questions.json`). 82 of her figures ship.
 - **Her own model answers**: `extract-her-answers.mjs` lifts the `quiz_comment` block of every essay, word for word, into
   `content/her-answers.json` (26 of 27 essays). They ship labelled as HERS. Nothing the tool wrote is in here yet.
-- `NO_IMAGE_OK` in `build.mjs`: 24 questions whose missing image was a video thumbnail or decoration, each read by eye.
-- Held, with the reason on each row of `held.json` (11): **4 whose figure is genuinely gone** — he re-opened them on Canvas and the
-  picture is "access denied" or a dead link (211071 the vasectomy diagram · 211086 one pedigree-links item · 211120 noise-induced
-  hearing loss · 211121 the eye-defect mix and match); her two self-mark notices; the ovarian/uterine cycle essay (she posted no
-  answer); and 4 parser oddities (two "key text not among options", one blank with no options, one empty stem).
+- `NO_IMAGE_OK` in `build.mjs`: 18 rows, each read by eye. 15 are a video thumbnail or decoration that never loaded; 3 are figures
+  **gone from Canvas itself** (he re-opened them: access denied / dead link) on questions every part of which is named in their own
+  words: 211071 the vasectomy drop-downs, 211120 noise-induced hearing loss, 211121 the eye-defect match. A row whose question now
+  ships its figure fails the build (9 such rows went when their figures came back).
+- Held, with the reason on each row of `held.json` (3): the ovarian/uterine cycle essay (she posted no answer) and her two self-mark
+  notices. Nothing is held for a figure or a parse any more.
 - Two false holds fixed 21 Sep, which released 26 questions: the image binder only read `src="…"` and his saves write `src=data:…`
   with NO quotes (28 real figures were being ignored); and "letter-only options" meant "shorter than 3 characters", which in genetics
   catches real answers ("46", "Hh", "AO", "LH"). A bare letter is now one character A-H, and only if EVERY option is one.
@@ -26,9 +27,26 @@ Nothing needs re-saving. Every "missing" figure that still exists on Canvas was 
 2. **SingleFile keeps a picture the page uses more than once in a CSS variable** — `--sf-img-N: url("data:…")` in a style block — and
    leaves the `<img>` holding an empty SVG plus `background-image:var(--sf-img-N)`. `inlineSfImages()` in `stem-html.mjs` puts the
    real data URI back at read time, for both `bind-images.mjs` and `build.mjs` (13 figures, 10 questions);
-3. "letter-only options" meant "shorter than 3 characters" (see above).
-CHECK hs2-test2 and hs2-paper-m1 for 1 and 2: they were built with the same reader, and hs2-test2's `NO_IMAGE_OK` says six figures in
-210998/213444 "did not make it".
+3. "letter-only options" meant "shorter than 3 characters" (see above);
+4. (evening) SingleFile writes attributes in any order: `<img style="…var(--sf-img-24)…" src='…'>` (211086 Q11, the pedigree the
+   handoff called gone from Canvas) was missed by a src-first regex. `inlineSfImages` v2 cuts each tag out with a quote-aware scan.
+hs2-test2 and hs2-paper-m1 now carry the same reader, byte for byte (M1 got 14 figures back; hs2-test2 had nothing left to find).
+
+## Three more traps found 21 Sep 2026 (evening), all fixed
+
+- **A stray dot marked the answer (24 live questions).** An answer whose Canvas text is under 3 characters is read from its title:
+  a wrong "Ee" has title "Ee." (used, dot and all), the right one "ee. This was the correct answer." cleaned to "ee" (bare). Every
+  wrong option ended in "." and the key did not. `cleanTitle` now strips both of Canvas's marks and that dot, and a gate fails the
+  build if an option or key ever carries either (it failed on all 24 before the fix).
+- **YouTube channel logos shipped as figures (3).** SingleFile keeps an embedded player's whole page in `<iframe srcdoc="…">` with
+  its tags literal, so once unquoted `src=data:` was read, the logo inside became a "figure" (211011 ear wax, 210994 fertilisation,
+  211123 afterimage). `dropIframeDocs()` empties every srcdoc before a capture is read; the tag keeps its title.
+- **The shared parser dropped a correct mark (1).** `hs2-test1/audit/parse-quizzes.mjs` skipped a duplicate option BEFORE reading
+  its `correct_answer` class; her guinea-pig drop-down (211087 #20) offers "h" twice and the correct copy was the second. Re-parsing
+  all three modules with the fix changed only that question.
+- The empty-stem pedigree (211091 #19) has its question printed on her figure; an authored-stems entry keyed on the figure file copies
+  the words in and the page says where they come from. Her one short-answer question (211121 #14, "…known as an [].") ships as a
+  typed blank at her "[]". The eye-parts match (211011 #2) is only a video on Canvas, so its one question line is the tool's and says so.
 
 - Checked at 375 px: renders, no console errors, no horizontal scroll, page is `noindex`.
 
@@ -44,10 +62,7 @@ revision sessions: move what she names to tier 0 and add the badge, as hs2-test2
 
 ## Not done yet (in order)
 
-1. The 4 parser oddities: read each capture by eye.
-2. The 4 questions whose figure is gone from Canvas: read each one; if it can be answered without the picture add it to
-   `NO_IMAGE_OK` with the reason, otherwise leave it held. Do NOT substitute a picture of our own.
-3. Two matching questions sit under an embedded video, so their stem is YouTube page furniture: give them an authored stem.
-4. Re-tier the checklist when she posts her Test 3 pointers; `qtopic` + helpline answers if she opens a Module 3 helpline.
-5. Slides and passages for the explain row (re-harvest Canvas first), then caption-verified videos and the playlist page.
-6. Case studies for Test 3 once he confirms which are in scope. Confirm the Test 3 date on Canvas (the page says 26 Oct).
+1. Re-tier the checklist when she posts her Test 3 pointers; `qtopic` + helpline answers if she opens a Module 3 helpline.
+2. Slides and passages for the explain row (re-harvest Canvas first), then caption-verified videos and the playlist page.
+3. Case studies for Test 3 once he confirms which are in scope. Confirm the Test 3 date on Canvas (the page says 26 Oct).
+4. The ovarian/uterine cycle essay needs a model answer (she posted none): author it in her marks-per-step shape, sourced.

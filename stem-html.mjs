@@ -53,6 +53,13 @@ const esc = (s) => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': 
 /* SingleFile stores a picture the page uses MORE THAN ONCE in a CSS variable (--sf-img-N: url("data:…")) and leaves the <img> holding an
    empty SVG plus background-image:var(--sf-img-N). Read naively, the question looks like it has no figure. This puts the real data URI
    back into src, so every reader downstream sees an ordinary image. (Found 21 Sep 2026: 13 "missing" figures were in the files all along.) */
+/* SingleFile stores an embedded player's whole document in its <iframe srcdoc="…"> (quotes escaped, tags literal), so once
+   unquoted src=data: was read, a YouTube channel logo inside it became a question "figure" (3 in Module 3, 21 Sep 2026). The
+   embed is not her question: its document is emptied before anything is read. The tag keeps src and title, so it still
+   becomes a link. (hs2-paper-m1's prep-capture empties iframes for the same reason.) */
+export function dropIframeDocs(html) {
+  return html.replace(/(<iframe\b[^>]*?\ssrcdoc=)(?:"[^"]*"|'[^']*')/gi, '$1""');
+}
 export function inlineSfImages(html) {
   const defs = {};
   for (const m of html.matchAll(/(--sf-img-\d+)\s*:\s*url\(\s*["']?(data:[^"')]+)["']?\s*\)/g)) defs[m[1]] = m[2];
@@ -369,7 +376,7 @@ export function structuredStems(CAP, manifest, ext) {
   };
   const out = {};
   for (const f of fs.readdirSync(CAP).filter(x => /^HS2CAP-.*\.html$/.test(x))) {
-    const html = inlineSfImages(fs.readFileSync(path.join(CAP, f), 'utf8'));
+    const html = inlineSfImages(dropIframeDocs(fs.readFileSync(path.join(CAP, f), 'utf8')));
     const per = {};
     blocks(html, 'display_question').forEach((q, i) => {
       const cls = (q.match(/class=["']?([^"'>]*)/) || [])[1] || '';

@@ -69,9 +69,6 @@ const NO_IMAGE_OK = [
   /* Module 3 — each row read by eye on 21 Sep 2026. His single-file saves inline only the images that had LOADED; these
      did not, and each question below is fully answerable from its own words. Anything that truly needs its figure
      (pedigrees, karyotypes, label-the-diagram) stays HELD until that page is re-saved with the image showing. */
-  { quiz: '210994', k: '4 the filling of the' },   // MCQ, options in the stem; the image was a Wikipedia picture of the corpus cavernosum
-  { quiz: '210994', k: '8 which of the following components in semen' },   // MCQ; the image was a journal cover
-  { quiz: '210994', k: '9 unlike females males produce gametes throughout life' },   // MCQ; decoration
   { quiz: '210994', k: '13 in a female which of the following structures houses the oocytes' },   // MCQ; decoration
   { quiz: '210994', k: '22 a woman who wants to ensure conception' },   // MCQ on the LH surge; decoration
   { quiz: '210994', k: 'fertilization process virtual reality' },   // drop-downs under an embedded YouTube video; the "image" is its thumbnail
@@ -81,20 +78,19 @@ const NO_IMAGE_OK = [
   { quiz: '211011', k: 'sound waves travel as vibrations of particles' },   // T/F from the sentence itself
   { quiz: '211011', k: 'ear wax is made by' },   // fill-in from the sentence itself
   { quiz: '211022', k: 'sounds with low frequencies' },   // statement about the basilar membrane; the tonotopic figure ships with the neighbouring question
-  { quiz: '211054', k: 'the tertiary follicle releases a secondary oocyte' },   // T/F from the sentence itself
-  { quiz: '211062', k: 'baldness in humans is a dominant trait' },   // a worded genetics problem
   { quiz: '211041', k: 'blood types are inherited by different combinations' },   // her genotype table is TEXT in the stem; the image was a decoration
   { quiz: '211091', k: 'blood types are inherited by different combinations' },   // same question in the second quiz
-  { quiz: '211094', k: 'a condition where intraocular pressure increases' },   // glaucoma, from the definition
-  { quiz: '211094', k: 'a condition where the lens of the eye loses its clarity' },   // cataract, from the definition
   { quiz: '211120', k: 'erection is a process' },   // ordering question; every step is written out
   { quiz: '211120', k: 'complete the sentences using the appropriate items from the drop box' },   // her sperm table: every blank sits in a worded sentence
-  { quiz: '211120', k: 'the inside of the fallopian tube is seen below' },   // asks the function of the cilia; the photo only showed them
   { quiz: '211120', k: 'mix and match a b o blood types' },   // matching; every pair is self-contained
   { quiz: '211121', k: 'fill the spaces using words from the drop down menu the lens in the eye' },   // drop-downs in worded sentences
-  { quiz: '211135', k: 'the pattern of inheritance of sickle cell anemia' },   // MCQ from the description
+  /* GONE FROM CANVAS (he re-opened each on 21 Sep 2026: access denied / dead link), so no save can bring the figure back.
+     Each ships because every part is named in its own words; never with a picture of ours in its place. */
+  { quiz: '211071', k: 'in the diagram the place where a vasectomy' },   // drop-downs: each letter carries its name in the prose ("cutting A (the ___)", "from B … and from the prostate", "the gland with citric acid")
+  { quiz: '211120', k: 'study the images and choose the correct answer noise induced hearing loss' },   // MCQ: the stem describes the damage in full; options pair structure + type
+  { quiz: '211121', k: 'mix and match the conditions with the cause of the defect' },   // matching: each cause is a self-contained sentence (image in front of / behind / on the retina)
 ];
-const noImgOkUsed = new Set();
+const noImgOkUsed = new Set(), noImgOkStale = [];
 
 /* A blank her KEY defines but her STEM never shows: in the PNS receptor table she printed "Photo receptors" as plain text
    and left its dropdown out, so Canvas itself shows three dropdowns for a four-blank key. A blank the student cannot see
@@ -147,12 +143,20 @@ for (const z of bank.quizzes) {
        labelled generic on purpose, never invented content. */
     if (!stem && q.key && q.key.kind === 'pairs' && q.key.pairs.length >= 2)
       stem = 'Match each item with its correct partner.';
+    /* her question printed INSIDE her figure, with no stem text on Canvas at all (211091 #19: the pedigree carries "What pattern
+       of inheritance does this trait follow?"). An authored-stems entry keyed on THAT figure file copies the printed words in;
+       nothing is invented, the page says where the words come from, and a stale entry fails the build like any other. */
+    if (!stem) {
+      const fig = AUTHORED_STEMS.find(a => a.quiz === fid && a.fig && ((imgBind[path.basename(z.file)] || {})[idx] || []).includes(a.fig));
+      if (fig) stem = fig.stem;
+    }
     if (!stem) { held.push({ quiz: qname, why: 'empty stem' }); return; }
     const ex = EXCLUDE.find(e => e.quiz === fid && norm(stem).startsWith(e.k));
     if (ex) { held.push({ quiz: qname, why: ex.why, q: stem.slice(0, 80) }); return; }
     const imgs = ((imgBind[path.basename(z.file)] || {})[idx] || []);
     const okNoImg = NO_IMAGE_OK.find(e => e.quiz === fid && norm(stem).startsWith(e.k));
     if (okNoImg) noImgOkUsed.add(okNoImg);
+    if (okNoImg && imgs.length) noImgOkStale.push(`no-image-ok row is stale, the question ships its figure: ${fid} "${okNoImg.k}"`);
     const needsImg = !okNoImg && (/\[\[IMG/.test(stemRaw) || /\b(image|diagram|picture|micrograph|labell?ed|figure) (above|below|shown)\b/i.test(stem));
     if (needsImg && !imgs.length) { held.push({ quiz: qname, why: 'image did not survive capture', q: stem.slice(0, 80) }); return; }
     const sys = qsys === 'mixed' ? routeSys(stem + ' ' + (q.answers || []).map(a => a.text).join(' ')) : qsys;
@@ -180,6 +184,14 @@ for (const z of bank.quizzes) {
     };
     if (base.qh && q.type !== 'multiple_dropdowns_question' && q.type !== 'fill_in_multiple_blanks_question' && blankMarkers(base.qh).length) {
       structFails.push(`${qname} #${idx + 1}: blank markers in a ${q.type}`); base.qh = base.qh.replace(/\[\[BLANK:[^\]]*\]\]/g, '____');
+    }
+    /* her one short-answer question (211121 #14, "…is known as an [].") is a typed blank: she wrote "[]" where the answer goes and
+       Canvas's accepted answers are its key. It ships as a one-blank typed cloze at her "[]", graded on exactly those answers.
+       Only when her stem carries exactly one "[]": anything else stays on the old path (and is held there). */
+    if (q.type === 'short_answer_question' && q.key && q.key.kind === 'options' && q.key.correct.length && (base.qh.match(/\[\]/g) || []).length === 1) {
+      base.qh = base.qh.replace('[]', '[[BLANK:0]]');
+      base.qt = plainText(base.qh);
+      q = { ...q, type: 'fill_in_multiple_blanks_question', key: { kind: 'blanks', blanks: [{ label: null, options: q.key.correct, correct: q.key.correct[0] }] } };
     }
 
     if (q.type === 'essay_question') {
@@ -387,6 +399,7 @@ for (const o of OVERRIDES) if (!overridesUsed.has(o)) fails.push(`override match
 for (const a of AUTHORED_STEMS) if (!authoredUsed.has(a)) fails.push(`authored-stem matched NO question: ${a.quiz} "${a.k}"`);
 for (const e of ORPHAN_BLANKS) if (!orphanUsed.has(e)) fails.push(`orphan-blank rule dropped nothing: ${e.quiz} "${e.k}"`);
 for (const e of NO_IMAGE_OK) if (!noImgOkUsed.has(e)) fails.push(`no-image-ok matched NO question: ${e.quiz} "${e.k}"`);
+fails.push(...noImgOkStale);
 /* an option must not carry Canvas's marks or the dot its title appends: either one tells the answer apart by its shape */
 for (const q of questions) for (const o of [...(q.opts || []), ...(q.key || [])]) if (typeof o === 'string' && (/you selected this answer|this was the correct answer/i.test(o) || /^[^\s.]{2}\.$/.test(o))) fails.push(`option carries a Canvas title mark: ${q.id} "${o}"`);
 for (const q of questions) if (!q.qh) fails.push('no structured stem for ' + q.id + ' "' + q.q.slice(0, 60) + '"');

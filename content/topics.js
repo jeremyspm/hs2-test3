@@ -147,6 +147,8 @@ export const PIN = {
   qa2e4edbb5f:'gen-pedigree',
   q425d07a7a7:'gen-pedigree',
   q6b152501ab:'gen-pedigree',
+  q26fc21977e:'repro-male',     // 211071 #19 vasectomy (released 21 Sep 2026): every blank is a duct or gland on the sperm's path
+  q3dc03a23ff:'gen-pedigree',   // 211091 #19, her question printed on her pedigree figure (released 21 Sep 2026); the rule saw 'inheritance'
   qcda8c1bbce:'gen-crosses',
   q4cf5c0900c:'gen-crosses',
   qb2e41fdc03:'gen-crosses',
