@@ -323,6 +323,17 @@ for (const q of questions) {
 console.log(`references per part: ${nPartRefs} parts referenced over ${nPartQ} multi-part questions`);
 console.log(`explain layer: ${nVid}/${questions.length} questions matched a video (${Math.round(100 * nVid / questions.length)}%); ` +
   `${nRef} carry a judged reference (${nSlide} her slide images + ${nSlideText} slides quoted as text, ${nHer} her prose, ${nCourse} course files, ${nPat} Patton excerpts; ${nPatOnly} Patton-only) — from ${videos.length} videos`);
+/* plus the slides hosted for Flesh & Bone's "Her figure" buttons (content/hosted-figs.json): no question uses them, the trainer
+   hot-links them, so a missing one is a broken button in another repo — fail here instead. */
+const HOSTED = JSON.parse(fs.readFileSync(path.join(HERE, 'content', 'hosted-figs.json'), 'utf8'));
+for (const h of HOSTED.slides) {
+  const png = path.join(SLIDESRC, h.slug, `slide-${h.n}.png`);
+  if (!fs.existsSync(png)) { console.error(`BUILD FAILED: hosted slide ${h.slug} #${h.n} is not rendered (${png})`); process.exit(1); }
+  usedSlides.add(JSON.stringify([png, `${h.slug}-${h.n}.jpg`]));
+}
+const figMissing = HOSTED.media.filter(f => !fs.existsSync(path.join(HERE, 'img', 'figs', f.out)));
+if (figMissing.length) { console.error(`BUILD FAILED: hosted figures missing — run python host-figs.py first: ${figMissing.map(f => f.out).join(', ')}`); process.exit(1); }
+console.log(`hosted for Flesh & Bone: ${HOSTED.slides.length} slides + ${HOSTED.media.length} figures`);
 /* compress + ship only the referenced slides */
 const SLIDEOUT = path.join(HERE, 'img', 'slides');
 fs.mkdirSync(SLIDEOUT, { recursive: true });

@@ -84,6 +84,14 @@ source by a script, a second pass tried to refute it, and then I read every surv
   `hub/hs2-m3-videos.build.mjs` from this repo's `content/dmdm-all.json` and built `index.html`; 13 topics, gated both ways.
   Re-run it after any change to the shelf or the matches.
 
+## Figures hosted for Flesh & Bone
+
+`content/hosted-figs.json` lists her figures that no question here uses but the 3D trainer's "Her figure" buttons hot-link
+(the trainer is a public repo and never carries her images). Whole slides ship through the slide layer; pictures lifted out of a
+deck at full resolution go to `img/figs/` via `host-figs.py`. Order: `python host-figs.py && node build.mjs && python compress-slides.py`.
+The build fails if a hosted slide is not rendered or a hosted figure was not made. Removing an entry breaks a button in
+`flesh-and-bone` (its `tools/check-figrefs.mjs --live` gate will say which).
+
 ## Not done yet (in order)
 
 1. Re-tier the checklist when she posts her Test 3 pointers; `qtopic` + helpline answers if she opens a Module 3 helpline.

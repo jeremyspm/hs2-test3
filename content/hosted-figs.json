@@ -1,0 +1,58 @@
+{
+ "why": "Her figures no question here uses, hosted so Flesh & Bone (a public repo that never carries her images) can hot-link them behind its 'Her figure' buttons. Whole slides ship through the slide layer as img/slides/<deck>-<n>.jpg; pictures lifted out of a deck at full resolution ship as img/figs/<out> (made by host-figs.py). The build fails if one is missing.",
+ "slides": [
+  {
+   "slug": "2023-Revision-mod-3-22-slide2",
+   "n": 15,
+   "for": "eye (her labelled slide eye)"
+  },
+  {
+   "slug": "2023-Revision-mod-3-22-slide2",
+   "n": 19,
+   "for": "ear, middle ear"
+  },
+  {
+   "slug": "2023-Revision-mod-3-22-slide2",
+   "n": 20,
+   "for": "inner ear"
+  },
+  {
+   "slug": "2023-Revision-mod-3-22-slide2",
+   "n": 21,
+   "for": "cochlea"
+  },
+  {
+   "slug": "2026-LIGHT-AND-SEEING",
+   "n": 10,
+   "for": "retina (rods at the edge, cones at the fovea)"
+  },
+  {
+   "slug": "2026-LIGHT-AND-SEEING",
+   "n": 11,
+   "for": "retina (rod and cone cells)"
+  }
+ ],
+ "media": [
+  {
+   "out": "rev3-s2-ovarian-cycle.jpg",
+   "pptx": "C:/Users/USER/Desktop/github/_inbox/HS2 Module 3 Capture/HS2 2019 Revision mod 3 22 slide2.pptx",
+   "slide": 2,
+   "media": "image3.jpg",
+   "for": "ovary (her ovulation figure)"
+  },
+  {
+   "out": "rev3-s2-uterine-arteries.png",
+   "pptx": "C:/Users/USER/Desktop/github/_inbox/HS2 Module 3 Capture/HS2 2019 Revision mod 3 22 slide2.pptx",
+   "slide": 2,
+   "media": "image4.png",
+   "for": "uterus wall (her arteries figure)"
+  },
+  {
+   "out": "repro-female-s19-uterine-supply.jpg",
+   "pptx": "C:/Users/USER/Desktop/github/canvas-harvest/CanvasArchive/2026/Health Science 2 (722.541-26-MC-21) - Health Science 2 (61986)/files/2026 Repro Female-1.pptx",
+   "slide": 19,
+   "media": "image11.jpeg",
+   "for": "uterus wall (Uterine vascular supply)"
+  }
+ ]
+}
