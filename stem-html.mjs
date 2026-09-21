@@ -50,6 +50,16 @@ const esc = (s) => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': 
    URLs the manifest maps, so a figure that would download as HS2IMG-<id>.png arrives
    as base64 bytes with no id. Give it a stable shipped name from the bytes themselves,
    so resolveImg (below) and bind-images.mjs agree on the SAME file by construction. */
+/* SingleFile stores a picture the page uses MORE THAN ONCE in a CSS variable (--sf-img-N: url("data:…")) and leaves the <img> holding an
+   empty SVG plus background-image:var(--sf-img-N). Read naively, the question looks like it has no figure. This puts the real data URI
+   back into src, so every reader downstream sees an ordinary image. (Found 21 Sep 2026: 13 "missing" figures were in the files all along.) */
+export function inlineSfImages(html) {
+  const defs = {};
+  for (const m of html.matchAll(/(--sf-img-\d+)\s*:\s*url\(\s*["']?(data:[^"')]+)["']?\s*\)/g)) defs[m[1]] = m[2];
+  if (!Object.keys(defs).length) return html;
+  return html.replace(/<img\s+src\s*=\s*'data:image\/svg\+xml,<svg[^']*'([^>]*?background-image:var\((--sf-img-\d+)\)[^>]*)>/g,
+    (all, rest, v) => defs[v] ? '<img src="' + defs[v] + '"' + rest + '>' : all);
+}
 export function dataImgFile(src) {
   if (typeof src !== 'string' || !src.startsWith('data:image/')) return null;
   /* a single-file save leaves a PLACEHOLDER where an image never loaded: an inline (non-base64) SVG of the right size, or an empty
@@ -346,7 +356,7 @@ export function structuredStems(CAP, manifest, ext) {
   };
   const out = {};
   for (const f of fs.readdirSync(CAP).filter(x => /^HS2CAP-.*\.html$/.test(x))) {
-    const html = fs.readFileSync(path.join(CAP, f), 'utf8');
+    const html = inlineSfImages(fs.readFileSync(path.join(CAP, f), 'utf8'));
     const per = {};
     blocks(html, 'display_question').forEach((q, i) => {
       const cls = (q.match(/class=["']?([^"'>]*)/) || [])[1] || '';
