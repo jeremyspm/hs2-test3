@@ -368,8 +368,8 @@ function dealPick(){
    each one goes and how heavily her own bank drills it, so a tick is a real
    claim rather than a shrug. Ticks are per-browser (localStorage). */
 const FTIER = {
-  0:{n:'She is pointing at these THIS WEEK', c:'var(--ok)',
-     w:'Named in her MODULE 2 HELPLINE worksheet (which ships an answers page) or in the Wed 16 / Thu 17 revision sessions. This is her pointing days before the test, not a question count — so it sits above the ranking, not inside it. It does not mean biggest: the volume topics below still carry the most marks.'},
+  0:{n:'She has said it will be tested', c:'var(--ok)',
+     w:'Her own words, not a count. Today that is one row: six of her quiz questions carry the line “PEDIGREE CHARTS WILL BE TESTED IN TEST 3”. When she posts a Test 3 focus list, a helpline or revision sessions, whatever she names moves up here. It does not mean biggest: the rows below still carry the most marks.'},
   1:{n:'Do these first',    c:'var(--danger)', w:'Biggest blocks of marks in her bank, or she named them out loud.'},
   2:{n:'Then these',        c:'var(--warn)',   w:'Real marks, but they will not decide the paper on their own.'},
   3:{n:"Know it, don't camp", c:'var(--muted-fg)', w:'Thin in her bank. Read it once so it cannot blindside you, then leave it.'},
@@ -424,24 +424,10 @@ function focusCard(){
       <summary style="cursor:pointer;font-weight:700">🎯 What to learn, and how far · <span id="fsum">${focusStats().d}/${focusStats().n}</span></summary>
       <div style="margin-top:10px">
         <div class="fhead" id="fhead">${focusHead()}</div>
-        <p class="fwhy">Her <b>“Diagrams &amp; Processes in Test 2”</b> post names topics in one or two words —
-          it is an index, not the scope. Every topic below carries <b>the ceiling</b>: what you have to be able to
-          DO before ticking it, and where it stops. Open a row before you tick it.</p>
-        <details><summary class="hist" style="cursor:pointer">? Where the ranking comes from</summary>
-          <p class="fwhy" style="margin-top:6px">Every question in this tool's bank (471) was assigned a topic and
-          then read by hand. <b>Questions</b> and <b>marks</b> count unique items, with repeats across quizzes merged.
-          Ranking is her bank's marks — except where she flagged something herself, which overrides the count:
-          “Label the endocrine glands” is only 2 questions and sits in tier 1 because she said in the 10 Sept lecture
-          that it is in the test. <b>✍️</b> counts essays and dropdown questions — she said on tape the dropdowns
-          are the SAQs. <b>Ranking by marks has a blind spot</b>, and it showed: “Fracture repair” is 3 questions
-          and would sit near the bottom, but it is a named section of her Module 2 Helpline. Anything she names in
-          the helpline or in this week's revision sessions is lifted into its own band at the top. This is derived from her materials, not from the marking schedule: it is the best available
-          read on her emphasis, not a leaked paper.</p>
+        <p class="fwhy">Every row is one of <b>her own numbered criteria</b> for Module 3 (Genetics 1–9, Special senses 1–13, Reproductive 1–14) — the name of the criterion is at the bottom of each row. Every one of her ${DATA.stats.n} questions in this tool sits on exactly one row; the tool sorted them, then every group was read by hand. <b>Questions</b> and <b>marks</b> count unique items, with repeats across quizzes merged, and are counted by the build, not by a person. Ranking is her bank's marks — except where she said something herself, which overrides the count. <b>✍️</b> counts essays and drop-downs. <b>done / how she asks it / where it stops</b> are this tool's reading of her questions; the questions themselves, and the model answers under the written ones, are hers. A row with 0 questions is on her criteria list but in none of her quizzes. This is the best available read on her emphasis, not a leaked paper.</p>
         </details>
         ${tier(0)}${tier(1)}${tier(2)}${tier(3)}
-        <div class="refsrc" style="margin-top:10px">Sources: her “Diagrams &amp; Processes in Test 2” post · the
-          <b>Continuous Tests and Exam Focus Points</b> criteria doc (Science 2 Detailed Content.docx) · her Endocrine 1
-          lecture, 10 Sept 2026 · this tool's own question bank. Ticks are saved in this browser only.</div>
+        <div class="refsrc" style="margin-top:10px">Sources: her <b>Continuous Tests and Exam Focus Points</b> criteria doc (Science 2 Detailed Content.docx) · her 23 Module 3 quizzes and her own model answers · her Module 3 revision deck (22 slides). Ticks are saved in this browser only.</div>
       </div>
     </details>
   </div>`;
@@ -761,7 +747,9 @@ function learnChipsHTML(q){
   for(const r of q.refs)chips.push(`<button class="qa" data-act="${r.k}">${REF[r.k].ic} ${REF[r.k].lbl}${r.k==='patton'?' p. '+r.pp:''}</button>`);
   if(hasHer(q))chips.push('<button class="qa" data-act="hl">✅ Her worked answer</button>');
   const hint=chips.length?(SIT.chk[q.id]?'':'<span class="hint">open before or after you answer</span>')
-    :'<span class="hint">nothing of hers or Patton’s states this one outright — the answer shows on Check</span>';
+    :(DATA.questions.some(x=>x.vid||(x.refs&&x.refs.length))
+      ?'<span class="hint">nothing of hers or Patton’s states this one outright — the answer shows on Check</span>'
+      :'<span class="hint">her slides and the videos have not been matched to this module yet — the answer shows on Check</span>');
   return `<div class="lres" data-qid="${q.id}">${chips.join('')}${hint}<div class="qr-pane" hidden></div></div>`;
 }
 /* resources open by themselves for: written questions, skipped ones, anything not fully right */

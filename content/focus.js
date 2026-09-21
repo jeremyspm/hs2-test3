@@ -1,2 +1,159 @@
-/* HIS RULE: Module 3 gets the Test-2-grade focus checklist. Not authored yet. */
-export const FOCUS = [];
+/* focus.js — Module 3: what to learn, and how far.
+ *
+ * WHERE THE ROWS COME FROM. Every row is one of HER numbered assessment criteria — "Continuous Tests and Exam Focus Points"
+ * (Science 2 Detailed Content.docx), Module 3: Genetics 1-9, Special Senses 1-13, Reproductive systems 1-14. `crit` names the
+ * criterion. One row ('repro-pregnancy') is the other way round: her quizzes ask it, her criteria never name it, and it says so.
+ * Rows her criteria name but her 23 quizzes never ask are kept, with 0 questions, because that is triage information too.
+ *
+ * WHERE THE NUMBERS COME FROM. The build counts them — never a person. content/topics.js puts every shipped question on exactly
+ * one row (rules, then every group read by eye, then 98 moved by hand); build.mjs fills in, per row:
+ *   n    unique questions (the same stem captured in two quizzes counts once)      all  including repeats — re-drilling is emphasis
+ *   pts  marks of the unique questions      qz  how many separate quizzes touch it      saq  how many are written (essay or drop-down)
+ * and the TIER from pts (1: 30+ marks · 2: 12-29 · 3: under 12). `tier:0` here overrides that — see below.
+ *
+ * TIER 0 = SHE SAID SO, in her own words. Today that is ONE row: six of her quiz stems carry the line
+ * "PEDIGREE CHARTS WILL BE TESTED IN TEST 3". Her Test 3 focus post, helpline and revision sessions do not exist yet
+ * (21 Sep 2026); when they do, whatever she names moves up here. Nothing is in tier 0 on my say-so.
+ *
+ * (No D/P/R/T flags here: in Module 2 those were the rows of HER focus post. She has not posted one for Test 3, so none are claimed.)
+ * `rev`  = the slides of her own Module 3 revision deck that cover the row (what she chose to revise, not a promise).
+ * `done` = what you must be able to DO to tick it.  `ask` = the shape she actually uses.  `cap` = where her bank stops.
+ * done / ask / cap are MY reading of her questions (21 Sep 2026) — the questions under each row are hers.
+ */
+export const FOCUS = [
+/* ══════════ GENETICS ══════════ */
+{ id:'gen-pedigree', sys:'gen', tier:0, crit:'Genetics 6', t:'Reading pedigree charts', rev:'deck · slides 11–12',
+  done:'Read any pedigree cold: circles and squares, shaded and half-shaded, a line through = deceased, generations I–III. Decide dominant or recessive (does it skip a generation? do two unaffected parents have an affected child?) and autosomal or X-linked (mostly males? never father to son?), then give the genotype of a numbered individual.',
+  ask:'A chart, then a one-mark question: how many females, who is deceased, the genotype of III-1, the chance the next child is affected, which pattern this is. Her drop-down versions make you justify it: "recessive since it skips a generation", "autosomal since it affects both sexes".',
+  cap:'Her stems say it outright: PEDIGREE CHARTS WILL BE TESTED IN TEST 3. Nothing here asks you to DRAW a pedigree — only to read one. Several of her charts did not load when the pages were saved, so those questions are held until they are re-saved.' },
+{ id:'gen-crosses', sys:'gen', crit:'Genetics 7', t:'Punnett squares and probabilities',
+  done:'Set up a one-gene cross from a word problem — write both parents\' genotypes, draw the square, read off the genotypic and phenotypic ratios as percentages — including the back-to-front ones (two brown-eyed parents with a blue-eyed grandparent each; "what must the unknown parent be?").',
+  ask:'Word problems, many as drop-downs where every step is a blank: genotype of the bull, genotype of the cow, F1 genotype, F1 phenotype, chance of a horned calf. Cattle, tomatoes, peas, guinea pigs, tongue-rolling, freckles, plus disease costumes (PKU, cystic fibrosis, Huntington\'s).',
+  cap:'Every cross in her bank is ONE gene. "Dihybrid" appears only as a wrong option, never as a question. The arithmetic never goes past 25 / 50 / 75 / 100 %.' },
+{ id:'gen-vocab', sys:'gen', crit:'Genetics 1 · 4', t:'The vocabulary of genetics', rev:'deck · slides 8–10',
+  done:'Define on sight: allele, gene, locus, genotype, phenotype, homozygous, heterozygous, dominant, recessive, carrier, autosome, genome, heredity — and pick the right one when the definition is given.',
+  ask:'Mostly one-mark "the expression of genes is called the ____" with the term as the answer, the same dozen terms re-asked across eight quizzes, plus three big matching tables of term ↔ definition.',
+  cap:'Definitions only. She never asks you to explain one of these terms in a paragraph.' },
+{ id:'gen-blood', sys:'gen', crit:'Genetics 5', t:'ABO blood groups — multiple alleles', rev:'deck · slide 9',
+  done:'Know the six genotypes and four blood types, that A and B are codominant and both dominant over O, and run an ABO cross (AO × BO gives all four types; an O child needs an O allele from each parent).',
+  ask:'Scenario MCQs ("a man with type AB marries…") and two matching tables of cross → offspring genotypes.',
+  cap:'ABO only. Rhesus is not asked anywhere in her bank.' },
+{ id:'gen-patterns', sys:'gen', crit:'Genetics 5', t:'Codominance, incomplete dominance, polygenic inheritance', rev:'deck · slide 9',
+  done:'Tell the three apart with an example each: incomplete dominance = a blend (red × white → pink; curly × straight → wavy; her sickle-cell question), codominance = both show (AB blood), polygenic = many gene pairs → a continuous range (skin colour, height).',
+  ask:'"The form of inheritance in which the heterozygous state is expressed as an intermediate is ____", asked twice over; her skin-colour distribution figure as a drop-down.',
+  cap:'Naming and recognising the pattern. No crosses are asked for incomplete dominance beyond the curly-hair problem.' },
+{ id:'gen-karyotype', sys:'gen', crit:'Genetics 2', t:'Karyotypes and chromosome-number disorders', rev:'deck · slide 13',
+  done:'Read a karyotype: 22 pairs of autosomes + one pair of sex chromosomes = 46; XX or XY; spot the extra or missing one — trisomy 21 (Down, 47), XO (Turner, 45), XXY (Klinefelter, 47). Say what aneuploidy is and that non-disjunction causes it.',
+  ask:'A karyotype picture with "what disorder is present?" / "male or female?"; definition one-liners; her own written question "How many chromosomes are in a human karyotype? What is aneuploidy?".',
+  cap:'Those three disorders and no others. Several karyotype pictures did not load when the pages were saved — held until re-saved.' },
+{ id:'gen-sexlinked', sys:'gen', crit:'Genetics 4', t:'Sex-linked (X-linked) inheritance', rev:'deck · slide 10',
+  done:'Explain why males show X-linked recessive conditions more often (one X, no matching allele on the Y), why only females can be carriers, and that a male who inherits the colour-blindness allele always expresses it.',
+  ask:'One-mark completions and a two-blank drop-down ("Males cannot be carriers because they only carry one X allele"). Queen Victoria\'s haemophilia pedigree is on the pedigree row.',
+  cap:'Colour blindness and haemophilia are her only examples.' },
+{ id:'gen-mito', sys:'gen', crit:'Genetics 5', t:'Mitochondrial inheritance', rev:'deck · slide 9',
+  done:'Mitochondrial DNA is part of the genome but not of the nuclear DNA, and it passes from the mother to all her children — never from the father.',
+  ask:'True/false and one-mark MCQs.', cap:'Two facts; that is all she asks.' },
+{ id:'gen-dna', sys:'gen', crit:'Genetics 3', t:'DNA, chromosomes and meiosis', rev:'deck · slide 8',
+  done:'DNA → coiled into a chromosome; a gamete has 23 chromosomes and a zygote 46, half from each parent; crossing over (chiasmata) separates linked genes in meiosis.',
+  ask:'A handful of one-mark MCQs and one matching table (DNA, chromosome, gene…).',
+  cap:'Her criteria call it "review from BN1". No DNA replication, transcription or translation anywhere in her Module 3 bank.' },
+{ id:'gen-disorders', sys:'gen', crit:'Genetics 2', t:'Mutations and single-gene disorders', rev:'deck · slide 14',
+  done:'A mutation is a permanent change in the structure of a gene. Know Tay-Sachs as her recessive example, and that schizophrenia and Down syndrome are NOT simple recessive traits.',
+  ask:'One-mark questions. The disease names mostly turn up as costumes on Punnett-square problems (that row).', cap:'Thin in her bank — see the count on this row.' },
+{ id:'gen-therapy', sys:'gen', crit:'Genetics 9', t:'Gene therapy and genetic engineering',
+  done:'Gene therapy = treatment that corrects a single-gene disorder. Be able to write a line each on polygenic inheritance, mitochondrial inheritance, gene therapy and genetic engineering — she asks all four in one written question, and her own answer ships with it.',
+  ask:'One MCQ asked twice, and one 5-mark written question.', cap:'Definitions, one line each.' },
+{ id:'gen-testing', sys:'gen', crit:'Genetics 8', t:'Fetal and genetic testing',
+  done:'The most common form of fetal testing is amniocentesis.', ask:'That one MCQ, asked in two quizzes.', cap:'Her criterion says "explain some ways genetic abnormalities are detected"; her bank asks one fact.' },
+
+/* ══════════ SPECIAL SENSES ══════════ */
+{ id:'eye-anatomy', sys:'senses', crit:'Special senses 1', t:'Structures of the eye and what each does', rev:'deck · slides 15–16',
+  done:'Label an eye in section (hers comes both ways round — cornea on the left on her slide, on the right in her quizzes) and give each part\'s job: cornea 80 % of refraction, lens 20 %, the three layers (fibrous · vascular · neural) and what is in each, the two humours, fovea = only cones, optic disc = no rods or cones, hyaloid canal, ciliary muscle.',
+  ask:'Number-the-parts and letter-the-parts figures, a 20-mark matching table of description ↔ part, and her own written question "What are the three layers of the eye, their structures and functions" (her table ships as the answer).',
+  cap:'Recognition plus one-line functions. The eyelid and tear questions (palpebrae, lacrimation) are one mark each.' },
+{ id:'eye-focus', sys:'senses', crit:'Special senses 2', t:'Accommodation, the pupil and image formation', rev:'deck · slides 16–17',
+  done:'Near vision: ciliary muscle CONTRACTS → suspensory ligaments slacken → lens bulges; the eyes converge and the pupil constricts. Far vision is the reverse. Pupil: sympathetic → radial muscles → dilates; parasympathetic → circular muscles → constricts. The image on the retina is real and inverted; the brain turns it upright; half the fibres cross at the optic chiasma.',
+  ask:'True/false with the mechanism reversed ("the ciliary muscle contracts to flatten the lens for near vision" — false), two drop-down paragraphs comparing close-up and far vision, and her written "What changes occur in the eye to allow near vision?".',
+  cap:'The chain as far as the lens changing shape. No diopters, no calculations.' },
+{ id:'eye-retina', sys:'senses', crit:'Special senses 2', t:'The retina: rods, cones and colour blindness', rev:'deck · slide 15',
+  done:'Rods = dim light, no colour; cones = bright light and colour, concentrated at the macula and alone at the fovea (sharpest vision); visual pigments differ by their opsin; colour blindness = the CONES are affected; an afterimage = photoreceptors still firing after the light has gone.',
+  ask:'One-mark MCQs ("focusing on the ____ gives the highest visual acuity"), a 12-mark drop-down table of receptor · location for light AND sound, and short written questions with her own answers.',
+  cap:'The inheritance of colour blindness is on the sex-linked row; this row is only the receptors.' },
+{ id:'eye-errors', sys:'senses', crit:'Special senses 3', t:'Myopia, hyperopia, astigmatism — and the lens that fixes each',
+  done:'Myopia: eyeball too long or lens too strong → image falls in FRONT of the retina → concave (diverging) lens. Hyperopia: too short or too weak → behind the retina → convex (converging) lens. Emmetropia = normal. Astigmatism = irregular cornea or lens → several focal points.',
+  ask:'Two matching tables (condition ↔ description, condition ↔ corrective measure) and four written questions with her own answers, including "Explain how myopia, emmetropia and hyperopia are different" for 3 marks.',
+  cap:'Four written questions on six items — this is where she makes you write. Presbyopia appears only inside a matching table.' },
+{ id:'eye-imbalances', sys:'senses', crit:'Special senses 4', t:'Glaucoma, cataracts and pinkeye',
+  done:'Glaucoma = aqueous humour does not drain → intraocular pressure rises → damages the optic nerve. Cataract = the lens goes cloudy (its proteins denature). Pinkeye = infection of the conjunctiva. Diabetes can cause all of cataracts, glaucoma and retinopathy.',
+  ask:'Definition MCQs, one true/false, and her written "Briefly explain what glaucoma and cataracts are" (2 marks).', cap:'Definitions and the one causal line each.' },
+{ id:'ear-anatomy', sys:'senses', crit:'Special senses 5', t:'The three regions of the ear', rev:'deck · slides 18–20',
+  done:'Outer (pinna, canal, eardrum) · middle (malleus → incus → stapes, Eustachian tube) · inner (cochlea, vestibule, semicircular canals), with one function each: the ossicles AMPLIFY and the stapes pushes on the oval window; air in the outer ear, bone in the middle, fluid in the inner; the hearing receptors are in the inner ear.',
+  ask:'A 10-mark matching table of description ↔ part, one-mark MCQs asked twice over, and her written "What are the three regions of the ear, describe their structures and functions" (her table ships as the answer).',
+  cap:'Parts and one-line jobs.' },
+{ id:'ear-hearing', sys:'senses', crit:'Special senses 6', t:'How hearing works — the pathway and transduction', rev:'deck · slide 21',
+  done:'Put it in order: canal → eardrum → ossicles → oval window → perilymph of the scala vestibuli and tympani → basilar membrane → hair cells bend against the tectorial membrane → neurotransmitter → cochlear nerve. Different parts of the basilar membrane answer different frequencies. Mechanical → electrical = transduction, by the hair cells of the organ of Corti in the scala media.',
+  ask:'Two arrange-in-order questions, a nine-blank drop-down paragraph of the whole pathway, "what are the receptors for sound and where exactly are they found?", and her 4-mark written "Discuss how hearing occurs in humans".',
+  cap:'The sequence. No question asks for the ion channels or the membrane potentials of the hair cell.' },
+{ id:'ear-deafness', sys:'senses', crit:'Special senses 7', t:'Conduction versus sensorineural deafness', rev:'deck · slide 22',
+  done:'Conduction deafness = sound cannot get THROUGH (wax from the ceruminous glands, perforated eardrum, stiff ossicles). Sensorineural = hair cells or nerve damaged — noise-induced hearing loss and ototoxic drugs (gentamicin, some TB drugs) belong here. Loud sound can be FELT because it is vibration picked up by mechanoreceptors.',
+  ask:'"The following is NOT a cause of conductive hearing loss", true/false on ototoxic drugs, the sound-shirt MCQ, and her written "What is the difference between sensorineural and conduction deafness? Which does noise-induced hearing loss belong to?".',
+  cap:'Sorting a cause into one of the two bins.' },
+{ id:'ear-balance', sys:'senses', crit:'Special senses 8 · 9', t:'Static and dynamic equilibrium', rev:'deck · slide 20',
+  done:'Static equilibrium = head position and straight-line movement, from the utricle and saccule; dynamic = rotation, from the semicircular canals. Both work by mechanoreception (bending hair cells). The MIDDLE ear has nothing to do with balance.',
+  ask:'One MCQ and her 1.5-mark written "What is the difference between static and dynamic equilibrium? How are they detected?".', cap:'Two criteria, two questions in her whole bank.' },
+{ id:'phys-waves', sys:'senses', crit:'Special senses 10', t:'Waves: amplitude, wavelength, frequency — and how we experience them',
+  done:'Frequency → pitch (sound) or colour (light); amplitude → loudness or brightness; wavelength is the distance between crests. Sound needs a medium (no sound in a vacuum). The Doppler effect = the apparent change in frequency as the source moves relative to you.',
+  ask:'A nine-blank drop-down table (what is it / what does it mean for sound / for light), two 10-mark "comparing light and sound" matching tables, Doppler MCQs, and her written "Explain the different parts of a wave".',
+  cap:'Concepts only — no calculations of speed, frequency or decibels anywhere in her bank.' },
+{ id:'phys-bend', sys:'senses', crit:'Special senses 11', t:'Refraction and reflection, of light and of sound',
+  done:'Refraction = a wave BENDS as it enters a medium of different density; reflection = it BOUNCES back. Examples she uses: rainbows (white light is many wavelengths, each refracted differently by raindrops), echoes and sonar (reflected sound), sound bending upward away from heated ground (refracted sound).',
+  ask:'True/false, "choose the two correct answers", a three-blank drop-down definition, and two written questions with her own answers ("Why do rainbows form?", "What is the difference between refraction and reflection when it comes to light?").',
+  cap:'Definitions with her examples.' },
+{ id:'taste', sys:'senses', crit:'Special senses 12', t:'Taste',
+  done:'Taste is about 80 % smell — which is why food tastes flat with a blocked nose.', ask:'One MCQ in the whole bank.', cap:'Her criterion says "briefly describe the structure of the taste buds"; her quizzes never ask it.' },
+{ id:'smell', sys:'senses', crit:'Special senses 13', t:'Smell (olfaction)',
+  done:'Know that the olfactory epithelium in the roof of the nasal cavity holds the receptors.', ask:'Not asked: none of her 23 quizzes has a question on it.', cap:'On her criteria list, absent from her bank. Read it once.' },
+
+/* ══════════ REPRODUCTIVE SYSTEMS ══════════ */
+{ id:'repro-male', sys:'repro', crit:'Reproductive 1 · 2', t:'Male organs, ducts and the path the sperm take', rev:'deck · slides 5–6',
+  done:'Label the male system (her figure is a side-on section, front of the body on the left) and give the path: testis → epididymis (where sperm mature) → vas deferens → ampulla → ejaculatory duct → urethra. Scrotum keeps the testes about 3 °C cooler; cremaster (skeletal) pulls them up in the cold, dartos (smooth) wrinkles the skin.',
+  ask:'Definition MCQs ("the duct that takes sperm from the testes to the ejaculatory duct"), a six-blank pathway sentence, "which statement about the dartos muscle is FALSE", and two big written questions: label all the structures of both systems (10 marks) and tabulate the differences between them (6).',
+  cap:'Recognition and order. Her label figure for the vasectomy site did not load when the page was saved — held.' },
+{ id:'repro-sperm', sys:'repro', crit:'Reproductive 3', t:'Spermatogenesis and its hormonal control', rev:'deck · slides 5, 7',
+  done:'Spermatogonium (diploid, mitosis — which is why males make gametes for life) → primary spermatocyte → meiosis I → secondary spermatocyte → meiosis II → spermatids → spermiogenesis → sperm. FSH → Sertoli cells (nurture sperm, make INHIBIN, which suppresses FSH); LH → Leydig cells → testosterone. Sperm: acrosome, 23 chromosomes as chromatin in the head, mitochondria in the midpiece for ATP, tail to propel.',
+  ask:'An 8-pair matching table of the cell stages, her six-blank sperm table, "the pituitary hormone that stimulates ____ is ____" asked four ways, and her 4-mark written question on gamete production and its hormones.',
+  cap:'The sequence and which hormone acts on which cell. Her label-the-sperm figure did not load — held.' },
+{ id:'repro-semen', sys:'repro', crit:'Reproductive 6', t:'What is in semen, and which gland adds it', rev:'deck · slide 5',
+  done:'Seminal vesicles: about 60 %, alkaline, fructose, prostaglandins (which make the uterus contract in reverse peristalsis). Prostate: about 30 %, citric acid, under the bladder round the urethra. Bulbo-urethral: alkaline, lubricant. Her key: as many as 750 million sperm can be released with each ejaculation.',
+  ask:'"A gland that makes a fluid that contains ____" one-liners.', cap:'Matching a substance to its gland.' },
+{ id:'repro-erection', sys:'repro', crit:'Reproductive 5', t:'The mechanism of erection', rev:'deck · slide 6',
+  done:'Parasympathetic → nitric oxide → the deep artery dilates → the corpora cavernosa fill → the veins are squashed so blood is trapped. Put her five in-between steps in order.',
+  ask:'One fill-the-gap MCQ (corpora cavernosa) and one put-the-steps-in-order MCQ.', cap:'Two questions. Erectile dysfunction is in her criterion and not in her bank.' },
+{ id:'repro-testosterone', sys:'repro', crit:'Reproductive 4', t:'Testosterone and male secondary sex characteristics',
+  done:'Made by the Leydig (interstitial) cells under LH: deep voice, body hair, muscle and bone mass, libido, sperm production. She asks its functions in males AND females in a written question (her answer ships).',
+  ask:'Two MCQs and one written question.', cap:'Thin.' },
+{ id:'repro-female', sys:'repro', crit:'Reproductive 7 · 8', t:'Female organs and what each does', rev:'deck · slide 2',
+  done:'Label her front-view figure 1–8 (vagina, cervix, myometrium, uterus cavity, Fallopian tube, fimbriae, ovary, endometrium). Oocytes sit in the ovarian cortex; the fimbriae catch the ovulated oocyte; cilia move it toward the uterus; the endometrium receives the embryo; the vagina is acidic, which is why antibiotics can let yeast overgrow.',
+  ask:'Her 8-label figure as a matching question, a 16-pair matching table of descriptions ↔ terms, and application MCQs (yeast infection, breast-cancer risk factors).',
+  cap:'Recognition plus one-line functions.' },
+{ id:'repro-cycle-ovarian', sys:'repro', crit:'Reproductive 9', t:'The ovarian cycle, oogenesis and ovulation', rev:'deck · slides 3–4, 7',
+  done:'Oogonia exist only before birth; primary oocytes wait in prophase I; each month one finishes meiosis I → a SECONDARY oocyte, released from the tertiary (Graafian) follicle when the LH peak ruptures the ovarian wall, and caught by the fimbriae. Afterwards the follicle becomes the corpus luteum, then the corpus albicans if there is no pregnancy. Compare with spermatogenesis (one egg + polar bodies versus four sperm; starts before birth versus at puberty).',
+  ask:'Her six-blank ovulation drop-down on the "ovarian cycle" figure, a 14-pair matching table of terms, true/false on the stages, and "the major difference between spermatogenesis and oogenesis".',
+  cap:'Her oogenesis-diagram matching question did not load its figure — held.' },
+{ id:'repro-cycle-uterine', sys:'repro', crit:'Reproductive 10', t:'The uterine cycle and what the hormones are doing', rev:'deck · slides 2, 4',
+  done:'Menstruation → proliferative phase (oestrogen rebuilds the functional layer) → secretory phase (progesterone from the corpus luteum). No fertilisation → oestrogen and progesterone fall → the functional layer, with its spiral arteries, is shed.',
+  ask:'Three one-mark questions. Her essay "Describe the processes of the ovarian and uterine cycles" is the ONE written question she posted no answer for, so it is held.',
+  cap:'Thin in her quizzes, prominent on her revision deck — the hormone-levels graph is slide 4.' },
+{ id:'repro-female-hormones', sys:'repro', crit:'Reproductive 11 · 12', t:'Oestrogen, progesterone and the pill',
+  done:'The ovarian follicles and the corpus luteum make the female hormones. Oestrogen drives the female secondary sex characteristics. High steady oestrogen + progesterone (the pill) suppress FSH and LH, so no follicle matures and no ovulation happens; know what the progesterone-only mini pill does and does not do.',
+  ask:'Application MCQs and one matching table of contraceptive methods.', cap:'Six questions.' },
+{ id:'repro-response-female', sys:'repro', crit:'Reproductive 13', t:'The female sexual response',
+  done:'Her criterion marks it self-directed.', ask:'Not asked: none of her 23 quizzes has a question on it.', cap:'On her criteria list, absent from her bank.' },
+{ id:'repro-terms', sys:'repro', crit:'Reproductive 14', t:'Menarche, menopause, amenorrhoea, dysmenorrhoea',
+  done:'Menarche = the first period, when the reproductive hormones start surging; menopause = when they decline and the cycles stop. Amenorrhoea = no periods; dysmenorrhoea = painful periods.',
+  ask:'Two one-mark MCQs (menarche, menopause).', cap:'Amenorrhoea and dysmenorrhoea are on her criteria list and never asked.' },
+{ id:'repro-pregnancy', sys:'repro', crit:'not in her criteria — but in her quizzes', t:'Fertilisation and early pregnancy',
+  done:'Fertilisation happens in the Fallopian tube. Her key names the OUTER layer round the egg, from the follicle, the "zona radiata" (and lists "zona pelucida" as a wrong option — her figures call the same layer corona radiata); calcium is her mineral for penetration. Most likely to conceive around ovulation. The corpus luteum makes progesterone, oestrogen and relaxin for the first three months; pregnancy removes the hormone drop at the end of the cycle.',
+  ask:'Her Fertility cases quiz: a four-blank drop-down under the fertilisation video, "which three hormones", and how pregnancy changes the hormone graph.',
+  cap:'Her Module 3 criteria never mention fertilisation or pregnancy; her quizzes ask it four times. Lactation is a Test 3 CASE STUDY topic — check Canvas.' },
+];

@@ -179,6 +179,11 @@
   "q": "Describe the processes of the ovarian and uterine cycles in the female"
  },
  {
+  "quiz": "SAQ, student-marked: Genetics, SS & Repro",
+  "why": "her notice to students, not a question",
+  "q": "This is a self mark quiz - you should be able to see the models when you submit "
+ },
+ {
   "quiz": "Revision: SS, Genetics & Reproduction",
   "why": "letter-only options with no lettered stem or image",
   "q": "A pituitary hormone that stimulates testosterone production in males and progest"
@@ -222,5 +227,10 @@
   "quiz": "Light & Sound",
   "why": "key text not among options",
   "q": "Use this link to see the optical illusion in action: Link An image that persists"
+ },
+ {
+  "quiz": "SAQ: Light & Sound",
+  "why": "her notice to students, not a question",
+  "q": "This is a self mark quiz - you should be able to see the answers your lecturer w"
  }
 ]

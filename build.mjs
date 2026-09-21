@@ -18,6 +18,7 @@ import { FOCUS } from './content/focus.js';
 import { HELPLINE } from './content/helpline.js';
 import { QTOPIC } from './content/qtopic.js';
 import { QROW } from './content/qrow.js';
+import { rowOf } from './content/topics.js';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 /* HER OWN model answers, lifted verbatim from the quiz_comment blocks of his graded captures by extract-her-answers.mjs */
@@ -55,6 +56,9 @@ const QUIZ = {
    glands" used to live here; it now has an authored image-stem in
    content/authored-stems.js, so it ships.) */
 const EXCLUDE = [
+  /* not questions: her notice at the top of the two self-mark quizzes, captured as a 1-mark true/false */
+  { quiz: '211104', k: 'this is a self mark quiz', why: 'her notice to students, not a question' },
+  { quiz: '211123', k: 'this is a self mark quiz', why: 'her notice to students, not a question' },
 ];
 
 /* Questions held as "image did not survive" whose only image is a dead or decorative
@@ -333,14 +337,24 @@ for (let i = questions.length - 1; i >= 0; i--) {
   else dup.add(questions[i].id);
 }
 if (dropped) console.log('deduped', dropped, 'identical duplicate captures');
+/* the shipped bank as plain text, for the topic tagger (tag-topics.mjs) and for reading by eye — never shipped */
+fs.writeFileSync(path.join(HERE, 'bank-dump.json'), JSON.stringify(questions.map(q => ({ id: q.id, quiz: q.quiz, sys: q.sys, type: q.type, pts: q.pts, t: [q.q, (Array.isArray(q.key) ? q.key : q.key != null ? [q.key] : []).join(' | ')      /* the CORRECT answer only: distractors would drag a question onto the wrong row */, (q.pairs || []).map(p => (p.left || '') + ' => ' + (p.right || '')).join(' | '), (q.blanks || []).map(x => x.correct).join(' | '), q.saq ? q.saq.steps.join(' ') : ''].join(' ## ').replace(/\s+/g, ' ') })), null, 0));
 /* "Learn her N questions on this": each focus row named in content/qrow.js carries `qs`,
    the ids it deals. Gated both ways like every other join; exact repeats (one question
    captured in two quizzes) are dropped so the button's count is what he will actually sit,
    and one-tap questions lead so a run starts in the shallow end and ends on the written ones. */
 const TYPE_RANK = { mcq: 0, tf: 0, multi: 1, match: 2, cloze: 3, essay: 4 };
+/* THE FOCUS CHECKLIST IS COUNTED HERE, never by hand. content/topics.js puts each shipped question on ONE row (a row = one of her
+   numbered criteria); a question with no row, or a row that is not in focus.js, fails the build. */
+const ASSIGN = {}, dumpText = q => [q.q, (Array.isArray(q.key) ? q.key : q.key != null ? [q.key] : []).join(' | '), (q.pairs || []).map(p => (p.left || '') + ' => ' + (p.right || '')).join(' | '), (q.blanks || []).map(x => x.correct).join(' | '), q.saq ? q.saq.steps.join(' ') : ''].join(' ## ').replace(/\s+/g, ' ');
+for (const q of questions) { const r = rowOf({ id: q.id, t: dumpText(q) }); if (!r) { fails.push('question on NO focus row: ' + q.id + ' "' + q.q.slice(0, 60) + '"'); continue; } if (!FOCUS.some(f => f.id === r)) { fails.push('topics.js names a row that focus.js does not have: ' + r); continue; } (ASSIGN[r] = ASSIGN[r] || []).push(q.id); }
+const sigOf = q => q.type + '|' + norm(q.q) + '|' + JSON.stringify(q.key || q.pairs || (q.blanks || []).map(b => b.correct));      /* the SAME repeat rule the Learn-by-row button uses below, so a row's count and its button agree */
+for (const f of FOCUS) { const qs = (ASSIGN[f.id] || []).map(id => questions.find(q => q.id === id)), uniq = new Map(); for (const q of qs) if (!uniq.has(sigOf(q))) uniq.set(sigOf(q), q);
+  f.all = qs.length; f.n = uniq.size; f.pts = +[...uniq.values()].reduce((a, q) => a + (q.pts || 0), 0).toFixed(1); f.qz = new Set(qs.map(q => q.quiz)).size; f.saq = [...uniq.values()].filter(q => q.type === 'essay' || q.type === 'cloze').length;
+  if (f.tier !== 0) f.tier = f.pts >= 30 ? 1 : f.pts >= 12 ? 2 : 3; }
 const byId = new Map(questions.map(q => [q.id, q]));
 const rowQs = {}; let nRowQ = 0;
-for (const [rid, ids] of Object.entries(QROW)) {
+for (const [rid, ids] of Object.entries({ ...ASSIGN, ...QROW })) {
   if (!FOCUS.some(f => f.id === rid)) { fails.push('qrow row is not a focus row: ' + rid); continue; }
   const seenId = new Set(), seenSig = new Set(), keep = [];
   for (const id of ids) {
