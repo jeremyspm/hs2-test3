@@ -240,7 +240,7 @@ a{color:var(--primary)}
 <header>
   <h1>HS2 · Paper Sim</h1>
   <span class="d" id="countdown"></span>
-  <a class="btn ghost" href="https://jeremyspm.github.io/hs2-videos.html" target="_blank" rel="noopener" title="Every Dr Matt &amp; Dr Mike video, by topic">▶</a>
+  <a class="btn ghost" href="https://jeremyspm.github.io/hs2-m3-videos.html" target="_blank" rel="noopener" title="Every Dr Matt &amp; Dr Mike video, by topic">▶</a>
   <button class="btn ghost" id="themeBtn" title="theme">◐</button>
   <button class="btn ghost" id="helpBtn" title="what is this?">?</button>
 </header>
@@ -505,12 +505,12 @@ function home(){
       <button class="btn ghost" data-sys="senses" data-learn="1">Learn Senses · ${nLbl('senses')}</button>
       <button class="btn ghost" data-go="miss" data-learn="1" ${mp?'':'disabled'}>Learn my misses${mp?` · ${howMany(mp)}${howMany(mp)<mp?' of '+mp:''}`:''}</button>
     </div>
-    <p style="margin:8px 0 0">The count applies to every dealt set here and to the MS / NS / Endo sets under Pick my rep; a mock test keeps its own size. Want particular quizzes, as many as you like? Tick them under <b>Pick my rep</b> below. A Learn run saves itself as you go — stop partway and this page offers to pick it up.</p>
+    <p style="margin:8px 0 0">The count applies to every dealt set here and to the Repro / Genetics / Senses sets under Pick my rep; a mock test keeps its own size. Want particular quizzes, as many as you like? Tick them under <b>Pick my rep</b> below. A Learn run saves itself as you go — stop partway and this page offers to pick it up.</p>
   </div>
   <div class="card door" style="border-left:4px solid var(--primary)">
     <h2>📺 Watch first — the whole video shelf</h2>
-    <p>All ${DATA.stats.videos - DATA.stats.videosFill} Dr Matt &amp; Dr Mike videos behind this paper${DATA.stats.videosFill?`, plus ${DATA.stats.videosFill} gap-filler videos from other channels (each labelled by channel on its own row)`:''}, in 20 topics. In a <b>mock test</b> a video only shows up once you have got something wrong; in <b>Learn as you go</b> it sits under the question from the start — ${DATA.stats.withVideo} of the ${DATA.stats.n} questions have one, matched from the video's own captions and checked twice, and the link opens where the point is taught. The other ${DATA.stats.videos - DATA.stats.videosReached} videos teach nothing a captured quiz asks, so no amount of sitting will ever surface them. That page is the only way to see the set before you attempt anything.</p>
-    <p class="muted" style="font-size:.85rem">The Module 3 playlist page is not built yet; videos have not been matched to these questions.</p>
+    <p>All ${DATA.stats.videos - DATA.stats.videosFill} Dr Matt &amp; Dr Mike videos on the Module 3 shelf${DATA.stats.videosFill?`, plus ${DATA.stats.videosFill} gap-filler videos from other channels (each labelled by channel on its own row)`:''}, by topic. In a <b>mock test</b> a video only shows up once you have got something wrong; in <b>Learn as you go</b> it sits under the question from the start — ${DATA.stats.withVideo} of the ${DATA.stats.n} questions have one, matched from the video's own captions (judged from the caption text, every quote re-found in the track, every match then read by hand), and the link opens where the point is taught. The other ${DATA.stats.videos - DATA.stats.videosReached} videos teach nothing a captured quiz asks, so no amount of sitting will ever surface them. That page is the only way to see the set before you attempt anything.</p>
+    <a class="btn wide" href="https://jeremyspm.github.io/hs2-m3-videos.html" target="_blank" rel="noopener">Open the Module 3 video playlist ↗</a>
   </div>
   <div class="card door">
     <h2>🎯 Deal me a mock test</h2>
@@ -998,7 +998,7 @@ function weakSpotsHTML(rows){
     Watch these before your next sitting:
     ${[...vids.values()].slice(0,4).map(v=>vidRowHTML(v)).join('')}
     <div class="refsrc">Each video was matched to its question from the video's own captions and checked twice, and the link opens where that point is taught. Where a video and Hannetjie disagree, she wins.
-    <a href="https://jeremyspm.github.io/hs2-videos.html" target="_blank" rel="noopener">All 148 by topic ↗</a></div></div>`;
+    <a href="https://jeremyspm.github.io/hs2-m3-videos.html" target="_blank" rel="noopener">All ${DATA.stats.videos} by topic ↗</a></div></div>`;
 }
 /* readable key rendering: matching and cloze get one ROW per part, wrong parts
    annotated with what you picked — never a run-on paragraph */
@@ -1158,8 +1158,8 @@ $('#helpBtn').onclick=()=>{$('#help').innerHTML=`
   goes on the score chart; a wrong or skipped question still joins your misses pile, and a right answer after a
   peek does not clear it. <b>Sit</b> is the test version: the same questions, nothing shown until the end.</p>
   <p><b>How many at a time</b> (12 · 25 · 50 · 100 · All) sets the size of every dealt Learn set and of the
-  MS / NS / Endo sets; All hands you the whole pool, least-seen first, misses first. Under <b>Pick my rep</b>
-  tick any quizzes — or a whole system with the All / MS / NS / Endo / Mixed chips — and the bar at the bottom
+  Repro / Genetics / Senses sets; All hands you the whole pool, least-seen first, misses first. Under <b>Pick my rep</b>
+  tick any quizzes — or a whole system with the All / Repro / Genetics / Senses / Mixed chips — and the bar at the bottom
   runs them as one deck, Learn or Sit, every question of every ticked quiz. A Learn run saves itself after every
   Check; stop partway (or lose the tab) and the home page offers to pick it up where you were.</p>
   <p>Inside the rows of <b>What to learn, and how far</b> that she pointed at herself, <b>📖 Learn her N questions on
@@ -1169,15 +1169,14 @@ $('#helpBtn').onclick=()=>{$('#help').innerHTML=`
   <h3>Where the explanations come from</h3>
   <p>Every reference under a question was checked to <b>state the keyed fact</b>, not just share its topic: each
   of her slides, learning-page paragraphs, Anatomy Monday answers, the lab workbook, the discussion-board and
-  helpline answers she posted, her recorded Endocrine 1 lecture, the other lecture files posted in the course
+  helpline answers she posted, the other lecture files posted in the course
   (shown as 📄 Course file, never as hers) and the whole of Patton was shortlisted by keyword, read by a model
   that had to quote the exact words that state the answer, that quote was re-found in the source by a script,
   and a second pass tried to knock each match down. For a matching question with many pairs, a table that
   states at least half of them counts.
   ${DATA.stats.withRef} of the ${DATA.stats.n} questions carry at least one — ${DATA.stats.withHer} from her own
   material, ${DATA.stats.withPatton} with a Patton passage (${DATA.stats.pattonOnly} have only Patton). A question with
-  nothing is a question nothing states outright, and no reference beats a wrong one. Where a question sits on one of the
-  nine topics her helpline answers board works through, <b>✅ Her worked answer</b> is there too, verbatim, above the references. Patton passages are short
+  nothing is a question nothing states outright, and no reference beats a wrong one. Patton passages are short
   excerpts (a sentence or two, never more than 70 words) from <i>Patton &amp; Thibodeau, Anatomy &amp; Physiology,
   9th ed.</i> (Elsevier, 2016), quoted for study with the page named; the course’s ClinicalKey copy is the 2019
   edition, so figure numbers may differ. Where Patton and Hannetjie disagree, she wins.</p>

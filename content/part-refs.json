@@ -1,3 +1,2883 @@
 {
- "parts": {}
+ "parts": {
+  "q0998b434b2": [
+   {
+    "i": 3,
+    "k": "patton",
+    "uid": "patton:1171#6",
+    "src": "Patton 9e · Ch 48 Genetics and Heredity · p. 1131",
+    "quote": "dominant genes are represented by uppercase letters",
+    "t": "By convention, dominant genes are represented by uppercase letters and recessive genes by lowercase letters.",
+    "pg": 1171,
+    "pp": 1131,
+    "ch": 48
+   },
+   {
+    "i": 4,
+    "k": "her",
+    "uid": "page:GENETICS 3 Pedigree charts#1",
+    "src": "GENETICS 3 Pedigree charts learning page",
+    "quote": "homozygous recessive genotype (rr)",
+    "t": "…• Recessive allele(r) • Zygote= fertilized egg –alleles combined (R and r = Rr) • homozygous dominant genotype (RR) • homozygous recessive genotype (rr) • heterozygous genotype (Rr) • Genotype – how the genes are (homo, heterozygous, dominant, recessive • Phenotype – the genes that…"
+   },
+   {
+    "i": 5,
+    "k": "her",
+    "uid": "page:GENETICS 3 Pedigree charts#1",
+    "src": "GENETICS 3 Pedigree charts learning page",
+    "quote": "homozygous dominant genotype (RR)",
+    "t": "Dominant allele (R) • Recessive allele(r) • Zygote= fertilized egg –alleles combined (R and r = Rr) • homozygous dominant genotype (RR) • homozygous recessive genotype (rr) • heterozygous genotype (Rr) • Genotype – how the genes are (homo, heterozygous, dominant, recessive • Phenotype…"
+   },
+   {
+    "i": 6,
+    "k": "her",
+    "uid": "page:Module-3-2-Genetics#8",
+    "src": "Module 3.2 Genetics page",
+    "quote": "This is why we will take it as co- dominance",
+    "t": "This is why we will take it as co- dominance."
+   },
+   {
+    "i": 7,
+    "k": "patton",
+    "uid": "patton:1172#18",
+    "src": "Patton 9e · Ch 48 Genetics and Heredity · p. 1132",
+    "quote": "determined by the combined effect of many different gene pairs",
+    "t": "Inherited characteristics, such as skin color and height, which are determined by the combined effect of many different gene pairs, are often called polygenic (“many genes”) traits to distinguish them from monogenic, or single-gene, traits.",
+    "pg": 1172,
+    "pp": 1132,
+    "ch": 48
+   },
+   {
+    "i": 8,
+    "k": "her",
+    "uid": "am:12ab#29",
+    "src": "Anatomy Mondays 12 answers",
+    "quote": "when you have BOTH versions you end up with pink",
+    "t": "A good example is flowers, where you have a red version, and a white version of the gene for colour, but when you have BOTH versions you end up with pink!"
+   }
+  ],
+  "q0b53507b0c": [
+   {
+    "i": 1,
+    "k": "her",
+    "uid": "am:13a#0",
+    "src": "Anatomy Mondays 13 answers",
+    "quote": "refraction is when a wave bends as it moves through a medium",
+    "t": "Reflection is when a wave bounces off a surface (and the wave is 'thrown back\", where as refraction is when a wave bends as it moves through a medium."
+   },
+   {
+    "i": 2,
+    "k": "course",
+    "uid": "course:SS3-Light-and-Sound-Emma-Annotated#9",
+    "src": "Course file · SS3 Light and Sound - Emma Annotated deck · slide 9",
+    "quote": "each side of the wave starts to travel at a difference speed",
+    "t": "Sound can be reflected ( echo ) and refracted BOUNCES Refraction occurs when each side of the wave starts to travel at a difference speed – sound travels fastest with greatest amplitude in less dense version of the medium BENDS"
+   },
+   {
+    "i": 3,
+    "k": "her",
+    "uid": "am:13a#0",
+    "src": "Anatomy Mondays 13 answers",
+    "quote": "Reflection is when a wave bounces off a surface",
+    "t": "Reflection is when a wave bounces off a surface (and the wave is 'thrown back\", where as refraction is when a wave bends as it moves through a medium."
+   }
+  ],
+  "q0f58f154ae": [
+   {
+    "i": 1,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#8",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 8",
+    "quote": "Phenotype –genes that are expressed",
+    "t": "…(RR) homo zygous recessive genotype ( rr ) heterozygous genotype (Rr) Genotype – how genes are (homo, heterozygous, dominant, recessive) Phenotype –genes that are expressed (Rr and RR = Dominant trait expressed, rr = Recessive trait expressed) Punnett squares – used to work out probabilities…"
+   },
+   {
+    "i": 2,
+    "k": "her",
+    "uid": "page:Module-3-2-Genetics#5",
+    "src": "Module 3.2 Genetics page",
+    "quote": "Chromosome numbers (Haploid (23)and Diploid (46)",
+    "t": "Human genome Chromosomes and genes Autosomes and Sex chromosomes Karyotypes Chromosome numbers (Haploid (23)and Diploid (46) Chromosomal diseases Aneuploidy & Non- disjunction Monosomy: Turner syndrome (XO) Trisomy: Down's syndrome (trisomy 21) and Edward's (trisomy"
+   },
+   {
+    "i": 3,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#8",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 8",
+    "quote": "Dominant allele (R) = always expressed",
+    "t": "…copy of gene – usually we have two copies for a gene- one from father & one from mother Dominant allele (R) = always expressed Recessive allele(r) = there must be two of them before they are expressed Zygote = fertilized egg –alleles combined (R…"
+   },
+   {
+    "i": 4,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#8",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 8",
+    "quote": "Gene = section of DNA coding for one protein & determining a trait",
+    "t": "…nucleus - carries genetic code that determines structure & function of our proteins (structural & functional) Gene = section of DNA coding for one protein & determining a trait (characteristic) Allele = copy of gene – usually we have two copies for a gene- one…"
+   },
+   {
+    "i": 5,
+    "k": "slide",
+    "uid": "slide:2026-BN2-Intro-to-genetics#60",
+    "src": "2026 BN2 Intro to genetics deck · slide 60",
+    "quote": "Changes to the genetic code (variations/mutations*) can occur naturally",
+    "t": "Genetic engineering Changes to the genetic code (variations/mutations*) can occur naturally, but can also be caused by other factors eg . high-energy radiation or in vitro manipulation. 50 years ago scientists discovered that by using UV light to make mutations in penicillium fungus they could…"
+   },
+   {
+    "i": 6,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#8",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 8",
+    "quote": "Genotype – how genes are (homo, heterozygous, dominant, recessive)",
+    "t": "…r = Rr) homo zygous dominant genotype (RR) homo zygous recessive genotype ( rr ) heterozygous genotype (Rr) Genotype – how genes are (homo, heterozygous, dominant, recessive) Phenotype –genes that are expressed (Rr and RR = Dominant trait expressed, rr = Recessive trait expressed) Punnett…"
+   },
+   {
+    "i": 8,
+    "k": "patton",
+    "uid": "patton:190#6",
+    "src": "Patton 9e · Ch 8 Introduction to Tissues · p. 150",
+    "quote": "Some carcinogens are mutagens (mutation makers) that cause changes or mutations",
+    "t": "Some carcinogens are mutagens (mutation makers) that cause changes or mutations in a cell’s DNA structure.",
+    "pg": 190,
+    "pp": 150,
+    "ch": 8
+   }
+  ],
+  "q16701ba431": [
+   {
+    "i": 1,
+    "k": "slide",
+    "uid": "slide:2025-S2-GONADS-spermatogenesis-oogenesis#5",
+    "src": "2025 S2 GONADS spermatogenesis oogenesis deck · slide 5",
+    "quote": "Release of secondary oocyte = ovulation",
+    "t": "Bursting of Graafian follicle Release of secondary oocyte = ovulation"
+   },
+   {
+    "i": 4,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#2",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 2",
+    "quote": "Functionalis with spiral arteries shed during menstruation",
+    "t": "…Menstruation: Steps: H ormonal influences & blood vessel changes leading to cell death & menstruation Layers of endometrium : Functionalis with spiral arteries shed during menstruation; Basal with straight arteries stay intact- form new functionalis The ovarian cycle: Follicular phase, ovulation & luteal phase H…"
+   },
+   {
+    "i": 6,
+    "k": "slide",
+    "uid": "slide:2026-Repro-Female-1#29",
+    "src": "2026 Repro Female-1 deck · slide 29",
+    "quote": "the secondary oocyte and first polar body The secondary oocyte arrests in metaphase II and is ovulated",
+    "t": "The activated primary oocyte produces two haploid cells the secondary oocyte and first polar body The secondary oocyte arrests in metaphase II and is ovulated If penetrated by sperm the second oocyte completes meiosis II , yielding one large ovum (the functional gamete) and a…"
+   },
+   {
+    "i": 7,
+    "k": "her",
+    "uid": "page:The Reproductive System#6",
+    "src": "The Reproductive System learning page",
+    "quote": "Haploid (N) spermatids -undergo spermiogenesis to become spermatozoa",
+    "t": "Testis histology In the diagram of a cross section through a seminiferous tubule (above): Sertoli cells(sustentacular) making inhibin and feeding sperm Haploid (N) spermatids -undergo spermiogenesis to become spermatozoa Haploid (N) spermatozoa - needs 10 - 15 days to mature in epididymis"
+   },
+   {
+    "i": 8,
+    "k": "her",
+    "uid": "am:12b#24",
+    "src": "Anatomy Mondays 12",
+    "quote": "People only inherit their mitochondrial DNA from their mum",
+    "t": "People only inherit their mitochondrial DNA from their mum, so mitochondrial DNA diseases only pass from mother to child."
+   },
+   {
+    "i": 9,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#2",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 2",
+    "quote": "Fimbriae on infundibulum- stroking over ovary to catch secondary oocyte",
+    "t": "…Parts of female reproductive system & their functions: Ovary – producing eggs & hormones estrogen & progesterone Fimbriae on infundibulum- stroking over ovary to catch secondary oocyte Fallopian tube – cilia on inside - to help egg/ embryo move towards uterus Where fertilization happens Uterus…"
+   },
+   {
+    "i": 10,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#2",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 2",
+    "quote": "Fallopian tube – cilia on inside - to help egg/ embryo move towards uterus",
+    "t": "…& hormones estrogen & progesterone Fimbriae on infundibulum- stroking over ovary to catch secondary oocyte Fallopian tube – cilia on inside - to help egg/ embryo move towards uterus Where fertilization happens Uterus to house embryo Layers of uterus: Endometrium Myometrium (smooth muscles) & Perimetrium…"
+   },
+   {
+    "i": 11,
+    "k": "course",
+    "uid": "course:Repro-Processes-Notes#28",
+    "src": "Course file · Repro Processes Notes",
+    "quote": "Day 14 LH surge which triggers ovulation",
+    "t": "Day 14 LH surge which triggers ovulation (LH can be tracked in the urine, OPK’s)."
+   },
+   {
+    "i": 12,
+    "k": "slide",
+    "uid": "slide:2025-S2-GONADS-spermatogenesis-oogenesis#5",
+    "src": "2025 S2 GONADS spermatogenesis oogenesis deck · slide 5",
+    "quote": "Granulosa follicle cells release ESTROGEN",
+    "t": "Granulosa follicle cells release ESTROGEN . one primary oocyte to develop into a secondary oocyte From puberty till menopause: Undergoes monthly changes controlled by hormones (FSH and LH) from the anterior pituitary LH =Luteinising Hormone stimulates: 1 before birth 2 & 3 monthly from puberty…"
+   },
+   {
+    "i": 13,
+    "k": "slide",
+    "uid": "slide:2025-S2-GONADS-spermatogenesis-oogenesis#5",
+    "src": "2025 S2 GONADS spermatogenesis oogenesis deck · slide 5",
+    "quote": "Development of corpus luteum that releases PROGESTERONE",
+    "t": "Development of corpus luteum that releases PROGESTERONE 1 Estrogen primary (have to have) & secondary (nice to have) sexual characteristics 3 2 4 5 6 7"
+   },
+   {
+    "i": 14,
+    "k": "patton",
+    "uid": "patton:1110#4",
+    "src": "Patton 9e · Ch 46 Female Reproductive System · p. 1070",
+    "quote": "This phase is also called the luteal phase, or more simply, the secretory phase",
+    "t": "This phase is also called the luteal phase, or more simply, the secretory phase, because the corpus luteum secretes only during this time.",
+    "pg": 1110,
+    "pp": 1070,
+    "ch": 46
+   }
+  ],
+  "q1b3811c4ef": [
+   {
+    "i": 1,
+    "k": "her",
+    "uid": "page:Module-3-3-Special-Senses#21",
+    "src": "Module 3.3 Special Senses page",
+    "quote": "Middle ear for amplification of sound",
+    "t": "Middle ear for amplification of sound Structures: Ossicles (malleus, incus and stapes) Large Tympanic membrane connected to the Malleus Small Oval window (membrane) into which stapes fits Round window"
+   },
+   {
+    "i": 2,
+    "k": "her",
+    "uid": "page:Module-3-3-Special-Senses#22",
+    "src": "Module 3.3 Special Senses page",
+    "quote": "Cochlea with organ of Corti where transduction takes place",
+    "t": "Inner ear for transducing mechanical energy to electrical energy Cochlea with organ of Corti where transduction takes place and electrical impulses are created from mechanical vibrations Vestibular apparatus where movement and effects of gravity are transduced to electrical impulses."
+   },
+   {
+    "i": 3,
+    "k": "her",
+    "uid": "lab:2026#254",
+    "src": "Lab workbook 2026",
+    "quote": "To equalise pressure between the in and outside of the tympanum",
+    "t": "To equalise pressure between the in and outside of the tympanum D."
+   },
+   {
+    "i": 4,
+    "k": "course",
+    "uid": "course:Physiology-of-the-Special-Senses#69",
+    "src": "Course file · Physiology of the Special Senses deck · slide 69",
+    "quote": "Balance/equilibrium - Vestibular apparatus Vestibule and Semicircular Canals",
+    "t": "Saccule Utricle Semicircular ducts Balance/equilibrium - Vestibular apparatus Vestibule and Semicircular Canals"
+   }
+  ],
+  "q243e513590": [
+   {
+    "i": 1,
+    "k": "patton",
+    "uid": "patton:1172#17",
+    "src": "Patton 9e · Ch 48 Genetics and Heredity · p. 1132",
+    "quote": "two normal parents, each having the heterozygous genotype Aa",
+    "t": "Thus two normal parents, each having the heterozygous genotype Aa, can produce both normal children and children who have albinism (Figure 48-6).",
+    "pg": 1172,
+    "pp": 1132,
+    "ch": 48
+   },
+   {
+    "i": 2,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#8",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 8",
+    "quote": "Recessive allele(r) = there must be two of them before",
+    "t": "…copies for a gene- one from father & one from mother Dominant allele (R) = always expressed Recessive allele(r) = there must be two of them before they are expressed Zygote = fertilized egg –alleles combined (R and r = Rr) homo zygous dominant genotype…"
+   }
+  ],
+  "q25a205eaf8": [
+   {
+    "i": 3,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#8",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 8",
+    "quote": "homo zygous recessive genotype ( rr )",
+    "t": "…they are expressed Zygote = fertilized egg –alleles combined (R and r = Rr) homo zygous dominant genotype (RR) homo zygous recessive genotype ( rr ) heterozygous genotype (Rr) Genotype – how genes are (homo, heterozygous, dominant, recessive) Phenotype –genes that are expressed (Rr and…"
+   }
+  ],
+  "q269f7910cb": [
+   {
+    "i": 1,
+    "k": "slide",
+    "uid": "slide:2026-LIGHT-AND-SEEING#2",
+    "src": "2026 LIGHT AND SEEING deck · slide 2",
+    "quote": "Mechanical energy –kinetic- causing pressure waves",
+    "t": "Sound and Light – its all waves Light Sound Wave type Electromagnetic energy Mechanical energy –kinetic- causing pressure waves Production alternating electrical and magnetic fields By vibrations Description Moving as particles/ photons -particle and as waves Waves of compressed and rarefied (thinned) medium called compressions…"
+   },
+   {
+    "i": 2,
+    "k": "slide",
+    "uid": "slide:2026-LIGHT-AND-SEEING#2",
+    "src": "2026 LIGHT AND SEEING deck · slide 2",
+    "quote": "Wave type Electromagnetic energy Mechanical energy",
+    "t": "Sound and Light – its all waves Light Sound Wave type Electromagnetic energy Mechanical energy –kinetic- causing pressure waves Production alternating electrical and magnetic fields By vibrations Description Moving as particles/ photons -particle and as waves Waves of compressed and rarefied (thinned) medium called compressions…"
+   },
+   {
+    "i": 3,
+    "k": "slide",
+    "uid": "slide:2026-LIGHT-AND-SEEING#2",
+    "src": "2026 LIGHT AND SEEING deck · slide 2",
+    "quote": "Needs medium- cannot move through vacuum",
+    "t": "…and as waves Waves of compressed and rarefied (thinned) medium called compressions and rarefications caused by movement of the particles of matter (gases like air, fluid like water and solids) Medium No medium needed – can move through vacuum Needs medium- cannot move through vacuum"
+   },
+   {
+    "i": 4,
+    "k": "slide",
+    "uid": "slide:2026-LIGHT-AND-SEEING#2",
+    "src": "2026 LIGHT AND SEEING deck · slide 2",
+    "quote": "No medium needed – can move through vacuum",
+    "t": "…and as waves Waves of compressed and rarefied (thinned) medium called compressions and rarefications caused by movement of the particles of matter (gases like air, fluid like water and solids) Medium No medium needed – can move through vacuum Needs medium- cannot move through vacuum"
+   },
+   {
+    "i": 6,
+    "k": "her",
+    "uid": "am:13a#1",
+    "src": "Anatomy Mondays 13 answers",
+    "quote": "The amplitude relates to the intensity of the wave",
+    "t": "The amplitude relates to the intensity of the wave."
+   },
+   {
+    "i": 7,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#21",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 21",
+    "quote": "Loudness of sound = amplitude of sound wave",
+    "t": "This activates specific mechanoreceptors (hair cells) which result in electrical signals to brain Loudness of sound = amplitude of sound wave Pitch of sound = frequency of sound wave"
+   },
+   {
+    "i": 8,
+    "k": "her",
+    "uid": "am:13a#2",
+    "src": "Anatomy Mondays 13 answers",
+    "quote": "Wavelength and frequency are experienced as LIGHT COLOUR with long waves",
+    "t": "Light Wavelength and frequency are experienced as LIGHT COLOUR with long waves being red light and short waves being violet light"
+   },
+   {
+    "i": 9,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#21",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 21",
+    "quote": "Pitch of sound = frequency of sound wave",
+    "t": "This activates specific mechanoreceptors (hair cells) which result in electrical signals to brain Loudness of sound = amplitude of sound wave Pitch of sound = frequency of sound wave"
+   }
+  ],
+  "q26fc21977e": [
+   {
+    "i": 1,
+    "k": "slide",
+    "uid": "slide:2026-Male-Repro-3#9",
+    "src": "2026 Male Repro-3 deck · slide 9",
+    "quote": "vas (ductus) deferens, ejaculatory duct urethra",
+    "t": "…Lie within scrotum produce sperm in seminiferous tubules Ducts: Sperms delivered to exterior through tubes : rete testis epididymis vas (ductus) deferens, ejaculatory duct urethra L.O. 2 Accessory sex glands: Empty their secretions into ducts during ejaculation seminal vesicles prostate gland bulbourethral glands Testis with…"
+   },
+   {
+    "i": 3,
+    "k": "slide",
+    "uid": "slide:2026-Male-Repro-3#21",
+    "src": "2026 Male Repro-3 deck · slide 21",
+    "quote": "Join vas deferens to form ejaculatory duct",
+    "t": "21 Accessory Glands: Seminal Vesicles On posterior wall of bladder -secrete 60% of volume of semen Join vas deferens to form ejaculatory duct Seminal fluid viscous alkaline fluid contains fructose, ascorbic acid, coagulating enzyme ( vesiculase ), and prostaglandins L.O. 2 Sperm & seminal fluid…"
+   },
+   {
+    "i": 4,
+    "k": "slide",
+    "uid": "slide:2026-Male-Repro-3#21",
+    "src": "2026 Male Repro-3 deck · slide 21",
+    "quote": "Enter prostatic urethra during ejaculation",
+    "t": "…bladder -secrete 60% of volume of semen Join vas deferens to form ejaculatory duct Seminal fluid viscous alkaline fluid contains fructose, ascorbic acid, coagulating enzyme ( vesiculase ), and prostaglandins L.O. 2 Sperm & seminal fluid mix in ejaculatory duct Enter prostatic urethra during ejaculation"
+   },
+   {
+    "i": 5,
+    "k": "slide",
+    "uid": "slide:2026-Male-Repro-3#25",
+    "src": "2026 Male Repro-3 deck · slide 25",
+    "quote": "Semen from 60%: seminal vesicle 30%: prostate 10% : sperm",
+    "t": "25 Semen L.O. 6 Semen from 60%: seminal vesicle 30%: prostate 10% : sperm, Testes, Epididymis, Cowper’s gland Testis Prostate Seminal vesicle Bulbourethral glands Sperm Only 2-5 ml of semen is ejaculated, but it contains 50-130 million sperm/ml Sterility – low sperm count, < 20-25…"
+   },
+   {
+    "i": 6,
+    "k": "patton",
+    "uid": "patton:1087#10",
+    "src": "Patton 9e · Ch 45 Male Reproductive System · p. 1047",
+    "quote": "The prostate secretes a watery, milky-looking, and slightly acidic fluid",
+    "t": "Function The prostate secretes a watery, milky-looking, and slightly acidic fluid that constitutes about 30% of the seminal fluid volume.",
+    "pg": 1087,
+    "pp": 1047,
+    "ch": 45
+   }
+  ],
+  "q2fcdaa9e49": [
+   {
+    "i": 1,
+    "k": "slide",
+    "uid": "slide:2026-Hearing-Equilibrium#24",
+    "src": "2026 Hearing_Equilibrium deck · slide 24",
+    "quote": "Conduction deafness – results from impaired sound conduction to the inner ear",
+    "t": "Disorders of hearing Conduction deafness – results from impaired sound conduction to the inner ear (cause - impacted earwax, perforated eardrum, ostosclerosis of the ossicles) Sensorineural deafness – results from damage to the neural structures at any point from the cochlear hair cells to the…"
+   },
+   {
+    "i": 2,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#22",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 22",
+    "quote": "In outer ear canal: ear wax -reversible",
+    "t": "Sensory neural deafness 22 Ear imbalances In middle ear: Infections, perforated eardrum, osteosclerosis , arthritis, gum ear In outer ear canal: ear wax -reversible Permanent: noise induced or due to e.g. ototoxic medication Damage to mechano receptors (hair cells in organ of Corti in cochlea…"
+   },
+   {
+    "i": 3,
+    "k": "slide",
+    "uid": "slide:2026-Hearing-Equilibrium#24",
+    "src": "2026 Hearing_Equilibrium deck · slide 24",
+    "quote": "Sensorineural deafness – results from damage to the neural structures at any point from the cochlear hair cells to the auditory cortical cells",
+    "t": "…results from impaired sound conduction to the inner ear (cause - impacted earwax, perforated eardrum, ostosclerosis of the ossicles) Sensorineural deafness – results from damage to the neural structures at any point from the cochlear hair cells to the auditory cortical cells What is Tinnitus?"
+   },
+   {
+    "i": 6,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#22",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 22",
+    "quote": "Damage to mechano receptors (hair cells in organ of Corti in cochlea – hit tectorial membrane too violently –loss of hair cells - sound waves cannot be transduced to electrical stimuli",
+    "t": "…induced or due to e.g. ototoxic medication Damage to mechano receptors (hair cells in organ of Corti in cochlea – hit tectorial membrane too violently –loss of hair cells - sound waves cannot be transduced to electrical stimuli Can limit further damage by protecting ears…"
+   }
+  ],
+  "q316970d173": [
+   {
+    "i": 2,
+    "k": "slide",
+    "uid": "slide:2026-BN2-Intro-to-genetics#7",
+    "src": "2026 BN2 Intro to genetics deck · slide 7",
+    "quote": "A chromosome is formed from a single DNA molecule that contains many genes",
+    "t": "Structure of a chromosome (Typical metaphase chromosome): A chromosome is formed from a single DNA molecule that contains many genes."
+   },
+   {
+    "i": 4,
+    "k": "her",
+    "uid": "page:The Reproductive System#13",
+    "src": "The Reproductive System learning page",
+    "quote": "they have only one set of chromosomes (23 in humans)",
+    "t": "That means that they have only one set of chromosomes (23 in humans)."
+   },
+   {
+    "i": 5,
+    "k": "patton",
+    "uid": "patton:1187#13",
+    "src": "Patton 9e · Ch 48 Genetics and Heredity · p. 1147",
+    "quote": "person who possesses the gene for a recessive trait but does not exhibit the trait",
+    "t": "Carrier—person who possesses the gene for a recessive trait but does not exhibit the trait",
+    "pg": 1187,
+    "pp": 1147,
+    "ch": 48
+   },
+   {
+    "i": 7,
+    "k": "patton",
+    "uid": "patton:1187#13",
+    "src": "Patton 9e · Ch 48 Genetics and Heredity · p. 1147",
+    "quote": "Heterozygous—genotype with two different forms of a gene",
+    "t": "Genotype—combination of genes within the cells of an individual (1) Homozygous—genotype with two identical forms of a gene (2) Heterozygous—genotype with two different forms of a gene",
+    "pg": 1187,
+    "pp": 1147,
+    "ch": 48
+   }
+  ],
+  "q3401e33d38": [
+   {
+    "i": 1,
+    "k": "her",
+    "uid": "page:The Reproductive System#26",
+    "src": "The Reproductive System learning page",
+    "quote": "Diploid spermatogonia become diploid primary spermatocytes through mitosis",
+    "t": "Meiosis I Meiosis 2 Before birth After Puberty After fertilisation Spermatogenesis Diploid spermatogonia become diploid primary spermatocytes through mitosis, and then haploid secondary spermatocytes through meiosis"
+   },
+   {
+    "i": 2,
+    "k": "her",
+    "uid": "page:The Reproductive System#26",
+    "src": "The Reproductive System learning page",
+    "quote": "diploid primary spermatocytes through mitosis, and then haploid secondary spermatocytes through meiosis 1",
+    "t": "Meiosis I Meiosis 2 Before birth After Puberty After fertilisation Spermatogenesis Diploid spermatogonia become diploid primary spermatocytes through mitosis, and then haploid secondary spermatocytes through meiosis"
+   },
+   {
+    "i": 3,
+    "k": "her",
+    "uid": "page:The Reproductive System#26",
+    "src": "The Reproductive System learning page",
+    "quote": "haploid secondary spermatocytes through meiosis 1. Secondary spermatocytes become spermatids through meiosis 2",
+    "t": "Meiosis I Meiosis 2 Before birth After Puberty After fertilisation Spermatogenesis Diploid spermatogonia become diploid primary spermatocytes through mitosis, and then haploid secondary spermatocytes through meiosis 1. Secondary spermatocytes become spermatids through meiosis 2 which then mature and differentiate through spermiogenesis to become motile spermatozoa."
+   },
+   {
+    "i": 4,
+    "k": "her",
+    "uid": "page:The Reproductive System#26",
+    "src": "The Reproductive System learning page",
+    "quote": "mature and differentiate through spermiogenesis to become motile spermatozoa",
+    "t": "Secondary spermatocytes become spermatids through meiosis 2 which then mature and differentiate through spermiogenesis to become motile spermatozoa."
+   },
+   {
+    "i": 5,
+    "k": "her",
+    "uid": "lab:2026#226",
+    "src": "Lab workbook 2026",
+    "quote": "Cells of Sertoli making inhibin, Cells of Leydig making testosterone",
+    "t": "Label this diagram of a cross section through the testis: Word list: Cells of Sertoli making inhibin, Cells of Leydig making testosterone Basement membrane Spermatogonia (2N) Primary spermatocytes (2N) Secondary spermatocytes (N) Spermatids (N) Spermatozoa (N)"
+   },
+   {
+    "i": 6,
+    "k": "her",
+    "uid": "lab:2026#226",
+    "src": "Lab workbook 2026",
+    "quote": "Cells of Sertoli making inhibin, Cells of Leydig making testosterone",
+    "t": "Label this diagram of a cross section through the testis: Word list: Cells of Sertoli making inhibin, Cells of Leydig making testosterone Basement membrane Spermatogonia (2N) Primary spermatocytes (2N) Secondary spermatocytes (N) Spermatids (N) Spermatozoa (N)"
+   },
+   {
+    "i": 7,
+    "k": "her",
+    "uid": "page:Male Reproduction#13",
+    "src": "Male Reproduction learning page",
+    "quote": "Spermatogenesis, Spermiogenesis stimulated by testosterone; inhibited by inhibin",
+    "t": "Produce male hormones Testosterone in Leydig cells -production stimulated by LH Inhibin in Sertoli (sustentacular) cells) suppresses production of FSH Descending of testes into scrotum stimulated by testosterone Spermatogenesis, Spermiogenesis stimulated by testosterone; inhibited by inhibin"
+   }
+  ],
+  "q369defb72d": [
+   {
+    "i": 3,
+    "k": "slide",
+    "uid": "slide:2026-PUNNETT-SQUARES-PATTERNS-OF-INHERITANCE#4",
+    "src": "2026 PUNNETT SQUARES PATTERNS OF INHERITANCE deck · slide 4",
+    "quote": "100% heterozygous 50% heterozygous 50% homozygous dominant",
+    "t": "…Bb b Bb bb B b B BB Bb B BB Bb b b B Bb Bb B Bb Bb BB x bb BB x Bb Bb x Bb 100% heterozygous 50% heterozygous 50% homozygous dominant 50% heterozygous 25% homozygous dominant 25% homozygous recessive Genotypes"
+   },
+   {
+    "i": 4,
+    "k": "her",
+    "uid": "page:GENETICS 2#7",
+    "src": "GENETICS 2 learning page",
+    "quote": "The dominant trait will be expressed in 100% of the offspring",
+    "t": "R r R RR Rr R RR Rr Genotypes: 50% homozygous dominant, 50% heterozygous Phenotypes: The dominant trait will be expressed in 100% of the offspring Try to complete this one on your own."
+   },
+   {
+    "i": 5,
+    "k": "her",
+    "uid": "page:GENETICS 2#6",
+    "src": "GENETICS 2 learning page",
+    "quote": "The recessive trait will be expressed in 25% of the offspring",
+    "t": "R r R RR Rr r Rr rr Genotypes: 25% homozygous dominant, 50% heterozygous, 25% homozygous recessive Phenotypes: The dominant trait will be expressed in 75% of the offspring when there is complete dominance, The recessive trait will be expressed in 25% of the offspring."
+   }
+  ],
+  "q38eff182ac": [
+   {
+    "i": 1,
+    "k": "her",
+    "uid": "am:12b#9",
+    "src": "Anatomy Mondays 12",
+    "quote": "Turners syndrome (when a person have only 1 sex chromosome",
+    "t": "…but common ones are Down Syndrome (or Trisomy 21 when a person inherits an extra chromosome 21), Turners syndrome (when a person have only 1 sex chromosome and so their genetic sex is XO), or Klinefelters syndrome (when a person has 2 X chromosomes and…"
+   },
+   {
+    "i": 2,
+    "k": "her",
+    "uid": "am:12b#9",
+    "src": "Anatomy Mondays 12",
+    "quote": "Down Syndrome (or Trisomy 21",
+    "t": "There are a few different aneuploidies, but common ones are Down Syndrome (or Trisomy 21 when a person inherits an extra chromosome 21), Turners syndrome (when a person have only 1 sex chromosome and so their genetic sex is XO), or Klinefelters syndrome (when a…"
+   },
+   {
+    "i": 3,
+    "k": "her",
+    "uid": "am:12b#9",
+    "src": "Anatomy Mondays 12",
+    "quote": "Klinefelters syndrome (when a person has 2 X chromosomes and 1 Y chromsome)",
+    "t": "…are Down Syndrome (or Trisomy 21 when a person inherits an extra chromosome 21), Turners syndrome (when a person have only 1 sex chromosome and so their genetic sex is XO), or Klinefelters syndrome (when a person has 2 X chromosomes and 1 Y chromsome)."
+   },
+   {
+    "i": 4,
+    "k": "her",
+    "uid": "page:GENETICS 1#9",
+    "src": "GENETICS 1 learning page",
+    "quote": "Trisomy 18 = Edward syndrome",
+    "t": "Trisomy 21 = Down syndrome Trisomy 18 = Edward syndrome"
+   }
+  ],
+  "q3da24a1a85": [
+   {
+    "i": 2,
+    "k": "slide",
+    "uid": "slide:2022-S2-Eyes-3#8",
+    "src": "2022 S2 Eyes (3) deck · slide 8",
+    "quote": "Fibrous tunic o utermost tough fibrous coating forming white sclera",
+    "t": "…body Choroid: middle pigmented highly vascular layer, supplies nutrients and prevents light scattering Susan duraisamy L.O. 1 Fibrous tunic o utermost tough fibrous coating forming white sclera posteriorly & transparent cornea anteriorly Sclera: P rotects eye Anchors extrinsic muscles Cornea: Window to let light enter…"
+   },
+   {
+    "i": 3,
+    "k": "slide",
+    "uid": "slide:2022-S2-Eyes-3#8",
+    "src": "2022 S2 Eyes (3) deck · slide 8",
+    "quote": "Cornea: Window to let light enter Refracts light",
+    "t": "…tough fibrous coating forming white sclera posteriorly & transparent cornea anteriorly Sclera: P rotects eye Anchors extrinsic muscles Cornea: Window to let light enter Refracts light (80%) Retina - Neural (sensory) tunic = Delicate 2-layered membrane Outer Pigmented layer Absorbs light Prevents light scattering Inner…"
+   },
+   {
+    "i": 4,
+    "k": "slide",
+    "uid": "slide:2022-S2-Eyes-3#8",
+    "src": "2022 S2 Eyes (3) deck · slide 8",
+    "quote": "Choroid: middle pigmented highly vascular layer, supplies nutrients and",
+    "t": "Tunics/coats Vascular tunic (uvea) consists of three regions: choroid, iris and ciliary body Choroid: middle pigmented highly vascular layer, supplies nutrients and prevents light scattering Susan duraisamy L.O. 1 Fibrous tunic o utermost tough fibrous coating forming white sclera posteriorly & transparent cornea anteriorly Sclera:…"
+   },
+   {
+    "i": 6,
+    "k": "slide",
+    "uid": "slide:2022-S2-Eyes-3#8",
+    "src": "2022 S2 Eyes (3) deck · slide 8",
+    "quote": "Inner Neural layer contains 3 layers of neurons",
+    "t": "…& transparent cornea anteriorly Sclera: P rotects eye Anchors extrinsic muscles Cornea: Window to let light enter Refracts light (80%) Retina - Neural (sensory) tunic = Delicate 2-layered membrane Outer Pigmented layer Absorbs light Prevents light scattering Inner Neural layer contains 3 layers of neurons"
+   },
+   {
+    "i": 7,
+    "k": "slide",
+    "uid": "slide:2022-S2-Eyes-3#8",
+    "src": "2022 S2 Eyes (3) deck · slide 8",
+    "quote": "Outer Pigmented layer Absorbs light Prevents light scattering",
+    "t": "…& transparent cornea anteriorly Sclera: P rotects eye Anchors extrinsic muscles Cornea: Window to let light enter Refracts light (80%) Retina - Neural (sensory) tunic = Delicate 2-layered membrane Outer Pigmented layer Absorbs light Prevents light scattering Inner Neural layer contains 3 layers of neurons"
+   }
+  ],
+  "q3eb5f72a2f": [
+   {
+    "i": 5,
+    "k": "patton",
+    "uid": "patton:1181#14",
+    "src": "Patton 9e · Ch 48 Genetics and Heredity · p. 1141",
+    "quote": "A horizontal line between symbols designates a sexual relationship",
+    "t": "A horizontal line between symbols designates a sexual relationship that produced offspring.",
+    "pg": 1181,
+    "pp": 1141,
+    "ch": 48
+   },
+   {
+    "i": 7,
+    "k": "her",
+    "uid": "page:GENETICS 2#12",
+    "src": "GENETICS 2 learning page",
+    "quote": "Pattern Autosomal dominant Autosomal Recessive X-linked dominant",
+    "t": "Pattern Autosomal dominant Autosomal Recessive X-linked dominant X-linked recessive Example Huntingtons Cystic fibrosis"
+   },
+   {
+    "i": 9,
+    "k": "her",
+    "uid": "page:GENETICS 2#13",
+    "src": "GENETICS 2 learning page",
+    "quote": "All heterozygous(Hh) and homozygous dominant (HH) individuals will be affected",
+    "t": "Fragile X Hemophilia Red-green colourblindness Explanation All heterozygous(Hh) and homozygous dominant (HH) individuals will be affected."
+   },
+   {
+    "i": 10,
+    "k": "her",
+    "uid": "page:GENETICS 2#13",
+    "src": "GENETICS 2 learning page",
+    "quote": "Homozygous recessive (hh) individualin the affected family will escape this disease",
+    "t": "Homozygous recessive (hh) individualin the affected family will escape this disease."
+   }
+  ],
+  "q41a12e1f9c": [
+   {
+    "i": 1,
+    "k": "course",
+    "uid": "course:Physiology-of-the-Special-Senses#7",
+    "src": "Course file · Physiology of the Special Senses deck · slide 7",
+    "quote": "Wavelength : Total distance traveled by wave in one full cycle",
+    "t": "Amplitude : Maximum displacement from equilibrium position = sound’s intensity (LOUDNESS) measured in decibels Wavelength : Total distance traveled by wave in one full cycle Shorter wavelength- higher PITCH WAVES Frequency : number of waves that pass a given point in a given time –…"
+   },
+   {
+    "i": 2,
+    "k": "course",
+    "uid": "course:Physiology-of-the-Special-Senses#7",
+    "src": "Course file · Physiology of the Special Senses deck · slide 7",
+    "quote": "Frequency : number of waves that pass a given point in a given time",
+    "t": "…: Total distance traveled by wave in one full cycle Shorter wavelength- higher PITCH WAVES Frequency : number of waves that pass a given point in a given time – create crests and troughs measured in hertz (Hz) - Higher frequency -higher PITCH Refraction occurs…"
+   },
+   {
+    "i": 3,
+    "k": "course",
+    "uid": "course:Physiology-of-the-Special-Senses#7",
+    "src": "Course file · Physiology of the Special Senses deck · slide 7",
+    "quote": "Amplitude : Maximum displacement from equilibrium position = sound’s intensity (LOUDNESS)",
+    "t": "Amplitude : Maximum displacement from equilibrium position = sound’s intensity (LOUDNESS) measured in decibels Wavelength : Total distance traveled by wave in one full cycle Shorter wavelength- higher PITCH WAVES Frequency : number of waves that pass a given point in a given time –…"
+   },
+   {
+    "i": 4,
+    "k": "her",
+    "uid": "am:13a#2",
+    "src": "Anatomy Mondays 13 answers",
+    "quote": "Wavelength and frequency are experienced as LIGHT COLOUR with long waves",
+    "t": "Light Wavelength and frequency are experienced as LIGHT COLOUR with long waves being red light and short waves being violet light"
+   },
+   {
+    "i": 6,
+    "k": "her",
+    "uid": "am:13a#3",
+    "src": "Anatomy Mondays 13 answers",
+    "quote": "Amplitude is experienced as light BRIGHTNESS and is measured in LUX",
+    "t": "Amplitude is experienced as light BRIGHTNESS and is measured in LUX Sound Wavelength and frequency are experienced as different pitches of sound, with high frequencies being high pitches (squeakier sounds)."
+   },
+   {
+    "i": 7,
+    "k": "her",
+    "uid": "am:13a#1",
+    "src": "Anatomy Mondays 13 answers",
+    "quote": "short wavelength = high frequency and high wave length = low frequency",
+    "t": "Wavelength and frequency are related, with a short wavelength = high frequency and high wave length = low frequency."
+   },
+   {
+    "i": 8,
+    "k": "her",
+    "uid": "am:13a#3",
+    "src": "Anatomy Mondays 13 answers",
+    "quote": "high frequencies being high pitches (squeakier sounds)",
+    "t": "Amplitude is experienced as light BRIGHTNESS and is measured in LUX Sound Wavelength and frequency are experienced as different pitches of sound, with high frequencies being high pitches (squeakier sounds)."
+   },
+   {
+    "i": 9,
+    "k": "her",
+    "uid": "am:13a#4",
+    "src": "Anatomy Mondays 13 answers",
+    "quote": "Amplitude is experienced as sound VOLUME and is measured in dB",
+    "t": "Amplitude is experienced as sound VOLUME and is measured in dB"
+   }
+  ],
+  "q420b1b9add": [
+   {
+    "i": 1,
+    "k": "patton",
+    "uid": "patton:1172#17",
+    "src": "Patton 9e · Ch 48 Genetics and Heredity · p. 1132",
+    "quote": "two normal parents, each having the heterozygous genotype Aa",
+    "t": "Thus two normal parents, each having the heterozygous genotype Aa, can produce both normal children and children who have albinism (Figure 48-6).",
+    "pg": 1172,
+    "pp": 1132,
+    "ch": 48
+   }
+  ],
+  "q4704a9f8be": [
+   {
+    "i": 2,
+    "k": "patton",
+    "uid": "patton:1172#18",
+    "src": "Patton 9e · Ch 48 Genetics and Heredity · p. 1132",
+    "quote": "determined by the combined effect of many different gene pairs",
+    "t": "Inherited characteristics, such as skin color and height, which are determined by the combined effect of many different gene pairs, are often called polygenic (“many genes”) traits to distinguish them from monogenic, or single-gene, traits.",
+    "pg": 1172,
+    "pp": 1132,
+    "ch": 48
+   }
+  ],
+  "q4b8dbd9a69": [
+   {
+    "i": 1,
+    "k": "slide",
+    "uid": "slide:2026-BN2-Intro-to-genetics#38",
+    "src": "2026 BN2 Intro to genetics deck · slide 38",
+    "quote": "Polygene (multi gene) inheritance when a characteristic is determined by more than one gene pair",
+    "t": "Polygene (multi gene) inheritance when a characteristic is determined by more than one gene pair, and possibly more than one allele e.g. skin colour , eye colour , height, Rhesus factor Polygene inheritance"
+   },
+   {
+    "i": 2,
+    "k": "patton",
+    "uid": "patton:1172#18",
+    "src": "Patton 9e · Ch 48 Genetics and Heredity · p. 1132",
+    "quote": "determined by the combined effect of many different gene pairs, are often called polygenic",
+    "t": "Inherited characteristics, such as skin color and height, which are determined by the combined effect of many different gene pairs, are often called polygenic (“many genes”) traits to distinguish them from monogenic, or single-gene, traits.",
+    "pg": 1172,
+    "pp": 1132,
+    "ch": 48
+   },
+   {
+    "i": 5,
+    "k": "her",
+    "uid": "am:12b#24",
+    "src": "Anatomy Mondays 12",
+    "quote": "People only inherit their mitochondrial DNA from their mum, so mitochondrial DNA diseases only pass from mother to child",
+    "t": "People only inherit their mitochondrial DNA from their mum, so mitochondrial DNA diseases only pass from mother to child."
+   },
+   {
+    "i": 6,
+    "k": "slide",
+    "uid": "slide:2026-BN2-Intro-to-genetics#59",
+    "src": "2026 BN2 Intro to genetics deck · slide 59",
+    "quote": "Gene therapy is the treatment of genetic diseases by the insertion of genetic material into cells",
+    "t": "Genetic engineering and gene therapy Genetic engineering is the deliberate alteration of DNA to alter the genetic make-up of organisms e.g. alteration of bacteria to make insulin Gene therapy is the treatment of genetic diseases by the insertion of genetic material into cells"
+   },
+   {
+    "i": 8,
+    "k": "slide",
+    "uid": "slide:2026-BN2-Intro-to-genetics#59",
+    "src": "2026 BN2 Intro to genetics deck · slide 59",
+    "quote": "Genetic engineering is the deliberate alteration of DNA to alter the genetic make-up of organisms",
+    "t": "Genetic engineering and gene therapy Genetic engineering is the deliberate alteration of DNA to alter the genetic make-up of organisms e.g. alteration of bacteria to make insulin Gene therapy is the treatment of genetic diseases by the insertion of genetic material into cells"
+   },
+   {
+    "i": 9,
+    "k": "slide",
+    "uid": "slide:2026-BN2-Intro-to-genetics#59",
+    "src": "2026 BN2 Intro to genetics deck · slide 59",
+    "quote": "Genetic engineering is the deliberate alteration of DNA to alter the genetic make-up of organisms",
+    "t": "Genetic engineering and gene therapy Genetic engineering is the deliberate alteration of DNA to alter the genetic make-up of organisms e.g. alteration of bacteria to make insulin Gene therapy is the treatment of genetic diseases by the insertion of genetic material into cells"
+   }
+  ],
+  "q4ed1f9ea01": [
+   {
+    "i": 2,
+    "k": "her",
+    "uid": "page:GENETICS 3 Pedigree charts#1",
+    "src": "GENETICS 3 Pedigree charts learning page",
+    "quote": "homozygous recessive genotype (rr) heterozygous genotype (Rr) Genotype – how the genes",
+    "t": "…fertilized egg –alleles combined (R and r = Rr) • homozygous dominant genotype (RR) • homozygous recessive genotype (rr) • heterozygous genotype (Rr) • Genotype – how the genes are (homo, heterozygous, dominant, recessive • Phenotype – the genes that are expressed (Rr and RR…"
+   }
+  ],
+  "q5130942b0b": [
+   {
+    "i": 1,
+    "k": "her",
+    "uid": "page:GENETICS 2#7",
+    "src": "GENETICS 2 learning page",
+    "quote": "50% homozygous dominant, 50% heterozygous",
+    "t": "R r R RR Rr R RR Rr Genotypes: 50% homozygous dominant, 50% heterozygous Phenotypes: The dominant trait will be expressed in 100% of the offspring Try to complete this one on your own."
+   },
+   {
+    "i": 2,
+    "k": "slide",
+    "uid": "slide:2026-PUNNETT-SQUARES-PATTERNS-OF-INHERITANCE#4",
+    "src": "2026 PUNNETT SQUARES PATTERNS OF INHERITANCE deck · slide 4",
+    "quote": "100% heterozygous 50% heterozygous 50% homozygous dominant",
+    "t": "…Bb b Bb bb B b B BB Bb B BB Bb b b B Bb Bb B Bb Bb BB x bb BB x Bb Bb x Bb 100% heterozygous 50% heterozygous 50% homozygous dominant 50% heterozygous 25% homozygous dominant 25% homozygous recessive Genotypes"
+   },
+   {
+    "i": 3,
+    "k": "slide",
+    "uid": "slide:2026-PUNNETT-SQUARES-PATTERNS-OF-INHERITANCE#4",
+    "src": "2026 PUNNETT SQUARES PATTERNS OF INHERITANCE deck · slide 4",
+    "quote": "50% heterozygous 25% homozygous dominant 25% homozygous recessive",
+    "t": "…Bb b Bb bb B b B BB Bb B BB Bb b b B Bb Bb B Bb Bb BB x bb BB x Bb Bb x Bb 100% heterozygous 50% heterozygous 50% homozygous dominant 50% heterozygous 25% homozygous dominant 25% homozygous recessive Genotypes"
+   },
+   {
+    "i": 4,
+    "k": "her",
+    "uid": "page:GENETICS 2#6",
+    "src": "GENETICS 2 learning page",
+    "quote": "25% homozygous dominant, 50% heterozygous, 25% homozygous recessive",
+    "t": "R r R RR Rr r Rr rr Genotypes: 25% homozygous dominant, 50% heterozygous, 25% homozygous recessive Phenotypes: The dominant trait will be expressed in 75% of the offspring when there is complete dominance, The recessive trait will be expressed in 25% of the offspring."
+   }
+  ],
+  "q534e4c99e4": [
+   {
+    "i": 1,
+    "k": "slide",
+    "uid": "slide:2026-LIGHT-AND-SEEING#2",
+    "src": "2026 LIGHT AND SEEING deck · slide 2",
+    "quote": "gases like air, fluid like water and solids",
+    "t": "…and as waves Waves of compressed and rarefied (thinned) medium called compressions and rarefications caused by movement of the particles of matter (gases like air, fluid like water and solids) Medium No medium needed – can move through vacuum Needs medium- cannot move through vacuum"
+   },
+   {
+    "i": 2,
+    "k": "course",
+    "uid": "course:Physiology-of-the-Special-Senses#5",
+    "src": "Course file · Physiology of the Special Senses deck · slide 5",
+    "quote": "Air molecules vibrate back & forth producing a sound wave",
+    "t": "Sound Sound is produced by vibrations Air molecules vibrate back & forth producing a sound wave E.g. tuning fork, vocal cords, strings Sound moves through air by vibration of air particles fast vibration ( compression), sound wave crests slow vibration ( rarefaction ), sound wave…"
+   },
+   {
+    "i": 4,
+    "k": "course",
+    "uid": "course:SS3-Light-and-Sound-Emma-Annotated#16",
+    "src": "Course file · SS3 Light and Sound - Emma Annotated deck · slide 16",
+    "quote": "Sound conducted through vibrations of skull bones",
+    "t": "Deafness Conduction Deafness: occurs when something inhibits sound conduction to internal ear Ear wax Perforated eardrum Middle ear infections & otosclerosis (most common) Sound conducted through vibrations of skull bones Sensorineural Deafness: results from damage to neural/auditory structures"
+   }
+  ],
+  "q53b7c4478d": [
+   {
+    "i": 1,
+    "k": "slide",
+    "uid": "slide:2026-PUNNETT-SQUARES-PATTERNS-OF-INHERITANCE#3",
+    "src": "2026 PUNNETT SQUARES PATTERNS OF INHERITANCE deck · slide 3",
+    "quote": "Homozygous dominant (BB) Homozygous recessive (bb) Heterozygous (Bb)",
+    "t": "3 Homozygous dominant (BB) Homozygous recessive (bb) Heterozygous (Bb) Allele combinations cells to have a sickle shape, making it difficult for these misshapen cells to pass through the smallest blood vessels ."
+   },
+   {
+    "i": 2,
+    "k": "slide",
+    "uid": "slide:2026-PUNNETT-SQUARES-PATTERNS-OF-INHERITANCE#3",
+    "src": "2026 PUNNETT SQUARES PATTERNS OF INHERITANCE deck · slide 3",
+    "quote": "Homozygous dominant (BB) Homozygous recessive (bb) Heterozygous (Bb)",
+    "t": "3 Homozygous dominant (BB) Homozygous recessive (bb) Heterozygous (Bb) Allele combinations cells to have a sickle shape, making it difficult for these misshapen cells to pass through the smallest blood vessels ."
+   },
+   {
+    "i": 3,
+    "k": "slide",
+    "uid": "slide:2026-PUNNETT-SQUARES-PATTERNS-OF-INHERITANCE#4",
+    "src": "2026 PUNNETT SQUARES PATTERNS OF INHERITANCE deck · slide 4",
+    "quote": "100% heterozygous 50% heterozygous 50% homozygous dominant",
+    "t": "…Bb b Bb bb B b B BB Bb B BB Bb b b B Bb Bb B Bb Bb BB x bb BB x Bb Bb x Bb 100% heterozygous 50% heterozygous 50% homozygous dominant 50% heterozygous 25% homozygous dominant 25% homozygous recessive Genotypes"
+   }
+  ],
+  "q545c6fe2ca": [
+   {
+    "i": 2,
+    "k": "her",
+    "uid": "page:GENETICS 2#6",
+    "src": "GENETICS 2 learning page",
+    "quote": "Genotypes: 25% homozygous dominant, 50% heterozygous, 25% homozygous recessive",
+    "t": "R r R RR Rr r Rr rr Genotypes: 25% homozygous dominant, 50% heterozygous, 25% homozygous recessive Phenotypes: The dominant trait will be expressed in 75% of the offspring when there is complete dominance, The recessive trait will be expressed in 25% of the offspring."
+   },
+   {
+    "i": 4,
+    "k": "patton",
+    "uid": "patton:1171#7",
+    "src": "Patton 9e · Ch 48 Genetics and Heredity · p. 1131",
+    "quote": "The manner in which a genotype is expressed is called the phenotype",
+    "t": "The manner in which a genotype is expressed is called the phenotype.",
+    "pg": 1171,
+    "pp": 1131,
+    "ch": 48
+   }
+  ],
+  "q5524bb4292": [
+   {
+    "i": 3,
+    "k": "slide",
+    "uid": "slide:2026-Hearing-Equilibrium#2",
+    "src": "2026 Hearing_Equilibrium deck · slide 2",
+    "quote": "The key role of these bones is to AMPLIFY sounds – they take the vibration",
+    "t": "The key role of these bones is to AMPLIFY sounds – they take the vibration of the whole ear drum and channel that sound to a much smaller oval window."
+   },
+   {
+    "i": 5,
+    "k": "patton",
+    "uid": "patton:598#42",
+    "src": "Patton 9e · Ch 24 Special Senses · p. 558",
+    "quote": "The stapes moves against the oval window, which begins the fluid conduction of sound waves",
+    "t": "The stapes moves against the oval window, which begins the fluid conduction of sound waves",
+    "pg": 598,
+    "pp": 558,
+    "ch": 24
+   }
+  ],
+  "q55c7b97606": [
+   {
+    "i": 1,
+    "k": "her",
+    "uid": "page:Special Senses 3: The Ear#12",
+    "src": "Special Senses 3: The Ear learning page",
+    "quote": "This canal funnels the sound toward the eardrum (tympanic membrane)",
+    "t": "This canal funnels the sound toward the eardrum (tympanic membrane)."
+   },
+   {
+    "i": 3,
+    "k": "patton",
+    "uid": "patton:580#6",
+    "src": "Patton 9e · Ch 24 Special Senses · p. 540",
+    "quote": "When the stapes moves against the oval window, pressure is exerted inward into the perilymph in the scala vestibuli",
+    "t": "When the stapes moves against the oval window, pressure is exerted inward into the perilymph in the scala vestibuli of the cochlea.",
+    "pg": 580,
+    "pp": 540,
+    "ch": 24
+   }
+  ],
+  "q5f1de75cd5": [
+   {
+    "i": 1,
+    "k": "slide",
+    "uid": "slide:2025-Medical-Genetics-1#12",
+    "src": "2025 Medical Genetics 1 deck · slide 12",
+    "quote": "Contains 2 of the same allele",
+    "t": "Terminology Dominant allele Recessive allele Homozygous Heterozygous Always present in phenotype (expressed) Only present in phenotype if dominant not present Contains 2 of the same allele Contains 2 different alleles R r RR rr Rr"
+   },
+   {
+    "i": 2,
+    "k": "slide",
+    "uid": "slide:2025-Medical-Genetics-1#12",
+    "src": "2025 Medical Genetics 1 deck · slide 12",
+    "quote": "Contains 2 different alleles",
+    "t": "Terminology Dominant allele Recessive allele Homozygous Heterozygous Always present in phenotype (expressed) Only present in phenotype if dominant not present Contains 2 of the same allele Contains 2 different alleles R r RR rr Rr"
+   },
+   {
+    "i": 3,
+    "k": "her",
+    "uid": "am:12b#19",
+    "src": "Anatomy Mondays 12",
+    "quote": "Are what we call the different versions of genes",
+    "t": "Allele Are what we call the different versions of genes, and they can be recessive or dominant!"
+   },
+   {
+    "i": 4,
+    "k": "slide",
+    "uid": "slide:2025-Medical-Genetics-1#12",
+    "src": "2025 Medical Genetics 1 deck · slide 12",
+    "quote": "Always present in phenotype (expressed)",
+    "t": "Terminology Dominant allele Recessive allele Homozygous Heterozygous Always present in phenotype (expressed) Only present in phenotype if dominant not present Contains 2 of the same allele Contains 2 different alleles R r RR rr Rr"
+   },
+   {
+    "i": 5,
+    "k": "slide",
+    "uid": "slide:2025-Medical-Genetics-1#12",
+    "src": "2025 Medical Genetics 1 deck · slide 12",
+    "quote": "Only present in phenotype if dominant not present",
+    "t": "Terminology Dominant allele Recessive allele Homozygous Heterozygous Always present in phenotype (expressed) Only present in phenotype if dominant not present Contains 2 of the same allele Contains 2 different alleles R r RR rr Rr"
+   },
+   {
+    "i": 6,
+    "k": "patton",
+    "uid": "patton:1187#13",
+    "src": "Patton 9e · Ch 48 Genetics and Heredity · p. 1147",
+    "quote": "Genotype—combination of genes within the cells of an individual",
+    "t": "Genotype—combination of genes within the cells of an individual (1) Homozygous—genotype with two identical forms of a gene (2) Heterozygous—genotype with two different forms of a gene",
+    "pg": 1187,
+    "pp": 1147,
+    "ch": 48
+   },
+   {
+    "i": 7,
+    "k": "her",
+    "uid": "page:GENETICS 3 Pedigree charts#1",
+    "src": "GENETICS 3 Pedigree charts learning page",
+    "quote": "Phenotype – the genes that are expressed",
+    "t": "…• homozygous recessive genotype (rr) • heterozygous genotype (Rr) • Genotype – how the genes are (homo, heterozygous, dominant, recessive • Phenotype – the genes that are expressed (Rr and RR = Red phenotype, rr =white • Punnett squares – used to work out probabilities"
+   },
+   {
+    "i": 13,
+    "k": "her",
+    "uid": "am:12ab#19",
+    "src": "Anatomy Mondays 12 answers",
+    "quote": "Autosomes in humans are numbered 1-22",
+    "t": "Autosomes in humans are numbered 1-22 Sex Chromosome A chromosome that contributes to genetic sex."
+   },
+   {
+    "i": 14,
+    "k": "her",
+    "uid": "am:12ab#19",
+    "src": "Anatomy Mondays 12 answers",
+    "quote": "In humans these are the X and Y chromosome",
+    "t": "In humans these are the X and Y chromosome, and most people have 2, a pair of sex chromosomes, with an X from mum, and either an X or Y from dad (but there are other genetic sex combos as well!)."
+   }
+  ],
+  "q69016c771a": [
+   {
+    "i": 2,
+    "k": "slide",
+    "uid": "slide:2026-Hearing-Equilibrium#10",
+    "src": "2026 Hearing_Equilibrium deck · slide 10",
+    "quote": "special receptor area called the crista ampullaris which are sensitive to movement of the head in the three planes of direction, and are particularly sensitive to rotation of the head",
+    "t": "…each of the ducts, there is a special receptor area called the crista ampullaris which are sensitive to movement of the head in the three planes of direction, and are particularly sensitive to rotation of the head – like when you turn your head or…"
+   },
+   {
+    "i": 3,
+    "k": "course",
+    "uid": "course:SS2-Hearing-and-Equilibrium-Emma-Annotated#12",
+    "src": "Course file · SS2 Hearing and Equilibrium - Emma Annotated deck · slide 12",
+    "quote": "Rotational (angular) movements of the head causes movement of the fluid (endolymph) inside the canals and bending of the hair cells, which then generates a nerve impulse",
+    "t": "ampulla The ampulla houses dynamic equilibrium receptors called the crista ampullaris Receptors have hair cells Rotational (angular) movements of the head causes movement of the fluid (endolymph) inside the canals and bending of the hair cells, which then generates a nerve impulse 25"
+   },
+   {
+    "i": 5,
+    "k": "patton",
+    "uid": "patton:581#6",
+    "src": "Patton 9e · Ch 24 Special Senses · p. 541",
+    "quote": "Vertigo involves a sensation of one’s own body spinning in space or of the external world spinning around the individual",
+    "t": "Vertigo involves a sensation of one’s own body spinning in space or of the external world spinning around the individual.",
+    "pg": 581,
+    "pp": 541,
+    "ch": 24
+   }
+  ],
+  "q7731440590": [
+   {
+    "i": 1,
+    "k": "her",
+    "uid": "page:Female Reproduction#24",
+    "src": "Female Reproduction learning page",
+    "quote": "Endometrium prepares for implantation of the embryo under the influence of progesterone",
+    "t": "If pregnancy does occur, the corpus luteum produces hormonesuntil the placentatakes over that role (at about 3 months) SECRETORY PHASE Days 15-28 Endometrium prepares for implantation of the embryo under the influence of progesterone"
+   },
+   {
+    "i": 2,
+    "k": "course",
+    "uid": "course:Repro-Processes-Notes#44",
+    "src": "Course file · Repro Processes Notes",
+    "quote": "This structure produces progesterone & oestrogen which helps prime the uterus for implantation",
+    "t": "This structure produces progesterone & oestrogen which helps prime the uterus for implantation."
+   },
+   {
+    "i": 3,
+    "k": "course",
+    "uid": "course:Repro-Processes-Notes#28",
+    "src": "Course file · Repro Processes Notes",
+    "quote": "High oestrogen at this time promotes LH surge from the brain",
+    "t": "High oestrogen at this time promotes LH surge from the brain."
+   }
+  ],
+  "q7baff97fb9": [
+   {
+    "i": 4,
+    "k": "her",
+    "uid": "page:GENETICS 2#13",
+    "src": "GENETICS 2 learning page",
+    "quote": "Does NOT skip generations",
+    "t": "Does NOT skip generations."
+   },
+   {
+    "i": 10,
+    "k": "her",
+    "uid": "am:12b#23",
+    "src": "Anatomy Mondays 12",
+    "quote": "A methods to figure out what genotypes are possible in children",
+    "t": "Punnet Square (Aka Monohybrid Cross) A methods to figure out what genotypes are possible in children of two parents Pedigree Chart A family tree of the genes of different people."
+   }
+  ],
+  "q7eec919cbc": [
+   {
+    "i": 2,
+    "k": "course",
+    "uid": "course:Module-23-Part-2-Anatomy-of-Eyes-Ears-and-Repro#27",
+    "src": "Course file · Module 23 Part 2 Anatomy of Eyes, Ears and Repro deck · slide 27",
+    "quote": "the female gonads ovaries Function: Produce gametes (ova Secrete female sex hormones",
+    "t": "Female Reproductive System Female Reproductive System consists of: Primary sex organs - the female gonads ovaries Function: Produce gametes (ova Secrete female sex hormones (estrogen and progesterone) Accessory ducts include fallopian tubes, uterus, and vagina Function - to support the reproductive processes External genitalia _________________________…"
+   },
+   {
+    "i": 4,
+    "k": "her",
+    "uid": "page:Female Reproduction#4",
+    "src": "Female Reproduction learning page",
+    "quote": "the inferior narrow neck known as the cervix",
+    "t": "Uterus The uterus is a hollow pear-shaped organ with a superior fundus Middle body and the inferior narrow neck known as the cervix."
+   },
+   {
+    "i": 5,
+    "k": "her",
+    "uid": "page:Female Reproduction#4",
+    "src": "Female Reproduction learning page",
+    "quote": "The uterus is a hollow pear-shaped organ with a superior fundus",
+    "t": "Uterus The uterus is a hollow pear-shaped organ with a superior fundus Middle body and the inferior narrow neck known as the cervix."
+   },
+   {
+    "i": 9,
+    "k": "course",
+    "uid": "course:Repro-Processes-Notes#42",
+    "src": "Course file · Repro Processes Notes",
+    "quote": "vasoconstriction to the functional layer, causing them to die, separate and be shed",
+    "t": "The Menstrual Period Due to low hormone levels, there is a lack of hormonal support to the endometrium leading to vasoconstriction to the functional layer, causing them to die, separate and be shed."
+   },
+   {
+    "i": 11,
+    "k": "slide",
+    "uid": "slide:2026-Repro-Female-1#28",
+    "src": "2026 Repro Female-1 deck · slide 28",
+    "quote": "Primary oocyte – enter meiosis I division",
+    "t": "…remains dormant until puberty Before birth ( foetal life) Oogonia (parent cell) divide by mitosis to produce primary oocytes Primary oocyte – enter meiosis I division At birth Primary oocytes remain dormant until puberty Puberty Primary oocyte is activated Secondary oocyte Ovulated secondary oocyte After…"
+   },
+   {
+    "i": 12,
+    "k": "slide",
+    "uid": "slide:2026-Repro-Female-1#28",
+    "src": "2026 Repro Female-1 deck · slide 28",
+    "quote": "Oogonia (parent cell) divide by mitosis to produce primary oocytes",
+    "t": "…an ovum Summary Oogenesis - begins before birth, remains dormant until puberty Before birth ( foetal life) Oogonia (parent cell) divide by mitosis to produce primary oocytes Primary oocyte – enter meiosis I division At birth Primary oocytes remain dormant until puberty Puberty Primary oocyte…"
+   },
+   {
+    "i": 13,
+    "k": "slide",
+    "uid": "slide:2026-Repro-Female-1#28",
+    "src": "2026 Repro Female-1 deck · slide 28",
+    "quote": "After sperm penetration meiosis II is completed",
+    "t": "…to produce primary oocytes Primary oocyte – enter meiosis I division At birth Primary oocytes remain dormant until puberty Puberty Primary oocyte is activated Secondary oocyte Ovulated secondary oocyte After sperm penetration meiosis II is completed One Ovum (functional gamete) is formed 28 L.O. 3"
+   },
+   {
+    "i": 14,
+    "k": "slide",
+    "uid": "slide:2026-Repro-Female-1#26",
+    "src": "2026 Repro Female-1 deck · slide 26",
+    "quote": "2 million primary oocytes, arrested at prophase I of meiosis, are present in the ovaries",
+    "t": "Oogenesis - Before birth to at birth A women’s total egg supply is determined at birth where 2 million primary oocytes, arrested at prophase I of meiosis, are present in the ovaries."
+   }
+  ],
+  "q82d491b4c0": [
+   {
+    "i": 5,
+    "k": "course",
+    "uid": "course:Module-23-Part-2-Anatomy-of-Eyes-Ears-and-Repro#53",
+    "src": "Course file · Module 23 Part 2 Anatomy of Eyes, Ears and Repro deck · slide 53",
+    "quote": "The ciliary body is composed of ciliary muscles, suspensory",
+    "t": "Ciliary Body The ciliary body is composed of ciliary muscles, suspensory ligaments and ciliary processes"
+   },
+   {
+    "i": 6,
+    "k": "her",
+    "uid": "lab:2026#239",
+    "src": "Lab workbook 2026",
+    "quote": "pointing at the I. optic disc (functional blind spot-an",
+    "t": "The scalpel on the photograph on the right is pointing at the I. optic disc (functional blind spot-an area of the retina where there are no rods or cones and where the optic nerve leaves the eye)."
+   },
+   {
+    "i": 8,
+    "k": "patton",
+    "uid": "patton:585#3",
+    "src": "Patton 9e · Ch 24 Special Senses · p. 545",
+    "quote": "The iris, or the colored part of the eye, consists",
+    "t": "The iris, or the colored part of the eye, consists of circular and radial smooth muscle fibers arranged to form a doughnut-shaped structure.",
+    "pg": 585,
+    "pp": 545,
+    "ch": 24
+   },
+   {
+    "i": 9,
+    "k": "her",
+    "uid": "page:Module-3-3-Special-Senses#27",
+    "src": "Module 3.3 Special Senses page",
+    "quote": "in fovea=only cones; in macula lutea mainly cones",
+    "t": "…layer connected with ciliary muscles with suspensory ligaments for adjustment of lens shape-flatter for far vision and more bulbous for near vision. consists of: cones (106) (for sharp colour central vision in good light (photopic vision), in fovea=only cones; in macula lutea mainly cones; and"
+   },
+   {
+    "i": 10,
+    "k": "her",
+    "uid": "page:Module-3-3-Special-Senses#28",
+    "src": "Module 3.3 Special Senses page",
+    "quote": "Posterior compartment filled with jelly-like vitreous humor- helps eye",
+    "t": "rods (109) ( for peripheral vision and vision in poor light (scotopic vision); found all over retina except in optic disc and fovea. 2 .Compartments: Posterior compartment filled with jelly-like vitreous humor- helps eye to keep its shape and keeps retina in place"
+   }
+  ],
+  "q83cd61d2d7": [
+   {
+    "i": 1,
+    "k": "her",
+    "uid": "board:413318#0",
+    "src": "HELP WITH MODULE 3 TOPICS board",
+    "quote": "glaucoma (affecting the pressure in the eye and damaging the optic nerve)",
+    "t": "The Eye: glaucoma (affecting the pressure in the eye and damaging the optic nerve) cataract (affecting the clarity of the lens) SPECIAL SENSES 1 EYE BN2 LECTURE.pptx 31 min The Ear: conduction hearing loss (affecting the outer and middle ear like glue ear, wax in…"
+   },
+   {
+    "i": 2,
+    "k": "her",
+    "uid": "board:413318#0",
+    "src": "HELP WITH MODULE 3 TOPICS board",
+    "quote": "cataract (affecting the clarity of the lens)",
+    "t": "The Eye: glaucoma (affecting the pressure in the eye and damaging the optic nerve) cataract (affecting the clarity of the lens) SPECIAL SENSES 1 EYE BN2 LECTURE.pptx 31 min The Ear: conduction hearing loss (affecting the outer and middle ear like glue ear, wax in…"
+   },
+   {
+    "i": 3,
+    "k": "course",
+    "uid": "course:Physiology-of-the-Special-Senses#24",
+    "src": "Course file · Physiology of the Special Senses deck · slide 24",
+    "quote": "Myopic Eye: ‘ short sighted’ Distant objects focused in front of retina Eyeball too long",
+    "t": "…: normal vision Hyperopic Eye : ‘far sighted’ Nearby objects focused behind retina Eyeball too short Corrected with convex lenses – converge light Myopic Eye: ‘ short sighted’ Distant objects focused in front of retina Eyeball too long Corrected with concave lenses – diverge light"
+   },
+   {
+    "i": 4,
+    "k": "course",
+    "uid": "course:Physiology-of-the-Special-Senses#24",
+    "src": "Course file · Physiology of the Special Senses deck · slide 24",
+    "quote": "Hyperopic Eye : ‘far sighted’ Nearby objects focused behind retina Eyeball too short",
+    "t": "How people see Emmetropic Eye : normal vision Hyperopic Eye : ‘far sighted’ Nearby objects focused behind retina Eyeball too short Corrected with convex lenses – converge light Myopic Eye: ‘ short sighted’ Distant objects focused in front of retina Eyeball too long Corrected with…"
+   },
+   {
+    "i": 5,
+    "k": "her",
+    "uid": "page:Special Senses 4: The Eye#10",
+    "src": "Special Senses 4: The Eye learning page",
+    "quote": "Lens/Cornea can be uneven like in astigmatism",
+    "t": "Eyeball too long or too short Lens/Cornea can be uneven like in astigmatism 2023 LIGHT AND SEEING (1)-1.pptx (27 slides)Download 2023 LIGHT AND SEEING (1)-1.pptx (27 slides) High pressure in eye damages optic nerve Result from blockage of canal of Schlemm making aqueous fluid build…"
+   }
+  ],
+  "q8563c60a07": [
+   {
+    "i": 1,
+    "k": "slide",
+    "uid": "slide:2026-LIGHT-AND-SEEING#16",
+    "src": "2026 LIGHT AND SEEING deck · slide 16",
+    "quote": "Front surface of the eye or the lens inside the eye is curved differently in one direction",
+    "t": "Astigmatism Front surface of the eye or the lens inside the eye is curved differently in one direction than the other."
+   }
+  ],
+  "q892a8aa5f6": [
+   {
+    "i": 1,
+    "k": "slide",
+    "uid": "slide:2026-LIGHT-AND-SEEING#14",
+    "src": "2026 LIGHT AND SEEING deck · slide 14",
+    "quote": "Myopic Eye: ‘short sighted’ Distant objects focused in front of retina",
+    "t": "…Emmetropic Eye : normal vision Hyperopic Eye: ‘far sighted’ Nearby objects focused behind retina Eyeball too short Corrected with convex lenses – converge light Myopic Eye: ‘short sighted’ Distant objects focused in front of retina Eyeball too long Corrected with concave lenses – diverge light"
+   },
+   {
+    "i": 2,
+    "k": "slide",
+    "uid": "slide:2026-LIGHT-AND-SEEING#14",
+    "src": "2026 LIGHT AND SEEING deck · slide 14",
+    "quote": "Corrected with concave lenses – diverge light",
+    "t": "…Emmetropic Eye : normal vision Hyperopic Eye: ‘far sighted’ Nearby objects focused behind retina Eyeball too short Corrected with convex lenses – converge light Myopic Eye: ‘short sighted’ Distant objects focused in front of retina Eyeball too long Corrected with concave lenses – diverge light"
+   },
+   {
+    "i": 3,
+    "k": "slide",
+    "uid": "slide:2026-LIGHT-AND-SEEING#14",
+    "src": "2026 LIGHT AND SEEING deck · slide 14",
+    "quote": "Emmetropic Eye : normal vision",
+    "t": "How people see Emmetropic Eye : normal vision Hyperopic Eye: ‘far sighted’ Nearby objects focused behind retina Eyeball too short Corrected with convex lenses – converge light Myopic Eye: ‘short sighted’ Distant objects focused in front of retina Eyeball too long Corrected with concave lenses…"
+   },
+   {
+    "i": 4,
+    "k": "slide",
+    "uid": "slide:2026-LIGHT-AND-SEEING#14",
+    "src": "2026 LIGHT AND SEEING deck · slide 14",
+    "quote": "Hyperopic Eye: ‘far sighted’ Nearby objects focused behind retina",
+    "t": "How people see Emmetropic Eye : normal vision Hyperopic Eye: ‘far sighted’ Nearby objects focused behind retina Eyeball too short Corrected with convex lenses – converge light Myopic Eye: ‘short sighted’ Distant objects focused in front of retina Eyeball too long Corrected with concave lenses…"
+   },
+   {
+    "i": 5,
+    "k": "slide",
+    "uid": "slide:2026-LIGHT-AND-SEEING#14",
+    "src": "2026 LIGHT AND SEEING deck · slide 14",
+    "quote": "Corrected with convex lenses – converge light",
+    "t": "…people see Emmetropic Eye : normal vision Hyperopic Eye: ‘far sighted’ Nearby objects focused behind retina Eyeball too short Corrected with convex lenses – converge light Myopic Eye: ‘short sighted’ Distant objects focused in front of retina Eyeball too long Corrected with concave lenses –…"
+   }
+  ],
+  "q896b441451": [
+   {
+    "i": 1,
+    "k": "slide",
+    "uid": "slide:2026-Repro-Female-1#28",
+    "src": "2026 Repro Female-1 deck · slide 28",
+    "quote": "Oogonia (parent cell) divide by mitosis to produce primary oocytes",
+    "t": "…an ovum Summary Oogenesis - begins before birth, remains dormant until puberty Before birth ( foetal life) Oogonia (parent cell) divide by mitosis to produce primary oocytes Primary oocyte – enter meiosis I division At birth Primary oocytes remain dormant until puberty Puberty Primary oocyte…"
+   },
+   {
+    "i": 2,
+    "k": "slide",
+    "uid": "slide:2026-Repro-Female-1#28",
+    "src": "2026 Repro Female-1 deck · slide 28",
+    "quote": "Primary oocyte – enter meiosis I division",
+    "t": "…remains dormant until puberty Before birth ( foetal life) Oogonia (parent cell) divide by mitosis to produce primary oocytes Primary oocyte – enter meiosis I division At birth Primary oocytes remain dormant until puberty Puberty Primary oocyte is activated Secondary oocyte Ovulated secondary oocyte After…"
+   },
+   {
+    "i": 3,
+    "k": "slide",
+    "uid": "slide:2026-Repro-Female-1#28",
+    "src": "2026 Repro Female-1 deck · slide 28",
+    "quote": "After sperm penetration meiosis II is completed",
+    "t": "…to produce primary oocytes Primary oocyte – enter meiosis I division At birth Primary oocytes remain dormant until puberty Puberty Primary oocyte is activated Secondary oocyte Ovulated secondary oocyte After sperm penetration meiosis II is completed One Ovum (functional gamete) is formed 28 L.O. 3"
+   },
+   {
+    "i": 5,
+    "k": "slide",
+    "uid": "slide:2026-Male-Repro-3#35",
+    "src": "2026 Male Repro-3 deck · slide 35",
+    "quote": "Primary spermatocytes – undergo meiosis I",
+    "t": "MEIOSIS OF SPERMATOCYTES TO SPERMATIDS Primary spermatocytes – undergo meiosis I Secondary spermatocytes -undergo meiosis II Spermatids - small, round, non-motile cells"
+   },
+   {
+    "i": 6,
+    "k": "slide",
+    "uid": "slide:2026-Male-Repro-3#35",
+    "src": "2026 Male Repro-3 deck · slide 35",
+    "quote": "Secondary spermatocytes -undergo meiosis II",
+    "t": "MEIOSIS OF SPERMATOCYTES TO SPERMATIDS Primary spermatocytes – undergo meiosis I Secondary spermatocytes -undergo meiosis II Spermatids - small, round, non-motile cells"
+   },
+   {
+    "i": 7,
+    "k": "slide",
+    "uid": "slide:2026-Male-Repro-3#35",
+    "src": "2026 Male Repro-3 deck · slide 35",
+    "quote": "Spermatids - small, round, non-motile cells",
+    "t": "MEIOSIS OF SPERMATOCYTES TO SPERMATIDS Primary spermatocytes – undergo meiosis I Secondary spermatocytes -undergo meiosis II Spermatids - small, round, non-motile cells"
+   },
+   {
+    "i": 8,
+    "k": "course",
+    "uid": "course:Repro-Processes-Notes#27",
+    "src": "Course file · Repro Processes Notes",
+    "quote": "Meiosis 1Meiosis 2Afterwards Primary spermatocytes Secondary Spermatocytes Spermatids4 Sperm (correct shape)",
+    "t": "Meiosis 1Meiosis 2Afterwards Primary spermatocytes Secondary Spermatocytes Spermatids4 Sperm (correct shape) Primary oocytes This only happens during fetal life."
+   },
+   {
+    "i": 9,
+    "k": "slide",
+    "uid": "slide:2026-Repro-Female-1#28",
+    "src": "2026 Repro Female-1 deck · slide 28",
+    "quote": "Oogonia (parent cell) divide by mitosis to produce primary oocytes",
+    "t": "…an ovum Summary Oogenesis - begins before birth, remains dormant until puberty Before birth ( foetal life) Oogonia (parent cell) divide by mitosis to produce primary oocytes Primary oocyte – enter meiosis I division At birth Primary oocytes remain dormant until puberty Puberty Primary oocyte…"
+   },
+   {
+    "i": 10,
+    "k": "course",
+    "uid": "course:Repro-Processes-Notes#26",
+    "src": "Course file · Repro Processes Notes",
+    "quote": "During fetal development, Mitosis to oogonia",
+    "t": "During fetal development, Mitosis to oogonia."
+   },
+   {
+    "i": 11,
+    "k": "course",
+    "uid": "course:Repro-Processes-Notes#26",
+    "src": "Course file · Repro Processes Notes",
+    "quote": "You are born, with all of the primary oocytes ready to undergo Meiosis 1",
+    "t": "You are born, with all of the primary oocytes ready to undergo Meiosis"
+   },
+   {
+    "i": 12,
+    "k": "course",
+    "uid": "course:Repro-Processes-Notes#27",
+    "src": "Course file · Repro Processes Notes",
+    "quote": "Secondary oocyte, but it occurs in developing follicles over the follicle phase of the ovarian cycle",
+    "t": "Secondary oocyte, but it occurs in developing follicles over the follicle phase of the ovarian cycle."
+   },
+   {
+    "i": 13,
+    "k": "slide",
+    "uid": "slide:2026-Repro-Female-1#31",
+    "src": "2026 Repro Female-1 deck · slide 31",
+    "quote": "Meanwhile primary oocyte completes meiosis I  secondary oocyte",
+    "t": "…Secondary follicle Theca folliculi & granulosa cells produce estrogen Follicle continues to grow  large Graafian follicle ; Meanwhile primary oocyte completes meiosis I  secondary oocyte Secondary oocyte begins meiosis II  suspended at metaphase II till fertilisation Follicular phase regulated by pituitary FSH…"
+   },
+   {
+    "i": 14,
+    "k": "slide",
+    "uid": "slide:2026-Repro-Female-1#28",
+    "src": "2026 Repro Female-1 deck · slide 28",
+    "quote": "After sperm penetration meiosis II is completed",
+    "t": "…to produce primary oocytes Primary oocyte – enter meiosis I division At birth Primary oocytes remain dormant until puberty Puberty Primary oocyte is activated Secondary oocyte Ovulated secondary oocyte After sperm penetration meiosis II is completed One Ovum (functional gamete) is formed 28 L.O. 3"
+   },
+   {
+    "i": 15,
+    "k": "slide",
+    "uid": "slide:2026-Repro-Female-1#28",
+    "src": "2026 Repro Female-1 deck · slide 28",
+    "quote": "One Ovum (functional gamete) is formed",
+    "t": "…to produce primary oocytes Primary oocyte – enter meiosis I division At birth Primary oocytes remain dormant until puberty Puberty Primary oocyte is activated Secondary oocyte Ovulated secondary oocyte After sperm penetration meiosis II is completed One Ovum (functional gamete) is formed 28 L.O. 3"
+   }
+  ],
+  "q899a32a6d3": [
+   {
+    "i": 1,
+    "k": "course",
+    "uid": "course:Module-23-Part-2-Anatomy-of-Eyes-Ears-and-Repro#58",
+    "src": "Course file · Module 23 Part 2 Anatomy of Eyes, Ears and Repro deck · slide 58",
+    "quote": "The Lens A biconvex, transparent, flexible, avascular structure",
+    "t": "The Lens A biconvex, transparent, flexible, avascular structure - held in position by the suspensory ligaments attached at the base to the ciliary body The lens is composed of epithelium and lens fibers that are transparent, crystalline protein."
+   },
+   {
+    "i": 2,
+    "k": "slide",
+    "uid": "slide:2022-S2-Eyes-3#21",
+    "src": "2022 S2 Eyes (3) deck · slide 21",
+    "quote": "The image formed is small and inverted",
+    "t": "…and the neural layer of the retina to the photoreceptors Light is refracted in each of the above structures The image formed is small and inverted The photoreceptors detect the light energy and generate nerve impulses that travel via the optic nerve to the visual…"
+   },
+   {
+    "i": 4,
+    "k": "patton",
+    "uid": "patton:494#1",
+    "src": "Patton 9e · Ch 20 Central Nervous System · p. 454",
+    "quote": "the optic chiasma is a region where the right and left optic nerves cross",
+    "t": "For example, the optic chiasma is a region where the right and left optic nerves cross each other before entering the brain—exchanging fibers as they do so.",
+    "pg": 494,
+    "pp": 454,
+    "ch": 20
+   },
+   {
+    "i": 5,
+    "k": "patton",
+    "uid": "patton:495#52",
+    "src": "Patton 9e · Ch 20 Central Nervous System · p. 455",
+    "quote": "commissural fibers that make up the corpus callosum",
+    "t": "B, (coronal) perspective, showing commissural fibers that make up the corpus callosum and the projection fibers that communicate with lower regions of the nervous system.",
+    "pg": 495,
+    "pp": 455,
+    "ch": 20
+   }
+  ],
+  "q8dd9e689be": [
+   {
+    "i": 1,
+    "k": "course",
+    "uid": "course:Physiology-of-the-Special-Senses#26",
+    "src": "Course file · Physiology of the Special Senses deck · slide 26",
+    "quote": "Front surface of the eye or the lens inside the eye is curved differently",
+    "t": "Astigmatism Front surface of the eye or the lens inside the eye is curved differently in one direction than the other."
+   },
+   {
+    "i": 2,
+    "k": "patton",
+    "uid": "patton:594#27",
+    "src": "Patton 9e · Ch 24 Special Senses · p. 554",
+    "quote": "In hyperopia, a flattened eyeball causes the image to focus behind the retina",
+    "t": "D, In hyperopia, a flattened eyeball causes the image to focus behind the retina.",
+    "pg": 594,
+    "pp": 554,
+    "ch": 24
+   },
+   {
+    "i": 3,
+    "k": "patton",
+    "uid": "patton:594#27",
+    "src": "Patton 9e · Ch 24 Special Senses · p. 554",
+    "quote": "In myopia, an elongated eyeball causes the image to focus in front of the retina",
+    "t": "B, In myopia, an elongated eyeball causes the image to focus in front of the retina.",
+    "pg": 594,
+    "pp": 554,
+    "ch": 24
+   }
+  ],
+  "q97da9ca7f9": [
+   {
+    "i": 1,
+    "k": "patton",
+    "uid": "patton:1115#15",
+    "src": "Patton 9e · Ch 46 Female Reproductive System · p. 1075",
+    "quote": "mechanical barrier methods use devices such as condoms, diaphragms, and cervical caps to block sperm",
+    "t": "For example, spermicidal methods involve use of preparations (foams, jellies, and creams) that act to kill sperm, and mechanical barrier methods use devices such as condoms, diaphragms, and cervical caps to block sperm from entering the uterus.",
+    "pg": 1115,
+    "pp": 1075,
+    "ch": 46
+   },
+   {
+    "i": 3,
+    "k": "slide",
+    "uid": "slide:2026-Repro-Female-1#37",
+    "src": "2026 Repro Female-1 deck · slide 37",
+    "quote": "these pills prevent pregnancy by: Preventing ovulation",
+    "t": "…“the pill” They contain synthetic female hormones known as estrogen and progestin (synthetic form of progesterone) Used in combination or alone, these pills prevent pregnancy by: Preventing ovulation Thickening the mucus over the cervix , which can prevent or slow sperm entry into the uterus."
+   }
+  ],
+  "q99146d1381": [
+   {
+    "i": 2,
+    "k": "her",
+    "uid": "am:13a#0",
+    "src": "Anatomy Mondays 13 answers",
+    "quote": "A lens refracts and bends light, either focusing or scattering light",
+    "t": "A lens refracts and bends light, either focusing or scattering light."
+   }
+  ],
+  "q997d4f4436": [
+   {
+    "i": 1,
+    "k": "her",
+    "uid": "am:12a#21",
+    "src": "Anatomy Mondays 12 answers",
+    "quote": "Tail C = to propel the sperm forward by whiplike motions",
+    "t": "Parts Function Head A = consists of acrocome and nucleus with chromosomes Midpiece B = contains the mitochondria Tail C = to propel the sperm forward by whiplike motions Acrosome"
+   },
+   {
+    "i": 2,
+    "k": "her",
+    "uid": "page:The Reproductive System#16",
+    "src": "The Reproductive System learning page",
+    "quote": "The nucleus=highly compact package of genetic chromatin material, about 5",
+    "t": "The nucleus=highly compact package of genetic chromatin material, about 5 μm long and is released into the ovum during the process of fertilization."
+   },
+   {
+    "i": 3,
+    "k": "her",
+    "uid": "am:12a#21",
+    "src": "Anatomy Mondays 12 answers",
+    "quote": "Head A = consists of acrocome and nucleus with chromosomes",
+    "t": "Parts Function Head A = consists of acrocome and nucleus with chromosomes Midpiece B = contains the mitochondria Tail C = to propel the sperm forward by whiplike motions Acrosome"
+   },
+   {
+    "i": 4,
+    "k": "her",
+    "uid": "am:12a#21",
+    "src": "Anatomy Mondays 12 answers",
+    "quote": "Midpiece B = contains the mitochondria",
+    "t": "Parts Function Head A = consists of acrocome and nucleus with chromosomes Midpiece B = contains the mitochondria Tail C = to propel the sperm forward by whiplike motions Acrosome"
+   }
+  ],
+  "q99dd42a439": [
+   {
+    "i": 2,
+    "k": "slide",
+    "uid": "slide:2026-REPRO-1-GONADS-DNA-gonads-to-fertilisation-1#27",
+    "src": "2026 REPRO 1 GONADS DNA gonads to fertilisation (1) deck · slide 27",
+    "quote": "From abdominopelvic cavity ovum enters one of uterine (fallopian) tubes",
+    "t": "From abdominopelvic cavity ovum enters one of uterine (fallopian) tubes through an opening surrounded by fimbriae (fringelike processes) ."
+   },
+   {
+    "i": 4,
+    "k": "her",
+    "uid": "page:The Reproductive System#54",
+    "src": "The Reproductive System learning page",
+    "quote": "Cortical reaction initiated (Ca2+ levels increase)",
+    "t": "Cortical reaction initiated (Ca2+ levels increase)."
+   }
+  ],
+  "qa2e4edbb5f": [
+   {
+    "i": 1,
+    "k": "her",
+    "uid": "page:GENETICS 2#15",
+    "src": "GENETICS 2 learning page",
+    "quote": "Dominant allele carried on X chromosome Individuals of both genders need only one affected X chromosome",
+    "t": "Dominant allele carried on X chromosome Individuals of both genders need only one affected X chromosome to be affected."
+   },
+   {
+    "i": 2,
+    "k": "her",
+    "uid": "page:GENETICS 2#13",
+    "src": "GENETICS 2 learning page",
+    "quote": "Does NOT skip generations",
+    "t": "Does NOT skip generations."
+   },
+   {
+    "i": 4,
+    "k": "her",
+    "uid": "page:GENETICS 2#15",
+    "src": "GENETICS 2 learning page",
+    "quote": "Individuals of both genders need only one affected X chromosome to be affected",
+    "t": "Dominant allele carried on X chromosome Individuals of both genders need only one affected X chromosome to be affected."
+   },
+   {
+    "i": 5,
+    "k": "her",
+    "uid": "page:GENETICS 2#3",
+    "src": "GENETICS 2 learning page",
+    "quote": "Heterozygous recessive (Rr) Monohybrid crosses",
+    "t": "Heterozygous recessive (Rr) Monohybrid crosses (when only one trait is considered- in this course we do not worry about dihybrid crosses)."
+   }
+  ],
+  "qa5e93ced16": [
+   {
+    "i": 1,
+    "k": "her",
+    "uid": "lab:2026#239",
+    "src": "Lab workbook 2026",
+    "quote": "an area of the retina where there are no rods or cones",
+    "t": "The scalpel on the photograph on the right is pointing at the I. optic disc (functional blind spot-an area of the retina where there are no rods or cones and where the optic nerve leaves the eye)."
+   },
+   {
+    "i": 2,
+    "k": "her",
+    "uid": "lab:2026#239",
+    "src": "Lab workbook 2026",
+    "quote": "The choroid is the middle vascular layer of the eyeball and heavily pigmented",
+    "t": "The choroid is the middle vascular layer of the eyeball and heavily pigmented and the retina is the internal layer."
+   },
+   {
+    "i": 4,
+    "k": "her",
+    "uid": "page:Module-3-3-Special-Senses#27",
+    "src": "Module 3.3 Special Senses page",
+    "quote": "in fovea=only cones",
+    "t": "…layer connected with ciliary muscles with suspensory ligaments for adjustment of lens shape-flatter for far vision and more bulbous for near vision. consists of: cones (106) (for sharp colour central vision in good light (photopic vision), in fovea=only cones; in macula lutea mainly cones; and"
+   },
+   {
+    "i": 6,
+    "k": "her",
+    "uid": "am:12a#6",
+    "src": "Anatomy Mondays 12 answers",
+    "quote": "help to hold and control the shape of the lens",
+    "t": "(HINT LENS) They are the ciliary muscle, iris sphincter and radial pupil dilator muscles, and help to hold and control the shape of the lens (a process called accommodation of the lens), and the pupil size and shape too!"
+   }
+  ],
+  "qa7eed3ac3b": [
+   {
+    "i": 7,
+    "k": "her",
+    "uid": "page:Special Senses 4: The Eye#12",
+    "src": "Special Senses 4: The Eye learning page",
+    "quote": "Surgery involving removal of opaque lens and replacing it with a clear artificial lens",
+    "t": "Surgery involving removal of opaque lens and replacing it with a clear artificial lens."
+   }
+  ],
+  "qa9ce93bc54": [
+   {
+    "i": 1,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#13",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 13",
+    "quote": "Karyotype representation of chromosomes in 23 homologous pairs = (23 x 2 =46 = diploid",
+    "t": "…during anaphase of cell division leading to aneuploidy (abnormal number of chromosomes in haploid cell Karyotype representation of chromosomes in 23 homologous pairs = (23 x 2 =46 = diploid 22 pairs of autosomes + 1 pair of sex chromosomes Note triploid (3) numbers of…"
+   },
+   {
+    "i": 2,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#13",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 13",
+    "quote": "22 pairs of autosomes + 1 pair of sex chromosomes",
+    "t": "…of cell division leading to aneuploidy (abnormal number of chromosomes in haploid cell Karyotype representation of chromosomes in 23 homologous pairs = (23 x 2 =46 = diploid 22 pairs of autosomes + 1 pair of sex chromosomes Note triploid (3) numbers of circled chromosomes"
+   },
+   {
+    "i": 3,
+    "k": "slide",
+    "uid": "slide:2026-BN2-Intro-to-genetics#15",
+    "src": "2026 BN2 Intro to genetics deck · slide 15",
+    "quote": "Aneuploidy is a state in which a cell has an abnormal number of chromosomes",
+    "t": "Aneuploidy is a state in which a cell has an abnormal number of chromosomes. ... e.g."
+   },
+   {
+    "i": 4,
+    "k": "slide",
+    "uid": "slide:2026-BN2-Intro-to-genetics#15",
+    "src": "2026 BN2 Intro to genetics deck · slide 15",
+    "quote": "e.g. Down syndrome (47 chromosomes - trisomy 21)",
+    "t": "Aneuploidy is a state in which a cell has an abnormal number of chromosomes. ... e.g. Down syndrome (47 chromosomes - trisomy 21), Turner’s syndrome (45 chromosomes - XO) Nondisjunction"
+   },
+   {
+    "i": 5,
+    "k": "slide",
+    "uid": "slide:2026-BN2-Intro-to-genetics#15",
+    "src": "2026 BN2 Intro to genetics deck · slide 15",
+    "quote": "Turner’s syndrome (45 chromosomes - XO)",
+    "t": "Down syndrome (47 chromosomes - trisomy 21), Turner’s syndrome (45 chromosomes - XO) Nondisjunction"
+   },
+   {
+    "i": 6,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#3",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 3",
+    "quote": "Non-disjunction and aneuploidy Meiosis I & II - non-disjunction can lead to aneuploidy",
+    "t": "…fertilisation Chromosome number of oocyte (N or 2N; 23 or 46) When girl is born During ovulation Before and after fertilisation Non-disjunction and aneuploidy Meiosis I & II - non-disjunction can lead to aneuploidy Female oocyte can end up with more or less chromosomes e.g."
+   }
+  ],
+  "qaf1174e0ed": [
+   {
+    "i": 1,
+    "k": "her",
+    "uid": "page:The Reproductive System#43",
+    "src": "The Reproductive System learning page",
+    "quote": "under the influence of the pituitary hormone LH (luteinizing hormone)",
+    "t": "FROM AND IN THE FEMALE Ovulation : the expulsion of the mature ovum from the mature Graafian/vesicular/ antral follicle into the abdominopelvic cavity under the influence of the pituitary hormone LH (luteinizing hormone)."
+   },
+   {
+    "i": 2,
+    "k": "her",
+    "uid": "page:Female Reproduction#17",
+    "src": "Female Reproduction learning page",
+    "quote": "Regulated by the pituitary FSH and LH",
+    "t": "FOLLICULAR PHASE Preovulatory, Estrogenic Regulated by the pituitary FSH and LH One primary follicle develops to become a secondary follicle."
+   },
+   {
+    "i": 3,
+    "k": "course",
+    "uid": "course:Repro-Processes-Notes#30",
+    "src": "Course file · Repro Processes Notes",
+    "quote": "rising levels of oestrogen in the blood early in the cycle promotes further release of GnRH, LH and FSH",
+    "t": "In controlling these processes, rising levels of oestrogen in the blood early in the cycle promotes further release of GnRH, LH and FSH."
+   }
+  ],
+  "qb0a125c4f3": [
+   {
+    "i": 1,
+    "k": "patton",
+    "uid": "patton:1133#11",
+    "src": "Patton 9e · Ch 47 Growth and Development · p. 1093",
+    "quote": "Meiosis I produces a secondary oocyte and the first polar body",
+    "t": "Meiosis I produces a secondary oocyte and the first polar body (see Figure 47-2, B).",
+    "pg": 1133,
+    "pp": 1093,
+    "ch": 47
+   },
+   {
+    "i": 2,
+    "k": "her",
+    "uid": "page:The Reproductive System#43",
+    "src": "The Reproductive System learning page",
+    "quote": "under the influence of the pituitary hormone LH (luteinizing hormone)",
+    "t": "FROM AND IN THE FEMALE Ovulation : the expulsion of the mature ovum from the mature Graafian/vesicular/ antral follicle into the abdominopelvic cavity under the influence of the pituitary hormone LH (luteinizing hormone)."
+   },
+   {
+    "i": 3,
+    "k": "her",
+    "uid": "page:The Reproductive System#43",
+    "src": "The Reproductive System learning page",
+    "quote": "In the process the ovarian wall ruptures and the fluid-filled follicle bursts",
+    "t": "In the process the ovarian wall ruptures and the fluid-filled follicle bursts."
+   },
+   {
+    "i": 4,
+    "k": "her",
+    "uid": "page:The Reproductive System#23",
+    "src": "The Reproductive System learning page",
+    "quote": "Graafian follicle (late tertiary follicle)",
+    "t": "Graafian follicle (late tertiary follicle) Source: Follicle: Granulosa cell layers - secrete oestrogen-rich fluid that pools around the oocyte in a space called an antrum."
+   },
+   {
+    "i": 5,
+    "k": "her",
+    "uid": "page:Female Reproduction#7",
+    "src": "Female Reproduction learning page",
+    "quote": "fingerlike projections (fimbriae) that move to increase their chances",
+    "t": "Round ligament–bind anterior uterine wallto labia majora Fimbriae, Infundibulum and Fallopian tubes The oviducts (fallopian tubes) stretch from a wide funnel (infundibulum) with fingerlike projections (fimbriae) that move to increase their chances of getting an egg into the infundibulum."
+   },
+   {
+    "i": 6,
+    "k": "her",
+    "uid": "page:Female Reproduction#7",
+    "src": "Female Reproduction learning page",
+    "quote": "The oviducts (fallopian tubes) stretch from a wide funnel",
+    "t": "Round ligament–bind anterior uterine wallto labia majora Fimbriae, Infundibulum and Fallopian tubes The oviducts (fallopian tubes) stretch from a wide funnel (infundibulum) with fingerlike projections (fimbriae) that move to increase their chances of getting an egg into the infundibulum."
+   }
+  ],
+  "qb3f06bf5b7": [
+   {
+    "i": 1,
+    "k": "her",
+    "uid": "page:Special Senses 3: The Ear#10",
+    "src": "Special Senses 3: The Ear learning page",
+    "quote": "2. Through ear canal 3. Tympanum vibrates",
+    "t": "Enter ear 2. Through ear canal 3. Tympanum vibrates"
+   },
+   {
+    "i": 2,
+    "k": "her",
+    "uid": "page:Special Senses 3: The Ear#10",
+    "src": "Special Senses 3: The Ear learning page",
+    "quote": "3. Tympanum vibrates 4. Ossicles amplify vibrations",
+    "t": "Through ear canal 3. Tympanum vibrates 4. Ossicles amplify vibrations"
+   },
+   {
+    "i": 3,
+    "k": "her",
+    "uid": "page:Special Senses 3: The Ear#10",
+    "src": "Special Senses 3: The Ear learning page",
+    "quote": "4. Ossicles amplify vibrations 5. Vibrations enter cochlea",
+    "t": "Tympanum vibrates 4. Ossicles amplify vibrations 5. Vibrations enter cochlea Sound is created by vibrations in the air."
+   },
+   {
+    "i": 4,
+    "k": "her",
+    "uid": "page:Special Senses 3: The Ear#5",
+    "src": "Special Senses 3: The Ear learning page",
+    "quote": "from tympanum to oval window 3 membranes",
+    "t": "3 ossicles - Malleus, Incus, Stapes to transfer vibrations from tympanum to oval window 3 membranes - Tympanum, Oval window, Round window 1 tube- Pharyngo tympanic duct/ Eustachian tube to equalise pressure on inside and outside of tympanum"
+   },
+   {
+    "i": 5,
+    "k": "her",
+    "uid": "lab:2026#251",
+    "src": "Lab workbook 2026",
+    "quote": "Supports the organ of Corti, and separates cochlear chambers",
+    "t": "Inside the cochlea (runs along its length) Supports the organ of Corti, and separates cochlear chambers; vibrates in response to sound frequencies"
+   }
+  ],
+  "qb77255cdb7": [
+   {
+    "i": 1,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#7",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 7",
+    "quote": "From puberty to death",
+    "t": "…system Compare: Oogenesis & Spermatogenesis Decide whether this process applies to Spermatogenesis/ Oogenesis/ None or Both From menarche to menopause From puberty to death Produce 4 functioning cells per division Produce only 1 functioning cell per division Polar bodies produced No polar bodies produced One…"
+   },
+   {
+    "i": 2,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#7",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 7",
+    "quote": "From menarche to menopause",
+    "t": "Reproductive system Compare: Oogenesis & Spermatogenesis Decide whether this process applies to Spermatogenesis/ Oogenesis/ None or Both From menarche to menopause From puberty to death Produce 4 functioning cells per division Produce only 1 functioning cell per division Polar bodies produced No polar bodies produced…"
+   },
+   {
+    "i": 4,
+    "k": "slide",
+    "uid": "slide:2026-Repro-Female-1#29",
+    "src": "2026 Repro Female-1 deck · slide 29",
+    "quote": "yielding one large ovum (the functional gamete) and a tiny second polar body",
+    "t": "…cells the secondary oocyte and first polar body The secondary oocyte arrests in metaphase II and is ovulated If penetrated by sperm the second oocyte completes meiosis II , yielding one large ovum (the functional gamete) and a tiny second polar body 29 L.O. 3"
+   },
+   {
+    "i": 5,
+    "k": "course",
+    "uid": "course:Repro-Processes-Notes#6",
+    "src": "Course file · Repro Processes Notes",
+    "quote": "this process makes 4 new sperm for each of the stem cells",
+    "t": "For each stem cell, this process makes 4 new sperm for each of the stem cells."
+   },
+   {
+    "i": 6,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#7",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 7",
+    "quote": "Produce only 1 functioning cell per division",
+    "t": "…Spermatogenesis/ Oogenesis/ None or Both From menarche to menopause From puberty to death Produce 4 functioning cells per division Produce only 1 functioning cell per division Polar bodies produced No polar bodies produced One functional cell produced per month Millions of functional cells produced continuously…"
+   }
+  ],
+  "qba10b6d6bd": [
+   {
+    "i": 1,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#8",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 8",
+    "quote": "homo zygous dominant genotype (RR)",
+    "t": "…must be two of them before they are expressed Zygote = fertilized egg –alleles combined (R and r = Rr) homo zygous dominant genotype (RR) homo zygous recessive genotype ( rr ) heterozygous genotype (Rr) Genotype – how genes are (homo, heterozygous, dominant, recessive) Phenotype…"
+   },
+   {
+    "i": 2,
+    "k": "her",
+    "uid": "page:GENETICS 3 Pedigree charts#1",
+    "src": "GENETICS 3 Pedigree charts learning page",
+    "quote": "Dominant allele (R) • Recessive allele(r)",
+    "t": "Dominant allele (R) • Recessive allele(r) • Zygote= fertilized egg –alleles combined (R and r = Rr) • homozygous dominant genotype (RR) • homozygous recessive genotype (rr) • heterozygous genotype (Rr) • Genotype – how the genes are (homo, heterozygous, dominant, recessive • Phenotype…"
+   },
+   {
+    "i": 3,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#8",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 8",
+    "quote": "Dominant allele (R) = always expressed",
+    "t": "…copy of gene – usually we have two copies for a gene- one from father & one from mother Dominant allele (R) = always expressed Recessive allele(r) = there must be two of them before they are expressed Zygote = fertilized egg –alleles combined (R…"
+   },
+   {
+    "i": 4,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#8",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 8",
+    "quote": "homo zygous recessive genotype ( rr )",
+    "t": "…they are expressed Zygote = fertilized egg –alleles combined (R and r = Rr) homo zygous dominant genotype (RR) homo zygous recessive genotype ( rr ) heterozygous genotype (Rr) Genotype – how genes are (homo, heterozygous, dominant, recessive) Phenotype –genes that are expressed (Rr and…"
+   },
+   {
+    "i": 5,
+    "k": "patton",
+    "uid": "patton:1187#13",
+    "src": "Patton 9e · Ch 48 Genetics and Heredity · p. 1147",
+    "quote": "Heterozygous—genotype with two different forms of a gene",
+    "t": "Genotype—combination of genes within the cells of an individual (1) Homozygous—genotype with two identical forms of a gene (2) Heterozygous—genotype with two different forms of a gene",
+    "pg": 1187,
+    "pp": 1147,
+    "ch": 48
+   }
+  ],
+  "qc0e1379b6f": [
+   {
+    "i": 1,
+    "k": "slide",
+    "uid": "slide:2026-LIGHT-AND-SEEING#10",
+    "src": "2026 LIGHT AND SEEING deck · slide 10",
+    "quote": "Retina contains photoreceptors = & rods",
+    "t": "The eye cones & rods The inner layer of the eye =retina Retina contains photoreceptors = & rods - - - - peripheral; cones --- to center The eye has a biconcave lens (bulging) The lens bends (refracts =20%) the light reflected (bounced back) from…"
+   },
+   {
+    "i": 2,
+    "k": "slide",
+    "uid": "slide:2026-LIGHT-AND-SEEING#10",
+    "src": "2026 LIGHT AND SEEING deck · slide 10",
+    "quote": "The inner layer of the eye =retina",
+    "t": "The eye cones & rods The inner layer of the eye =retina Retina contains photoreceptors = & rods - - - - peripheral; cones --- to center The eye has a biconcave lens (bulging) The lens bends (refracts =20%) the light reflected (bounced back) from…"
+   },
+   {
+    "i": 3,
+    "k": "slide",
+    "uid": "slide:2026-LIGHT-AND-SEEING#26",
+    "src": "2026 LIGHT AND SEEING deck · slide 26",
+    "quote": "Cones are for colour vision in good light = photopic vision",
+    "t": "Cones are for colour vision in good light = photopic vision There are far less cones (10 6 ) than rods (10 9 ) in the retina"
+   },
+   {
+    "i": 4,
+    "k": "course",
+    "uid": "course:SPECIAL-SENSES-1-EYE-BN2-LECTURE#16",
+    "src": "Course file · SPECIAL SENSES 1 EYE BN2 LECTURE deck · slide 16",
+    "quote": "Cones are in macula lutea and concentrated in fovea centralis",
+    "t": "…Respond to dim light ( scotopic vision ) Are used for peripheral vision Contains the pigment rhodopsin Cones are in macula lutea and concentrated in fovea centralis Functions of Cones: Respond to bright light ( photopic vision) Form sharper images (visual acuity) Responsible for colour…"
+   },
+   {
+    "i": 5,
+    "k": "course",
+    "uid": "course:SPECIAL-SENSES-1-EYE-BN2-LECTURE#16",
+    "src": "Course file · SPECIAL SENSES 1 EYE BN2 LECTURE deck · slide 16",
+    "quote": "Rods (more numerous than cones) and found in the peripheral retina",
+    "t": "…The photoreceptors – rods and cones contain visual pigments Function - convert light energy into nerve impulses Rods (more numerous than cones) and found in the peripheral retina Function of Rods: Respond to dim light ( scotopic vision ) Are used for peripheral vision Contains…"
+   },
+   {
+    "i": 6,
+    "k": "patton",
+    "uid": "patton:600#5",
+    "src": "Patton 9e · Ch 24 Special Senses · p. 560",
+    "quote": "increased in density toward the periphery of the retina",
+    "t": "…the sensory retina (a) Photoreceptor cells—visual receptors, sensitive to light rays (i) Rods—absent from the fovea and macula; increased in density toward the periphery of the retina (ii) Cones—less numerous than rods; most densely concentrated in the fovea centralis in the macula lutea (b) Bipolar…",
+    "pg": 600,
+    "pp": 560,
+    "ch": 24
+   },
+   {
+    "i": 7,
+    "k": "slide",
+    "uid": "slide:2026-Hearing-Equilibrium#6",
+    "src": "2026 Hearing_Equilibrium deck · slide 6",
+    "quote": "Organ of Corti consists of : auditory receptors (hair cells)sit on the basilar membrane",
+    "t": "…organ of Corti The floor of the cochlear duct is formed by the basilar membrane Organ of Corti consists of : auditory receptors (hair cells)sit on the basilar membrane and have hairs sticking into a gelatinous material, tectorial membrane The sensory nerve fibres of the…"
+   },
+   {
+    "i": 8,
+    "k": "slide",
+    "uid": "slide:2026-Hearing-Equilibrium#6",
+    "src": "2026 Hearing_Equilibrium deck · slide 6",
+    "quote": "scala media also known as the cochlear duct is filled with the fluid",
+    "t": "…Amplitude = how far wave moves from position of rest Loudness = Measured in decibel (dB) scala media also known as the cochlear duct is filled with the fluid, endolymph, and houses the organ of Corti The floor of the cochlear duct is formed by…"
+   }
+  ],
+  "qc1adb0e47d": [
+   {
+    "i": 1,
+    "k": "slide",
+    "uid": "slide:2025-Medical-Genetics-1#12",
+    "src": "2025 Medical Genetics 1 deck · slide 12",
+    "quote": "Dominant allele Recessive allele Homozygous Heterozygous",
+    "t": "Terminology Dominant allele Recessive allele Homozygous Heterozygous Always present in phenotype (expressed) Only present in phenotype if dominant not present Contains 2 of the same allele Contains 2 different alleles R r RR rr Rr"
+   },
+   {
+    "i": 2,
+    "k": "slide",
+    "uid": "slide:2025-Medical-Genetics-1#12",
+    "src": "2025 Medical Genetics 1 deck · slide 12",
+    "quote": "Recessive allele Homozygous Heterozygous",
+    "t": "Terminology Dominant allele Recessive allele Homozygous Heterozygous Always present in phenotype (expressed) Only present in phenotype if dominant not present Contains 2 of the same allele Contains 2 different alleles R r RR rr Rr"
+   },
+   {
+    "i": 3,
+    "k": "slide",
+    "uid": "slide:2025-Medical-Genetics-1#12",
+    "src": "2025 Medical Genetics 1 deck · slide 12",
+    "quote": "Contains 2 of the same allele",
+    "t": "Terminology Dominant allele Recessive allele Homozygous Heterozygous Always present in phenotype (expressed) Only present in phenotype if dominant not present Contains 2 of the same allele Contains 2 different alleles R r RR rr Rr"
+   },
+   {
+    "i": 4,
+    "k": "slide",
+    "uid": "slide:2025-Medical-Genetics-1#12",
+    "src": "2025 Medical Genetics 1 deck · slide 12",
+    "quote": "Contains 2 of the same allele",
+    "t": "Terminology Dominant allele Recessive allele Homozygous Heterozygous Always present in phenotype (expressed) Only present in phenotype if dominant not present Contains 2 of the same allele Contains 2 different alleles R r RR rr Rr"
+   },
+   {
+    "i": 5,
+    "k": "slide",
+    "uid": "slide:2025-Medical-Genetics-1#12",
+    "src": "2025 Medical Genetics 1 deck · slide 12",
+    "quote": "Always present in phenotype (expressed)",
+    "t": "Terminology Dominant allele Recessive allele Homozygous Heterozygous Always present in phenotype (expressed) Only present in phenotype if dominant not present Contains 2 of the same allele Contains 2 different alleles R r RR rr Rr"
+   },
+   {
+    "i": 6,
+    "k": "slide",
+    "uid": "slide:2025-Medical-Genetics-1#12",
+    "src": "2025 Medical Genetics 1 deck · slide 12",
+    "quote": "Only present in phenotype if dominant not present",
+    "t": "Terminology Dominant allele Recessive allele Homozygous Heterozygous Always present in phenotype (expressed) Only present in phenotype if dominant not present Contains 2 of the same allele Contains 2 different alleles R r RR rr Rr"
+   }
+  ],
+  "qc81960d3b7": [
+   {
+    "i": 1,
+    "k": "slide",
+    "uid": "slide:2026-Male-Repro-3#9",
+    "src": "2026 Male Repro-3 deck · slide 9",
+    "quote": "The male gonads (testes) Lie within scrotum produce sperm in",
+    "t": "9 Male Reproductive System Consists of: The male gonads (testes) Lie within scrotum produce sperm in seminiferous tubules Ducts: Sperms delivered to exterior through tubes : rete testis epididymis vas (ductus) deferens, ejaculatory duct urethra L.O. 2 Accessory sex glands: Empty their secretions into ducts…"
+   },
+   {
+    "i": 2,
+    "k": "slide",
+    "uid": "slide:2026-Male-Repro-3#9",
+    "src": "2026 Male Repro-3 deck · slide 9",
+    "quote": "rete testis epididymis vas (ductus) deferens, ejaculatory duct urethra",
+    "t": "…gonads (testes) Lie within scrotum produce sperm in seminiferous tubules Ducts: Sperms delivered to exterior through tubes : rete testis epididymis vas (ductus) deferens, ejaculatory duct urethra L.O. 2 Accessory sex glands: Empty their secretions into ducts during ejaculation seminal vesicles prostate gland bulbourethral glands…"
+   },
+   {
+    "i": 3,
+    "k": "slide",
+    "uid": "slide:2026-Male-Repro-3#9",
+    "src": "2026 Male Repro-3 deck · slide 9",
+    "quote": "epididymis vas (ductus) deferens, ejaculatory duct urethra",
+    "t": "…(testes) Lie within scrotum produce sperm in seminiferous tubules Ducts: Sperms delivered to exterior through tubes : rete testis epididymis vas (ductus) deferens, ejaculatory duct urethra L.O. 2 Accessory sex glands: Empty their secretions into ducts during ejaculation seminal vesicles prostate gland bulbourethral glands Testis…"
+   },
+   {
+    "i": 4,
+    "k": "slide",
+    "uid": "slide:2026-Male-Repro-3#9",
+    "src": "2026 Male Repro-3 deck · slide 9",
+    "quote": "vas (ductus) deferens, ejaculatory duct urethra",
+    "t": "…Lie within scrotum produce sperm in seminiferous tubules Ducts: Sperms delivered to exterior through tubes : rete testis epididymis vas (ductus) deferens, ejaculatory duct urethra L.O. 2 Accessory sex glands: Empty their secretions into ducts during ejaculation seminal vesicles prostate gland bulbourethral glands Testis with…"
+   },
+   {
+    "i": 5,
+    "k": "slide",
+    "uid": "slide:2026-Male-Repro-3#19",
+    "src": "2026 Male Repro-3 deck · slide 19",
+    "quote": "Penis Function: delivery of sperm into female reproductive tract",
+    "t": "Penis Function: delivery of sperm into female reproductive tract Consists of an attached root free shaf t that ends in glans penis Prepuce, or foreskin – cuff of skin covering the distal end of penis L.O. 2"
+   },
+   {
+    "i": 6,
+    "k": "slide",
+    "uid": "slide:2026-Male-Repro-3#9",
+    "src": "2026 Male Repro-3 deck · slide 9",
+    "quote": "Prostatic urethra Membranous urethra Spongeous urethra Bulbourethral gland",
+    "t": "…urethra L.O. 2 Accessory sex glands: Empty their secretions into ducts during ejaculation seminal vesicles prostate gland bulbourethral glands Testis with seminiferous tubules in scrotum Rete Testis Epididymis Vas deferens Seminal vesicle Ureter Ejaculatory duct Ampulla Prostate Prostatic urethra Membranous urethra Spongeous urethra Bulbourethral gland"
+   }
+  ],
+  "qca3e0c0c0f": [
+   {
+    "i": 1,
+    "k": "her",
+    "uid": "page:The Reproductive System#43",
+    "src": "The Reproductive System learning page",
+    "quote": "under the influence of the pituitary hormone LH (luteinizing hormone)",
+    "t": "FROM AND IN THE FEMALE Ovulation : the expulsion of the mature ovum from the mature Graafian/vesicular/ antral follicle into the abdominopelvic cavity under the influence of the pituitary hormone LH (luteinizing hormone)."
+   },
+   {
+    "i": 10,
+    "k": "her",
+    "uid": "page:The Reproductive System#15",
+    "src": "The Reproductive System learning page",
+    "quote": "the products differ greatly in size, motility, parts and structure",
+    "t": "The formation processes of sperm and eggs may be similar, but the products differ greatly in size, motility, parts and structure."
+   },
+   {
+    "i": 11,
+    "k": "slide",
+    "uid": "slide:2026-Repro-Female-1#14",
+    "src": "2026 Repro Female-1 deck · slide 14",
+    "quote": "Carries oocyte toward uterus by peristalsis and ciliary action – helps sperm too",
+    "t": "…no contact with ovaries Ovulated oocyte is cast into peritoneal cavity Beating cilia on fimbriae create currents to carry oocyte into uterine tube Functions Receive ovulated oocyte Provide a site for fertilization Carries oocyte toward uterus by peristalsis and ciliary action – helps sperm too"
+   }
+  ],
+  "qcddf12d7d8": [
+   {
+    "i": 1,
+    "k": "her",
+    "uid": "page:Special Senses 4: The Eye#5",
+    "src": "Special Senses 4: The Eye learning page",
+    "quote": "Involves contraction or relaxation of the ciliary muscle. Close up objects Ciliary muscle contracts",
+    "t": "Involves contraction or relaxation of the ciliary muscle. Close up objects Ciliary muscle contracts"
+   },
+   {
+    "i": 2,
+    "k": "course",
+    "uid": "course:SS3-Light-and-Sound-Emma-Annotated#28",
+    "src": "Course file · SS3 Light and Sound - Emma Annotated deck · slide 28",
+    "quote": "Ciliary muscles completely relaxed Lens as thin as possible",
+    "t": "…aim eyeballs, fixate on same spot Vision approaches the eyes in near parallel rays Rays focused on retina Ciliary muscles completely relaxed Lens as thin as possible The human eye contains a biconvex lens that can focus close or distant objects onto the retina is…"
+   },
+   {
+    "i": 3,
+    "k": "course",
+    "uid": "course:LIGHT#10",
+    "src": "Course file · LIGHT deck · slide 10",
+    "quote": "ciliary muscles contract, lens recoils and bulges",
+    "t": "The Eye Focusing on close objects: 3 simultaneous processes: Accommodation of lenses: ciliary muscles contract, lens recoils and bulges Constriction of pupils: pupil size decreases Convergence of eyeballs: eyeballs ‘turn in’ to focus on object"
+   },
+   {
+    "i": 4,
+    "k": "course",
+    "uid": "course:LIGHT#10",
+    "src": "Course file · LIGHT deck · slide 10",
+    "quote": "Constriction of pupils: pupil size decreases",
+    "t": "The Eye Focusing on close objects: 3 simultaneous processes: Accommodation of lenses: ciliary muscles contract, lens recoils and bulges Constriction of pupils: pupil size decreases Convergence of eyeballs: eyeballs ‘turn in’ to focus on object"
+   }
+  ],
+  "qd2b4ee049e": [
+   {
+    "i": 1,
+    "k": "course",
+    "uid": "course:Physiology-of-the-Special-Senses#24",
+    "src": "Course file · Physiology of the Special Senses deck · slide 24",
+    "quote": "Myopic Eye: ‘ short sighted’ Distant objects focused in front of retina",
+    "t": "…: normal vision Hyperopic Eye : ‘far sighted’ Nearby objects focused behind retina Eyeball too short Corrected with convex lenses – converge light Myopic Eye: ‘ short sighted’ Distant objects focused in front of retina Eyeball too long Corrected with concave lenses – diverge light"
+   },
+   {
+    "i": 2,
+    "k": "course",
+    "uid": "course:Physiology-of-the-Special-Senses#24",
+    "src": "Course file · Physiology of the Special Senses deck · slide 24",
+    "quote": "Corrected with convex lenses – converge light Myopic Eye",
+    "t": "…Emmetropic Eye : normal vision Hyperopic Eye : ‘far sighted’ Nearby objects focused behind retina Eyeball too short Corrected with convex lenses – converge light Myopic Eye: ‘ short sighted’ Distant objects focused in front of retina Eyeball too long Corrected with concave lenses –…"
+   },
+   {
+    "i": 3,
+    "k": "course",
+    "uid": "course:Physiology-of-the-Special-Senses#24",
+    "src": "Course file · Physiology of the Special Senses deck · slide 24",
+    "quote": "Emmetropic Eye : normal vision",
+    "t": "How people see Emmetropic Eye : normal vision Hyperopic Eye : ‘far sighted’ Nearby objects focused behind retina Eyeball too short Corrected with convex lenses – converge light Myopic Eye: ‘ short sighted’ Distant objects focused in front of retina Eyeball too long Corrected with…"
+   }
+  ],
+  "qd2bc4e0cb5": [
+   {
+    "i": 1,
+    "k": "slide",
+    "uid": "slide:2026-LIGHT-AND-SEEING#2",
+    "src": "2026 LIGHT AND SEEING deck · slide 2",
+    "quote": "Mechanical energy –kinetic- causing pressure waves",
+    "t": "Sound and Light – its all waves Light Sound Wave type Electromagnetic energy Mechanical energy –kinetic- causing pressure waves Production alternating electrical and magnetic fields By vibrations Description Moving as particles/ photons -particle and as waves Waves of compressed and rarefied (thinned) medium called compressions…"
+   },
+   {
+    "i": 2,
+    "k": "slide",
+    "uid": "slide:2026-LIGHT-AND-SEEING#2",
+    "src": "2026 LIGHT AND SEEING deck · slide 2",
+    "quote": "Wave type Electromagnetic energy Mechanical energy",
+    "t": "Sound and Light – its all waves Light Sound Wave type Electromagnetic energy Mechanical energy –kinetic- causing pressure waves Production alternating electrical and magnetic fields By vibrations Description Moving as particles/ photons -particle and as waves Waves of compressed and rarefied (thinned) medium called compressions…"
+   },
+   {
+    "i": 3,
+    "k": "slide",
+    "uid": "slide:2026-LIGHT-AND-SEEING#2",
+    "src": "2026 LIGHT AND SEEING deck · slide 2",
+    "quote": "Needs medium- cannot move through vacuum",
+    "t": "…and as waves Waves of compressed and rarefied (thinned) medium called compressions and rarefications caused by movement of the particles of matter (gases like air, fluid like water and solids) Medium No medium needed – can move through vacuum Needs medium- cannot move through vacuum"
+   },
+   {
+    "i": 4,
+    "k": "slide",
+    "uid": "slide:2026-LIGHT-AND-SEEING#2",
+    "src": "2026 LIGHT AND SEEING deck · slide 2",
+    "quote": "No medium needed – can move through vacuum",
+    "t": "…and as waves Waves of compressed and rarefied (thinned) medium called compressions and rarefications caused by movement of the particles of matter (gases like air, fluid like water and solids) Medium No medium needed – can move through vacuum Needs medium- cannot move through vacuum"
+   },
+   {
+    "i": 5,
+    "k": "slide",
+    "uid": "slide:2026-LIGHT-AND-SEEING#2",
+    "src": "2026 LIGHT AND SEEING deck · slide 2",
+    "quote": "Moving as particles/ photons -particle and as waves",
+    "t": "…type Electromagnetic energy Mechanical energy –kinetic- causing pressure waves Production alternating electrical and magnetic fields By vibrations Description Moving as particles/ photons -particle and as waves Waves of compressed and rarefied (thinned) medium called compressions and rarefications caused by movement of the particles of matter…"
+   },
+   {
+    "i": 6,
+    "k": "her",
+    "uid": "am:13a#1",
+    "src": "Anatomy Mondays 13 answers",
+    "quote": "The amplitude relates to the intensity of the wave",
+    "t": "The amplitude relates to the intensity of the wave."
+   },
+   {
+    "i": 7,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#21",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 21",
+    "quote": "Loudness of sound = amplitude of sound wave",
+    "t": "This activates specific mechanoreceptors (hair cells) which result in electrical signals to brain Loudness of sound = amplitude of sound wave Pitch of sound = frequency of sound wave"
+   },
+   {
+    "i": 8,
+    "k": "her",
+    "uid": "am:13a#2",
+    "src": "Anatomy Mondays 13 answers",
+    "quote": "Wavelength and frequency are experienced as LIGHT COLOUR",
+    "t": "Light Wavelength and frequency are experienced as LIGHT COLOUR with long waves being red light and short waves being violet light"
+   },
+   {
+    "i": 9,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#21",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 21",
+    "quote": "Pitch of sound = frequency of sound wave",
+    "t": "This activates specific mechanoreceptors (hair cells) which result in electrical signals to brain Loudness of sound = amplitude of sound wave Pitch of sound = frequency of sound wave"
+   }
+  ],
+  "qd5ae970dc8": [
+   {
+    "i": 1,
+    "k": "her",
+    "uid": "page:GENETICS 2#15",
+    "src": "GENETICS 2 learning page",
+    "quote": "Individuals of both genders need only one affected X chromosome to be affected",
+    "t": "Dominant allele carried on X chromosome Individuals of both genders need only one affected X chromosome to be affected."
+   },
+   {
+    "i": 2,
+    "k": "her",
+    "uid": "page:GENETICS 2#15",
+    "src": "GENETICS 2 learning page",
+    "quote": "No carriers. No skipped generations. Cross between affected mother and unaffected father",
+    "t": "No carriers. No skipped generations. Cross between affected mother and unaffected father"
+   },
+   {
+    "i": 4,
+    "k": "her",
+    "uid": "page:GENETICS 2#15",
+    "src": "GENETICS 2 learning page",
+    "quote": "Individuals of both genders need only one affected X chromosome to be affected",
+    "t": "Dominant allele carried on X chromosome Individuals of both genders need only one affected X chromosome to be affected."
+   }
+  ],
+  "qd901a43196": [
+   {
+    "i": 4,
+    "k": "her",
+    "uid": "page:GENETICS 2#7",
+    "src": "GENETICS 2 learning page",
+    "quote": "The dominant trait will be expressed in 100% of the offspring",
+    "t": "R r R RR Rr R RR Rr Genotypes: 50% homozygous dominant, 50% heterozygous Phenotypes: The dominant trait will be expressed in 100% of the offspring Try to complete this one on your own."
+   },
+   {
+    "i": 5,
+    "k": "her",
+    "uid": "page:GENETICS 2#6",
+    "src": "GENETICS 2 learning page",
+    "quote": "The recessive trait will be expressed in 25% of the offspring",
+    "t": "R r R RR Rr r Rr rr Genotypes: 25% homozygous dominant, 50% heterozygous, 25% homozygous recessive Phenotypes: The dominant trait will be expressed in 75% of the offspring when there is complete dominance, The recessive trait will be expressed in 25% of the offspring."
+   }
+  ],
+  "qdc9d8de3fc": [
+   {
+    "i": 1,
+    "k": "course",
+    "uid": "course:Physiology-of-the-Special-Senses#7",
+    "src": "Course file · Physiology of the Special Senses deck · slide 7",
+    "quote": "Amplitude : Maximum displacement from equilibrium position",
+    "t": "Amplitude : Maximum displacement from equilibrium position = sound’s intensity (LOUDNESS) measured in decibels Wavelength : Total distance traveled by wave in one full cycle Shorter wavelength- higher PITCH WAVES Frequency : number of waves that pass a given point in a given time –…"
+   },
+   {
+    "i": 3,
+    "k": "course",
+    "uid": "course:Physiology-of-the-Special-Senses#7",
+    "src": "Course file · Physiology of the Special Senses deck · slide 7",
+    "quote": "Wavelength : Total distance traveled by wave in one full cycle",
+    "t": "Amplitude : Maximum displacement from equilibrium position = sound’s intensity (LOUDNESS) measured in decibels Wavelength : Total distance traveled by wave in one full cycle Shorter wavelength- higher PITCH WAVES Frequency : number of waves that pass a given point in a given time –…"
+   },
+   {
+    "i": 4,
+    "k": "patton",
+    "uid": "patton:590#5",
+    "src": "Patton 9e · Ch 24 Special Senses · p. 550",
+    "quote": "measured in wavelengths (usually with the unit nanometer, abbreviated as nm)",
+    "t": "The color of light is measured in wavelengths (usually with the unit nanometer, abbreviated as nm).",
+    "pg": 590,
+    "pp": 550,
+    "ch": 24
+   },
+   {
+    "i": 5,
+    "k": "her",
+    "uid": "am:13a#2",
+    "src": "Anatomy Mondays 13 answers",
+    "quote": "Wavelength and frequency are experienced as LIGHT COLOUR with long waves",
+    "t": "Light Wavelength and frequency are experienced as LIGHT COLOUR with long waves being red light and short waves being violet light"
+   },
+   {
+    "i": 7,
+    "k": "her",
+    "uid": "am:13a#1",
+    "src": "Anatomy Mondays 13 answers",
+    "quote": "Wavelength and frequency are related, with a short wavelength",
+    "t": "Wavelength and frequency are related, with a short wavelength = high frequency and high wave length = low frequency."
+   },
+   {
+    "i": 8,
+    "k": "her",
+    "uid": "am:13a#4",
+    "src": "Anatomy Mondays 13 answers",
+    "quote": "The wave length gets shorter, and more waves appear in the same",
+    "t": "The wave length gets shorter, and more waves appear in the same amount of space - that's the frequency!"
+   },
+   {
+    "i": 9,
+    "k": "her",
+    "uid": "am:13a#3",
+    "src": "Anatomy Mondays 13 answers",
+    "quote": "Wavelength and frequency are experienced as different pitches of sound",
+    "t": "Amplitude is experienced as light BRIGHTNESS and is measured in LUX Sound Wavelength and frequency are experienced as different pitches of sound, with high frequencies being high pitches (squeakier sounds)."
+   }
+  ],
+  "qe233766bcf": [
+   {
+    "i": 1,
+    "k": "slide",
+    "uid": "slide:2026-Male-Repro-3#37",
+    "src": "2026 Male Repro-3 deck · slide 37",
+    "quote": "Tail – a typical flagellum -propels",
+    "t": "Sperm Sperm has three major regions Head – contains DNA has a helmet-like acrosome containing hydrolytic enzymes that allow the sperm to penetrate and enter the egg Midpiece – contains mitochondria Tail – a typical flagellum -propels 37 1000x"
+   },
+   {
+    "i": 2,
+    "k": "her",
+    "uid": "am:12a#21",
+    "src": "Anatomy Mondays 12 answers",
+    "quote": "Midpiece B = contains the mitochondria",
+    "t": "Parts Function Head A = consists of acrocome and nucleus with chromosomes Midpiece B = contains the mitochondria Tail C = to propel the sperm forward by whiplike motions Acrosome"
+   },
+   {
+    "i": 3,
+    "k": "course",
+    "uid": "course:Repro-Processes-Notes#8",
+    "src": "Course file · Repro Processes Notes",
+    "quote": "mitochondria filled to make ATP to power the tail",
+    "t": "(if not there, the sperm cannot penetrate the egg, which could affect fertility) Mid piece – mitochondria filled to make ATP to power the tail (contributes to sperm motility)"
+   },
+   {
+    "i": 4,
+    "k": "patton",
+    "uid": "patton:1136#13",
+    "src": "Patton 9e · Ch 47 Growth and Development · p. 1096",
+    "quote": "promote increased sperm motility, which aids sperm movement",
+    "t": "The cumulus cells also release progesterone and other molecules that promote increased sperm motility, which aids sperm movement through the outer layers and toward the ovum.",
+    "pg": 1136,
+    "pp": 1096,
+    "ch": 47
+   },
+   {
+    "i": 5,
+    "k": "her",
+    "uid": "am:12a#23",
+    "src": "Anatomy Mondays 12 answers",
+    "quote": "In head-to fuse wizth 23 chromosomes in the egg",
+    "t": "In tail = enjin that provides propulsive force 23 Chromosomes not in image-comment on where it is located and their function In head-to fuse wizth 23 chromosomes in the egg to restore the diploid chromosome number"
+   },
+   {
+    "i": 6,
+    "k": "slide",
+    "uid": "slide:2026-Male-Repro-3#37",
+    "src": "2026 Male Repro-3 deck · slide 37",
+    "quote": "has a helmet-like acrosome containing hydrolytic enzymes",
+    "t": "Sperm Sperm has three major regions Head – contains DNA has a helmet-like acrosome containing hydrolytic enzymes that allow the sperm to penetrate and enter the egg Midpiece – contains mitochondria Tail – a typical flagellum -propels 37 1000x"
+   }
+  ],
+  "qecf2bf30a0": [
+   {
+    "i": 3,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#19",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 19",
+    "quote": "Eustachian tube (Pharyngotympanic tube connects middle ear to nasopharynx to equalize pressure",
+    "t": "…synovial joints & skeletal muscles amplify sound Transmit vibratory motion of tympanic membrane to oval window Eustachian tube (Pharyngotympanic tube connects middle ear to nasopharynx to equalize pressure 1 Ear canal 2 Tympanic membrane 3 ossicles 4 oval window 5 cochlea With organ of corti…"
+   },
+   {
+    "i": 4,
+    "k": "slide",
+    "uid": "slide:2026-Hearing-Equilibrium#11",
+    "src": "2026 Hearing_Equilibrium deck · slide 11",
+    "quote": "Transmit vibratory motion of large tympanic membrane  small oval window",
+    "t": "Middle Ear (Tympanic Cavity) Amplifie s intensity of sound Transmit vibratory motion of large tympanic membrane  small oval window 3 Bones: Ossicles - smallest bones: malleus, incus, & stapes 3 Membranes: Tympanic membrane, oval window & round window 1 Pharyngotympanic tube = Eustachian tube…"
+   },
+   {
+    "i": 5,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#19",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 19",
+    "quote": "Middle ear Ossicles (malleus, incus & stapes) with synovial joints & skeletal muscles amplify sound",
+    "t": "Middle ear Ossicles (malleus, incus & stapes) with synovial joints & skeletal muscles amplify sound Transmit vibratory motion of tympanic membrane to oval window Eustachian tube (Pharyngotympanic tube connects middle ear to nasopharynx to equalize pressure 1 Ear canal 2 Tympanic membrane 3 ossicles 4…"
+   },
+   {
+    "i": 9,
+    "k": "slide",
+    "uid": "slide:2023-Revision-mod-3-22-slide2#20",
+    "src": "2023 Revision mod 3 22 slide2 deck · slide 20",
+    "quote": "Vestibulo Cochlear nerve (VIII) taking electrical impulses to auditory cortex in temporal lobe",
+    "t": "Internal Ear – Fluid filled labyrinth Vestibulo Cochlear nerve (VIII) taking electrical impulses to auditory cortex in temporal lobe Bony labyrinth - A complex series of tubes, running through temporal bone IN YELLOW : Fluid filled labyrinth - Perilymph IN BLUE: Membranous labyrinth - a…"
+   },
+   {
+    "i": 10,
+    "k": "course",
+    "uid": "course:Module-23-Part-2-Anatomy-of-Eyes-Ears-and-Repro#32",
+    "src": "Course file · Module 23 Part 2 Anatomy of Eyes, Ears and Repro deck · slide 32",
+    "quote": "The pinna acts like a satellite dish, and helps to collect sound",
+    "t": "The pinna acts like a satellite dish, and helps to collect sound and channel it into the external auditory meatus or the auditory canal."
+   }
+  ],
+  "qf0bf1a1c55": [
+   {
+    "i": 1,
+    "k": "her",
+    "uid": "am:12ab#31",
+    "src": "Anatomy Mondays 12 answers",
+    "quote": "things that have a spectrum, like height, body size, hair colour",
+    "t": "Some examples of polygenetic traits are things that have a spectrum, like height, body size, hair colour, body shape, eye colour, voice, skin colour - there isn't necessarily specific groups, e.g. blonde vs brown is subjective."
+   },
+   {
+    "i": 2,
+    "k": "her",
+    "uid": "am:12ab#31",
+    "src": "Anatomy Mondays 12 answers",
+    "quote": "When multiple genes create a trait. Some examples of polygenetic traits",
+    "t": "When multiple genes create a trait. Some examples of polygenetic traits are things that have a spectrum, like height, body size, hair colour, body shape, eye colour, voice, skin colour - there isn't necessarily specific groups, e.g. blonde vs brown is subjective."
+   }
+  ],
+  "qf2ae6a15b7": [
+   {
+    "i": 2,
+    "k": "her",
+    "uid": "lab:2026#247",
+    "src": "Lab workbook 2026",
+    "quote": "Emmetropia (normal), myopia (nearsightedness) and hyperopia (farsightedness) vision.",
+    "t": "Emmetropia (normal), myopia (nearsightedness) and hyperopia (farsightedness) vision."
+   },
+   {
+    "i": 5,
+    "k": "patton",
+    "uid": "patton:595#1",
+    "src": "Patton 9e · Ch 24 Special Senses · p. 555",
+    "quote": "producing an inflammation response known as “pink-eye,” or conjunctivitis",
+    "t": "Most eye infections begin in the conjunctiva, producing an inflammation response known as “pink-eye,” or conjunctivitis.",
+    "pg": 595,
+    "pp": 555,
+    "ch": 24
+   }
+  ],
+  "qf2bb3de90f": [
+   {
+    "i": 1,
+    "k": "patton",
+    "uid": "patton:1175#2",
+    "src": "Patton 9e · Ch 48 Genetics and Heredity · p. 1135",
+    "quote": "Such a Y-linked condition may be passed from father to son",
+    "t": "Such a Y-linked condition may be passed from father to son.",
+    "pg": 1175,
+    "pp": 1135,
+    "ch": 48
+   },
+   {
+    "i": 3,
+    "k": "patton",
+    "uid": "patton:1174#37",
+    "src": "Patton 9e · Ch 48 Genetics and Heredity · p. 1134",
+    "quote": "Traits carried on sex chromosomes are called sex-linked traits",
+    "t": "Traits carried on sex chromosomes are called sex-linked traits.",
+    "pg": 1174,
+    "pp": 1134,
+    "ch": 48
+   }
+  ],
+  "qf6bbe40991": [
+   {
+    "i": 1,
+    "k": "her",
+    "uid": "page:The Reproductive System#25",
+    "src": "The Reproductive System learning page",
+    "quote": "Oogonia (2N) --->Primary oocytes(2N) ---> Secondary oocytes(N)",
+    "t": "MALES Spermatogonia (2N) --->Primary spermatocytes(2N) ---> Secondary spermatocytes(N) --->Spermatids(N) ---> Spermatozoa(N) Mitosis Meiosis I Meiosis 2 Spermiogenesis = differentiation FEMALES Oogonia (2N) --->Primary oocytes(2N) ---> Secondary oocytes(N) ---> ovum(N) Mitosis"
+   },
+   {
+    "i": 2,
+    "k": "her",
+    "uid": "page:The Reproductive System#25",
+    "src": "The Reproductive System learning page",
+    "quote": "Primary oocytes(2N) ---> Secondary oocytes(N) ---> ovum(N)",
+    "t": "MALES Spermatogonia (2N) --->Primary spermatocytes(2N) ---> Secondary spermatocytes(N) --->Spermatids(N) ---> Spermatozoa(N) Mitosis Meiosis I Meiosis 2 Spermiogenesis = differentiation FEMALES Oogonia (2N) --->Primary oocytes(2N) ---> Secondary oocytes(N) ---> ovum(N) Mitosis"
+   },
+   {
+    "i": 3,
+    "k": "her",
+    "uid": "page:Female Reproduction#18",
+    "src": "Female Reproduction learning page",
+    "quote": "the primary oocyte completes meiosis I and forms asecondary oocyte",
+    "t": "Thetheca folliculi and granulosa cellsproduce estrogen The follicle continues to grow and becomes a largeGraafian follicleas this occurs the primary oocyte completes meiosis I and forms asecondary oocyte Secondary oocytebegins meiosis II but is suspended at metaphase II till ovulation"
+   },
+   {
+    "i": 4,
+    "k": "her",
+    "uid": "page:The Reproductive System#46",
+    "src": "The Reproductive System learning page",
+    "quote": "the secondary oocyte completes meiosis 2 and is now a mature ovum",
+    "t": "Upon entry of the sperm, the secondary oocyte completes meiosis 2 and is now a mature ovum."
+   },
+   {
+    "i": 5,
+    "k": "her",
+    "uid": "page:Female Reproduction#18",
+    "src": "Female Reproduction learning page",
+    "quote": "Secondary oocytebegins meiosis II but is suspended at metaphase II till ovulation",
+    "t": "Thetheca folliculi and granulosa cellsproduce estrogen The follicle continues to grow and becomes a largeGraafian follicleas this occurs the primary oocyte completes meiosis I and forms asecondary oocyte Secondary oocytebegins meiosis II but is suspended at metaphase II till ovulation"
+   },
+   {
+    "i": 6,
+    "k": "patton",
+    "uid": "patton:1133#13",
+    "src": "Patton 9e · Ch 47 Growth and Development · p. 1093",
+    "quote": "These polar bodies quickly break down and are reabsorbed into nearby cells",
+    "t": "These polar bodies quickly break down and are reabsorbed into nearby cells.",
+    "pg": 1133,
+    "pp": 1093,
+    "ch": 47
+   },
+   {
+    "i": 7,
+    "k": "her",
+    "uid": "page:The Reproductive System#34",
+    "src": "The Reproductive System learning page",
+    "quote": "arrested in Prophase I of Meiosis I",
+    "t": "Follicles Characteristics Oocyte Characteristics 1.Primordial follicle dormant, wrapped in single layer of squamous epithelial cells. 1.Primary oocyte (2N) Diploid primary oocyte cell formed in the fetus, arrested in Prophase I of Meiosis I."
+   },
+   {
+    "i": 8,
+    "k": "her",
+    "uid": "page:The Reproductive System#46",
+    "src": "The Reproductive System learning page",
+    "quote": "Upon entry of the sperm, the secondary oocyte completes meiosis 2",
+    "t": "Upon entry of the sperm, the secondary oocyte completes meiosis 2 and is now a mature ovum."
+   }
+  ],
+  "qfa89af9f25": [
+   {
+    "i": 1,
+    "k": "her",
+    "uid": "page:Module-3-3-Special-Senses#28",
+    "src": "Module 3.3 Special Senses page",
+    "quote": "Posterior compartment filled with jelly-like vitreous humor",
+    "t": "rods (109) ( for peripheral vision and vision in poor light (scotopic vision); found all over retina except in optic disc and fovea. 2 .Compartments: Posterior compartment filled with jelly-like vitreous humor- helps eye to keep its shape and keeps retina in place"
+   },
+   {
+    "i": 2,
+    "k": "slide",
+    "uid": "slide:2022-S2-Eyes-3#15",
+    "src": "2022 S2 Eyes (3) deck · slide 15",
+    "quote": "Aqueous humor in anterior eye segment",
+    "t": "…shape to eyeball - provide nutrients to avascular lens & cornea - refract light rays Aqueous humor Vitreous humor Aqueous humor in anterior eye segment Vitreous humor in posterior eye segment Watery fluid -fills anterior segment in front of lens Functions: helps to maintain structure…"
+   },
+   {
+    "i": 3,
+    "k": "slide",
+    "uid": "slide:2022-S2-Eyes-3#14",
+    "src": "2022 S2 Eyes (3) deck · slide 14",
+    "quote": "Neural layer – Retinal receptors Photoreceptors – rods & cones",
+    "t": "Neural layer – Retinal receptors Photoreceptors – rods & cones contain visual pigments Function - convert light energy into nerve impulses Susan duraisamy L.O. 1 Rods 10 9 /eye found in peripheral retina; Functions : respond to dim light (scotopic vision) used for peripheral vision…"
+   },
+   {
+    "i": 6,
+    "k": "slide",
+    "uid": "slide:2022-S2-Eyes-3#8",
+    "src": "2022 S2 Eyes (3) deck · slide 8",
+    "quote": "forming white sclera posteriorly",
+    "t": "…highly vascular layer, supplies nutrients and prevents light scattering Susan duraisamy L.O. 1 Fibrous tunic o utermost tough fibrous coating forming white sclera posteriorly & transparent cornea anteriorly Sclera: P rotects eye Anchors extrinsic muscles Cornea: Window to let light enter Refracts light (80%) Retina…"
+   },
+   {
+    "i": 7,
+    "k": "slide",
+    "uid": "slide:2022-S2-Eyes-3#12",
+    "src": "2022 S2 Eyes (3) deck · slide 12",
+    "quote": "Optic disc where optic nerve leaves –blind spot– not photoreceptors",
+    "t": "susan duraisamy Tunics – neural coat: Retina Optic disc where optic nerve leaves –blind spot– not photoreceptors"
+   },
+   {
+    "i": 8,
+    "k": "slide",
+    "uid": "slide:2022-S2-Eyes-3#14",
+    "src": "2022 S2 Eyes (3) deck · slide 14",
+    "quote": "concentrated in fovea centralis",
+    "t": "…: respond to dim light (scotopic vision) used for peripheral vision contains pigment rhodopsin Cones 10 6 /eye found in macula lutea concentrated in fovea centralis Functions: respond to bright light ( photopic vision ) form sharper images (visual acuity) r esponsible for colour vision"
+   },
+   {
+    "i": 9,
+    "k": "slide",
+    "uid": "slide:2022-S2-Eyes-3#8",
+    "src": "2022 S2 Eyes (3) deck · slide 8",
+    "quote": "Choroid: middle pigmented highly vascular layer",
+    "t": "Tunics/coats Vascular tunic (uvea) consists of three regions: choroid, iris and ciliary body Choroid: middle pigmented highly vascular layer, supplies nutrients and prevents light scattering Susan duraisamy L.O. 1 Fibrous tunic o utermost tough fibrous coating forming white sclera posteriorly & transparent cornea anteriorly Sclera:…"
+   },
+   {
+    "i": 11,
+    "k": "course",
+    "uid": "course:SPECIAL-SENSES-1-EYE-BN2-LECTURE#22",
+    "src": "Course file · SPECIAL SENSES 1 EYE BN2 LECTURE deck · slide 22",
+    "quote": "contraction of the ciliary muscle which relaxes the suspensory ligaments",
+    "t": "…focus diverging rays of light on the retina the refractory power of the lens must be increased This is done by the contraction of the ciliary muscle which relaxes the suspensory ligaments causing the lens to bulge anteriorly This process is called accommodation of lenses"
+   },
+   {
+    "i": 15,
+    "k": "her",
+    "uid": "lab:2026#237",
+    "src": "Lab workbook 2026",
+    "quote": "the H. conjunctiva, which is also reflected from the eyeball",
+    "t": "The part of the sclera in the front of the eye is covered with a thin layer of the cells, the H. conjunctiva, which is also reflected from the eyeball onto the inside surfaces of the eyelids"
+   },
+   {
+    "i": 19,
+    "k": "slide",
+    "uid": "slide:2026-LIGHT-AND-SEEING#26",
+    "src": "2026 LIGHT AND SEEING deck · slide 26",
+    "quote": "Cones are for colour vision in good light",
+    "t": "Cones are for colour vision in good light = photopic vision There are far less cones (10 6 ) than rods (10 9 ) in the retina"
+   },
+   {
+    "i": 20,
+    "k": "slide",
+    "uid": "slide:2022-S2-Eyes-3#14",
+    "src": "2022 S2 Eyes (3) deck · slide 14",
+    "quote": "respond to dim light (scotopic vision)",
+    "t": "…light energy into nerve impulses Susan duraisamy L.O. 1 Rods 10 9 /eye found in peripheral retina; Functions : respond to dim light (scotopic vision) used for peripheral vision contains pigment rhodopsin Cones 10 6 /eye found in macula lutea concentrated in fovea centralis Functions:…"
+   }
+  ],
+  "qfbcf45ca29": [
+   {
+    "i": 1,
+    "k": "her",
+    "uid": "lab:2026#251",
+    "src": "Lab workbook 2026",
+    "quote": "To transfer sound vibrations to ossicles in the middle ear",
+    "t": "To transfer sound vibrations to ossicles in the middle ear"
+   },
+   {
+    "i": 2,
+    "k": "her",
+    "uid": "lab:2026#251",
+    "src": "Lab workbook 2026",
+    "quote": "Oval window Between middle ear and inner ear (entrance to cochlea)",
+    "t": "Oval window Between middle ear and inner ear (entrance to cochlea)"
+   },
+   {
+    "i": 3,
+    "k": "course",
+    "uid": "course:Physiology-of-the-Special-Senses#56",
+    "src": "Course file · Physiology of the Special Senses deck · slide 56",
+    "quote": "Inner ear m ovement of perilymph and endolymph results in basilar membrane displacement",
+    "t": "…canal which causes vibration of the tympanic membrane Middle ear vibrations of the tympanic membrane are transferred to the ossicles which amplify the sound vibrations and transmit these to the oval window Inner ear m ovement of perilymph and endolymph results in basilar membrane displacement."
+   },
+   {
+    "i": 4,
+    "k": "her",
+    "uid": "lab:2026#251",
+    "src": "Lab workbook 2026",
+    "quote": "Supports the organ of Corti, and separates cochlear chambers; vibrates in response",
+    "t": "Inside the cochlea (runs along its length) Supports the organ of Corti, and separates cochlear chambers; vibrates in response to sound frequencies"
+   },
+   {
+    "i": 5,
+    "k": "her",
+    "uid": "lab:2026#251",
+    "src": "Lab workbook 2026",
+    "quote": "Tectorial membrane Inside the cochlea, above the basilar membrane",
+    "t": "Tectorial membrane Inside the cochlea, above the basilar membrane"
+   },
+   {
+    "i": 6,
+    "k": "her",
+    "uid": "lab:2026#257",
+    "src": "Lab workbook 2026",
+    "quote": "The auditory receptors, stereocilia /hair cells, are found in the scala media",
+    "t": "The auditory receptors, stereocilia /hair cells, are found in the scala media of the cochlea."
+   },
+   {
+    "i": 7,
+    "k": "her",
+    "uid": "page:Module-3-3-Special-Senses#22",
+    "src": "Module 3.3 Special Senses page",
+    "quote": "Inner ear for transducing mechanical energy to electrical energy",
+    "t": "Inner ear for transducing mechanical energy to electrical energy Cochlea with organ of Corti where transduction takes place and electrical impulses are created from mechanical vibrations Vestibular apparatus where movement and effects of gravity are transduced to electrical impulses."
+   },
+   {
+    "i": 8,
+    "k": "her",
+    "uid": "page:Module-3-3-Special-Senses#22",
+    "src": "Module 3.3 Special Senses page",
+    "quote": "transducing mechanical energy to electrical energy Cochlea with organ of Corti",
+    "t": "Inner ear for transducing mechanical energy to electrical energy Cochlea with organ of Corti where transduction takes place and electrical impulses are created from mechanical vibrations Vestibular apparatus where movement and effects of gravity are transduced to electrical impulses."
+   }
+  ],
+  "qfd18803c7d": [
+   {
+    "i": 1,
+    "k": "patton",
+    "uid": "patton:598#42",
+    "src": "Patton 9e · Ch 24 Special Senses · p. 558",
+    "quote": "The stapes moves against the oval window, which begins the fluid conduction",
+    "t": "The stapes moves against the oval window, which begins the fluid conduction of sound waves",
+    "pg": 598,
+    "pp": 558,
+    "ch": 24
+   },
+   {
+    "i": 2,
+    "k": "patton",
+    "uid": "patton:598#42",
+    "src": "Patton 9e · Ch 24 Special Senses · p. 558",
+    "quote": "Basilar membrane width and thickness varies throughout its length",
+    "t": "Basilar membrane width and thickness varies throughout its length (1) High-frequency sound waves vibrate the narrow portion near the oval window (2) Low frequencies vibrate the wider, thicker portion near the apex of the cochlea (3) Each frequency stimulates different hair cells and facilitates perception…",
+    "pg": 598,
+    "pp": 558,
+    "ch": 24
+   },
+   {
+    "i": 3,
+    "k": "her",
+    "uid": "am:12a#4",
+    "src": "Anatomy Mondays 12 answers",
+    "quote": "In the cochlear, the tectorial membrane causes the hairs to bend, and in",
+    "t": "In the cochlear, the tectorial membrane causes the hairs to bend, and in the vestibular apparatus, the movement of fluids causes the hairs to move (kind of like kelp moving under the water with the waves)"
+   },
+   {
+    "i": 5,
+    "k": "patton",
+    "uid": "patton:580#8",
+    "src": "Patton 9e · Ch 24 Special Senses · p. 540",
+    "quote": "initiates impulse conduction by the cochlear nerve to the brainstem",
+    "t": "The movement of the hair cells against the adherent tectorial membrane somehow stimulates these dendrites and initiates impulse conduction by the cochlear nerve to the brainstem.",
+    "pg": 580,
+    "pp": 540,
+    "ch": 24
+   }
+  ],
+  "qfd9becec17": [
+   {
+    "i": 1,
+    "k": "patton",
+    "uid": "patton:1106#9",
+    "src": "Patton 9e · Ch 46 Female Reproductive System · p. 1066",
+    "quote": "The vagina is a portion of the female reproductive tract that has several",
+    "t": "Functions of the Vagina The vagina is a portion of the female reproductive tract that has several important functions.",
+    "pg": 1106,
+    "pp": 1066,
+    "ch": 46
+   },
+   {
+    "i": 2,
+    "k": "patton",
+    "uid": "patton:1100#39",
+    "src": "Patton 9e · Ch 46 Female Reproductive System · p. 1060",
+    "quote": "exposes a triangular uterine cavity communicating by way of the internal os",
+    "t": "…cadaver dissection specimen of the internal female reproductive organs shown in Figure 46-3, B, removal of parts of the posterior wall of the body of the uterus and cervix exposes a triangular uterine cavity communicating by way of the internal os with the cervical canal.",
+    "pg": 1100,
+    "pp": 1060,
+    "ch": 46
+   },
+   {
+    "i": 3,
+    "k": "her",
+    "uid": "page:Female Reproduction#7",
+    "src": "Female Reproduction learning page",
+    "quote": "fingerlike projections (fimbriae) that move to increase their chances of getting an egg",
+    "t": "Round ligament–bind anterior uterine wallto labia majora Fimbriae, Infundibulum and Fallopian tubes The oviducts (fallopian tubes) stretch from a wide funnel (infundibulum) with fingerlike projections (fimbriae) that move to increase their chances of getting an egg into the infundibulum."
+   },
+   {
+    "i": 4,
+    "k": "her",
+    "uid": "lab:2026#212",
+    "src": "Lab workbook 2026",
+    "quote": "Myometrium and the endometrium Functional and basal layers of the endometrium",
+    "t": "Myometrium and the endometrium Functional and basal layers of the endometrium Semen and sperm 2.Several chemical substances are found in semen."
+   },
+   {
+    "i": 5,
+    "k": "her",
+    "uid": "am:12ab#1",
+    "src": "Anatomy Mondays 12 answers",
+    "quote": "7. Ovary 8. Endometrium of the uterus 1. Spinal column",
+    "t": "7. Ovary 8. Endometrium of the uterus 1. Spinal column (the sacral region)"
+   },
+   {
+    "i": 6,
+    "k": "course",
+    "uid": "course:Module-23-Part-2-Anatomy-of-Eyes-Ears-and-Repro#32",
+    "src": "Course file · Module 23 Part 2 Anatomy of Eyes, Ears and Repro deck · slide 32",
+    "quote": "Cervix – narrow neck which projects into the vagina inferiorly",
+    "t": "…superior to the entrance of the uterine tubes Isthmus – narrowed region between the body and cervix Cervix – narrow neck which projects into the vagina inferiorly Cervical canal – cavity of the cervix that communicates with: the vagina via external os the uterine body…"
+   },
+   {
+    "i": 7,
+    "k": "her",
+    "uid": "am:12ab#1",
+    "src": "Anatomy Mondays 12 answers",
+    "quote": "7. Ovary 8. Endometrium of the uterus 1. Spinal column",
+    "t": "7. Ovary 8. Endometrium of the uterus 1. Spinal column (the sacral region)"
+   },
+   {
+    "i": 8,
+    "k": "her",
+    "uid": "page:Female Reproduction#7",
+    "src": "Female Reproduction learning page",
+    "quote": "The oviducts (fallopian tubes) stretch from a wide funnel (infundibulum)",
+    "t": "Round ligament–bind anterior uterine wallto labia majora Fimbriae, Infundibulum and Fallopian tubes The oviducts (fallopian tubes) stretch from a wide funnel (infundibulum) with fingerlike projections (fimbriae) that move to increase their chances of getting an egg into the infundibulum."
+   }
+  ]
+ }
 }
