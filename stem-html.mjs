@@ -57,8 +57,21 @@ export function inlineSfImages(html) {
   const defs = {};
   for (const m of html.matchAll(/(--sf-img-\d+)\s*:\s*url\(\s*["']?(data:[^"')]+)["']?\s*\)/g)) defs[m[1]] = m[2];
   if (!Object.keys(defs).length) return html;
-  return html.replace(/<img\s+src\s*=\s*'data:image\/svg\+xml,<svg[^']*'([^>]*?background-image:var\((--sf-img-\d+)\)[^>]*)>/g,
-    (all, rest, v) => defs[v] ? '<img src="' + defs[v] + '"' + rest + '>' : all);
+  /* each <img> is cut out by a quote-aware scan, not [^>]*: the placeholder's src holds an <svg> with ">" in it, and
+     SingleFile writes attributes in any order (id= or style= can come before src=) */
+  let out = '', pos = 0;
+  for (const m of html.matchAll(/<img\b/gi)) {
+    if (m.index < pos) continue;
+    let i = m.index + 4, q = null;
+    for (; i < html.length; i++) { const c = html[i]; if (q) { if (c === q) q = null; } else if (c === '"' || c === "'") q = c; else if (c === '>') break; }
+    const tag = html.slice(m.index, i + 1);
+    const v = (tag.match(/background-image:var\((--sf-img-\d+)\)/) || [])[1];
+    const src = tag.match(/\ssrc\s*=\s*(?:'data:image\/svg\+xml,[^']*'|"data:image\/svg\+xml,[^"]*")/);
+    if (!v || !defs[v] || !src) continue;
+    out += html.slice(pos, m.index) + tag.replace(src[0], ' src="' + defs[v] + '"');
+    pos = i + 1;
+  }
+  return pos ? out + html.slice(pos) : html;
 }
 export function dataImgFile(src) {
   if (typeof src !== 'string' || !src.startsWith('data:image/')) return null;
