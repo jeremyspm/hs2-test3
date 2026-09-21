@@ -255,8 +255,35 @@ const DATA = /*@BANK@*/;
 for(const q of DATA.questions){ if(!q.refs) q.refs = q.ref ? [{k:q.ref.slide?'slide':'her', ...q.ref}] : []; }
 const REF = {slide:{ic:'📖',lbl:'Her slide'}, her:{ic:'✍',lbl:'Her notes'}, course:{ic:'📄',lbl:'Course file'}, patton:{ic:'📕',lbl:'Patton'}};
 /* ── state ─────────────────────────────────────────────────────────── */
-const LS = k => { try { return JSON.parse(localStorage.getItem('hs2t2.'+k)) } catch(e){ return null } };
-const SV = (k,v) => { try { localStorage.setItem('hs2t2.'+k, JSON.stringify(v)) } catch(e){} };
+/* Until 21 Sep 2026 this page saved under 'hs2t2.', the SAME keys as the Test 2 sim on this origin (localStorage is per origin,
+   not per path), so the two sims shared one score history, one misses pile and ONE resume slot: a Learn run started here wiped a
+   half-done Test 2 run. It now has its own prefix, and once, on first load, it moves out of the old keys everything that is
+   provably THIS bank's (its question ids, its row ids, its quiz ids, a resume run made only of its questions, scores whose mode
+   names one of them). Anything that cannot be told apart stays where it is. */
+const PFX = 'hs2t3.';
+(function takeBackFromTest2(){
+  try {
+    if (localStorage.getItem(PFX+'migrated')) return;
+    const get = k => { try { return JSON.parse(localStorage.getItem('hs2t2.'+k)) } catch(e){ return null } };
+    const put = (p,k,v) => localStorage.setItem(p+k, JSON.stringify(v));
+    const qid = new Set(DATA.questions.map(q=>q.id)), row = new Set(DATA.focus.map(f=>f.id)), quiz = new Set(DATA.quizzes.map(z=>z.id));
+    const sys = new Set(DATA.questions.map(q=>q.sys));
+    const split = (k, mine) => { const o = get(k); if (!o || typeof o !== 'object' || Array.isArray(o)) return;
+      const a = {}, b = {}; for (const [x,v] of Object.entries(o)) (mine(x) ? a : b)[x] = v;
+      if (Object.keys(a).length) { put(PFX,k,a); put('hs2t2.',k,b); } };
+    split('miss', x => qid.has(x)); split('seen', x => qid.has(x)); split('mastery', x => row.has(x));
+    const r = get('resume');
+    if (r && Array.isArray(r.ids) && r.ids.length && r.ids.every(x => qid.has(x))) { put(PFX,'resume',r); localStorage.removeItem('hs2t2.resume'); }
+    const pk = get('pick');
+    if (Array.isArray(pk) && pk.some(x => quiz.has(x))) { put(PFX,'pick',pk.filter(x => quiz.has(x))); put('hs2t2.','pick',pk.filter(x => !quiz.has(x))); }
+    const ours = m => typeof m === 'string' && ((m.startsWith('quiz:') && quiz.has(m.slice(5))) || (m.startsWith('topic:') && row.has(m.slice(6))) || (m.startsWith('sys:') && sys.has(m.slice(4)) && m.slice(4) !== 'mixed'));
+    const sc = get('scores');
+    if (Array.isArray(sc) && sc.some(e => e && ours(e.mode))) { put(PFX,'scores',sc.filter(e => e && ours(e.mode))); put('hs2t2.','scores',sc.filter(e => !(e && ours(e.mode)))); }
+    localStorage.setItem(PFX+'migrated', '1');
+  } catch(e) {}
+})();
+const LS = k => { try { return JSON.parse(localStorage.getItem(PFX+k)) } catch(e){ return null } };
+const SV = (k,v) => { try { localStorage.setItem(PFX+k, JSON.stringify(v)) } catch(e){} };
 let S = {
   scores: LS('scores')||[],   // {t, mode, got, tot, label}
   miss:   LS('miss')  ||{},   // qid -> wrong count
