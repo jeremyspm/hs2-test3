@@ -243,11 +243,13 @@ for (const z of bank.quizzes) {
     const above = o => /^(?:all|none|both) of (?:the above|these)/i.test(o);
     opts = [...opts.filter(o => !above(o)), ...opts.filter(above)];
     const key = [...new Set(ans.filter(a => a.correctClass || a.weight === '100').map(enrich))];
-    const lettered = opts.every(o => o.length < 3) && /\b[a-d]\.\s/.test(stem);
+    /* a BARE LETTER is one character A-H. Module 2 got away with "shorter than 3"; genetics cannot: "46", "Hh", "AO", "LH" and "0%" are real answers. */
+    const bare = o => /^[A-Ha-h]$/.test(o.trim());
+    const lettered = opts.every(bare) && /\b[a-d]\.\s/.test(stem);
     if (!opts.length || opts.length < 2 || !key.length || !key.every(k => opts.includes(k))) {
       held.push({ quiz: qname, why: 'key text not among options', q: stem.slice(0, 80) }); return;
     }
-    if (opts.some(o => o.length < 3) && !lettered && !imgs.length) {
+    if (opts.every(bare) && !lettered && !imgs.length) {      /* EVERY option a bare letter: blood types A · B · AB · O are answers, not letters */
       held.push({ quiz: qname, why: 'letter-only options with no lettered stem or image', q: stem.slice(0, 80) }); return;
     }
     const type = q.type === 'true_false_question' ? 'tf'

@@ -5,14 +5,24 @@ Module 3 = reproduction · genetics · special senses · light & sound. Cold-sta
 
 ## State on 21 Sep 2026
 
-- `node bind-images.mjs` then `node build.mjs` → **358 questions ship, 47 held**, from his 23 graded quiz pages
-  (`../_inbox/HS2 Module 3 Capture`, bank `../hs2-anki/m3/questions.json`). 52 of her figures ship.
+- `node bind-images.mjs` then `node build.mjs` → **384 questions ship, 21 held**, from his 23 graded quiz pages
+  (`../_inbox/HS2 Module 3 Capture`, bank `../hs2-anki/m3/questions.json`). 81 of her figures ship.
 - **Her own model answers**: `extract-her-answers.mjs` lifts the `quiz_comment` block of every essay, word for word, into
   `content/her-answers.json` (26 of 27 essays). They ship labelled as HERS. Nothing the tool wrote is in here yet.
 - `NO_IMAGE_OK` in `build.mjs`: 24 questions whose missing image was a video thumbnail or decoration, each read by eye.
-- Held, with the reason on each row of `held.json`: 30 that truly need a figure that did not load when the page was saved
-  (pedigrees, karyotypes, label-the-diagram: re-save those pages with the images showing), 9 letter-only MC questions,
-  the ovarian/uterine cycle essay (she posted no answer), and 5 parser oddities.
+- Held, with the reason on each row of `held.json`: **14 whose figure is a PLACEHOLDER in the saved page** (the image had not loaded
+  when he saved it — see "Pages to re-save" below), her two self-mark notices, the ovarian/uterine cycle essay (she posted no answer),
+  and 4 parser oddities (two "key text not among options", one blank with no options, one empty stem).
+- Two false holds fixed 21 Sep, which released 26 questions: the image binder only read `src="…"` and his saves write `src=data:…`
+  with NO quotes (28 real figures were being ignored); and "letter-only options" meant "shorter than 3 characters", which in genetics
+  catches real answers ("46", "Hh", "AO", "LH"). A bare letter is now one character A-H, and only if EVERY option is one.
+  A placeholder (inline non-base64 SVG, or `data:,`) is rejected, so a question never ships with a blank picture.
+
+## Pages to re-save (figures that had not loaded)
+
+211041 Q15 Q18 Q19 · 211050 Q1 Q2 · 211053 Q5 Q6 · 211062 Q2 Q3 · 211071 Q19 · 211086 Q6-Q14 · 211120 Q30 · 211121 Q10.
+Open the graded attempt, scroll slowly to the very bottom so every image loads, check those questions show their picture, save over
+`_inbox/HS2 Module 3 Capture/HS2CAP-<id>.html`, then `node bind-images.mjs && node build.mjs`.
 - Checked at 375 px: renders, no console errors, no horizontal scroll, page is `noindex`.
 
 ## The focus checklist (21 Sep 2026)
@@ -27,7 +37,7 @@ revision sessions: move what she names to tier 0 and add the badge, as hs2-test2
 
 ## Not done yet (in order)
 
-1. The 9 letter-only questions and the 5 parser oddities: read each capture by eye.
+1. The 4 parser oddities: read each capture by eye.
 2. Re-save the pages whose figures did not load; re-run `bind-images.mjs`. One figure is an SVG data URI and lands as
    `img/HS2DATA-01fa88c8b230659f.svgxml`: teach `dataImgFile` in `stem-html.mjs` to name it `.svg`.
 3. Two matching questions sit under an embedded video, so their stem is YouTube page furniture: give them an authored stem.

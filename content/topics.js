@@ -55,6 +55,9 @@ export const RULES = [
 ];
 /* moved by hand after reading the groups: question id -> row */
 export const PIN = {
+  /* released 21 Sep when the image binder learned to read unquoted src and the bare-letter rule was fixed — read by eye like the rest */
+  q9b7e52e55b:'gen-crosses', q096557147b:'gen-crosses', qbf650b004d:'gen-crosses', qafbfe87657:'gen-crosses',
+  q997d4f4436:'repro-sperm', q82d491b4c0:'eye-anatomy', qf6bbe40991:'repro-cycle-ovarian', qd5ae970dc8:'gen-pedigree', q1b3811c4ef:'ear-anatomy',
   q969c3c85cc:'gen-sexlinked',
   qad2e3f869b:'eye-anatomy',
   q73f30c2a67:'eye-retina',

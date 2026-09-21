@@ -19,8 +19,9 @@ for (const f of fs.readdirSync(CAP).filter(x => /^HS2CAP-.*\.html$/.test(x))) {
   starts.forEach((s, i) => {
     const seg = html.slice(s, i + 1 < starts.length ? starts[i + 1] : html.length);
     const names = new Set();
-    for (const im of seg.matchAll(/<img[^>]*\ssrc="([^"]+)"/g)) {
-      const u = im[1];
+    /* his single-file saves are minified: <img src=data:image/png;base64,…> with NO quotes. Reading only src="…" lost 28 real figures. */
+    for (const im of seg.matchAll(/<img[^>]*?\ssrc\s*=\s*(?:"([^"]+)"|'([^']+)'|([^\s>]+))/g)) {
+      const u = im[1] ?? im[2] ?? im[3];
       if (u.startsWith('data:image/')) {          // full-page save inlined the figure
         const file = writeDataImg(u, path.join(CAP, 'images'));
         if (file) names.add(file);

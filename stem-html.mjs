@@ -52,9 +52,13 @@ const esc = (s) => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': 
    so resolveImg (below) and bind-images.mjs agree on the SAME file by construction. */
 export function dataImgFile(src) {
   if (typeof src !== 'string' || !src.startsWith('data:image/')) return null;
+  /* a single-file save leaves a PLACEHOLDER where an image never loaded: an inline (non-base64) SVG of the right size, or an empty
+     data:, URI. A placeholder is not her figure — accepting one would ship a pedigree question with a blank picture. Real figures
+     are base64 and carry real bytes. */
+  if (!/^data:image\/[\w.+-]+;base64,/.test(src) || src.length < 1200) return null;
   const sha = crypto.createHash('sha1').update(src).digest('hex').slice(0, 16);
   const mime = (src.match(/^data:image\/([\w.+-]+)/) || [])[1] || 'png';
-  const ext = mime === 'jpeg' ? 'jpg' : (mime.replace(/[^\w]/g, '') || 'png');
+  const ext = mime === 'jpeg' ? 'jpg' : mime === 'svg+xml' ? 'svg' : (mime.replace(/[^\w]/g, '') || 'png');
   return `HS2DATA-${sha}.${ext}`;
 }
 export function writeDataImg(src, dir) {
