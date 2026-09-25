@@ -106,6 +106,13 @@ build unless it matches exactly one, and the page shows it under the tool's answ
 feedback contradicts her own slides, a ⚠ trap line says which one the slides back: near-vision pupil (feedback: dilates; decks and
 her quiz key: constricts), LH on Leydig cells (feedback: estrogen; Male Repro deck: testosterone), which part of the ear amplifies
 (feedback: inner; deck: middle), the lens (Light & Seeing slide 10: biconcave; slide 12: biconvex).
+**Full mock = Test 3's shape (26 Sep):** 37 Q, 65 min, 30% of the MARKS written — the exam sim's rule (hs2-final `dealFull`):
+written questions are added and closed ones dropped until the written share is nearest 30%. The written ones are SAQ Trainer
+questions (`mkSaqQ`): both test cases every sitting, then the rest least-seen first. The closed deal is the nearest-to-average of
+eight least-seen deals, so a deal heavy in 8-mark matchings cannot swing a sitting to 10 written questions. 300 simulated deals:
+always 37 Q and both cases; share median 30.0% (p10 28.4%, p90 31.7%); 4-7 written (mostly 5-6); all 21 SAQs rotate in. Her
+closed quiz items carry more marks than the real paper's (~1 each), so the mock's written load (median 28 marks) is heavier
+than the real 15: it errs hard on purpose.
 Driven at 375 px on 26 Sep: all 21 read → drill (a wrong pick requeues, then clears) → order where set → write → mark → score; the
 paper, the sheet and the warm-up; console clean, no horizontal scroll. Build: `node build.mjs` (resplice's bank regex expects LF,
 so it fails on a CRLF checkout).
@@ -119,4 +126,3 @@ so it fails on a CRLF checkout).
    already carries both cases as written questions.
 3. The ovarian/uterine cycle essay needs a model answer (she posted none): the SAQ Trainer's `cycles` entry is one, sourced
    from her deck; wire it to that essay in `saq-answers.js` if wanted.
-4. The full mock is still Test 2's shape (40 closed + 2 written = 42 Q). Test 3 is 37 Q with 30% written.

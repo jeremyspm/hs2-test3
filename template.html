@@ -406,17 +406,34 @@ const howMany = pool => Math.min(CAP(), pool);
 function dealMini(n=12){ return dealStratified(n) }
 function dealSys(s,n){ return shuffle(pickN(CLOSED.filter(q=>q.sys===s), n, new Set())) }
 function dealFull(){
-  const closed = dealStratified(40);
-  const essays = shuffle(DATA.questions.filter(q=>q.saq));
-  const saqs = [];
-  if(DATA.case7){ saqs.push(mkCaseQ(DATA.case7.questions[(S.scores.filter(s=>s.mode==='full').length) % DATA.case7.questions.length])); if(essays[0]) saqs.push(essays[0]); }
-  else saqs.push(...essays.slice(0,2));      /* no case study wired for this module yet: two of her essays, each marked against HER own answer */
-  return closed.concat(saqs);
+  /* TEST 3'S OWN SHAPE (her Assessment Overview): 37 questions, 65 min, 30% of the MARKS written, and the written part names
+     her two test cases, (11) Lactation and (12) Hearing loss. Same rule as the exam sim (hs2-final dealFull): her closed quiz
+     items often carry several marks (a drop-down or matching question is worth one mark per part), so a written COUNT means
+     nothing; written questions are added one at a time and closed ones dropped until the written share reaches 30% with 37
+     questions. The written ones are the SAQ Trainer's: both test cases first (least-seen of the two leading), then the rest
+     least-seen first, so the rotation carries every SAQ into a sitting over time.
+     Two guards keep one sitting from swinging to 10 written questions: the closed deal is the one of eight least-seen deals
+     whose marks sit nearest the bank's average (a deal heavy with 8-mark matchings would need far more writing to reach 30%),
+     and the written count stops at whichever share lands nearest 30%, not the first one past it. */
+  const N = 37, SHARE = 0.30;
+  const marks = a => a.reduce((s,q)=>s+(q.pts||1),0);
+  const avg = marks(CLOSED)/CLOSED.length;
+  let closed = null;
+  for(let i=0;i<8;i++){ const d = dealStratified(N); if(!closed || Math.abs(marks(d)-N*avg) < Math.abs(marks(closed)-N*avg)) closed = d; }
+  const load = x => (S.seen[saqMockId(x)]||0) + Math.random();
+  const byLoad = xs => xs.map(x=>[x,load(x)]).sort((a,b)=>a[1]-b[1]).map(e=>e[0]);
+  const cases = SAQD.filter(x=>/-case$/.test(x.id)), rest = SAQD.filter(x=>!/-case$/.test(x.id));
+  const queue = byLoad(cases).concat(byLoad(rest)).map(mkSaqQ);
+  const share = k => { const w = marks(queue.slice(0,k)); return w/(w + marks(closed.slice(0, N-k))); };
+  let k = cases.length;                                   /* both test cases, always */
+  while(k < queue.length && k < N/2 && share(k) < SHARE && Math.abs(share(k+1)-SHARE) <= Math.abs(share(k)-SHARE)) k++;
+  return closed.slice(0, N-k).concat(queue.slice(0,k));
 }
-function mkCaseQ(cq){
-  return { id:'c7-'+cq.q.slice(0,24).replace(/\W/g,''), quiz:'case7', sys:'mixed', type:'essay',
-    pts:cq.marks, q:cq.q, imgs:[], saq:{steps:cq.steps, src:'Case study 7 — model answer is the tool’s'},
-    scenario: DATA.case7.scenario };
+/* an SAQ Trainer question as a mock written question: her ask, the tool's mark points (bold markers dropped), self-marked */
+const saqMockId = x => 'sq-'+x.id;
+function mkSaqQ(x){
+  return { id:saqMockId(x), quiz:'saqd', sys:x.sys, type:'essay', pts:x.marks, q:x.ask, imgs:[], refs:[], prefs:[],
+    saq:{ steps:x.steps.map(s=>s.replace(/\*\*/g,'')), src:`SAQ Trainer: ${x.title} · model answer is the tool’s, built from ${x.src}` } };
 }
 /* the misses pile, worst first: once four or more have been missed twice, only those */
 function missPool(){
@@ -559,7 +576,7 @@ function home(){
     <h2>🎯 Deal me a mock test</h2>
     <p>Practice only — dealt from her whole question bank. This is NOT the real test; Test 3 happens on Canvas (closes 26 Oct — check your own date).</p>
     <button class="btn primary wide" data-go="mini">Sit a mini mock test · 12 questions, ~15 min</button>
-    <button class="btn wide" data-go="full">Sit the full mock test · 42 Q incl. written, 65 min</button>
+    <button class="btn wide" data-go="full">Sit the full mock test · 37 Q, 30% written, 65 min</button>
     <button class="btn wide" data-go="miss" ${Object.keys(S.miss).length? '':'disabled'}>Redo my misses${Object.keys(S.miss).length?` · ${Object.keys(S.miss).length} in the pile`:''}</button>
   </div>
   <div class="card door">
@@ -764,7 +781,7 @@ function renderQ(){
       : q.blanks.map((b,i)=>`<div class="blankrow"><label>${esc(blankLabel(b,i))}${q.bk==='dd'?'':' (type it)'}</label>${widget(b,i)}</div>`).join('');
   } else if(q.type==='essay'){
     body=`${q.scenario?`<div class="note">${esc(q.scenario)}</div>`:''}
-      <div class="note">Written question · ${q.pts} marks — write ${q.pts} numbered points, one causal step each. You mark yourself against the model at the end.</div>
+      <div class="note">Written question · ${q.pts} marks — she gives half a mark per fact, so write about ${Math.ceil(q.pts*2)} facts, one numbered line each. You mark yourself against the model at the end.</div>
       <textarea data-essay placeholder="1. …&#10;2. …">${a&&a.text?esc(a.text):''}</textarea>`;
   }
   /* learn mode: once checked, a wrong/skipped/written question already has its slide and
