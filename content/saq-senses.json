@@ -16,6 +16,31 @@
    "This is **sensorineural deafness**: damage anywhere from the **cochlear hair cells** to the auditory cortex. It is usually **irreversible**; depending on where the damage is, a **cochlear implant** can help.",
    "The other kind is **conduction deafness**: sound is **blocked before it reaches the inner ear** (outer or middle ear), e.g. **impacted earwax**, a **perforated eardrum** or a **middle-ear infection** (glue ear). It is often **reversible**."
   ],
+  "short": {
+   "hook": "CORTI → SNAP → SILENT → SENSORINEURAL: where it breaks, how, what that does, what kind.",
+   "groups": [
+    {"q": "Which parts are damaged, and where?", "facts": [
+     {"t": "**Hair cells** are damaged", "of": 0},
+     {"t": "They sit in the **organ of Corti**", "of": 0},
+     {"t": "on the **basilar membrane**, in the **cochlea** of the **inner ear**", "of": 1}
+    ]},
+    {"q": "How does loud noise damage them?", "facts": [
+     {"t": "Loud sound = **high-amplitude** waves", "of": 2},
+     {"t": "The hairs **bend against the tectorial membrane**", "of": 2},
+     {"t": "Over time they **break off**", "of": 2},
+     {"t": "**85 dB** or more over time; **130 dB** at once", "of": 2}
+    ]},
+    {"q": "How does that cause deafness?", "facts": [
+     {"t": "No **nerve impulses** go down **nerve VIII** to the brain", "of": 3},
+     {"t": "Hair cells **do not grow back**, so it is **permanent**", "of": 4}
+    ]},
+    {"q": "What kind of deafness, and the other kind?", "facts": [
+     {"t": "**Sensorineural** deafness: damage from the cochlea to the brain", "of": 5},
+     {"t": "The other kind is **conduction**: sound is **blocked** in the outer or middle ear", "of": 6},
+     {"t": "e.g. **earwax** or **glue ear**; often **reversible**", "of": 6}
+    ]}
+   ]
+  },
   "order": false,
   "traps": [
    "Hair cells of the SEMICIRCULAR CANALS are for balance. Her own NIHL question offers them as the wrong answer.",

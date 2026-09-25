@@ -41,6 +41,29 @@ export function loadSaq(HERE) {
       return { pts: hit[0].pts, steps: hit[0].steps };
     }).filter(Boolean);
     delete x.her;
+    /* the short version (26 Sep 2026: the full answers were too big to remember). One fact a line, a few words each,
+       grouped under the question's own parts; each line names the long mark point it condenses (`of`). Every bold word
+       must be found in THAT point and every long point must have a short line, so the short version can neither invent
+       a fact nor drop a point. */
+    if (x.short) {
+      const s = x.short, flat = [];
+      const norm = t => ' ' + String(t).toLowerCase().replace(/\*\*/g, '').replace(/[^a-z0-9]+/g, ' ').trim() + ' ';
+      if (!String(s.hook || '').trim()) fails.push(`${at}: short.hook empty`);
+      if (!Array.isArray(s.groups) || !s.groups.length) fails.push(`${at}: short.groups empty`);
+      for (const g of s.groups || []) {
+        if (!String(g.q || '').trim()) fails.push(`${at}: a short group has no question`);
+        if (!Array.isArray(g.facts) || !g.facts.length) fails.push(`${at}: short group "${g.q}" has no lines`);
+        flat.push(...(g.facts || []));
+      }
+      for (const f of flat) {
+        if (!Number.isInteger(f.of) || f.of < 0 || f.of >= x.steps.length) { fails.push(`${at}: short line "${f.t}" cites point ${f.of}, out of range`); continue; }
+        const bold = [...String(f.t).matchAll(/\*\*(.+?)\*\*/g)].map(m => m[1]);
+        if (!bold.length) fails.push(`${at}: short line "${f.t}" has no bold mark word`);
+        for (const b of bold) if (!norm(x.steps[f.of]).includes(norm(b))) fails.push(`${at}: short line's bold "${b}" is not in long point ${f.of + 1}`);
+        if (String(f.t).split(/\s+/).length > 14) fails.push(`${at}: short line "${f.t}" is over 14 words`);
+      }
+      x.steps.forEach((_, i) => { if (!flat.some(f => f.of === i)) fails.push(`${at}: long point ${i + 1} has no short line`); });
+    }
     const covered = new Set();
     (x.mcq || []).forEach((m, i) => {
       const mt = `${at} mcq ${i + 1}`;
