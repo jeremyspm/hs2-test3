@@ -15,6 +15,76 @@
    "**Genotypes**: label the **homozygous recessives first** (bb, or XᵃY / XᵃXᵃ); everyone else has **at least one dominant allele**, and you work out the rest from their **parents and children**. Here the affected father must be **Bb**, because some of his children are unaffected (bb); the unaffected mother is **bb**.",
    "**Chance**: draw a **Punnett square** of the parents' alleles. **Bb × bb** gives **2 Bb : 2 bb**, so each child has a **50%** chance of being affected."
   ],
+  "short": {
+   "hook": "SKIP? (skips = recessive) · BOYS vs GIRLS? (even = autosomal) · RECESSIVES first · PUNNETT the parents: Bb × bb = 50%.",
+   "groups": [
+    {
+     "q": "Read the chart",
+     "facts": [
+      {
+       "t": "**Squares = males**, **circles = females**, **shaded = affected**",
+       "of": 0
+      }
+     ]
+    },
+    {
+     "q": "Dominant or recessive?",
+     "facts": [
+      {
+       "t": "In **every generation**, never skips = **dominant**",
+       "of": 1
+      },
+      {
+       "t": "**Skips a generation** = **recessive**",
+       "of": 1
+      }
+     ]
+    },
+    {
+     "q": "Autosomal or X-linked?",
+     "facts": [
+      {
+       "t": "Count **males vs females**: equal = **autosomal**",
+       "of": 2
+      },
+      {
+       "t": "A father passing it to his son **rules out X-linked**",
+       "of": 2
+      },
+      {
+       "t": "X-linked dominant: affected fathers pass it to **all their daughters**",
+       "of": 3
+      }
+     ]
+    },
+    {
+     "q": "Genotypes",
+     "facts": [
+      {
+       "t": "Label the **homozygous recessives first** (bb)",
+       "of": 4
+      },
+      {
+       "t": "Father **Bb** (he has unaffected children); mother **bb**",
+       "of": 4
+      }
+     ]
+    },
+    {
+     "q": "Chance of another affected child",
+     "facts": [
+      {
+       "t": "**Punnett square** of the parents: **Bb × bb**",
+       "of": 5
+      },
+      {
+       "t": "**2 Bb : 2 bb** = a **50%** chance for each child",
+       "of": 5
+      }
+     ]
+    }
+   ]
+  },
   "order": true,
   "traps": [
    "Say HOW you can tell (skips or not; males vs females; father to son). 'How can you tell?' carries its own marks in her question.",
@@ -143,6 +213,71 @@
    "So there are **no healthy carriers**: anyone with an **H** allele develops the disease and only **hh** is unaffected; it shows in **every generation**.",
    "**Hh × hh**: the Punnett square gives **2 Hh : 2 hh**, so each child has a **50%** chance of being affected."
   ],
+  "short": {
+   "hook": "Chromosome 4 → CAG STUTTER → TOXIC protein in the brain → ONE H is enough: Hh × hh = 50%.",
+   "groups": [
+    {
+     "q": "Cause",
+     "facts": [
+      {
+       "t": "A **mutated gene** on **chromosome 4**",
+       "of": 0
+      },
+      {
+       "t": "Chromosome 4 is an **autosome**",
+       "of": 0
+      },
+      {
+       "t": "**CAG** repeated **36-120 times** (normal: **10-35**)",
+       "of": 1
+      }
+     ]
+    },
+    {
+     "q": "How it damages the body",
+     "facts": [
+      {
+       "t": "It makes an **abnormal huntingtin protein**, which is **toxic**",
+       "of": 2
+      },
+      {
+       "t": "It **builds up in the brain**: **movement, thinking and memory** suffer",
+       "of": 2
+      }
+     ]
+    },
+    {
+     "q": "How it is inherited",
+     "facts": [
+      {
+       "t": "**Autosomal dominant**: **one copy** (**Hh**) is enough",
+       "of": 3
+      },
+      {
+       "t": "**No healthy carriers**: Hh is affected, only hh is not",
+       "of": 4
+      },
+      {
+       "t": "It shows in **every generation**",
+       "of": 4
+      }
+     ]
+    },
+    {
+     "q": "Hh × hh",
+     "facts": [
+      {
+       "t": "**Hh × hh** → **2 Hh : 2 hh**",
+       "of": 5
+      },
+      {
+       "t": "Each child has a **50%** chance",
+       "of": 5
+      }
+     ]
+    }
+   ]
+  },
   "order": false,
   "traps": [
    "DOMINANT: Hh is AFFECTED. Calling Hh a 'carrier' loses the mark (her deck asks: can a person be a healthy carrier? No).",
@@ -244,6 +379,63 @@
    "Phenotypes: BB and Bb both show the **dominant** trait, so **75% brown : 25% blue**; only **bb** shows the recessive trait.",
    "**Codominance (ABO)**: **Iᴬ and Iᴮ are both expressed** and **i** (O) is recessive. **Iᴬi × Iᴮi** gives **IᴬIᴮ (AB), Iᴬi (A), Iᴮi (B) and ii (O)**, **25% each**, which is how four children can have four different blood groups."
   ],
+  "short": {
+   "hook": "One parent ACROSS THE TOP, one DOWN THE SIDE, one letter from each into every box.",
+   "groups": [
+    {
+     "q": "What it shows",
+     "facts": [
+      {
+       "t": "**Alleles** come in pairs, **one from each parent**",
+       "of": 0
+      },
+      {
+       "t": "It shows **all the possible combinations**: the **probability** of each",
+       "of": 0
+      }
+     ]
+    },
+    {
+     "q": "How to draw it",
+     "facts": [
+      {
+       "t": "One parent **across the top**, the other **down the side**",
+       "of": 1
+      }
+     ]
+    },
+    {
+     "q": "Bb × Bb",
+     "facts": [
+      {
+       "t": "**Bb × Bb** → **1 BB : 2 Bb : 1 bb**",
+       "of": 2
+      },
+      {
+       "t": "25% **homozygous dominant**, 50% **heterozygous**, 25% **homozygous recessive**",
+       "of": 2
+      },
+      {
+       "t": "Phenotypes: **75% brown : 25% blue**",
+       "of": 3
+      }
+     ]
+    },
+    {
+     "q": "Codominant blood groups",
+     "facts": [
+      {
+       "t": "Codominance: **Iᴬ and Iᴮ are both expressed**; i (O) is recessive",
+       "of": 4
+      },
+      {
+       "t": "Iᴬi × Iᴮi → **AB**, A, B and O, **25% each**",
+       "of": 4
+      }
+     ]
+    }
+   ]
+  },
   "order": true,
   "traps": [
    "Genotype (the letters: BB, Bb, bb) is not phenotype (what shows: brown or blue). Give both when asked.",
@@ -345,6 +537,63 @@
    "**Mitochondrial inheritance**: genes in **mitochondrial DNA** are passed **only by the mother**, to **all her children** (sons and daughters); **fathers never pass it on**.",
    "Mitochondrial disorders can appear in **both sexes in every generation**, but severity varies because of the **bottleneck effect**: symptoms appear once mutated mtDNA passes a **threshold** (often **60-90%**), e.g. **LHON**."
   ],
+  "short": {
+   "hook": "CO = BOTH show (AB). INCOMPLETE = a BLEND (sickle cell). POLY = MANY genes (height). MITO = MUM only.",
+   "groups": [
+    {
+     "q": "Codominance",
+     "facts": [
+      {
+       "t": "**Both alleles are fully expressed**",
+       "of": 0
+      },
+      {
+       "t": "e.g. **ABO blood groups**: A and B together give **AB**",
+       "of": 0
+      }
+     ]
+    },
+    {
+     "q": "Incomplete dominance",
+     "facts": [
+      {
+       "t": "One allele **does not completely mask** the other: **intermediate**",
+       "of": 1
+      },
+      {
+       "t": "e.g. **sickle cell**: carriers have normal and sickle cells",
+       "of": 1
+      }
+     ]
+    },
+    {
+     "q": "Polygenic inheritance",
+     "facts": [
+      {
+       "t": "**Many genes** control one trait: a **continuous range** (bell curve)",
+       "of": 2
+      },
+      {
+       "t": "e.g. **height**, **skin colour**",
+       "of": 2
+      }
+     ]
+    },
+    {
+     "q": "Mitochondrial inheritance",
+     "facts": [
+      {
+       "t": "**Mitochondrial DNA** passes **only by the mother**, to **all her children**",
+       "of": 3
+      },
+      {
+       "t": "Severity varies: the **bottleneck effect** (a **threshold**)",
+       "of": 4
+      }
+     ]
+    }
+   ]
+  },
   "order": false,
   "traps": [
    "Codominance = BOTH shown fully (AB); incomplete dominance = a BLEND. Her quizzes pair them to catch you.",
@@ -449,6 +698,63 @@
    "Examples: **Down syndrome = trisomy 21** (**47** chromosomes, three copies of chromosome 21); **Turner syndrome = 45,X (XO)**, only one X. Edwards syndrome (trisomy 18) is another.",
    "Aneuploidy is caused by **non-disjunction**: a chromosome pair or its chromatids **fail to separate** in **anaphase of meiosis** (I or II), so a **gamete** gets one too many or one too few, and so does the **zygote**."
   ],
+  "short": {
+   "hook": "46 = 23 PAIRS. ONE TOO MANY (Down, 47) or ONE TOO FEW (Turner, 45) = pairs failing to split in meiosis.",
+   "groups": [
+    {
+     "q": "Karyotype",
+     "facts": [
+      {
+       "t": "A picture of the chromosomes in **numbered homologous pairs**",
+       "of": 0
+      },
+      {
+       "t": "**46 chromosomes = 23 pairs**",
+       "of": 1
+      },
+      {
+       "t": "**22 pairs of autosomes** + **XX** or **XY**",
+       "of": 1
+      }
+     ]
+    },
+    {
+     "q": "Aneuploidy",
+     "facts": [
+      {
+       "t": "**Aneuploidy** = an **abnormal number of chromosomes**",
+       "of": 2
+      }
+     ]
+    },
+    {
+     "q": "Two examples",
+     "facts": [
+      {
+       "t": "**Down syndrome = trisomy 21**: **47** chromosomes",
+       "of": 3
+      },
+      {
+       "t": "**Turner syndrome**: **45**, only one X",
+       "of": 3
+      }
+     ]
+    },
+    {
+     "q": "How it arises",
+     "facts": [
+      {
+       "t": "**Non-disjunction** in **meiosis**",
+       "of": 4
+      },
+      {
+       "t": "Pairs **fail to separate**, so a **gamete** gets one too many or few",
+       "of": 4
+      }
+     ]
+    }
+   ]
+  },
   "order": false,
   "traps": [
    "46 chromosomes = 23 PAIRS = 22 pairs of autosomes + 1 pair of sex chromosomes. '23 autosomes' is wrong.",
@@ -553,6 +859,58 @@
    "**Genetic engineering** is the **deliberate alteration of DNA** to change an organism's genetic make-up, e.g. **bacteria altered to make insulin**.",
    "**Gene therapy** is the **treatment of a genetic disease** by **inserting genetic material** into the patient's cells (carried in by a **vector**)."
   ],
+  "short": {
+   "hook": "LOOK (blood test, karyotype) → SAMPLE the baby (CVS early, amnio later) → CHANGE DNA (engineering) → TREAT (gene therapy).",
+   "groups": [
+    {
+     "q": "Genetic testing",
+     "facts": [
+      {
+       "t": "**Genetic testing** reads a person's **DNA** (a **blood sample**)",
+       "of": 0
+      },
+      {
+       "t": "e.g. a **karyotype** or a **CGH-array**",
+       "of": 0
+      }
+     ]
+    },
+    {
+     "q": "Fetal testing",
+     "facts": [
+      {
+       "t": "**Chorionic villus sampling (CVS)**: the **placenta**, **8-12 weeks**",
+       "of": 2
+      },
+      {
+       "t": "**Amniocentesis**: **amniotic fluid**, **14-20 weeks**",
+       "of": 1
+      },
+      {
+       "t": "Both check the **fetal cells** for disorders",
+       "of": 1
+      }
+     ]
+    },
+    {
+     "q": "Genetic engineering and gene therapy",
+     "facts": [
+      {
+       "t": "**Genetic engineering**: **deliberate alteration of DNA**",
+       "of": 3
+      },
+      {
+       "t": "e.g. **bacteria altered to make insulin**",
+       "of": 3
+      },
+      {
+       "t": "**Gene therapy**: **treatment of a genetic disease** by **inserting genetic material**",
+       "of": 4
+      }
+     ]
+    }
+   ]
+  },
   "order": false,
   "traps": [
    "CVS is EARLIER (8-12 weeks, placenta); amniocentesis is LATER (14-20 weeks, amniotic fluid).",

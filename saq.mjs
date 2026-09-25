@@ -44,7 +44,8 @@ export function loadSaq(HERE) {
     /* the short version (26 Sep 2026: the full answers were too big to remember). One fact a line, a few words each,
        grouped under the question's own parts; each line names the long mark point it condenses (`of`). Every bold word
        must be found in THAT point and every long point must have a short line, so the short version can neither invent
-       a fact nor drop a point. */
+       a fact nor drop a point. Every SAQ ships one: the trainer is built around it. */
+    if (!x.short) fails.push(`${at}: no short version (every SAQ needs one: one fact a line, about two lines a mark)`);
     if (x.short) {
       const s = x.short, flat = [];
       const norm = t => ' ' + String(t).toLowerCase().replace(/\*\*/g, '').replace(/[^a-z0-9]+/g, ' ').trim() + ' ';

@@ -1380,10 +1380,11 @@ function saqCard(){
     <p>Test 3 is <b>30% written</b>. These are the written questions she has already set for Module 3: her student-marked SAQ quiz,
     the two test case studies she names (<b>11 Lactation</b>, <b>L Noise-induced hearing loss</b>), pedigree charts (her words: <i>will be tested</i>)
     and the topics on her help board. She marks <b>half a mark per fact</b>, so count the marks and give twice as many facts.
-    For each one: <b>1 Read</b> the model answer (one mark point per line; the <b style="color:var(--warn)">bold</b> words are what earn the marks)
-    → <b>2 Write it</b> from memory → the page checks your answer for her mark words, you confirm the marks, and it shows what you missed
+    For each one: <b>1 Read</b> the short version (one fact a line, a few words each, about two lines a mark; the <b style="color:var(--warn)">bold</b> words are what earn the marks)
+    → <b>2 Fill the gaps</b>: the lines disappear a round at a time, 1, then a quarter, half, then all of them; say each one, tap to check
+    → <b>3 Write it</b> from memory → the page checks your answer for the mark words, you confirm the marks, and it shows what you missed
     → write it again until you get 80% (then it's locked ✓). If a point won't stick, the multiple-choice drill is there as a helper. <b>⭐ = do these first.</b></p>
-    <p class="refsrc">Model answers are this tool's, built from her decks and answer pages (each one names its source). Where she posted her own answer, it sits under the tool's, word for word. Progress is saved in this browser only.</p>
+    <p class="refsrc">Model answers are this tool's, built from her decks and answer pages (each one names its source). Each short version is cut from the full answer line by line, and the full one sits folded underneath it. Where she posted her own answer, it sits there too, word for word. Progress is saved in this browser only.</p>
     </details>
     ${nx?`<button class="btn primary wide" data-sqgo="${nx.id}">▶ ${sqS(nx.id).read?'Continue':'Start'}: ${esc(nx.title)}</button>`
        :`<p style="margin:.4rem 0"><b>All ${SAQD.length} locked.</b> Keep them warm with a practice SAQ paper.</p>`}
@@ -1412,7 +1413,7 @@ function sqOpen(id,stage){
 }
 /* the main road is Read -> Write; the multiple-choice drill and the ordering rung are helpers beside it */
 function sqStages(x){ return x.short
-  ? [['read','1 Read'],['gaps','2 Fill gaps'],['cold','3 Write it'],...(x.mcq.length?[['drill','🧩 MCQ help']]:[])]
+  ? [['read','1 Read'],['gaps','2 Fill gaps'],['cold','3 Write it'],...(x.mcq.length?[['drill','🧩 MCQ help']]:[]),...(x.order?[['order','↕ Order']]:[])]
   : [['read','1 Read'],['cold','2 Write it'],...(x.mcq.length?[['drill','🧩 MCQ help']]:[]),...(x.order?[['order','↕ Order']]:[])] }
 function sqHead(){
   const x=SQR.x, st=sqStages(x);
@@ -1708,7 +1709,7 @@ function sqSheet(){
   SQR=null;
   const xs=SAQD.filter(x=>x.star).concat(SAQD.filter(x=>!x.star));
   $('#view').innerHTML=`<div class="card sheet"><div class="qhead"><button class="btn ghost" id="sqBack" style="padding:4px 10px">← SAQs</button><span class="n">📄 Last-look sheet</span></div>
-    <p class="hist" style="margin:0">All ${SAQD.length} model answers, one mark point per line (the short version, one fact a line, where there is one). Bold = the words that earn it.</p>
+    <p class="hist" style="margin:0">All ${SAQD.length} short answers, one fact a line. Bold = the words that earn it.</p>
     ${xs.map(x=>`<div class="sheeti"><h3>${x.star?'⭐ ':''}${esc(x.title)} <span class="tag ${x.sys}">${x.marks} marks</span></h3>
       ${x.short
         ?`<div class="shook">🧠 ${esc(x.short.hook)}</div>${sqShortHTML(x, i=>`<li value="${i+1}">${mdB(sqPoints(x)[i])}</li>`)}`
@@ -1743,8 +1744,11 @@ $('#helpBtn').onclick=()=>{$('#help').innerHTML=`
   <p>Practice for the written questions, which are 30% of Test 3. The list is the written questions she has already set for Module 3:
   her student-marked SAQ quiz, the two test case studies, pedigree charts (her words: <i>will be tested</i>) and the topics on her
   "Help with Module 3 topics" board; ⭐ marks those signals, so do them first. She marks <b>half a mark per fact</b> (her
-  "SAQ – what can we expect?" post). For each: <b>Read</b> the model answer (one mark point per line, the bold words earn it), then
-  <b>Write it</b> from memory. When you press Mark, the page ticks every point where it finds that point's bold words in your answer
+  "SAQ – what can we expect?" post). For each: <b>Read</b> the short version (one fact a line, a few words each, about two
+  lines a mark, grouped under the question's own parts; the bold words earn it; the full answer folds away underneath), then
+  <b>Fill the gaps</b> (the whole short answer with 1, then a quarter, half, then every line hidden: say the missing line, tap to
+  check, mark yourself honestly; a line you miss stays hidden next round), then
+  <b>Write it</b> from memory. When you press Mark, the page ticks every line where it finds that line's bold words in your answer
   and shows which words it found (✓) and which were missing (✗); you correct the ticks, and it scores you. A long word has to match
   nearly in full, so "oestrogen" never passes for "oxytocin". Write it again until you reach 80%, which locks it, and a locked
   question opens straight at Write it next time. Helpers if a point won't stick: <b>🧩 MCQ help</b> (multiple choice on each mark

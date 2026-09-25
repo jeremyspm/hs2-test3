@@ -15,6 +15,89 @@
    "Milk path: **alveoli (alveolar cells)** → **alveolar ducts** → **lactiferous ducts** → out at the **nipple**.",
    "In pregnancy, rising **progesterone** develops the **lobules and alveoli** (the milk factories); **oestrogen** grows the **ducts**. Before pregnancy the ducts are there but not the glandular tissue that makes milk."
   ],
+  "short": {
+   "hook": "PROlactin PROduces, OXYtocin lets it OUT. Suckling fires both. Oestrogen = the pipes, progesterone = the factories.",
+   "groups": [
+    {
+     "q": "Prolactin",
+     "facts": [
+      {
+       "t": "**Prolactin**: from the **anterior pituitary**",
+       "of": 0
+      },
+      {
+       "t": "It **stimulates milk production** by the **alveolar cells**",
+       "of": 0
+      }
+     ]
+    },
+    {
+     "q": "Oxytocin",
+     "facts": [
+      {
+       "t": "**Oxytocin**: made in the **hypothalamus**, released from the **posterior pituitary**",
+       "of": 1
+      },
+      {
+       "t": "It **stimulates milk release (let-down)**: **myoepithelial cells** **contract**",
+       "of": 1
+      }
+     ]
+    },
+    {
+     "q": "What sets both off",
+     "facts": [
+      {
+       "t": "A **neural stimulus**: the baby **suckling** (or its **cry**)",
+       "of": 2
+      }
+     ]
+    },
+    {
+     "q": "The gland",
+     "facts": [
+      {
+       "t": "Mammary glands are **modified sweat glands**",
+       "of": 3
+      },
+      {
+       "t": "**15-25 lobes** around the **nipple**, each with **lobules** of **alveoli**",
+       "of": 3
+      },
+      {
+       "t": "**Areola** around the nipple; **suspensory ligaments** hold the breast",
+       "of": 3
+      }
+     ]
+    },
+    {
+     "q": "The milk's path",
+     "facts": [
+      {
+       "t": "**Alveoli** → **alveolar ducts** → **lactiferous ducts** → **nipple**",
+       "of": 4
+      }
+     ]
+    },
+    {
+     "q": "In pregnancy",
+     "facts": [
+      {
+       "t": "**Progesterone** develops the **lobules and alveoli** (the milk factories)",
+       "of": 5
+      },
+      {
+       "t": "**Oestrogen** grows the **ducts**",
+       "of": 5
+      },
+      {
+       "t": "Before pregnancy there are ducts but no **glandular tissue**",
+       "of": 5
+      }
+     ]
+    }
+   ]
+  },
   "order": false,
   "traps": [
    "PROlactin PROduces milk; OXYtocin ejects it (let-down). Swapping them is the classic lost mark.",
@@ -150,6 +233,58 @@
    "**Meiosis II is completed only if a sperm enters** the oocyte, giving **1 ovum** (plus a second polar body). Egg production **ends at menopause**.",
    "Both are driven by **FSH** (follicle-stimulating hormone) from the **anterior pituitary**, together with **LH**."
   ],
+  "short": {
+   "hook": "SPERM: puberty, non-stop, 1 → 4. EGG: before birth, pauses, one a month, finishes only if a sperm gets in, 1 → 1. Both: FSH.",
+   "groups": [
+    {
+     "q": "Males: sperm",
+     "facts": [
+      {
+       "t": "**Spermatogenesis**: **seminiferous tubules**, **continuously** from **puberty**",
+       "of": 0
+      },
+      {
+       "t": "**Spermatogonia** divide by **mitosis** → **primary spermatocytes**",
+       "of": 1
+      },
+      {
+       "t": "**meiosis I**, then **meiosis II** → **4 sperm**",
+       "of": 1
+      }
+     ]
+    },
+    {
+     "q": "Females: eggs",
+     "facts": [
+      {
+       "t": "**Oogenesis** starts in **fetal life**",
+       "of": 2
+      },
+      {
+       "t": "**Primary oocytes** **arrest in prophase I** until puberty",
+       "of": 2
+      },
+      {
+       "t": "From **puberty**, **one** a month completes **meiosis I** and is ovulated",
+       "of": 3
+      },
+      {
+       "t": "**Meiosis II** finishes only **if a sperm enters**: **1 ovum**",
+       "of": 4
+      }
+     ]
+    },
+    {
+     "q": "The hormone",
+     "facts": [
+      {
+       "t": "**FSH** from the **anterior pituitary** (with **LH**)",
+       "of": 5
+      }
+     ]
+    }
+   ]
+  },
   "order": false,
   "traps": [
    "One primary spermatocyte → 4 sperm; one primary oocyte → only 1 egg (the rest are polar bodies).",
@@ -266,6 +401,65 @@
    "**Proliferative phase (days 6-14)**: rising **oestrogen** from the growing follicle **rebuilds** the endometrium.",
    "**Secretory phase (days 15-28)**: **progesterone** from the corpus luteum turns the endometrium into a gland-rich lining **ready for implantation**. If no embryo implants, progesterone falls and menstruation starts again."
   ],
+  "short": {
+   "hook": "OVARY: GROW (FSH) → POP (LH) → YELLOW BODY (progesterone) → WHITE SCAR. UTERUS: SHED → REBUILD (oestrogen) → GET READY (progesterone).",
+   "groups": [
+    {
+     "q": "Ovarian cycle",
+     "facts": [
+      {
+       "t": "**Follicular phase** (days 1-14): **FSH** makes a follicle grow",
+       "of": 0
+      },
+      {
+       "t": "primordial → primary → secondary → **Graafian**",
+       "of": 0
+      },
+      {
+       "t": "The follicle secretes **oestrogen**",
+       "of": 0
+      },
+      {
+       "t": "**Ovulation** (about day 14): an **LH surge** releases the **secondary oocyte**",
+       "of": 1
+      },
+      {
+       "t": "**Luteal phase**: the **corpus luteum** secretes **progesterone**",
+       "of": 2
+      },
+      {
+       "t": "No pregnancy: it becomes the **corpus albicans**",
+       "of": 2
+      }
+     ]
+    },
+    {
+     "q": "Uterine cycle",
+     "facts": [
+      {
+       "t": "**Menstrual phase** (days 1-5): **progesterone falls**",
+       "of": 3
+      },
+      {
+       "t": "**Spiral arteries** spasm; the **stratum functionalis** is **shed**",
+       "of": 3
+      },
+      {
+       "t": "**Proliferative phase** (6-14): **oestrogen** **rebuilds** the lining",
+       "of": 4
+      },
+      {
+       "t": "**Secretory phase** (15-28): **progesterone** readies it for **implantation**",
+       "of": 5
+      },
+      {
+       "t": "No implantation: progesterone falls, **menstruation** starts again",
+       "of": 5
+      }
+     ]
+    }
+   ]
+  },
   "order": true,
   "traps": [
    "Follicular phase = FSH + oestrogen; luteal phase = corpus luteum + progesterone.",
@@ -379,6 +573,89 @@
    "**Meiosis**: in males it is **continuous** and one spermatocyte gives **4 sperm**; in females it **stops and starts** (arrests in prophase I and metaphase II) and one oocyte gives **1 egg** plus polar bodies.",
    "**Mobility**: sperm are **motile** (they swim with a tail); the egg **cannot move** itself and is carried along the fallopian tube by **cilia** and peristalsis."
   ],
+  "short": {
+   "hook": "Six rows, female vs male, one line each: LH, FSH, timing, size, meiosis, moving.",
+   "groups": [
+    {
+     "q": "LH",
+     "facts": [
+      {
+       "t": "Female: **triggers ovulation**",
+       "of": 0
+      },
+      {
+       "t": "Male: **Leydig cells** make **testosterone**",
+       "of": 0
+      }
+     ]
+    },
+    {
+     "q": "FSH",
+     "facts": [
+      {
+       "t": "Female: **follicle development**",
+       "of": 1
+      },
+      {
+       "t": "Male: **spermatogenesis** (via the Sertoli cells)",
+       "of": 1
+      }
+     ]
+    },
+    {
+     "q": "Timing of gamete production",
+     "facts": [
+      {
+       "t": "Female: starts in **fetal life**; eggs from **puberty to menopause**",
+       "of": 2
+      },
+      {
+       "t": "Male: from **puberty**, **for life**",
+       "of": 2
+      }
+     ]
+    },
+    {
+     "q": "Size of the gametes",
+     "facts": [
+      {
+       "t": "Egg: the **largest** body cell",
+       "of": 3
+      },
+      {
+       "t": "Sperm: the **smallest**",
+       "of": 3
+      }
+     ]
+    },
+    {
+     "q": "Timing of meiosis",
+     "facts": [
+      {
+       "t": "Female: **stops and starts**; **1 egg**",
+       "of": 4
+      },
+      {
+       "t": "Male: **continuous**; **4 sperm**",
+       "of": 4
+      }
+     ]
+    },
+    {
+     "q": "Mobility",
+     "facts": [
+      {
+       "t": "Egg: **cannot move**, carried by **cilia**",
+       "of": 5
+      },
+      {
+       "t": "Sperm: **motile**, swims with a tail",
+       "of": 5
+      }
+     ]
+    }
+   ]
+  },
   "order": false,
   "traps": [
    "LH → Leydig cells → TESTOSTERONE. Her student-marked feedback slips and says 'estrogen'; her Male Repro deck (slides 13 and 38) says testosterone.",
@@ -484,6 +761,71 @@
    "At puberty testosterone grows the **reproductive organs** to adult size and brings the **secondary sex characteristics**: **pubic, axillary and facial hair**, a **deeper voice**, a bigger chest, and thicker, oilier skin.",
    "It also increases **bone density** and **skeletal muscle mass**, and it is the basis of **libido** in both males and females."
   ],
+  "short": {
+   "hook": "GnRH → FSH + LH. L-T: LH → Leydig → Testosterone. S-I: FSH → Sertoli → sperm care + Inhibin.",
+   "groups": [
+    {
+     "q": "From the brain",
+     "facts": [
+      {
+       "t": "**Hypothalamus** → **GnRH** → **anterior pituitary**",
+       "of": 0
+      },
+      {
+       "t": "which releases **FSH** and **LH**",
+       "of": 0
+      }
+     ]
+    },
+    {
+     "q": "At the testes",
+     "facts": [
+      {
+       "t": "**LH** → **Leydig (interstitial) cells** → **testosterone**",
+       "of": 1
+      },
+      {
+       "t": "Testosterone **enhances spermatogenesis**",
+       "of": 1
+      },
+      {
+       "t": "**FSH** → **Sertoli (sustentacular) cells**, which **nourish** the sperm",
+       "of": 2
+      }
+     ]
+    },
+    {
+     "q": "Negative feedback",
+     "facts": [
+      {
+       "t": "**Testosterone** switches off **GnRH** and **LH**",
+       "of": 3
+      },
+      {
+       "t": "**Inhibin** (from Sertoli cells) switches off **FSH**",
+       "of": 3
+      }
+     ]
+    },
+    {
+     "q": "Testosterone at puberty",
+     "facts": [
+      {
+       "t": "Grows the **reproductive organs** to adult size",
+       "of": 4
+      },
+      {
+       "t": "**Pubic, axillary and facial hair**; a **deeper voice**",
+       "of": 4
+      },
+      {
+       "t": "More **bone density** and **skeletal muscle mass**; **libido**",
+       "of": 5
+      }
+     ]
+    }
+   ]
+  },
   "order": true,
   "same": [
    [
@@ -599,6 +941,66 @@
    "The **contraceptive pill** contains synthetic **oestrogen and progestin** (a synthetic progesterone), combined or alone.",
    "The pill prevents pregnancy in three ways: it **stops ovulation**, **thickens the cervical mucus** so sperm cannot get into the uterus, and **thins the endometrium** so a fertilised egg cannot implant."
   ],
+  "short": {
+   "hook": "OESTROGEN BUILDS (organs, breasts, hips, lining). PROGESTERONE PREPARES (lining, milk glands). THE PILL: no egg, a mucus plug, a thin lining.",
+   "groups": [
+    {
+     "q": "Oestrogen",
+     "facts": [
+      {
+       "t": "**Oestrogen** rises at **puberty** and drives **follicle growth**",
+       "of": 0
+      },
+      {
+       "t": "It grows the **uterine tubes, uterus and vagina**",
+       "of": 0
+      },
+      {
+       "t": "**Breast growth**; **fat** on the **hips and breasts**",
+       "of": 1
+      },
+      {
+       "t": "A **wider, lighter pelvis**; **axillary and pubic hair**",
+       "of": 1
+      },
+      {
+       "t": "It **rebuilds the endometrium** (**proliferative phase**)",
+       "of": 2
+      }
+     ]
+    },
+    {
+     "q": "Progesterone",
+     "facts": [
+      {
+       "t": "**Progesterone** (**corpus luteum**) readies the lining for **implantation**",
+       "of": 3
+      },
+      {
+       "t": "In pregnancy it develops the breast **lobules and alveoli**",
+       "of": 3
+      }
+     ]
+    },
+    {
+     "q": "The pill",
+     "facts": [
+      {
+       "t": "The **contraceptive pill**: synthetic **oestrogen and progestin**",
+       "of": 4
+      },
+      {
+       "t": "It **stops ovulation** and **thickens the cervical mucus**",
+       "of": 5
+      },
+      {
+       "t": "and **thins the endometrium**, so an egg cannot implant",
+       "of": 5
+      }
+     ]
+    }
+   ]
+  },
   "order": false,
   "traps": [
    "Oestrogen = ducts, fat, pelvis, the proliferative phase. Progesterone = alveoli, the secretory phase, pregnancy.",

@@ -19,26 +19,74 @@
   "short": {
    "hook": "CORTI → SNAP → SILENT → SENSORINEURAL: where it breaks, how, what that does, what kind.",
    "groups": [
-    {"q": "Which parts are damaged, and where?", "facts": [
-     {"t": "**Hair cells** are damaged", "of": 0},
-     {"t": "They sit in the **organ of Corti**", "of": 0},
-     {"t": "on the **basilar membrane**, in the **cochlea** of the **inner ear**", "of": 1}
-    ]},
-    {"q": "How does loud noise damage them?", "facts": [
-     {"t": "Loud sound = **high-amplitude** waves", "of": 2},
-     {"t": "The hairs **bend against the tectorial membrane**", "of": 2},
-     {"t": "Over time they **break off**", "of": 2},
-     {"t": "**85 dB** or more over time; **130 dB** at once", "of": 2}
-    ]},
-    {"q": "How does that cause deafness?", "facts": [
-     {"t": "No **nerve impulses** go down **nerve VIII** to the brain", "of": 3},
-     {"t": "Hair cells **do not grow back**, so it is **permanent**", "of": 4}
-    ]},
-    {"q": "What kind of deafness, and the other kind?", "facts": [
-     {"t": "**Sensorineural** deafness: damage from the cochlea to the brain", "of": 5},
-     {"t": "The other kind is **conduction**: sound is **blocked** in the outer or middle ear", "of": 6},
-     {"t": "e.g. **earwax** or **glue ear**; often **reversible**", "of": 6}
-    ]}
+    {
+     "q": "Which parts are damaged, and where?",
+     "facts": [
+      {
+       "t": "**Hair cells** are damaged",
+       "of": 0
+      },
+      {
+       "t": "They sit in the **organ of Corti**",
+       "of": 0
+      },
+      {
+       "t": "on the **basilar membrane**, in the **cochlea** of the **inner ear**",
+       "of": 1
+      }
+     ]
+    },
+    {
+     "q": "How does loud noise damage them?",
+     "facts": [
+      {
+       "t": "Loud sound = **high-amplitude** waves",
+       "of": 2
+      },
+      {
+       "t": "The hairs **bend against the tectorial membrane**",
+       "of": 2
+      },
+      {
+       "t": "Over time they **break off**",
+       "of": 2
+      },
+      {
+       "t": "**85 dB** or more over time; **130 dB** at once",
+       "of": 2
+      }
+     ]
+    },
+    {
+     "q": "How does that cause deafness?",
+     "facts": [
+      {
+       "t": "No **nerve impulses** go down **nerve VIII** to the brain",
+       "of": 3
+      },
+      {
+       "t": "Hair cells **do not grow back**, so it is **permanent**",
+       "of": 4
+      }
+     ]
+    },
+    {
+     "q": "What kind of deafness, and the other kind?",
+     "facts": [
+      {
+       "t": "**Sensorineural** deafness: damage from the cochlea to the brain",
+       "of": 5
+      },
+      {
+       "t": "The other kind is **conduction**: sound is **blocked** in the outer or middle ear",
+       "of": 6
+      },
+      {
+       "t": "e.g. **earwax** or **glue ear**; often **reversible**",
+       "of": 6
+      }
+     ]
+    }
    ]
   },
   "order": false,
@@ -180,6 +228,53 @@
    "The cloudy lens stops light reaching the **retina** properly: vision becomes **blurred and yellowed**, with poor night vision and **glare** sensitivity. It is common with **age** and **diabetes**.",
    "A cataract is treated with **surgery** that **replaces the lens**."
   ],
+  "short": {
+   "hook": "GLAUCOMA = PRESSURE: the drain blocks and the nerve is crushed. CATARACT = a CLOUDY LENS.",
+   "groups": [
+    {
+     "q": "Glaucoma: where, what goes wrong, what it does",
+     "facts": [
+      {
+       "t": "**Glaucoma** is a problem with the **aqueous humor**",
+       "of": 0
+      },
+      {
+       "t": "The **ciliary body** makes it; the **canal of Schlemm** drains it",
+       "of": 0
+      },
+      {
+       "t": "Drain **blocked** → fluid **builds up** → **intraocular pressure rises**",
+       "of": 1
+      },
+      {
+       "t": "Pressure damages the **retina** and **optic nerve** → **blindness**",
+       "of": 2
+      }
+     ]
+    },
+    {
+     "q": "Cataract: where, what goes wrong, what it does",
+     "facts": [
+      {
+       "t": "A **cataract** affects the **lens**",
+       "of": 3
+      },
+      {
+       "t": "Its **proteins denature**, so it goes **cloudy (opaque)**",
+       "of": 3
+      },
+      {
+       "t": "Vision goes **blurred and yellowed**, with **glare**",
+       "of": 4
+      },
+      {
+       "t": "Treated by **surgery** that **replaces the lens**",
+       "of": 5
+      }
+     ]
+    }
+   ]
+  },
   "order": false,
   "traps": [
    "Glaucoma = PRESSURE (aqueous humor, canal of Schlemm). Cataract = the LENS. Swapping them loses both marks.",
@@ -296,6 +391,63 @@
    "Bending the hairs is **transduction**: the hair cells (**mechanoreceptors**) turn the vibration into **nerve impulses**.",
    "The impulses travel along the **cochlear branch of the vestibulocochlear nerve (VIII)** to the **auditory cortex** in the **temporal lobe**, where the sound is heard."
   ],
+  "short": {
+   "hook": "COLLECT → AMPLIFY → RIPPLE → BEND → FIRE → HEAR: outer ear, middle ear, inner ear, nerve, brain.",
+   "groups": [
+    {
+     "q": "Outer ear: collect",
+     "facts": [
+      {
+       "t": "The **pinna** collects sound; the **tympanic membrane** vibrates",
+       "of": 0
+      }
+     ]
+    },
+    {
+     "q": "Middle ear: amplify",
+     "facts": [
+      {
+       "t": "The **ossicles** (**malleus → incus → stapes**) pass it on",
+       "of": 1
+      },
+      {
+       "t": "and **amplify** it onto the **oval window**",
+       "of": 1
+      }
+     ]
+    },
+    {
+     "q": "Inner ear: ripple and bend",
+     "facts": [
+      {
+       "t": "The vibration moves the **perilymph**, then the **endolymph**",
+       "of": 2
+      },
+      {
+       "t": "The **basilar membrane** moves",
+       "of": 3
+      },
+      {
+       "t": "**Hair cells** of the **organ of Corti** **bend against the tectorial membrane**",
+       "of": 3
+      }
+     ]
+    },
+    {
+     "q": "To the brain: fire and hear",
+     "facts": [
+      {
+       "t": "Bending = **transduction** into **nerve impulses**",
+       "of": 4
+      },
+      {
+       "t": "along **nerve VIII** to the **auditory cortex** in the **temporal lobe**",
+       "of": 5
+      }
+     ]
+    }
+   ]
+  },
   "order": true,
   "traps": [
    "It is the MIDDLE ear (the ossicles) that amplifies. Her student-marked feedback slips and says the inner ear amplifies; her deck (slide 11) says the middle ear.",
@@ -412,6 +564,62 @@
    "Inner ear part 1: the **cochlea**, for **hearing**; its **organ of Corti** turns sound vibration into nerve impulses.",
    "Inner ear part 2: the **vestibular apparatus** (the **vestibule** and the **semicircular canals**), for **equilibrium (balance)**."
   ],
+  "short": {
+   "hook": "OUTER collects, MIDDLE amplifies, INNER senses: the cochlea hears, the vestibular apparatus balances.",
+   "groups": [
+    {
+     "q": "Outer ear",
+     "facts": [
+      {
+       "t": "**Pinna**, **external auditory canal** (**cerumen**), **tympanic membrane**",
+       "of": 0
+      },
+      {
+       "t": "It **collects** sound onto the eardrum and helps **locate** it",
+       "of": 0
+      }
+     ]
+    },
+    {
+     "q": "Middle ear",
+     "facts": [
+      {
+       "t": "Air-filled, in the **temporal bone**; holds the **ossicles**",
+       "of": 1
+      },
+      {
+       "t": "It **amplifies** sound onto the **oval window**",
+       "of": 1
+      },
+      {
+       "t": "The **Eustachian** tube **equalises pressure**",
+       "of": 2
+      },
+      {
+       "t": "Two small **muscles** **dampen loud sounds**",
+       "of": 2
+      }
+     ]
+    },
+    {
+     "q": "Inner ear",
+     "facts": [
+      {
+       "t": "**Bony labyrinth** (**perilymph**) around a **membranous labyrinth** (**endolymph**)",
+       "of": 3
+      },
+      {
+       "t": "The **cochlea**: **hearing** (**organ of Corti**)",
+       "of": 4
+      },
+      {
+       "t": "The **vestibular apparatus**: **equilibrium (balance)**",
+       "of": 5
+      }
+     ]
+    }
+   ]
+  },
   "order": false,
   "traps": [
    "Only the INNER ear does balance. The outer and middle ear are for hearing only.",
@@ -528,6 +736,62 @@
    "**Neural tunic** (inner) = the **retina**. Its outer **pigmented layer** **absorbs light** and stops it scattering.",
    "The retina's inner **neural layer** has three layers of neurons: **photoreceptors (rods and cones)** → **bipolar cells** → **ganglion cells**, whose axons leave as the **optic nerve (II)**. The photoreceptors **turn light into nerve impulses**."
   ],
+  "short": {
+   "hook": "Outside in: TOUGH COAT (sclera, cornea) → BLOOD COAT (choroid, ciliary body, iris) → SEEING COAT (retina).",
+   "groups": [
+    {
+     "q": "Outer: fibrous tunic",
+     "facts": [
+      {
+       "t": "**Sclera**: white, **protects** the eye, **anchors** the muscles",
+       "of": 0
+      },
+      {
+       "t": "**Cornea**: clear, does about **80% of the refraction**",
+       "of": 0
+      }
+     ]
+    },
+    {
+     "q": "Middle: vascular tunic",
+     "facts": [
+      {
+       "t": "**Choroid**: **rich in blood vessels**, **nourishes** the eye",
+       "of": 1
+      },
+      {
+       "t": "**Ciliary body**: **holds the lens and changes its shape**",
+       "of": 2
+      },
+      {
+       "t": "**Iris**: its muscles **control pupil size**",
+       "of": 3
+      }
+     ]
+    },
+    {
+     "q": "Inner: neural tunic (the retina)",
+     "facts": [
+      {
+       "t": "The retina's outer **pigmented layer** **absorbs light**",
+       "of": 4
+      },
+      {
+       "t": "**Photoreceptors (rods and cones)** → **bipolar cells** → **ganglion cells**",
+       "of": 5
+      },
+      {
+       "t": "Their axons leave as the **optic nerve (II)**",
+       "of": 5
+      },
+      {
+       "t": "Photoreceptors **turn light into nerve impulses**",
+       "of": 5
+      }
+     ]
+    }
+   ]
+  },
   "order": false,
   "traps": [
    "The CORNEA, not the lens, does most of the refraction (about 80%).",
@@ -643,6 +907,45 @@
    "For distant vision all three are undone: the **ciliary muscle relaxes**, the **lens flattens**, the **pupils dilate** and the eyes look straight ahead.",
    "Light from a near object arrives as **diverging rays**; light from more than **6 m** away arrives as **parallel rays**. Near rays need more bending to focus on the **retina**."
   ],
+  "short": {
+   "hook": "Near = BULGE, SHRINK, CROSS. Far = all three undo.",
+   "groups": [
+    {
+     "q": "Near vision: three changes",
+     "facts": [
+      {
+       "t": "The **ciliary muscle contracts**",
+       "of": 0
+      },
+      {
+       "t": "so the **lens bulges** (gets rounder)",
+       "of": 0
+      },
+      {
+       "t": "The **pupils constrict**",
+       "of": 1
+      },
+      {
+       "t": "The eyes **converge** (turn inwards)",
+       "of": 2
+      }
+     ]
+    },
+    {
+     "q": "Distant vision: undone",
+     "facts": [
+      {
+       "t": "**Ciliary muscle relaxes**, **lens flattens**, **pupils dilate**",
+       "of": 3
+      },
+      {
+       "t": "Near light arrives **diverging**; from over **6 m** it is **parallel**",
+       "of": 4
+      }
+     ]
+    }
+   ]
+  },
   "order": false,
   "traps": [
    "For near vision the pupil CONSTRICTS. Her student-marked feedback says it dilates; her own quiz key ('the pupil dilates' is NOT typical) and both her decks say constricts. Write constricts.",
@@ -748,6 +1051,71 @@
    "Hyperopia is corrected with a **convex (biconvex) lens**, which **converges** the light and moves the focus **forward onto the retina**.",
    "**Astigmatism**: the **cornea or lens is curved unevenly** (more in one direction), so light focuses at **several points** and vision is blurred at **all distances**. It is corrected with glasses or contacts, or laser surgery (LASIK)."
   ],
+  "short": {
+   "hook": "MY-opia: MY world is close, focus falls SHORT → conCAVE. HYPER-opia: focus overshoots → conVEX.",
+   "groups": [
+    {
+     "q": "Normal: emmetropia",
+     "facts": [
+      {
+       "t": "**Emmetropia**: light **focused on the retina**",
+       "of": 0
+      }
+     ]
+    },
+    {
+     "q": "Myopia (short-sighted)",
+     "facts": [
+      {
+       "t": "**Myopia**: distant light focuses **in front of the retina**",
+       "of": 1
+      },
+      {
+       "t": "The eyeball is **too long**; far things blur",
+       "of": 1
+      },
+      {
+       "t": "Fixed with a **concave** lens, which **diverges** the light",
+       "of": 2
+      }
+     ]
+    },
+    {
+     "q": "Hyperopia (long-sighted)",
+     "facts": [
+      {
+       "t": "**Hyperopia**: near light focuses **behind the retina**",
+       "of": 3
+      },
+      {
+       "t": "The eyeball is **too short**; near things blur",
+       "of": 3
+      },
+      {
+       "t": "Fixed with a **convex** lens, which **converges** the light",
+       "of": 4
+      }
+     ]
+    },
+    {
+     "q": "Astigmatism",
+     "facts": [
+      {
+       "t": "The **cornea or lens is curved unevenly**",
+       "of": 5
+      },
+      {
+       "t": "Light focuses at **several points**: blurred at **all distances**",
+       "of": 5
+      },
+      {
+       "t": "Fixed with glasses, contacts or **laser surgery**",
+       "of": 5
+      }
+     ]
+    }
+   ]
+  },
   "order": false,
   "traps": [
    "Myopia = SHORT-sighted = CONCAVE lens. Hyperopia = LONG-sighted = CONVEX lens. Swapping the lenses is the commonest slip.",
@@ -855,6 +1223,58 @@
    "Dynamic equilibrium is detected by the **crista ampullaris** in the **ampulla** of each **semicircular canal**: rotation moves the endolymph, which swings the gel **cupula** and bends the hairs.",
    "Impulses travel in the **vestibular branch of nerve VIII** to the **brain stem** and **cerebellum** (and the cortex). Signals that fire with no real movement cause **vertigo**."
   ],
+  "short": {
+   "hook": "STATIC = GRAVITY and straight lines: the VESTIBULE, stones slide. DYNAMIC = SPINNING: the CANALS, a gel cap swings.",
+   "groups": [
+    {
+     "q": "Both: where and how",
+     "facts": [
+      {
+       "t": "**Hair cells** in the **vestibular apparatus** fire when their hairs bend",
+       "of": 0
+      },
+      {
+       "t": "Signals go along **nerve VIII** to the **cerebellum**",
+       "of": 5
+      }
+     ]
+    },
+    {
+     "q": "Static equilibrium",
+     "facts": [
+      {
+       "t": "**Static**: head position **in response to gravity** and **straight-line movement**",
+       "of": 1
+      },
+      {
+       "t": "Detected by the **maculae** in the **utricle and saccule**",
+       "of": 2
+      },
+      {
+       "t": "**Otoliths** (ear stones) slide when the head tilts",
+       "of": 2
+      }
+     ]
+    },
+    {
+     "q": "Dynamic equilibrium",
+     "facts": [
+      {
+       "t": "**Dynamic**: balance while the head is **rotating**",
+       "of": 3
+      },
+      {
+       "t": "Detected by the **crista ampullaris** in each **semicircular canal**",
+       "of": 4
+      },
+      {
+       "t": "Rotation swings the gel **cupula**, bending the hairs",
+       "of": 4
+      }
+     ]
+    }
+   ]
+  },
   "order": false,
   "traps": [
    "Static = the VESTIBULE (utricle, saccule, maculae, otoliths). Dynamic = the SEMICIRCULAR CANALS (ampulla, crista, cupula). Swapping them loses both marks.",
@@ -960,6 +1380,62 @@
    "**Reflection**: light **bounces back** off a flat, opaque surface, e.g. a **mirror**. A coloured object reflects only its own wavelengths and absorbs the rest.",
    "**Refraction**: light **bends** when it passes into a medium of **different density**, because it **slows down** there, e.g. a **rainbow** in raindrops, and the **cornea and lens** focusing light on the retina."
   ],
+  "short": {
+   "hook": "TALL = loud or bright. PEAK TO PEAK = colour. HOW MANY = pitch. Reflection BOUNCES, refraction BENDS.",
+   "groups": [
+    {
+     "q": "Amplitude, wavelength, frequency",
+     "facts": [
+      {
+       "t": "**Amplitude** = the wave's **height**: **loudness** (dB), **brightness**",
+       "of": 0
+      },
+      {
+       "t": "**Wavelength** = **one peak to the next**: light's **colour**",
+       "of": 1
+      },
+      {
+       "t": "**Frequency** = waves **per second** (**Hz**): sound's **pitch**",
+       "of": 2
+      },
+      {
+       "t": "Higher **frequency** = shorter **wavelength**",
+       "of": 2
+      }
+     ]
+    },
+    {
+     "q": "Light vs sound",
+     "facts": [
+      {
+       "t": "**Light**: **electromagnetic**, needs **no medium**",
+       "of": 3
+      },
+      {
+       "t": "**Sound**: a **mechanical pressure wave**, **needs a medium**",
+       "of": 3
+      }
+     ]
+    },
+    {
+     "q": "Reflection vs refraction",
+     "facts": [
+      {
+       "t": "**Reflection**: light **bounces back**, e.g. a **mirror**",
+       "of": 4
+      },
+      {
+       "t": "**Refraction**: light **bends** as it **slows down** in a different density",
+       "of": 5
+      },
+      {
+       "t": "e.g. a **rainbow**, or the **cornea and lens** focusing light",
+       "of": 5
+      }
+     ]
+    }
+   ]
+  },
   "order": false,
   "traps": [
    "Loudness = AMPLITUDE; pitch = FREQUENCY. Her quizzes swap them to catch you.",
