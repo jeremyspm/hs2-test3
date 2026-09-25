@@ -64,6 +64,15 @@ export function loadSaq(HERE) {
         if (String(f.t).split(/\s+/).length > 14) fails.push(`${at}: short line "${f.t}" is over 14 words`);
       }
       x.steps.forEach((_, i) => { if (!flat.some(f => f.of === i)) fails.push(`${at}: long point ${i + 1} has no short line`); });
+      /* short.same: short lines (0-based, straight through) that the Order rung accepts in any order among themselves.
+         Each group stays inside one part of the answer, so the rebuilt answer still goes part by part. */
+      const part = (s.groups || []).flatMap((g, k) => (g.facts || []).map(() => k)), inSame = new Set();
+      if (s.same && !x.order) fails.push(`${at}: short.same set but the SAQ has no Order rung`);
+      for (const g of s.same || []) {
+        if (!Array.isArray(g) || g.length < 2 || !g.every(i => Number.isInteger(i) && i >= 0 && i < flat.length)) { fails.push(`${at}: bad short.same group ${JSON.stringify(g)}`); continue; }
+        if (new Set(g.map(i => part[i])).size !== 1) fails.push(`${at}: short.same group ${JSON.stringify(g)} spans more than one part of the answer`);
+        for (const i of g) { if (inSame.has(i)) fails.push(`${at}: short line ${i + 1} is in two short.same groups`); inSame.add(i); }
+      }
     }
     const covered = new Set();
     (x.mcq || []).forEach((m, i) => {

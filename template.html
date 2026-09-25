@@ -1591,23 +1591,31 @@ function sqDrillEnd(){
   $('#sqRe').onclick=()=>{SQR.after=null;sqDrillStart()};
   window.scrollTo(0,0);
 }
-/* rung 3: rebuild the answer. Steps listed in "same" groups may come in any order among themselves. */
+/* rung: rebuild the answer. With a short version (26 Sep 2026) it is the short lines, and lines in a short.same group
+   may come in any order among themselves; each part's heading appears over its lines as they are placed. Without one,
+   the full answer's mark points and x.same, as before. */
 function sqOrder(){
-  const x=SQR.x;
-  if(!SQR.ord) SQR.ord={left:shuffle(x.steps.map((t,i)=>i)), got:[], bad:0};
+  const x=SQR.x, P=sqPoints(x), same=x.short?(x.short.same||[]):(x.same||[]);
+  if(!SQR.ord) SQR.ord={left:shuffle(P.map((t,i)=>i)), got:[], bad:0};
   const o=SQR.ord, done=!o.left.length;
+  let got='';
+  if(o.got.length&&x.short){
+    const part=x.short.groups.flatMap((g,k)=>g.facts.map(()=>k)); let cur=-1;
+    o.got.forEach((i,k)=>{ if(part[i]!==cur){ if(cur>=0) got+='</ol>'; cur=part[i]; got+=`<div class="sgq">${esc(x.short.groups[cur].q)}</div><ol class="sgot">`; } got+=`<li value="${k+1}">${mdB(P[i])}</li>`; });
+    got+='</ol>';
+  } else if(o.got.length) got=`<ol class="sgot">${o.got.map(i=>`<li>${mdB(P[i])}</li>`).join('')}</ol>`;
   $('#view').innerHTML=`<div class="card">${sqHead()}
     <p class="sask">${esc(x.ask)}</p>
-    <p class="hist" style="margin:0 0 6px">${done?'':'Tap the mark points in the order you would write them.'}</p>
-    ${o.got.length?`<ol class="sgot">${o.got.map(i=>`<li>${mdB(x.steps[i])}</li>`).join('')}</ol>`:''}
-    ${o.left.map(i=>`<button class="sordb" data-st="${i}">${mdB(x.steps[i])}</button>`).join('')}
+    <p class="hist" style="margin:0 0 6px">${done?'':`Tap the ${x.short?'lines':'mark points'} in the order you would write them.`}</p>
+    ${got}
+    ${o.left.map(i=>`<button class="sordb" data-st="${i}">${mdB(P[i])}</button>`).join('')}
     ${done?`<div class="mk ${o.bad?'wrong':'right'}"><p class="verdict">✓ Built${o.bad?`, with ${o.bad} wrong tap${o.bad>1?'s':''}`:', no wrong taps'}</p></div>
       <button class="btn primary wide" id="sqOn">✍️ Now write it from memory →</button>
       <button class="btn ghost wide" id="sqRe">Build it again</button>`:''}
   </div>`;
   sqBindHead();
   document.querySelectorAll('.sordb').forEach(b=>b.onclick=()=>{
-    const i=+b.dataset.st, r0=Math.min(...o.left), grp=(x.same||[]).find(g=>g.includes(r0));
+    const i=+b.dataset.st, r0=Math.min(...o.left), grp=same.find(g=>g.includes(r0));
     if(i===r0||(grp&&grp.includes(i))){ o.got.push(i); o.left=o.left.filter(k=>k!==i); sqOrder() }
     else { o.bad++; b.classList.add('bad'); setTimeout(()=>b.classList.remove('bad'),650) }
   });
