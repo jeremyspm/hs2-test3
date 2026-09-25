@@ -92,9 +92,31 @@ deck at full resolution go to `img/figs/` via `host-figs.py`. Order: `python hos
 The build fails if a hosted slide is not rendered or a hosted figure was not made. Removing an entry breaks a button in
 `flesh-and-bone` (its `tools/check-figrefs.mjs --live` gate will say which).
 
+## SAQ Trainer (26 Sep 2026)
+
+The red card at the top of home, ported from hs2-test2 (`saq.mjs` + `saq-lint.mjs` + the template's SAQ CSS and script block;
+`saq-lint.mjs` and `resplice.mjs` are byte-identical to test2's). Test 3 is 37 Q / **30% written** (her Assessment Overview), and
+Module 3 has no "POSSIBLE SAQ" list, so the 21 questions are her own signals: the two cases she names for Test 3 (**11 Lactation**,
+**L Noise-induced hearing loss**, both booklet questions verbatim), pedigree charts ("WILL BE TESTED"), the help-board topics
+(glaucoma/cataract, conduction vs sensorineural, Huntington's), then the rest of her student-marked SAQ quiz 211104.
+Content: `content/saq-senses.json` (9) · `saq-gen.json` (6) · `saq-repro.json` (6), 161 drill questions, lint 0 flags.
+
+Module 3 only: `her` on an SAQ names her OWN model answer in `content/her-answers.json` by its key prefix; `saq.mjs` fails the
+build unless it matches exactly one, and the page shows it under the tool's answer, word for word (19 links). Where her quiz
+feedback contradicts her own slides, a ⚠ trap line says which one the slides back: near-vision pupil (feedback: dilates; decks and
+her quiz key: constricts), LH on Leydig cells (feedback: estrogen; Male Repro deck: testosterone), which part of the ear amplifies
+(feedback: inner; deck: middle), the lens (Light & Seeing slide 10: biconcave; slide 12: biconvex).
+Driven at 375 px on 26 Sep: all 21 read → drill (a wrong pick requeues, then clears) → order where set → write → mark → score; the
+paper, the sheet and the warm-up; console clean, no horizontal scroll. Build: `node build.mjs` (resplice's bank regex expects LF,
+so it fails on a CRLF checkout).
+
 ## Not done yet (in order)
 
 1. Re-tier the checklist when she posts her Test 3 pointers; `qtopic` + helpline answers if she opens a Module 3 helpline.
-2. Case studies for Test 3 once he confirms which are in scope (they are gated on Canvas). Confirm the Test 3 date on Canvas
-   (the page says 26 Oct).
-3. The ovarian/uterine cycle essay needs a model answer (she posted none): author it in her marks-per-step shape, sourced.
+   If she posts a "POSSIBLE SAQ IN TEST 3" list, re-rank the SAQ Trainer's ORDER (saq.mjs) against it.
+2. Case studies for Test 3 in the question bank: 11 Lactation + L Hearing loss (her overview names them). Their quizzes
+   (211084 Lactation, 211068 NIHL — 211068 is a one-attempt assignment, never blitz it) are not captured. The SAQ Trainer
+   already carries both cases as written questions.
+3. The ovarian/uterine cycle essay needs a model answer (she posted none): the SAQ Trainer's `cycles` entry is one, sourced
+   from her deck; wire it to that essay in `saq-answers.js` if wanted.
+4. The full mock is still Test 2's shape (40 closed + 2 written = 42 Q). Test 3 is 37 Q with 30% written.

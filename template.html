@@ -234,6 +234,48 @@ h3{margin:14px 0 4px;font-size:.95rem}
 .footbar.on{display:flex}
 .footbar .btn{flex:1}
 a{color:var(--primary)}
+/* ── SAQ trainer ─────────────────────────────────────────────────────── */
+.sdoor{border-left:4px solid var(--danger)}
+.slist{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.srow{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;border:1px solid var(--border);border-radius:var(--radius);
+  padding:8px 10px;background:var(--muted);cursor:pointer}
+.srow.st{border-left:3px solid var(--warn)}
+.srow b{flex:1 1 160px;font-size:.86rem;font-weight:600}
+.srow .m{color:var(--muted-fg);font-size:.74rem;white-space:nowrap}
+.sbadge{font-size:.7rem;padding:1px 8px;border-radius:99px;background:var(--accent);color:var(--muted-fg);white-space:nowrap}
+.sbadge.lock{background:hsl(158 64% 42% / .2);color:var(--ok);font-weight:650}
+.sbadge.go{background:hsl(38 92% 55% / .18);color:var(--warn)}
+.sqall>summary{cursor:pointer;font-weight:650;font-size:.88rem;margin-top:10px}
+#sqBack,.qhead .tag{white-space:nowrap;flex:0 0 auto}
+.sstages{display:flex;gap:4px;margin:0 0 12px}
+.sstage{flex:1;font:inherit;font-size:.74rem;font-weight:600;padding:5px 2px;border-radius:6px;background:var(--muted);
+  color:var(--muted-fg);border:1px solid var(--border);cursor:pointer}
+.sstage.on{background:var(--primary);color:var(--onprimary);border-color:var(--primary)}
+.sstage.done{color:var(--ok);border-color:var(--ok)}
+.sask{font-weight:650;margin:0 0 10px;line-height:1.45}
+.shook{border:1px dashed var(--primary);border-radius:8px;padding:8px 10px;font-size:.88rem;margin:10px 0;line-height:1.45}
+.ssteps{margin:0 0 6px;padding-left:1.5em}
+.ssteps li{margin:7px 0;line-height:1.5}
+.ssteps b,.smk b,.sordb b,.scheck b,.sgot b{color:var(--warn);font-weight:700}
+.strap{font-size:.84rem;margin:5px 0;color:var(--fg)}
+.sq{font-weight:650;margin:6px 0 10px;font-size:1.02rem;line-height:1.45}
+.opt.sopt{width:100%;font:inherit;color:var(--fg);text-align:left;align-items:center}
+.okey{flex:0 0 auto;width:22px;height:22px;border-radius:50%;border:1px solid var(--border);display:inline-flex;
+  align-items:center;justify-content:center;font-size:.72rem;color:var(--muted-fg)}
+.smk{font-size:.84rem;margin-top:6px;padding:6px 8px;background:var(--muted);border-radius:6px;line-height:1.45}
+.sprog{display:flex;align-items:center;gap:10px;margin:0 0 6px}
+.sordb{display:block;width:100%;text-align:left;font:inherit;color:var(--fg);border:1px solid var(--border);background:var(--muted);
+  border-radius:var(--radius);padding:9px 10px;margin:6px 0;cursor:pointer;line-height:1.45;font-size:.9rem}
+.sordb.bad{border-color:var(--danger);box-shadow:inset 0 0 0 1px var(--danger)}
+.sgot{margin:6px 0 10px;padding-left:1.5em}
+.sgot li{margin:5px 0;font-size:.88rem;line-height:1.45}
+.sgot li::marker{color:var(--ok);font-weight:700}
+.scheck label{display:flex;gap:9px;align-items:flex-start;margin:9px 0;cursor:pointer;line-height:1.45;font-size:.92rem}
+.scheck input{margin-top:3px;width:18px;height:18px;flex:0 0 auto;accent-color:var(--ok)}
+.sres{font-size:1.7rem;font-weight:800;text-align:center;margin:.2rem 0}
+.syou{white-space:pre-wrap;font-size:.86rem;background:var(--muted);border-radius:8px;padding:8px 10px;margin:6px 0 10px}
+.sheet .sheeti{border-top:1px solid var(--border);padding-top:10px;margin-top:12px}
+.sheet h3{margin:0 0 4px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
 </style>
 </head>
 <body>
@@ -491,6 +533,7 @@ function home(){
   const mp = missPool().length, res = LS('resume');
   const nLbl = s => { const pool=CLOSED.filter(q=>q.sys===s).length, n=howMany(pool); return n===pool?`all ${n}`:n };
   document.getElementById('view').innerHTML = `
+  ${saqCard()}
   ${sparkCard()}
   ${focusCard()}
   <div class="card door" style="border-left:4px solid var(--ok)">
@@ -537,6 +580,7 @@ function home(){
     </div>
   </div>`;
   bindFocus();
+  bindSaq();
   document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>start(b.dataset.go,!!b.dataset.learn));
   document.querySelectorAll('[data-quiz]').forEach(b=>b.onclick=()=>start('quiz:'+b.dataset.quiz,!!b.dataset.learn));
   document.querySelectorAll('[data-sys]').forEach(b=>b.onclick=()=>start('sys:'+b.dataset.sys,!!b.dataset.learn));
@@ -1134,6 +1178,305 @@ function aiSplitCopy(s){
   const p=s.dataset.aitext?navigator.clipboard.writeText(b._aiText):navigator.clipboard.write([new ClipboardItem({'image/png':b._aiFig})]);
   p.then(()=>flash('Copied ✓')).catch(()=>flash('Copy blocked'));
 }
+/* ── SAQ trainer ───────────────────────────────────────────────────────
+   Ported from hs2-test2 (same ladder, same marking help). Module 3 has no "POSSIBLE SAQ" list yet, so the list is her
+   student-marked SAQ quiz, the two test cases she names (11 Lactation, L Noise-induced hearing loss), her help-board
+   topics and her "PEDIGREE CHARTS WILL BE TESTED", as a ladder per question:
+   1 Read the model answer (one mark point per line, bold = the words that earn it) ->
+   2 Drill: multiple choice on every mark point; a miss comes back three questions later until it is right ->
+   3 Order: rebuild the answer point by point (processes only) ->
+   4 Cold: write or say it with nothing on screen, then tick the points you got. 80% cold locks it.
+   Content: content/saq-senses.json + saq-gen.json + saq-repro.json, spliced in below by build.mjs and resplice.mjs (saq.mjs gates it).
+   The model answers are the TOOL's, built from her decks and her answer pages; each names its source. Where she posted
+   her own answer to the same question, saq.mjs ships it as x.herAns and it shows under the tool's, word for word. */
+const SAQD = /*@SAQD@*/;
+let SQ = LS('saqd') || {};          // saq id -> {read, drill, ord, best (0..1), lock, tries}; '_mm' -> "id:i" -> misses
+if(typeof SQ!=='object'||Array.isArray(SQ)) SQ = {};
+const sqS = id => SQ[id] || (SQ[id] = {});
+const sqSave = () => SV('saqd', SQ);
+const mdB = s => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+let SQR = null;                      // the trainer run on screen
+const sqNext = () => SAQD.find(x=>!sqS(x.id).lock);
+const sqMcqN = () => SAQD.reduce((n,x)=>n+x.mcq.length,0);
+function saqCard(){
+  const nL = SAQD.filter(x=>sqS(x.id).lock).length, nx = sqNext();
+  const badge = x => { const s=sqS(x.id);
+    return s.lock ? `<span class="sbadge lock">✓ locked · ${Math.round((s.best||0)*100)}%</span>`
+      : s.best!=null ? `<span class="sbadge go">cold ${Math.round(s.best*100)}% · not yet</span>`
+      : s.drill ? `<span class="sbadge go">drilled</span>` : s.read ? `<span class="sbadge">read</span>` : `<span class="sbadge">new</span>` };
+  return `<div class="card door sdoor" id="saqCard">
+    <h2>✍️ SAQ Trainer — write the answers</h2>
+    <p>Test 3 is <b>30% written</b>. These are the written questions she has already set for Module 3: her student-marked SAQ quiz,
+    the two test case studies she names (<b>11 Lactation</b>, <b>L Noise-induced hearing loss</b>), pedigree charts (her words: <i>will be tested</i>)
+    and the topics on her help board. She marks <b>half a mark per fact</b>, so count the marks and give twice as many facts.
+    For each one: <b>1 Read</b> the model answer (one mark point per line; the <b style="color:var(--warn)">bold</b> words are what earn the marks)
+    → <b>2 Write it</b> from memory → the page checks your answer for her mark words, you confirm the marks, and it shows what you missed
+    → write it again until you get 80% (then it's locked ✓). If a point won't stick, the multiple-choice drill is there as a helper. <b>⭐ = do these first.</b></p>
+    ${nx?`<button class="btn primary wide" data-sqgo="${nx.id}">▶ ${sqS(nx.id).read?'Continue':'Start'}: ${esc(nx.title)}</button>`
+       :`<p style="margin:.4rem 0"><b>All ${SAQD.length} locked.</b> Keep them warm with a practice SAQ paper.</p>`}
+    <div class="sysrow">
+      <button class="btn ghost" id="sqPaper">📝 SAQ paper · 3 questions, timed</button>
+      <button class="btn ghost" id="sqSheet">📄 Last-look sheet</button>
+      <button class="btn ghost" id="sqRapid">🧩 Multiple-choice warm-up · 20</button>
+    </div>
+    <details class="sqall" open><summary>All ${SAQD.length} questions · ${nL} locked</summary>
+      <div class="slist">${SAQD.map(x=>`<div class="srow${x.star?' st':''}" data-sq="${x.id}"><span class="tag ${x.sys}">${x.sys}</span><b>${x.star?'⭐ ':''}${esc(x.title)}</b><span class="m">${x.marks} marks</span>${badge(x)}</div>`).join('')}</div>
+    </details>
+    <p class="refsrc" style="margin:8px 0 0">Model answers are this tool's, built from her decks and answer pages (each one names its source). Where she posted her own answer, it sits under the tool's, word for word. Progress is saved in this browser only.</p>
+  </div>`;
+}
+function bindSaq(){
+  document.querySelectorAll('[data-sqgo],[data-sq]').forEach(b=>b.onclick=()=>sqOpen(b.dataset.sqgo||b.dataset.sq));
+  const r=$('#sqRapid'); if(r) r.onclick=sqRapid;
+  const p=$('#sqPaper'); if(p) p.onclick=sqPaper;
+  const h=$('#sqSheet'); if(h) h.onclick=sqSheet;
+}
+function sqHome(){ SQR=null; home(); const c=$('#saqCard'); if(c) c.scrollIntoView(); }
+function sqOpen(id,stage){
+  const x=SAQD.find(s=>s.id===id); if(!x) return;
+  SQR={x, stage: stage || (sqS(id).lock ? 'cold' : 'read')};
+  sqRender(); window.scrollTo(0,0);
+}
+/* the main road is Read -> Write; the multiple-choice drill and the ordering rung are helpers beside it */
+function sqStages(x){ return [['read','1 Read'],['cold','2 Write it'],...(x.mcq.length?[['drill','🧩 MCQ help']]:[]),...(x.order?[['order','↕ Order']]:[])] }
+function sqHead(){
+  const x=SQR.x, st=sqStages(x);
+  if(SQR.paper) return `<div class="qhead"><button class="btn ghost" id="sqBack" style="padding:4px 10px">✕</button><span class="n">SAQ paper · ${SQR.paper.i+1} of ${SQR.paper.ids.length}</span><span class="timer" id="sqClock">${sqClock()}</span><span class="tag ${x.sys}">${x.marks} marks</span></div>`;
+  return `<div class="qhead"><button class="btn ghost" id="sqBack" style="padding:4px 10px">← SAQs</button><span class="n">${esc(x.title)}</span><span class="tag ${x.sys}" style="margin-left:auto">${x.marks} marks</span></div>
+    <div class="sstages">${st.map(a=>`<button class="sstage${a[0]===SQR.stage?' on':''}" data-sqst="${a[0]}">${a[1]}</button>`).join('')}</div>`;
+}
+/* the paper's clock: time used against her pace (65 min for 50 marks ≈ 1.3 min a mark) */
+function sqClock(){ const p=SQR&&SQR.paper; if(!p) return ''; const s=Math.max(0,(Date.now()-p.t0)/1000|0);
+  return `${s/60|0}:${String(s%60).padStart(2,'0')} / ~${p.aim} min` }
+setInterval(()=>{ const c=document.getElementById('sqClock'); if(c) c.textContent=sqClock() },1000);
+/* marking help: which of a mark point's bold (mark-earning) terms appear in what he wrote. Generous about
+   form (case and endings: a long word must match all but its last 3 letters, so calcium never passes for calcitonin; either side of a "(PTH)" or "a / b"), strict about
+   substance (half the bold terms or more to pre-tick). It only suggests; he ticks. */
+const sqNorm = s => String(s).toLowerCase().replace(/²⁺|2\+/g,'2').replace(/[^a-z0-9 ]+/g,' ');
+const SQ_STOP = new Set(['the','and','of','in','for','from','into','with','via','its','than','not','a','an','to','on']);
+function sqHit(term,text){
+  const t=' '+sqNorm(text).replace(/\s+/g,' ')+' ';
+  return term.split(/[()\/]| or /).map(s=>s.trim()).filter(Boolean).some(alt=>{
+    const ws=sqNorm(alt).split(/\s+/).filter(w=>w.length>1&&!SQ_STOP.has(w));
+    return ws.length>0 && ws.filter(w=>t.includes(' '+w.slice(0,w.length<=5?w.length:Math.max(5,w.length-3)))).length>=Math.ceil(ws.length/2);
+  });
+}
+function sqCheckStep(step,text){
+  const ts=[...step.matchAll(/\*\*(.+?)\*\*/g)].map(m=>m[1]), found=ts.filter(t=>sqHit(t,text));
+  return {ts, found, auto: ts.length>0 && found.length>=Math.ceil(ts.length/2)};
+}
+function sqBindHead(){
+  const b=$('#sqBack'); if(b) b.onclick=()=>{ if(SQR&&SQR.paper&&!confirm('Stop this cold paper?')) return; sqHome() };
+  document.querySelectorAll('[data-sqst]').forEach(e=>e.onclick=()=>{SQR.stage=e.dataset.sqst;SQR.q=null;SQR.ord=null;SQR.cold=null;sqRender();window.scrollTo(0,0)});
+}
+function sqRender(){
+  const st=SQR.stage;
+  if(st==='read') sqRead(); else if(st==='drill') sqDrillStart(); else if(st==='order') sqOrder(); else sqCold();
+}
+/* her own model answer to the same question (the feedback on her student-marked SAQ quiz), word for word */
+function sqHer(x){ return (x.herAns||[]).map(h=>`<details class="hlans"><summary>✅ Her own answer${h.pts?` (${h.pts} mark${h.pts===1?'':'s'})`:''}, open it</summary>
+    <div class="hlbody">${h.steps.map(esc).join(String.fromCharCode(10))}
+<span class="refsrc">Word for word from the feedback on her quiz <i>MODULE 3: SAQ STUDENT MARKED: GENETICS, SS &amp; REPRO</i>. Where it disagrees with the tool's answer, the ⚠ lines above say which one her own slides back.</span></div></details>`).join('') }
+/* rung 1: the model answer, the hook, the traps */
+function sqRead(){
+  const x=SQR.x; sqS(x.id).read=1; sqSave();
+  $('#view').innerHTML=`<div class="card">${sqHead()}
+    <p class="sask">${esc(x.ask)}</p>
+    <div class="shook">🧠 ${esc(x.hook)}</div>
+    <ol class="ssteps">${x.steps.map(t=>`<li>${mdB(t)}</li>`).join('')}</ol>
+    <div class="note"><b style="color:var(--fg)">Where the marks get lost</b>${x.traps.map(t=>`<div class="strap">⚠ ${esc(t)}</div>`).join('')}</div>
+    ${sqHer(x)}
+    <div class="src">Model answer: this tool's, one mark point per line. Built from ${esc(x.src)}</div>
+    <button class="btn primary wide" id="sqGo">✍️ Now write it from memory →</button>
+    ${x.mcq.length?`<button class="btn ghost wide" data-sqst="drill">🧩 Not sticking yet? Multiple-choice help first</button>`:''}</div>`;
+  sqBindHead();
+  $('#sqGo').onclick=()=>{SQR.stage='cold';SQR.cold=null;sqRender();window.scrollTo(0,0)};
+}
+/* rung 2: multiple choice on every mark point. A miss goes back into the queue three questions later
+   and keeps coming back until it is answered right; the run ends when every question has been. */
+function sqQueue(entries){ SQR.q=entries; SQR.tot=entries.length; SQR.done=0; SQR.first=0; SQR.missed={}; sqAsk() }
+function sqDrillStart(entries){
+  const x=SQR.x, xi=SAQD.indexOf(x);
+  sqQueue(entries || shuffle(x.mcq.map((m,i)=>({s:xi,m:i}))));
+}
+function sqAsk(){
+  if(!SQR.q.length){ sqDrillEnd(); return }
+  const e=SQR.q[0], m=SAQD[e.s].mcq[e.m];
+  SQR.cur={e, opts:shuffle([m.a,...m.d]), picked:null};
+  sqPaintAsk(); window.scrollTo(0,0);
+}
+function sqPaintAsk(){
+  const {e,opts,picked}=SQR.cur, x=SAQD[e.s], m=x.mcq[e.m], ok=picked===m.a, back=SQR.q.length-(picked!=null&&ok?0:1);
+  const head = SQR.rapid
+    ? `<div class="qhead"><button class="btn ghost" id="sqBack" style="padding:4px 10px">← SAQs</button><span class="n">⚡ Rapid-fire</span><span class="tag ${x.sys}" style="margin-left:auto">${esc(x.title)}</span></div>`
+    : sqHead();
+  $('#view').innerHTML=`<div class="card">${head}
+    <div class="sprog"><div class="fbar"><i style="width:${Math.round(100*SQR.done/SQR.tot)}%"></i></div><span class="hist">${SQR.done}/${SQR.tot} right${Object.keys(SQR.missed).length?` · ${Object.keys(SQR.missed).length} to come back`:''}</span></div>
+    <p class="sq">${esc(m.q)}</p>
+    ${opts.map((o,i)=>`<button class="opt sopt${picked!=null?(o===m.a?' k':o===picked?' x':'')+' lock':''}" data-o="${i}"><span class="okey">${i+1}</span><span>${esc(o)}</span></button>`).join('')}
+    ${picked!=null?`<div class="mk ${ok?'right':'wrong'}"><p class="verdict">${ok?'✓ Right':'✗ Not this one. It will come back in a moment.'}</p>
+      <p style="margin:.2rem 0">${esc(m.why)}</p>
+      <div class="smk">Mark point ${m.step+1} of ${x.steps.length}: ${mdB(x.steps[m.step]||'')}</div></div>
+      <button class="btn primary wide" id="sqNext">${back>0||!ok?'Next →':'Finish drill →'}</button>`
+      :`<p class="hist" style="margin:8px 0 0">Tap an answer (or press 1–4).</p>`}
+  </div>`;
+  sqBindHead();
+  document.querySelectorAll('.sopt').forEach(b=>b.onclick=()=>sqPick(+b.dataset.o));
+  const n=$('#sqNext'); if(n){ n.onclick=sqAsk; n.focus({preventScroll:true}) }
+}
+function sqPick(i){
+  const c=SQR.cur; if(!c||c.picked!=null) return;
+  const x=SAQD[c.e.s], m=x.mcq[c.e.m], key=x.id+':'+c.e.m;
+  c.picked=c.opts[i];
+  const e=SQR.q.shift();
+  if(c.picked===m.a){ SQR.done++; if(!SQR.missed[key]) SQR.first++; delete SQR.missed[key] }
+  else { SQR.missed[key]=1; SQR.q.splice(Math.min(3,SQR.q.length),0,e);
+    const mm=SQ._mm||(SQ._mm={}); mm[key]=(mm[key]||0)+1; sqSave() }
+  sqPaintAsk();
+}
+function sqDrillEnd(){
+  const first=SQR.first, tot=SQR.tot;
+  if(SQR.rapid){
+    $('#view').innerHTML=`<div class="card"><p class="sres">${first}/${tot}</p><p class="score-sub">right first time · every miss was repeated until you got it</p>
+      <button class="btn primary wide" id="sqAgain">⚡ Another 20</button><button class="btn wide" id="sqBack">← Back to the SAQs</button></div>`;
+    $('#sqAgain').onclick=sqRapid; $('#sqBack').onclick=sqHome; window.scrollTo(0,0); return;
+  }
+  const x=SQR.x; sqS(x.id).drill=1; sqSave();
+  const nextSt = 'cold';
+  $('#view').innerHTML=`<div class="card">${sqHead()}
+    <p class="sres">${first}/${tot}</p><p class="score-sub">right first time · all ${tot} now answered right</p>
+    <button class="btn primary wide" id="sqOn">✍️ Now write it from memory →</button>
+    <button class="btn ghost wide" id="sqRe">Drill it again</button></div>`;
+  sqBindHead();
+  $('#sqOn').onclick=()=>{SQR.after=null;SQR.stage=nextSt;sqRender();window.scrollTo(0,0)};
+  $('#sqRe').onclick=()=>{SQR.after=null;sqDrillStart()};
+  window.scrollTo(0,0);
+}
+/* rung 3: rebuild the answer. Steps listed in "same" groups may come in any order among themselves. */
+function sqOrder(){
+  const x=SQR.x;
+  if(!SQR.ord) SQR.ord={left:shuffle(x.steps.map((t,i)=>i)), got:[], bad:0};
+  const o=SQR.ord, done=!o.left.length;
+  $('#view').innerHTML=`<div class="card">${sqHead()}
+    <p class="sask">${esc(x.ask)}</p>
+    <p class="hist" style="margin:0 0 6px">${done?'':'Tap the mark points in the order you would write them.'}</p>
+    ${o.got.length?`<ol class="sgot">${o.got.map(i=>`<li>${mdB(x.steps[i])}</li>`).join('')}</ol>`:''}
+    ${o.left.map(i=>`<button class="sordb" data-st="${i}">${mdB(x.steps[i])}</button>`).join('')}
+    ${done?`<div class="mk ${o.bad?'wrong':'right'}"><p class="verdict">✓ Built${o.bad?`, with ${o.bad} wrong tap${o.bad>1?'s':''}`:', no wrong taps'}</p></div>
+      <button class="btn primary wide" id="sqOn">✍️ Now write it from memory →</button>
+      <button class="btn ghost wide" id="sqRe">Build it again</button>`:''}
+  </div>`;
+  sqBindHead();
+  document.querySelectorAll('.sordb').forEach(b=>b.onclick=()=>{
+    const i=+b.dataset.st, r0=Math.min(...o.left), grp=(x.same||[]).find(g=>g.includes(r0));
+    if(i===r0||(grp&&grp.includes(i))){ o.got.push(i); o.left=o.left.filter(k=>k!==i); sqOrder() }
+    else { o.bad++; b.classList.add('bad'); setTimeout(()=>b.classList.remove('bad'),650) }
+  });
+  if(done){ sqS(x.id).ord=1; sqSave();
+    $('#sqOn').onclick=()=>{SQR.stage='cold';SQR.ord=null;sqRender();window.scrollTo(0,0)};
+    $('#sqRe').onclick=()=>{SQR.ord=null;sqOrder()} }
+}
+/* rung 2 (the main one): write the SAQ from memory, then mark it against the mark points.
+   The page pre-ticks a point when it finds that point's bold words in what he wrote; he confirms. */
+function sqCold(){
+  const x=SQR.x;
+  if(!SQR.cold) SQR.cold={text:'', marked:false};
+  const c=SQR.cold, mins=Math.max(2,Math.round(x.marks*1.3));
+  if(!c.marked){
+    $('#view').innerHTML=`<div class="card">${sqHead()}
+      <p class="sask">${esc(x.ask)}</p>
+      <p class="hist" style="margin:0 0 8px">Write it from memory, like the real test: one point per line, using the proper terms. ${x.marks} marks ≈ ${x.steps.length} points · aim for about ${mins} min.</p>
+      <textarea id="sqTxt" style="min-height:230px" placeholder="1. …&#10;2. …&#10;3. …">${esc(c.text)}</textarea>
+      <button class="btn primary wide" id="sqMark">Mark my answer →</button>
+      <p class="hist" style="margin:8px 0 0">No keyboard handy? Say it out loud, leave the box empty and press Mark; you tick the points yourself.</p></div>`;
+    sqBindHead();
+    const ta=$('#sqTxt'); ta.oninput=e=>{c.text=e.target.value}; if(!SQR.paper||SQR.paper.i||c.text) ta.focus({preventScroll:true});
+    $('#sqMark').onclick=()=>{c.marked=true;sqCold();window.scrollTo(0,0)};
+    return;
+  }
+  const typed=c.text.trim().length>0, chk=x.steps.map(t=>sqCheckStep(t,c.text));
+  $('#view').innerHTML=`<div class="card">${sqHead()}
+    <p class="sask">${esc(x.ask)}</p>
+    ${typed?`<div class="hist">Your answer</div><div class="syou">${esc(c.text)}</div>`:''}
+    <p class="hist" style="margin:0 0 4px">${typed
+      ?'The page ticked every point where it found the <b style="color:var(--warn)">bold</b> mark words in your answer. Check it: untick a point you named but did not explain, and tick one you got in other words.'
+      :'Tick every point you said. The <b style="color:var(--warn)">bold</b> words are what earn the mark, so be honest.'}</p>
+    <div class="scheck">${x.steps.map((t,i)=>{const k=chk[i];
+      return `<label><input type="checkbox" data-k="${i}" ${typed&&k.auto?'checked':''}><span>${mdB(t)}${typed&&k.ts.length?`<span class="refsrc" style="display:block;margin-top:2px">${k.ts.map(w=>k.found.includes(w)?`<span style="color:var(--ok)">✓ ${esc(w)}</span>`:`<span style="color:var(--danger)">✗ ${esc(w)}</span>`).join(' · ')}</span>`:''}</span></label>`}).join('')}</div>
+    <button class="btn primary wide" id="sqScore">Score it</button></div>`;
+  sqBindHead();
+  $('#sqScore').onclick=()=>sqColdResult([...document.querySelectorAll('.scheck input')].map(b=>b.checked));
+}
+function sqColdResult(ticks){
+  const x=SQR.x, s=sqS(x.id), n=ticks.filter(Boolean).length, pct=n/ticks.length, miss=ticks.map((t,i)=>t?-1:i).filter(i=>i>=0);
+  const pts=Math.round(pct*x.marks*2)/2;
+  s.tries=(s.tries||0)+1; s.best=Math.max(s.best||0,pct); if(pct>=0.8) s.lock=1; s.last=SQR.cold?SQR.cold.text:''; sqSave();
+  if(SQR.paper){ SQR.paper.res.push({id:x.id,pts,marks:x.marks,miss}); return sqPaperNext() }
+  const nx=sqNext(), locked=pct>=0.8, helps=x.mcq.some(m=>miss.includes(m.step));
+  $('#view').innerHTML=`<div class="card">${sqHead()}
+    <p class="sres">≈${pts}/${x.marks} marks</p>
+    <p class="score-sub">${n} of ${ticks.length} points · ${locked?'✓ Locked. That answer would score.':'not locked yet (80% locks it). What was missing:'}</p>
+    ${miss.length?`<ol class="ssteps">${miss.map(i=>`<li value="${i+1}">${mdB(x.steps[i])}</li>`).join('')}</ol>`:''}
+    ${locked&&nx&&nx!==x?`<button class="btn primary wide" id="sqNx">▶ Next SAQ: ${esc(nx.title)}</button>`:''}
+    <button class="btn ${locked?'':'primary '}wide" id="sqAgainCold">✍️ Write it again${miss.length?' (read the missing points first)':''}</button>
+    ${!locked&&helps?`<button class="btn wide" id="sqMiss">🧩 Multiple-choice help on just what I missed</button>`:''}
+    <button class="btn ghost wide" id="sqReread">Read the whole model answer again</button>
+    <button class="btn ghost wide" id="sqHomeB">← All SAQs</button></div>`;
+  sqBindHead(); window.scrollTo(0,0);
+  const b=$('#sqNx'); if(b) b.onclick=()=>sqOpen(nx.id,'read');
+  const mb=$('#sqMiss'); if(mb) mb.onclick=()=>{
+    const xi=SAQD.indexOf(x), es=x.mcq.map((m,i)=>({s:xi,m:i,st:m.step})).filter(e=>miss.includes(e.st)).map(({s,m})=>({s,m}));
+    SQR.stage='drill'; SQR.after='cold'; SQR.cold=null; sqQueue(shuffle(es));
+  };
+  $('#sqAgainCold').onclick=()=>{SQR.cold=null;SQR.stage='cold';sqCold();window.scrollTo(0,0)};
+  $('#sqReread').onclick=()=>{SQR.stage='read';SQR.cold=null;sqRender();window.scrollTo(0,0)};
+  $('#sqHomeB').onclick=sqHome;
+}
+/* 🧩 multiple-choice warm-up: 20 drill questions across every SAQ, the ones missed most often first */
+function sqRapid(){
+  const mm=SQ._mm||{}, all=[];
+  SAQD.forEach((x,s)=>x.mcq.forEach((m,i)=>all.push({s,m:i,w:(mm[x.id+':'+i]||0)+Math.random()})));
+  all.sort((a,b)=>b.w-a.w);
+  SQR={rapid:true, x:null, stage:'drill'};
+  sqQueue(shuffle(all.slice(0,20).map(({s,m})=>({s,m}))));
+}
+/* 📝 SAQ paper: three SAQs back to back with nothing on screen, weakest first, on her clock, then one total */
+function sqPaper(){
+  const ids=SAQD.slice().sort((a,b)=>((sqS(a.id).best||0)-(sqS(b.id).best||0))||((b.star?1:0)-(a.star?1:0))||(Math.random()-.5)).slice(0,3).map(x=>x.id);
+  const aim=Math.round(ids.reduce((n,id)=>n+SAQD.find(s=>s.id===id).marks,0)*1.3);
+  SQR={x:SAQD.find(s=>s.id===ids[0]), stage:'cold', paper:{ids,i:0,res:[],t0:Date.now(),aim}};
+  sqCold(); window.scrollTo(0,0);
+}
+function sqPaperNext(){
+  const p=SQR.paper; p.i++;
+  if(p.i<p.ids.length){ SQR.x=SAQD.find(s=>s.id===p.ids[p.i]); SQR.cold=null; sqCold(); window.scrollTo(0,0); return }
+  const got=p.res.reduce((a,r)=>a+r.pts,0), tot=p.res.reduce((a,r)=>a+r.marks,0), used=Math.round((Date.now()-p.t0)/60000);
+  $('#view').innerHTML=`<div class="card"><p class="sres">≈${got}/${tot} marks</p><p class="score-sub">SAQ paper · ${p.res.length} questions · ${used} min used of ~${p.aim}</p>
+    ${p.res.map(r=>{const x=SAQD.find(s=>s.id===r.id);return `<div class="qr ${r.miss.length?(r.pts>0?'partial':'wrong'):'right'}"><div class="qr-head"><span class="qr-mk">${r.pts}/${r.marks}</span><span class="qr-stem">${esc(x.title)}</span></div>
+      ${r.miss.length?`<ol class="ssteps" style="padding:0 11px 8px 2.2em">${r.miss.map(i=>`<li value="${i+1}">${mdB(x.steps[i])}</li>`).join('')}</ol>`:''}
+      <div class="qr-acts"><button class="btn ghost" style="padding:3px 11px;font-size:.77rem" data-sqo="${x.id}">Open this SAQ</button></div></div>`}).join('')}
+    <button class="btn primary wide" id="sqPap2">📝 Another SAQ paper</button>
+    <button class="btn ghost wide" id="sqHomeB">← All SAQs</button></div>`;
+  window.scrollTo(0,0); SQR.paper=null;
+  document.querySelectorAll('[data-sqo]').forEach(b=>b.onclick=()=>sqOpen(b.dataset.sqo,'read'));
+  $('#sqPap2').onclick=sqPaper; $('#sqHomeB').onclick=sqHome;
+}
+/* 📄 last-look sheet: every model answer on one page, ⭐ first, for the final read-through */
+function sqSheet(){
+  SQR=null;
+  const xs=SAQD.filter(x=>x.star).concat(SAQD.filter(x=>!x.star));
+  $('#view').innerHTML=`<div class="card sheet"><div class="qhead"><button class="btn ghost" id="sqBack" style="padding:4px 10px">← SAQs</button><span class="n">📄 Last-look sheet</span></div>
+    <p class="hist" style="margin:0">All ${SAQD.length} model answers, one mark point per line. Bold = the words that earn it.</p>
+    ${xs.map(x=>`<div class="sheeti"><h3>${x.star?'⭐ ':''}${esc(x.title)} <span class="tag ${x.sys}">${x.marks} marks</span></h3>
+      <div class="shook">🧠 ${esc(x.hook)}</div><ol class="ssteps">${x.steps.map(t=>`<li>${mdB(t)}</li>`).join('')}</ol></div>`).join('')}
+    <button class="btn ghost wide" id="sqHomeB">← All SAQs</button></div>`;
+  $('#sqBack').onclick=sqHome; $('#sqHomeB').onclick=sqHome; window.scrollTo(0,0);
+}
+/* keys: 1–4 answer a drill question, Enter moves on */
+document.addEventListener('keydown',e=>{
+  if(!SQR||!SQR.cur||!SQR.q||e.target.tagName==='TEXTAREA'||e.target.tagName==='INPUT') return;
+  if(SQR.cur.picked==null&&/^[1-4]$/.test(e.key)){ const b=document.querySelector(`.sopt[data-o="${+e.key-1}"]`); if(b){e.preventDefault();b.click()} }
+});
 /* ── chrome ────────────────────────────────────────────────────────── */
 paintCountdown();
 $('#themeBtn').onclick=()=>{const r=document.documentElement;
@@ -1144,8 +1487,22 @@ $('#helpBtn').onclick=()=>{$('#help').innerHTML=`
   <h2 style="margin-top:0">What is this?</h2>
   <p>Every practice quiz Hannetjie posted for Module 3 (reproduction · genetics · special senses · light &amp; sound), unlocked: sit them as
   often as you like, marked instantly — or let the tool deal you mixed mock tests from the whole bank.
-  Test 3 has the same shape as the other two continuous tests (about 80% closed questions, 20% written, 65 min). Its date and its
-  case studies are on Canvas — check them there.</p>
+  Test 3 (her Assessment Overview): <b>37 questions · 30% written · 65 min · 16.6% of the course</b>, weeks 9–11 plus the
+  <b>(11) Lactation</b> and <b>(12) Hearing loss</b> case studies. It closes 26 Oct; your own booked date is on Canvas.</p>
+  <h3>SAQ Trainer (the red card at the top)</h3>
+  <p>Practice for the written questions, which are 30% of Test 3. The list is the written questions she has already set for Module 3:
+  her student-marked SAQ quiz, the two test case studies, pedigree charts (her words: <i>will be tested</i>) and the topics on her
+  "Help with Module 3 topics" board; ⭐ marks those signals, so do them first. She marks <b>half a mark per fact</b> (her
+  "SAQ – what can we expect?" post). For each: <b>Read</b> the model answer (one mark point per line, the bold words earn it), then
+  <b>Write it</b> from memory. When you press Mark, the page ticks every point where it finds that point's bold words in your answer
+  and shows which words it found (✓) and which were missing (✗); you correct the ticks, and it scores you. A long word has to match
+  nearly in full, so "oestrogen" never passes for "oxytocin". Write it again until you reach 80%, which locks it, and a locked
+  question opens straight at Write it next time. Helpers if a point won't stick: <b>🧩 MCQ help</b> (multiple choice on each mark
+  point; a miss comes back until you get it right) and <b>↕ Order</b> (rebuild the answer in sequence). <b>📝 SAQ paper</b> is three
+  questions back to back on her clock (about 1.3 min a mark), weakest first. <b>📄 Last-look sheet</b> is every model answer on one
+  page. The model answers are <b>this tool's</b>, built from her decks and answer pages, and each names its source. Where she posted
+  her own answer to the same question, it sits under the tool's, word for word; where the two disagree, a ⚠ line says which one
+  her own slides back (she slips on the near-vision pupil and on what LH makes the Leydig cells produce).</p>
   <h3>Where the questions come from</h3>
   <p>${DATA.stats.n} questions captured from ${DATA.quizzes.length} of her own Canvas quizzes, answer keys
   extracted from the graded pages — nothing invented. Written questions have <b>model answers written by

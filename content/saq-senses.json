@@ -1,0 +1,1040 @@
+[
+ {
+  "id": "nihl-case",
+  "sys": "senses",
+  "star": true,
+  "title": "Case L: Jack's noise-induced hearing loss",
+  "marks": 6,
+  "ask": "Jack works in a very noisy open-plan office and has listened to loud music for a long time to drown it out. He now has trouble hearing and understanding. Which parts of the ear are damaged, and where are they? How does loud noise over time damage them, and how does that lead to deafness? What kind of deafness is this, and how does it compare with the other kind? (6 marks)",
+  "hook": "Too loud, too long → hairs in the ORGAN OF CORTI snap off → no signal down nerve VIII → SENSORINEURAL, and permanent. The other kind (CONDUCTION) is a blockage before the inner ear: wax, glue ear, a hole in the eardrum.",
+  "steps": [
+   "The damaged parts are the **hair cells** (the auditory **mechanoreceptors**) of the **organ of Corti**.",
+   "The organ of Corti sits on the **basilar membrane** in the **scala media (cochlear duct)** of the **cochlea**, in the **inner ear**.",
+   "Loud sound is a high-**amplitude** wave: the basilar membrane moves so hard that the hairs **bend against the tectorial membrane** until they **break off**. Continuous exposure to **85 dB** or more does this over time; **130 dB** or more does it at once.",
+   "Damaged hair cells cannot **transduce** vibration into **nerve impulses**, so no signal travels along the **vestibulocochlear nerve (VIII)** to the **auditory cortex** in the temporal lobe.",
+   "Hair cells **do not grow back**, so noise-induced hearing loss is **permanent**.",
+   "This is **sensorineural deafness**: damage anywhere from the **cochlear hair cells** to the auditory cortex. It is usually **irreversible**; depending on where the damage is, a **cochlear implant** can help.",
+   "The other kind is **conduction deafness**: sound is **blocked before it reaches the inner ear** (outer or middle ear), e.g. **impacted earwax**, a **perforated eardrum** or a **middle-ear infection** (glue ear). It is often **reversible**."
+  ],
+  "order": false,
+  "traps": [
+   "Hair cells of the SEMICIRCULAR CANALS are for balance. Her own NIHL question offers them as the wrong answer.",
+   "Noise-induced loss is SENSORINEURAL, even though the sound came in through a normal ear canal. Conduction means something BLOCKS the sound.",
+   "The case says 'be specific': name the organ of Corti AND where it sits (on the basilar membrane, scala media, cochlea, inner ear)."
+  ],
+  "her": [
+   "what is the difference between sensorineural and conduction deafness"
+  ],
+  "src": "Case Study Booklet A, case L (her 'MODULE 3 CASE STUDY L' board, the four questions verbatim); her 2026 Hearing & Equilibrium deck slide 6 (85 dB continuous, 130 dB immediate, hair cells bend so much they break off), slides 15 and 21 (organ of Corti on the basilar membrane, scala media, tectorial membrane), slide 24 (conduction vs sensorineural deafness); her Revision SS/Genetics/Repro quiz key (hair cells in the organ of Corti; sensorineural); her 'HELP WITH MODULE 3 TOPICS' board (conduction loss: glue ear, wax, middle ear infection; sensorineural: medications, loud noise). The marks are the tool's estimate.",
+  "mcq": [
+   {
+    "q": "Which cells does years of loud noise destroy in Jack's ear?",
+    "a": "Hair cells of the organ of Corti",
+    "d": [
+     "Hair cells of the semicircular canals",
+     "Cells lining the Eustachian tube",
+     "Cells of the tympanic membrane"
+    ],
+    "why": "Noise damages the auditory hair cells of the organ of Corti. Semicircular-canal hair cells sense rotation of the head, which is her standing distractor on this question.",
+    "step": 0
+   },
+   {
+    "q": "Where exactly does the organ of Corti sit?",
+    "a": "On the basilar membrane in the scala media",
+    "d": [
+     "On the tympanic membrane in the middle ear",
+     "Inside the utricle of the vestibule",
+     "On the oval window beside the stapes"
+    ],
+    "why": "Her deck: the organ of Corti sits on the basilar membrane, the floor of the scala media (cochlear duct) inside the cochlea of the inner ear.",
+    "step": 1
+   },
+   {
+    "q": "What physically happens to the receptor cells in noise damage?",
+    "a": "Their hairs bend so far they break off",
+    "d": [
+     "Their hairs get coated in thick earwax",
+     "They fill up with fluid and burst open",
+     "They swell and block the oval window"
+    ],
+    "why": "Her slide: the hair cells in the cochlea bend so much that they break off. Earwax is a cause of conduction deafness, a different kind.",
+    "step": 2
+   },
+   {
+    "q": "From what sound level does continuous exposure start to damage hearing, in her deck?",
+    "a": "85 dB",
+    "d": [
+     "30 dB",
+     "55 dB",
+     "200 dB"
+    ],
+    "why": "Her deck: continuous exposure to 85 dB or more can lead to sensorineural loss, and 130 dB or more causes it immediately.",
+    "step": 2
+   },
+   {
+    "q": "Why do damaged receptor cells leave Jack deaf?",
+    "a": "No vibration is turned into nerve impulses",
+    "d": [
+     "Sound waves can no longer enter the ear",
+     "The ossicles stop amplifying the sound",
+     "The Eustachian tube cannot equalise pressure"
+    ],
+    "why": "Sound still reaches the cochlea, but without hair cells there is no transduction, so no impulse goes to the brain. The other three options describe conduction problems.",
+    "step": 3
+   },
+   {
+    "q": "Which nerve would normally carry Jack's hearing signal to the brain?",
+    "a": "Vestibulocochlear nerve (VIII)",
+    "d": [
+     "Glossopharyngeal nerve (IX)",
+     "Facial nerve (VII)",
+     "Accessory nerve (XI)"
+    ],
+    "why": "The cochlear branch of the vestibulocochlear nerve (VIII) carries hearing impulses on to the auditory cortex.",
+    "step": 3
+   },
+   {
+    "q": "Why is noise-induced hearing loss permanent?",
+    "a": "Lost hair cells do not grow back",
+    "d": [
+     "The eardrum scars over for good",
+     "Earwax hardens and cannot be removed",
+     "The ossicles fuse into one bone"
+    ],
+    "why": "Hair cells that break off are not replaced, so the loss is permanent. Her NIHL question calls it permanent.",
+    "step": 4
+   },
+   {
+    "q": "Which type of deafness is noise-induced hearing loss?",
+    "a": "Sensorineural",
+    "d": [
+     "Conduction",
+     "Vestibular",
+     "Tympanic"
+    ],
+    "why": "The damage is to the hair cells (a neural structure of the inner ear), so it is sensorineural. Her quiz key says the same.",
+    "step": 5
+   },
+   {
+    "q": "Which of these would cause conduction deafness instead?",
+    "a": "Impacted earwax",
+    "d": [
+     "Loud music for years",
+     "A damaged organ of Corti",
+     "An injured auditory cortex"
+    ],
+    "why": "Conduction deafness blocks sound before the inner ear: earwax, a perforated eardrum, glue ear. The other three are sensorineural causes.",
+    "step": 6
+   },
+   {
+    "q": "What makes conduction deafness different from sensorineural?",
+    "a": "Sound is blocked before the inner ear",
+    "d": [
+     "Hair cells can no longer make signals",
+     "The auditory cortex cannot process it",
+     "The cochlear nerve is cut or damaged"
+    ],
+    "why": "Conduction = the outer or middle ear stops sound reaching the cochlea, and it is often reversible. The other three are all sensorineural.",
+    "step": 6
+   }
+  ]
+ },
+ {
+  "id": "glaucoma-cataract",
+  "sys": "senses",
+  "star": true,
+  "title": "Glaucoma and cataracts",
+  "marks": 4,
+  "ask": "Explain glaucoma and cataracts: which part of the eye each one affects, what goes wrong, and how it affects vision. (4 marks)",
+  "hook": "GLAUCOMA = a PRESSURE problem: the drain (canal of Schlemm) blocks, fluid backs up, pressure crushes the retina and optic nerve. CATARACT = a CLARITY problem: the lens goes cloudy.",
+  "steps": [
+   "**Glaucoma** involves the **aqueous humor**: normally the **ciliary body** makes it and the **canal of Schlemm** drains it at the same rate.",
+   "If the **canal of Schlemm is blocked** (or too much fluid is made), aqueous humor **builds up** in the **anterior** segment and **intraocular pressure rises**.",
+   "The raised pressure **compresses the retina** and its **blood supply** and damages the **optic nerve**, so vision is lost and it can end in **blindness**.",
+   "A **cataract** affects the **lens**: its **proteins denature**, so the lens turns **cloudy (opaque)** instead of transparent.",
+   "The cloudy lens stops light reaching the **retina** properly: vision becomes **blurred and yellowed**, with poor night vision and **glare** sensitivity. It is common with **age** and **diabetes**.",
+   "A cataract is treated with **surgery** that **replaces the lens**."
+  ],
+  "order": false,
+  "traps": [
+   "Glaucoma = PRESSURE (aqueous humor, canal of Schlemm). Cataract = the LENS. Swapping them loses both marks.",
+   "The ciliary body MAKES aqueous humor; the canal of Schlemm DRAINS it.",
+   "In glaucoma the lens is fine: it is the retina and optic nerve that get damaged."
+  ],
+  "her": [
+   "briefly explain the glaucoma and cataracts are"
+  ],
+  "src": "Her 'HELP WITH MODULE 3 TOPICS' board (glaucoma: the pressure in the eye, damaging the optic nerve; cataract: the clarity of the lens); her 'Answers for 12' page Q8 (aqueous humor made by the ciliary body, drained by the canal of Schlemm; cataract surgery); 2022 Eyes deck slides 15-16; 2026 Light & Seeing deck slide 19 (cataract symptoms); her quiz keys (glaucoma = canal blocked + pressure up + retina compressed; cataract = lens proteins denature, opaque).",
+  "mcq": [
+   {
+    "q": "Which structure produces the aqueous humor?",
+    "a": "Ciliary body",
+    "d": [
+     "Canal of Schlemm",
+     "Choroid",
+     "Lacrimal gland"
+    ],
+    "why": "The ciliary body makes aqueous humor. The canal of Schlemm is the drain, which is what blocks in glaucoma.",
+    "step": 0
+   },
+   {
+    "q": "Which structure normally drains the aqueous humor?",
+    "a": "Canal of Schlemm",
+    "d": [
+     "Ciliary body",
+     "Nasolacrimal duct",
+     "Optic disc"
+    ],
+    "why": "The canal of Schlemm drains aqueous humor. The nasolacrimal duct drains tears, not aqueous humor.",
+    "step": 0
+   },
+   {
+    "q": "In glaucoma, what happens to the pressure inside the eye?",
+    "a": "It rises as fluid builds up",
+    "d": [
+     "It falls as fluid leaks out",
+     "It stays normal but the lens clouds",
+     "It rises because the lens swells"
+    ],
+    "why": "Aqueous humor cannot drain, so it builds up and intraocular pressure rises.",
+    "step": 1
+   },
+   {
+    "q": "Which structures does the raised pressure of glaucoma damage?",
+    "a": "The optic nerve and retina",
+    "d": [
+     "The lens and its fibres",
+     "The cornea and conjunctiva",
+     "The iris and pupil muscles"
+    ],
+    "why": "Her help board: the pressure damages the optic nerve. Her quiz key adds that the retina is compressed and its blood supply blocked.",
+    "step": 2
+   },
+   {
+    "q": "Which part of the eye is affected by a cataract?",
+    "a": "The lens",
+    "d": [
+     "The retina",
+     "The cornea",
+     "The iris"
+    ],
+    "why": "A cataract is a cloudy lens. Her help board: cataract affects the clarity of the lens.",
+    "step": 3
+   },
+   {
+    "q": "What happens to the lens in a cataract?",
+    "a": "Its proteins denature and it turns opaque",
+    "d": [
+     "It is pushed back by high fluid pressure",
+     "It detaches from the suspensory ligaments",
+     "It loses its blood supply and dies off"
+    ],
+    "why": "Her quiz: the lens loses its clarity and becomes opaque because its proteins denature.",
+    "step": 3
+   },
+   {
+    "q": "Which symptom fits a cataract?",
+    "a": "Blurred, yellowed vision with glare",
+    "d": [
+     "A sudden dark curtain over one eye",
+     "Losing the sense of balance",
+     "Ringing in both of the ears"
+    ],
+    "why": "Her Light & Seeing slide on cataract: reduced acuity, poor night vision, blurring and yellowing, sensitivity to glare.",
+    "step": 4
+   },
+   {
+    "q": "How is a cataract treated?",
+    "a": "Surgery to replace the lens",
+    "d": [
+     "Eye drops to open the drain",
+     "Glasses with concave lenses",
+     "Surgery to reattach the retina"
+    ],
+    "why": "Her Answers page shows cataract surgery, where the cloudy lens is replaced.",
+    "step": 5
+   }
+  ]
+ },
+ {
+  "id": "hearing",
+  "sys": "senses",
+  "title": "How hearing occurs",
+  "marks": 4,
+  "ask": "Discuss how hearing occurs in humans, from the sound wave arriving at the ear to the sound being perceived. (4 marks)",
+  "hook": "COLLECT (pinna) → VIBRATE (eardrum) → AMPLIFY (ossicles onto the oval window) → FLUID WAVES (perilymph → endolymph) → BEND (hair cells against the tectorial membrane) → IMPULSE (nerve VIII) → HEAR (auditory cortex, temporal lobe).",
+  "steps": [
+   "**Outer ear**: the **pinna** collects sound waves and channels them along the **external auditory canal** to the **tympanic membrane**, which **vibrates**.",
+   "**Middle ear**: the vibration passes to the **ossicles** (**malleus → incus → stapes**), which **amplify** it onto the much smaller **oval window**.",
+   "**Inner ear**: the oval window vibrates the **perilymph** in the scala vestibuli and scala tympani, which passes the vibration to the **endolymph** in the **scala media** (cochlear duct).",
+   "The **basilar membrane** moves, and the **hair cells** of the **organ of Corti** **bend against the tectorial membrane**.",
+   "Bending the hairs is **transduction**: the hair cells (**mechanoreceptors**) turn the vibration into **nerve impulses**.",
+   "The impulses travel along the **cochlear branch of the vestibulocochlear nerve (VIII)** to the **auditory cortex** in the **temporal lobe**, where the sound is heard."
+  ],
+  "order": true,
+  "traps": [
+   "It is the MIDDLE ear (the ossicles) that amplifies. Her student-marked feedback slips and says the inner ear amplifies; her deck (slide 11) says the middle ear.",
+   "The hair cells sit ON the basilar membrane and bend AGAINST the tectorial membrane.",
+   "The auditory cortex is in the TEMPORAL lobe; the occipital lobe is vision."
+  ],
+  "her": [
+   "discuss how hearing occurs in humans"
+  ],
+  "src": "Her 2026 Hearing & Equilibrium deck slides 9-11 (outer ear collects, middle ear amplifies onto the oval window), slides 15 and 20-23 (perilymph, endolymph, basilar membrane, hair cells against the tectorial membrane, cochlear nerve, auditory cortex in the temporal lobe); her Sound & Hearing quiz key (hair cells bending against the tectorial membrane = transduction).",
+  "mcq": [
+   {
+    "q": "What does the pinna do?",
+    "a": "Collects sound and funnels it inward",
+    "d": [
+     "Amplifies sound onto the oval window",
+     "Equalises pressure in the middle ear",
+     "Turns sound waves into nerve impulses"
+    ],
+    "why": "The pinna collects sound like a satellite dish and channels it into the auditory canal. Amplifying is the ossicles' job.",
+    "step": 0
+   },
+   {
+    "q": "Which part of the ear amplifies the vibrations?",
+    "a": "The ossicles of the middle ear",
+    "d": [
+     "The pinna of the outer ear",
+     "The cochlea of the inner ear",
+     "The semicircular canals"
+    ],
+    "why": "Her deck: the middle ear amplifies, passing vibration from the large eardrum to the small oval window.",
+    "step": 1
+   },
+   {
+    "q": "In what order do the ossicles pass on the vibration?",
+    "a": "Malleus → incus → stapes",
+    "d": [
+     "Stapes → incus → malleus",
+     "Incus → malleus → stapes",
+     "Malleus → stapes → incus"
+    ],
+    "why": "The malleus touches the eardrum, the incus sits in the middle, and the stapes fits into the oval window.",
+    "step": 1
+   },
+   {
+    "q": "Which fluid does the oval window set moving first?",
+    "a": "Perilymph",
+    "d": [
+     "Endolymph",
+     "Aqueous humor",
+     "Cerebrospinal fluid"
+    ],
+    "why": "The oval window vibrates the perilymph in the scala vestibuli and tympani; that passes the vibration on to the endolymph of the scala media.",
+    "step": 2
+   },
+   {
+    "q": "The hair cells bend against which structure?",
+    "a": "The tectorial membrane",
+    "d": [
+     "The tympanic membrane",
+     "The oval window",
+     "The round window"
+    ],
+    "why": "The hair cells sit on the basilar membrane with their hairs in the gel-like tectorial membrane. Bending against it fires them.",
+    "step": 3
+   },
+   {
+    "q": "What kind of receptors are the hair cells of the organ of Corti?",
+    "a": "Mechanoreceptors",
+    "d": [
+     "Chemoreceptors",
+     "Photoreceptors",
+     "Thermoreceptors"
+    ],
+    "why": "They respond to bending (a mechanical stimulus). Her Answers page: the inner ear contains mechanoreceptors.",
+    "step": 4
+   },
+   {
+    "q": "Where is the sound finally perceived?",
+    "a": "Auditory cortex, temporal lobe",
+    "d": [
+     "Visual cortex, occipital lobe",
+     "The cerebellum",
+     "The medulla oblongata"
+    ],
+    "why": "Her deck: impulses are projected to the auditory cortex in the temporal lobe.",
+    "step": 5
+   },
+   {
+    "q": "Which nerve carries hearing impulses to the brain?",
+    "a": "Vestibulocochlear (VIII)",
+    "d": [
+     "Facial (VII)",
+     "Glossopharyngeal (IX)",
+     "Trigeminal (V)"
+    ],
+    "why": "Nerve VIII has a cochlear branch (hearing) and a vestibular branch (balance).",
+    "step": 5
+   }
+  ]
+ },
+ {
+  "id": "ear-regions",
+  "sys": "senses",
+  "title": "The three regions of the ear",
+  "marks": 4.5,
+  "ask": "What are the three regions of the ear? Describe their structures and functions. (4.5 marks)",
+  "hook": "OUTER collects (pinna, canal, eardrum). MIDDLE amplifies (three bones, a pressure tube, two damping muscles). INNER turns it into signals: cochlea = hearing, vestibular apparatus = balance.",
+  "steps": [
+   "**Outer (external) ear**: the **pinna**, the **external auditory canal** (with glands making **cerumen**, earwax) and the **tympanic membrane**. It **collects** sound and directs it onto the eardrum; the pinna also helps **locate** sound (above or below).",
+   "**Middle ear**: an air-filled cavity in the **temporal bone** holding the **ossicles** (malleus, incus, stapes). It **amplifies** sound, passing it from the large eardrum to the small **oval window**.",
+   "The middle ear also has the **Eustachian (pharyngotympanic) tube** to the nasopharynx, which **equalises pressure**, and two small **muscles** (tensor tympani and stapedius) that **dampen loud sounds**.",
+   "**Inner ear**: the **bony labyrinth** in the temporal bone, filled with **perilymph**, holding the **membranous labyrinth**, filled with **endolymph**.",
+   "Inner ear part 1: the **cochlea**, for **hearing**; its **organ of Corti** turns sound vibration into nerve impulses.",
+   "Inner ear part 2: the **vestibular apparatus** (the **vestibule** and the **semicircular canals**), for **equilibrium (balance)**."
+  ],
+  "order": false,
+  "traps": [
+   "Only the INNER ear does balance. The outer and middle ear are for hearing only.",
+   "The Eustachian tube equalises PRESSURE (the ear 'pops'); it does not carry sound.",
+   "PERIlymph is in the bony labyrinth, around the outside; ENDOlymph is inside the membranous labyrinth."
+  ],
+  "her": [
+   "what are the three regions of the ear"
+  ],
+  "src": "Her 2026 Hearing & Equilibrium deck slides 8-15 (the three parts; pinna, canal, cerumen, tympanic membrane; ossicles amplify; Eustachian tube equalises pressure; tensor tympani and stapedius dampen; bony labyrinth with perilymph, membranous labyrinth with endolymph; cochlea and vestibular apparatus); her 'Answers for 12' page Q1 (bony and membranous labyrinth).",
+  "mcq": [
+   {
+    "q": "Which structures make up the outer ear?",
+    "a": "Pinna, auditory canal, tympanic membrane",
+    "d": [
+     "Malleus, incus, stapes",
+     "Cochlea, vestibule, semicircular canals",
+     "Oval window, round window, Eustachian tube"
+    ],
+    "why": "The outer ear is the pinna, the canal and the eardrum. The ossicles are middle ear; the cochlea and vestibular apparatus are inner ear.",
+    "step": 0
+   },
+   {
+    "q": "What is cerumen?",
+    "a": "Earwax made in the auditory canal",
+    "d": [
+     "Fluid inside the cochlear duct",
+     "Gel over the balance hair cells",
+     "Mucus from the Eustachian tube"
+    ],
+    "why": "Cerumen is earwax, from the wax glands of the external auditory canal.",
+    "step": 0
+   },
+   {
+    "q": "What is the main job of the middle ear?",
+    "a": "Amplify sound onto the oval window",
+    "d": [
+     "Collect sound from the surroundings",
+     "Detect rotation of the head",
+     "Turn vibration into nerve impulses"
+    ],
+    "why": "Her deck: the middle ear amplifies the intensity of sound, from the large tympanic membrane to the small oval window.",
+    "step": 1
+   },
+   {
+    "q": "What does the Eustachian tube do?",
+    "a": "Equalises middle-ear pressure",
+    "d": [
+     "Drains earwax to the throat",
+     "Carries sound to the cochlea",
+     "Holds the ossicles in place"
+    ],
+    "why": "It connects the middle ear to the nasopharynx so the pressure on both sides of the eardrum matches. That is why ears pop.",
+    "step": 2
+   },
+   {
+    "q": "What do the tensor tympani and stapedius muscles do?",
+    "a": "Dampen vibration from loud sounds",
+    "d": [
+     "Tilt the pinna toward a sound",
+     "Open the Eustachian tube wide",
+     "Move fluid through the cochlea"
+    ],
+    "why": "Her deck notes: they limit the movement of the ossicles when sound gets loud, protecting the inner ear.",
+    "step": 2
+   },
+   {
+    "q": "Which fluid fills the membranous labyrinth?",
+    "a": "Endolymph",
+    "d": [
+     "Perilymph",
+     "Aqueous humor",
+     "Synovial fluid"
+    ],
+    "why": "Endo = inside: endolymph fills the membranous labyrinth. Perilymph surrounds it in the bony labyrinth.",
+    "step": 3
+   },
+   {
+    "q": "Which part of the inner ear is for hearing?",
+    "a": "Cochlea",
+    "d": [
+     "Utricle",
+     "Saccule",
+     "Ampulla"
+    ],
+    "why": "The cochlea (with the organ of Corti) is for hearing. The utricle, saccule and ampullae are balance organs.",
+    "step": 4
+   },
+   {
+    "q": "Which region of the ear handles balance as well as hearing?",
+    "a": "Inner ear",
+    "d": [
+     "Outer ear",
+     "Middle ear",
+     "Ear canal"
+    ],
+    "why": "Her deck: the external and middle ear are involved with hearing only; the internal ear does both hearing and equilibrium.",
+    "step": 5
+   }
+  ]
+ },
+ {
+  "id": "eye-layers",
+  "sys": "senses",
+  "title": "The three layers of the eye",
+  "marks": 4.5,
+  "ask": "What are the three layers (tunics) of the eye? Give their structures and functions. (4.5 marks)",
+  "hook": "Outside in: TOUGH COAT (sclera + cornea) → BLOOD COAT (choroid, ciliary body, iris) → SEEING COAT (retina: pigment layer + rods/cones → bipolar → ganglion → optic nerve).",
+  "steps": [
+   "**Fibrous tunic** (outer): the white **sclera** (**protects** the eye and **anchors** the extrinsic muscles) and the transparent **cornea** (lets light in and does about **80% of the refraction**).",
+   "**Vascular tunic (uvea)** (middle), part 1: the **choroid**, pigmented and **rich in blood vessels**; it **nourishes** the other layers and stops light scattering.",
+   "Vascular tunic, part 2: the **ciliary body** (ciliary muscles and suspensory ligaments) **holds the lens and changes its shape**, and its processes **make aqueous humor**.",
+   "Vascular tunic, part 3: the **iris**, whose circular and radial muscles **control pupil size** and so how much light enters.",
+   "**Neural tunic** (inner) = the **retina**. Its outer **pigmented layer** **absorbs light** and stops it scattering.",
+   "The retina's inner **neural layer** has three layers of neurons: **photoreceptors (rods and cones)** → **bipolar cells** → **ganglion cells**, whose axons leave as the **optic nerve (II)**. The photoreceptors **turn light into nerve impulses**."
+  ],
+  "order": false,
+  "traps": [
+   "The CORNEA, not the lens, does most of the refraction (about 80%).",
+   "The choroid is part of the VASCULAR (middle) tunic, not the retina.",
+   "Rods and cones are in the NEURAL layer; the pigmented layer only absorbs light."
+  ],
+  "her": [
+   "what are the three layers of the eye"
+  ],
+  "src": "Her 2022 Eyes deck slides 7-14 (three tunics; sclera protects and anchors muscles; cornea refracts 80%; choroid supplies nutrients and prevents scattering; ciliary body; iris muscles; retina pigmented layer and neural layer: photoreceptors, bipolar, ganglion cells, optic nerve II); slide 15 (ciliary body produces aqueous humor).",
+  "mcq": [
+   {
+    "q": "Which part of the outer tunic lets light in and does most of the refraction?",
+    "a": "Cornea",
+    "d": [
+     "Sclera",
+     "Lens",
+     "Choroid"
+    ],
+    "why": "Her deck: the cornea is the window that lets light in and refracts about 80% of it. The lens does the rest.",
+    "step": 0
+   },
+   {
+    "q": "What does the sclera do?",
+    "a": "Protects the eye and anchors its muscles",
+    "d": [
+     "Refracts about 80% of incoming light",
+     "Supplies blood to the retina",
+     "Makes the aqueous humor"
+    ],
+    "why": "The sclera is the tough white coat: it protects the eye and anchors the extrinsic eye muscles.",
+    "step": 0
+   },
+   {
+    "q": "Which layer of the eye is rich in blood vessels and nourishes the others?",
+    "a": "Choroid",
+    "d": [
+     "Sclera",
+     "Retina",
+     "Cornea"
+    ],
+    "why": "The choroid is the highly vascular, pigmented part of the middle tunic.",
+    "step": 1
+   },
+   {
+    "q": "Which structure changes the shape of the lens?",
+    "a": "Ciliary body",
+    "d": [
+     "Iris",
+     "Choroid",
+     "Optic disc"
+    ],
+    "why": "The ciliary muscles and suspensory ligaments of the ciliary body hold the lens and change its shape.",
+    "step": 2
+   },
+   {
+    "q": "What does the iris control?",
+    "a": "The size of the pupil",
+    "d": [
+     "The shape of the lens",
+     "The pressure in the eye",
+     "The drainage of tears"
+    ],
+    "why": "The iris's circular and radial muscles make the pupil smaller or larger, controlling how much light enters.",
+    "step": 3
+   },
+   {
+    "q": "What does the retina's pigmented layer do?",
+    "a": "Absorbs light so it does not scatter",
+    "d": [
+     "Turns light into nerve impulses",
+     "Makes aqueous humor for the lens",
+     "Carries impulses to the optic nerve"
+    ],
+    "why": "The pigmented layer absorbs stray light. Turning light into impulses is the photoreceptors' job in the neural layer.",
+    "step": 4
+   },
+   {
+    "q": "Which cells of the retina turn light into nerve impulses?",
+    "a": "Rods and cones",
+    "d": [
+     "Bipolar cells",
+     "Ganglion cells",
+     "Pigment cells"
+    ],
+    "why": "The photoreceptors (rods and cones) transduce light; bipolar and ganglion cells pass the signal on.",
+    "step": 5
+   },
+   {
+    "q": "Whose axons leave the eye as the optic nerve?",
+    "a": "Ganglion cells",
+    "d": [
+     "Bipolar cells",
+     "Rods and cones",
+     "Ciliary cells"
+    ],
+    "why": "Her deck: the axons of the ganglion cells leave the eye as the optic nerve (II).",
+    "step": 5
+   }
+  ]
+ },
+ {
+  "id": "accommodation",
+  "sys": "senses",
+  "title": "Near vision: the three changes",
+  "marks": 3,
+  "ask": "What changes occur in the eye to allow near vision? How is this undone for distant vision? (3 marks)",
+  "hook": "Reading a book close up = BULGE, SHRINK, CROSS: the lens bulges, the pupils shrink, the eyes cross inwards. Look out the window and all three undo.",
+  "steps": [
+   "The **lens bulges (gets rounder)**: the **ciliary muscle contracts**, the suspensory ligaments slacken and the elastic lens recoils, so it bends light more. This is **accommodation** of the lens.",
+   "The **pupils constrict**: the **circular (sphincter) muscles** of the iris contract.",
+   "The eyes **converge**: both eyeballs **rotate medially (turn inwards)** toward the near object.",
+   "For distant vision all three are undone: the **ciliary muscle relaxes**, the **lens flattens**, the **pupils dilate** and the eyes look straight ahead.",
+   "Light from a near object arrives as **diverging rays**; light from more than **6 m** away arrives as **parallel rays**. Near rays need more bending to focus on the **retina**."
+  ],
+  "order": false,
+  "traps": [
+   "For near vision the pupil CONSTRICTS. Her student-marked feedback says it dilates; her own quiz key ('the pupil dilates' is NOT typical) and both her decks say constricts. Write constricts.",
+   "The ciliary muscle CONTRACTS to make the lens BULGE. Her True/False trap says it contracts to flatten the lens (false).",
+   "Her Light & Seeing slide 10 slips and calls the lens 'biconcave'; it is BICONVEX (her slide 12 and the Eyes deck)."
+  ],
+  "her": [
+   "what changes occur in the eye to allow for near vision"
+  ],
+  "src": "Her 'Answers for 12' page Q7 (Patton's 3 changes: lens bulges, eyes converge, pupils constrict); 2022 Eyes deck slides 17-18 (near: ciliary muscle contracts, lens bulges, pupil constricts, convergence; far: ciliary muscle relaxes, lens flatter, pupils dilate, over 6 m = parallel rays); 2026 Light & Seeing deck slide 13 (the distant vs close vision table); her Special Senses quiz keys.",
+  "mcq": [
+   {
+    "q": "For near vision, what does the ciliary muscle do?",
+    "a": "Contracts, so the lens bulges",
+    "d": [
+     "Relaxes, so the lens flattens",
+     "Contracts, so the lens flattens",
+     "Relaxes, so the lens bulges"
+    ],
+    "why": "The ciliary muscle contracts, the suspensory ligaments slacken, and the elastic lens bulges. Her True/False trap pairs 'contracts' with 'flatten'.",
+    "step": 0
+   },
+   {
+    "q": "What is accommodation of the lens?",
+    "a": "Changing its shape to focus",
+    "d": [
+     "Letting more light reach it",
+     "Clouding over with age",
+     "Moving it nearer the retina"
+    ],
+    "why": "Accommodation is the lens changing shape (rounder for near, flatter for far) to focus the image on the retina.",
+    "step": 0
+   },
+   {
+    "q": "What does the pupil do when you read a book held close?",
+    "a": "Constricts",
+    "d": [
+     "Dilates",
+     "Stays the same",
+     "Closes fully"
+    ],
+    "why": "Her decks and her quiz key: the pupil constricts for near vision. 'Dilates' is the wrong option in her question.",
+    "step": 1
+   },
+   {
+    "q": "Which iris muscles make the pupil smaller?",
+    "a": "Circular (sphincter) muscles",
+    "d": [
+     "Radial (dilator) muscles",
+     "Extrinsic rectus muscles",
+     "The ciliary muscles"
+    ],
+    "why": "Her deck: constriction of the pupil = contraction of the circular (sphincter) muscles; dilation = the radial muscles.",
+    "step": 1
+   },
+   {
+    "q": "What do the eyeballs do to view a near object?",
+    "a": "Converge, turning inwards",
+    "d": [
+     "Diverge, turning outwards",
+     "Stay parallel and straight",
+     "Roll upwards together"
+    ],
+    "why": "Convergence is the medial rotation of both eyeballs toward the near object.",
+    "step": 2
+   },
+   {
+    "q": "When you look far away, what happens to the lens?",
+    "a": "It flattens as the ciliary muscle relaxes",
+    "d": [
+     "It bulges as the ciliary muscle contracts",
+     "It flattens as the ciliary muscle contracts",
+     "It bulges as the iris muscle contracts"
+    ],
+    "why": "For distance, the ciliary muscle relaxes and the lens is pulled thin and flat.",
+    "step": 3
+   },
+   {
+    "q": "How do light rays from a near object reach the eye?",
+    "a": "Diverging",
+    "d": [
+     "Parallel",
+     "Converging",
+     "Reflected"
+    ],
+    "why": "Near rays spread out (diverge), so the lens must bend them more. Rays from over 6 m away are near parallel.",
+    "step": 4
+   }
+  ]
+ },
+ {
+  "id": "refraction-errors",
+  "sys": "senses",
+  "title": "Myopia, hyperopia and astigmatism",
+  "marks": 5,
+  "ask": "Explain how myopia, emmetropia and hyperopia differ and how each error is corrected. What is astigmatism? (5 marks)",
+  "hook": "MYopia = MY world is up close (short-sighted): focus falls SHORT, in front of the retina → CONCAVE lens pushes it back. HYPERopia = long-sighted: focus overshoots, behind the retina → CONVEX lens pulls it forward.",
+  "steps": [
+   "**Emmetropia** is normal vision: parallel light rays are **focused on the retina**.",
+   "**Myopia** (short-sighted): light from distant objects focuses **in front of the retina**, usually because the eyeball is **too long** (the eye over-focuses). Near things are clear; far things are blurred.",
+   "Myopia is corrected with a **concave (biconcave) lens**, which **diverges** (scatters) the light and moves the focus **back onto the retina**.",
+   "**Hyperopia** (long-sighted): light from near objects focuses **behind the retina**, usually because the eyeball is **too short** (the eye under-focuses). Far things are clearer than near.",
+   "Hyperopia is corrected with a **convex (biconvex) lens**, which **converges** the light and moves the focus **forward onto the retina**.",
+   "**Astigmatism**: the **cornea or lens is curved unevenly** (more in one direction), so light focuses at **several points** and vision is blurred at **all distances**. It is corrected with glasses or contacts, or laser surgery (LASIK)."
+  ],
+  "order": false,
+  "traps": [
+   "Myopia = SHORT-sighted = CONCAVE lens. Hyperopia = LONG-sighted = CONVEX lens. Swapping the lenses is the commonest slip.",
+   "Say WHERE the image falls (in front of or behind the retina). That is the mark, not just 'blurry'.",
+   "Astigmatism does not depend on how far away you look (her feedback)."
+  ],
+  "her": [
+   "explain how myopia emmetropia and hyperopia are different",
+   "what is astigmatism",
+   "how do corrective lenses work"
+  ],
+  "src": "Her 2022 Eyes deck slide 23 (emmetropic, myopic, hyperopic eye); 2026 Light & Seeing deck slide 12 (concave lens diverges, convex converges), slide 14 (hyperopia: eyeball too short, convex lens; myopia: eyeball too long, concave lens), slides 16 and 21-23 (astigmatism, what each person sees); her student-marked SAQ answers on refraction errors, astigmatism and corrective lenses.",
+  "mcq": [
+   {
+    "q": "In emmetropia, where do parallel light rays focus?",
+    "a": "On the retina",
+    "d": [
+     "In front of the retina",
+     "Behind the retina",
+     "On the optic disc"
+    ],
+    "why": "Emmetropia is the normal eye: parallel rays focus exactly on the retina.",
+    "step": 0
+   },
+   {
+    "q": "In myopia, where does light from a distant object focus?",
+    "a": "In front of the retina",
+    "d": [
+     "On the retina",
+     "Behind the retina",
+     "On the lens"
+    ],
+    "why": "The myopic eye over-focuses, so the image falls short, in front of the retina.",
+    "step": 1
+   },
+   {
+    "q": "What shape problem usually causes short-sightedness?",
+    "a": "An eyeball that is too long",
+    "d": [
+     "An eyeball that is too short",
+     "A cornea that is too flat",
+     "A lens that is too thin"
+    ],
+    "why": "Her deck: myopic eye, eyeball too long. Hyperopia is the too-short eyeball.",
+    "step": 1
+   },
+   {
+    "q": "Which lens corrects short-sightedness?",
+    "a": "Concave, which diverges light",
+    "d": [
+     "Convex, which converges light",
+     "Convex, which diverges light",
+     "Concave, which converges light"
+    ],
+    "why": "A concave lens spreads the light out so the focus moves back onto the retina.",
+    "step": 2
+   },
+   {
+    "q": "What does a long-sighted person struggle with most?",
+    "a": "Reading close up",
+    "d": [
+     "Road signs far away",
+     "Seeing in dim light",
+     "Telling colours apart"
+    ],
+    "why": "In hyperopia near objects focus behind the retina, so close work blurs while distance is clearer.",
+    "step": 3
+   },
+   {
+    "q": "Which lens corrects hyperopia?",
+    "a": "Convex, which converges light",
+    "d": [
+     "Concave, which diverges light",
+     "Concave, which converges light",
+     "Convex, which diverges light"
+    ],
+    "why": "A convex lens bends the light inwards so the focus moves forward onto the retina.",
+    "step": 4
+   },
+   {
+    "q": "What causes astigmatism?",
+    "a": "Uneven curve of the cornea or lens",
+    "d": [
+     "A cloudy lens after protein damage",
+     "High pressure from aqueous humor",
+     "Missing cones in the retina"
+    ],
+    "why": "Her deck: the front of the eye or the lens is curved differently in one direction than the other. The distractors are cataract, glaucoma and colour blindness.",
+    "step": 5
+   }
+  ]
+ },
+ {
+  "id": "equilibrium",
+  "sys": "senses",
+  "title": "Static vs dynamic equilibrium",
+  "marks": 4,
+  "ask": "What is the difference between static and dynamic equilibrium? How and where is each detected? (4 marks)",
+  "hook": "STATIC = gravity and straight lines (tilt, lift): the VESTIBULE's maculae, where ear stones slide. DYNAMIC = spinning: the SEMICIRCULAR CANALS' cristae, where fluid swings a gel cap.",
+  "steps": [
+   "Both are sensed in the **vestibular apparatus** of the **inner ear** by **hair cells** (mechanoreceptors), which fire when **fluid (endolymph)** or a gel mass moves and **bends their hairs**.",
+   "**Static equilibrium** is the position of the head **in response to gravity** and **straight-line movement**: tilting the head, moving forwards or backwards, an accelerating lift.",
+   "Static equilibrium is detected by the **maculae** in the **utricle and saccule** (the **vestibule**): hairs embedded in a jelly **otolith membrane** studded with tiny stones (**otoliths**) that slide when the head tilts.",
+   "**Dynamic equilibrium** is balance while the head is **rotating** (angular movement), such as turning or spinning.",
+   "Dynamic equilibrium is detected by the **crista ampullaris** in the **ampulla** of each **semicircular canal**: rotation moves the endolymph, which swings the gel **cupula** and bends the hairs.",
+   "Impulses travel in the **vestibular branch of nerve VIII** to the **brain stem** and **cerebellum** (and the cortex). Signals that fire with no real movement cause **vertigo**."
+  ],
+  "order": false,
+  "traps": [
+   "Static = the VESTIBULE (utricle, saccule, maculae, otoliths). Dynamic = the SEMICIRCULAR CANALS (ampulla, crista, cupula). Swapping them loses both marks.",
+   "Static does not mean 'no movement at all': it includes straight-line movement like a lift. Dynamic means ROTATION.",
+   "The cochlea is for hearing, not balance."
+  ],
+  "her": [
+   "what is the different between the static and dynamic equilibrium"
+  ],
+  "src": "Her 2026 Hearing & Equilibrium deck slides 25-30 (vestibule: saccule, utricle, maculae, otolith membrane with otoliths; semicircular canals: ampulla, crista ampullaris, cupula, rotational movement; vestibular branch of VIII to the brain stem and cerebellum); her 'Answers for 12' page Q2 (the static vs dynamic table) and Q4 (mechanoreceptors).",
+  "mcq": [
+   {
+    "q": "What kind of receptors sense balance in the inner ear?",
+    "a": "Hair cells, which are mechanoreceptors",
+    "d": [
+     "Rods, which are photoreceptors",
+     "Free nerve endings, which sense pain",
+     "Taste cells, which are chemoreceptors"
+    ],
+    "why": "Her Answers page: the inner ear contains mechanoreceptors with hairs that fire when the hairs bend.",
+    "step": 0
+   },
+   {
+    "q": "Standing in a lift that suddenly starts to rise mainly uses which sense?",
+    "a": "Static equilibrium",
+    "d": [
+     "Dynamic equilibrium",
+     "Hearing",
+     "Proprioception"
+    ],
+    "why": "Her deck gives the sudden acceleration of a lift as a static equilibrium example: straight-line movement, not rotation.",
+    "step": 1
+   },
+   {
+    "q": "Where are the receptors for static equilibrium?",
+    "a": "Maculae of the utricle and saccule",
+    "d": [
+     "Cristae of the semicircular canals",
+     "Organ of Corti in the cochlea",
+     "Hair cells on the tympanic membrane"
+    ],
+    "why": "Static equilibrium uses the maculae in the vestibule (utricle and saccule).",
+    "step": 2
+   },
+   {
+    "q": "What are otoliths?",
+    "a": "Tiny stones on the macula's gel",
+    "d": [
+     "Fluid inside the semicircular canals",
+     "Small bones of the middle ear",
+     "Gel caps over the cochlear hairs"
+    ],
+    "why": "Otoliths ('ear stones') sit on the jelly-like otolith membrane; they slide when the head tilts and bend the hairs below.",
+    "step": 2
+   },
+   {
+    "q": "Spinning around on an office chair mainly stimulates...",
+    "a": "Dynamic equilibrium",
+    "d": [
+     "Static equilibrium",
+     "The organ of Corti",
+     "The utricle and saccule"
+    ],
+    "why": "Rotation of the head is dynamic equilibrium, sensed in the semicircular canals.",
+    "step": 3
+   },
+   {
+    "q": "Which structure detects rotation of the head?",
+    "a": "Crista ampullaris of the semicircular canals",
+    "d": [
+     "Macula of the utricle in the vestibule",
+     "Organ of Corti on the basilar membrane",
+     "Otolith membrane of the saccule"
+    ],
+    "why": "Each semicircular canal has a swollen ampulla holding the crista ampullaris, the dynamic equilibrium receptor.",
+    "step": 4
+   },
+   {
+    "q": "Where do balance impulses from nerve VIII mainly travel?",
+    "a": "Brain stem and cerebellum",
+    "d": [
+     "The occipital lobe",
+     "The hypothalamus",
+     "The auditory cortex only"
+    ],
+    "why": "Her deck: the vestibular branch of VIII runs mainly to the brain stem and cerebellum, and also to the cortex.",
+    "step": 5
+   }
+  ]
+ },
+ {
+  "id": "waves",
+  "sys": "senses",
+  "title": "Waves: light and sound",
+  "marks": 4,
+  "ask": "Explain amplitude, wavelength and frequency and how we experience each. Compare light and sound waves, and explain the difference between reflection and refraction of light. (4 marks)",
+  "hook": "Amplitude = how TALL (loud / bright). Wavelength = peak to peak (colour). Frequency = how MANY per second (pitch); more waves = shorter waves. Reflection BOUNCES, refraction BENDS.",
+  "steps": [
+   "**Amplitude** is the **height** of the wave (how far it moves from rest). We experience it as **loudness** in sound (measured in **decibels, dB**) and **brightness** in light.",
+   "**Wavelength** is the distance from **one peak to the next**. In light it decides the **colour** we see (visible light is measured in **nm**).",
+   "**Frequency** is the number of waves passing **per second**, in **hertz (Hz)**. As frequency goes **up**, wavelength goes **down**. In sound we hear frequency as **pitch** (humans hear about **20-20,000 Hz**).",
+   "**Light** is **electromagnetic** and needs **no medium** (it can cross a vacuum). **Sound** is a **mechanical pressure wave** of compressions and rarefactions and **needs a medium** (gas, liquid or solid).",
+   "**Reflection**: light **bounces back** off a flat, opaque surface, e.g. a **mirror**. A coloured object reflects only its own wavelengths and absorbs the rest.",
+   "**Refraction**: light **bends** when it passes into a medium of **different density**, because it **slows down** there, e.g. a **rainbow** in raindrops, and the **cornea and lens** focusing light on the retina."
+  ],
+  "order": false,
+  "traps": [
+   "Loudness = AMPLITUDE; pitch = FREQUENCY. Her quizzes swap them to catch you.",
+   "Higher frequency = SHORTER wavelength (her slide fills in the blank: decreases).",
+   "Sound cannot travel through a vacuum; light can."
+  ],
+  "her": [
+   "explain what the different parts of a wave are",
+   "what is the difference between refraction and reflection"
+  ],
+  "src": "Her 2026 Light & Seeing deck slides 2 (light vs sound table), 5 (as frequency increases, wavelength decreases), 7-9 (reflection, refraction, seeing colour); 2026 Hearing & Equilibrium deck slides 2-6 (sound needs a medium; loudness = amplitude in dB; pitch = frequency in Hz, 20-20,000 Hz); her student-marked SAQ answers on the parts of a wave and on refraction vs reflection.",
+  "mcq": [
+   {
+    "q": "Which wave property do we hear as loudness?",
+    "a": "Amplitude",
+    "d": [
+     "Frequency",
+     "Wavelength",
+     "Speed"
+    ],
+    "why": "Her deck: loudness is the interpretation of wave amplitude, measured in decibels.",
+    "step": 0
+   },
+   {
+    "q": "What is a wavelength?",
+    "a": "Distance from one peak to the next",
+    "d": [
+     "Height of the wave from rest",
+     "Number of waves each second",
+     "Speed of the wave in air"
+    ],
+    "why": "Wavelength is peak to peak. Height is amplitude; waves per second is frequency.",
+    "step": 1
+   },
+   {
+    "q": "In visible light, what does the wavelength decide?",
+    "a": "The colour we see",
+    "d": [
+     "The loudness we hear",
+     "How bright it looks",
+     "How fast it travels"
+    ],
+    "why": "Different wavelengths of visible light are different colours. Brightness is amplitude.",
+    "step": 1
+   },
+   {
+    "q": "As frequency increases, the wavelength...",
+    "a": "Decreases",
+    "d": [
+     "Increases",
+     "Stays the same",
+     "Doubles"
+    ],
+    "why": "Her slide: as frequency increases, wavelength decreases. More waves fit into each second only if each one is shorter.",
+    "step": 2
+   },
+   {
+    "q": "We hear the frequency of a sound as its...",
+    "a": "Pitch",
+    "d": [
+     "Loudness",
+     "Volume",
+     "Echo"
+    ],
+    "why": "Her deck: pitch is the perception of different frequencies. Loudness (volume) is amplitude.",
+    "step": 2
+   },
+   {
+    "q": "Which statement about light and sound is true?",
+    "a": "Light can cross a vacuum; sound cannot",
+    "d": [
+     "Sound can cross a vacuum; light cannot",
+     "Both need air to travel through",
+     "Neither can travel through water"
+    ],
+    "why": "Light is electromagnetic and needs no medium. Sound is a pressure wave and needs particles to push through.",
+    "step": 3
+   },
+   {
+    "q": "Light bouncing back off a mirror is called...",
+    "a": "Reflection",
+    "d": [
+     "Refraction",
+     "Diffraction",
+     "Absorption"
+    ],
+    "why": "Reflection is light bouncing back off a flat, opaque surface.",
+    "step": 4
+   },
+   {
+    "q": "Why does light bend as it passes into water?",
+    "a": "It slows in the denser medium",
+    "d": [
+     "It speeds up in the denser medium",
+     "It is absorbed by the water",
+     "It bounces off the surface"
+    ],
+    "why": "Her slide: light is refracted when it travels from one medium to another, because it travels slower in an optically denser medium.",
+    "step": 5
+   }
+  ]
+ }
+]

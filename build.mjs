@@ -16,6 +16,7 @@ import { OVERRIDES } from './content/overrides.js';
 import { AUTHORED_STEMS } from './content/authored-stems.js';
 import { FOCUS } from './content/focus.js';
 import { HELPLINE } from './content/helpline.js';
+import { loadSaq, saqJSON } from './saq.mjs';
 import { QTOPIC } from './content/qtopic.js';
 import { QROW } from './content/qrow.js';
 import { rowOf } from './content/topics.js';
@@ -444,8 +445,11 @@ const tpl = fs.readFileSync(path.join(HERE, 'template.html'), 'utf8');
 }
 const marker = '/*@BANK@*/';
 if (tpl.split(marker).length !== 2) { console.error('BUILD FAILED: expected exactly one ' + marker); process.exit(1); }
-const out = tpl.replace(marker, JSON.stringify(DATA));
+const SAQ_ALL = loadSaq(HERE);
+if (tpl.split('/*@SAQD@*/').length !== 2) { console.error('BUILD FAILED: expected exactly one /*@SAQD@*/'); process.exit(1); }
+const out = tpl.replace(marker, () => JSON.stringify(DATA)).replace('/*@SAQD@*/', () => saqJSON(SAQ_ALL));
 fs.writeFileSync(path.join(HERE, 'index.html'), out);
+console.log(`SAQ trainer: ${SAQ_ALL.length} questions · ${SAQ_ALL.reduce((n, x) => n + x.mcq.length, 0)} drill questions`);
 
 /* Parse-check the page's own inline script before it ships. A single bad escape
    kills the whole app with nothing but a blank page and exit code 0 - this is the

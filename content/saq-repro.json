@@ -1,0 +1,689 @@
+[
+ {
+  "id": "lactation-case",
+  "sys": "repro",
+  "star": true,
+  "title": "Case 11: Pania's milk coming in",
+  "marks": 6,
+  "ask": "Pania is 2 days postpartum and her milk is just 'coming in'. Two hormones are involved in the production and release of breast milk: for each, say where it is made or secreted from, what stimulates it, and its function. Describe the structure of the mammary gland and the path milk takes out of the breast. What type of gland is it, and what happens to the breasts in pregnancy as progesterone rises? (6 marks)",
+  "hook": "PROlactin PROduces (anterior pituitary → alveolar cells make milk). OXYtocin lets it OUT (posterior pituitary → myoepithelial cells squeeze = let-down). Both fired by suckling. Oestrogen builds the pipes, progesterone builds the milk factories.",
+  "steps": [
+   "**Prolactin** is secreted by the **anterior pituitary**; it **stimulates milk production** by the **alveolar cells** of the mammary glands.",
+   "**Oxytocin** is made in the **hypothalamus** and released from the **posterior pituitary**; it **stimulates milk release (let-down)** by making the **myoepithelial cells** around the alveoli **contract**.",
+   "Both are released by a **neural stimulus**: the baby **suckling** at the breast. Let-down can also be set off by the baby's **cry**, **smell**, or just thinking about the baby.",
+   "The mammary glands are **modified sweat glands**: **15-25 lobes** radiating around the **nipple**, each with **lobules** of glandular **alveoli** that make milk. The pigmented **areola** surrounds the nipple, and **suspensory ligaments** attach the breast to the muscle fascia.",
+   "Milk path: **alveoli (alveolar cells)** → **alveolar ducts** → **lactiferous ducts** → out at the **nipple**.",
+   "In pregnancy, rising **progesterone** develops the **lobules and alveoli** (the milk factories); **oestrogen** grows the **ducts**. Before pregnancy the ducts are there but not the glandular tissue that makes milk."
+  ],
+  "order": false,
+  "traps": [
+   "PROlactin PROduces milk; OXYtocin ejects it (let-down). Swapping them is the classic lost mark.",
+   "Prolactin = ANTERIOR pituitary. Oxytocin is made in the hypothalamus and released from the POSTERIOR pituitary.",
+   "Mammary glands are modified SWEAT glands, not sebaceous glands."
+  ],
+  "src": "Case Study Booklet A, case 11 (her 'MODULE 3 TEST CASE STUDY 11' board, questions 1-4 verbatim); her 'Answers for 12' page Q9-13 (alveolar cells → alveolar duct → lactiferous ducts → nipple; suspensory ligaments; glandular tissue appears in pregnancy; prolactin makes milk, oxytocin from the posterior pituitary makes myoepithelial cells contract for let-down; the neural stimulus of suckling, a baby's cry or smell); her 2026 Repro Female deck slides 22-24 (modified sweat glands, 15-25 lobes, areola, suspensory ligaments, lactiferous ducts; the hormone table: oestrogen ducts, progesterone lobules and alveoli, prolactin milk production, oxytocin milk ejection). The marks are the tool's estimate.",
+  "mcq": [
+   {
+    "q": "Which hormone makes the alveolar cells produce milk?",
+    "a": "Prolactin",
+    "d": [
+     "Oxytocin",
+     "Progesterone",
+     "Oestrogen"
+    ],
+    "why": "Prolactin produces milk. Her hormone table: prolactin, milk production, lobules and alveoli, lactation.",
+    "step": 0
+   },
+   {
+    "q": "Which gland secretes prolactin?",
+    "a": "Anterior pituitary",
+    "d": [
+     "Posterior pituitary",
+     "Corpus luteum",
+     "Placenta"
+    ],
+    "why": "Prolactin comes from the anterior pituitary. Oxytocin is the one released from the posterior pituitary.",
+    "step": 0
+   },
+   {
+    "q": "What does oxytocin do during breastfeeding?",
+    "a": "Contracts myoepithelial cells to eject milk",
+    "d": [
+     "Makes the alveolar cells produce milk",
+     "Grows new ducts during puberty",
+     "Builds alveoli during pregnancy"
+    ],
+    "why": "Her Answers page: oxytocin stimulates let-down, where contraction of myoepithelial cells pushes milk into the lactiferous ducts.",
+    "step": 1
+   },
+   {
+    "q": "Oxytocin is released into the blood from the...",
+    "a": "Posterior pituitary",
+    "d": [
+     "Anterior pituitary",
+     "Mammary alveoli",
+     "Adrenal cortex"
+    ],
+    "why": "Oxytocin is made in the hypothalamus and released from the posterior pituitary.",
+    "step": 1
+   },
+   {
+    "q": "What mainly triggers the milk hormones after birth?",
+    "a": "The baby suckling at the breast",
+    "d": [
+     "A drop in blood glucose",
+     "Rising progesterone levels",
+     "The mother's heart rate rising"
+    ],
+    "why": "Her Answers page: the stimulus is neural, the suckling of an infant at the breast (or the baby's cry or smell for let-down).",
+    "step": 2
+   },
+   {
+    "q": "Mammary glands are a modified form of which gland?",
+    "a": "Sweat glands",
+    "d": [
+     "Sebaceous glands",
+     "Salivary glands",
+     "Endocrine glands"
+    ],
+    "why": "Her deck: modified sweat glands consisting of 15-25 lobes.",
+    "step": 3
+   },
+   {
+    "q": "What attaches the breast to the underlying muscle fascia?",
+    "a": "Suspensory ligaments",
+    "d": [
+     "Lactiferous ducts",
+     "Myoepithelial cells",
+     "The areola"
+    ],
+    "why": "Her deck and Answers page: suspensory ligaments hold the breast in place, which is why breast shape changes with age.",
+    "step": 3
+   },
+   {
+    "q": "Which is the correct path of milk out of the breast?",
+    "a": "Alveoli → alveolar ducts → lactiferous ducts → nipple",
+    "d": [
+     "Lactiferous ducts → alveoli → alveolar ducts → nipple",
+     "Nipple → lactiferous ducts → alveoli → areola",
+     "Alveolar ducts → alveoli → areola → nipple"
+    ],
+    "why": "Her Answers page: alveolar cells secrete milk into the alveolar duct, through the lactiferous ducts, out at the nipple.",
+    "step": 4
+   },
+   {
+    "q": "During pregnancy, which hormone develops the lobules and alveoli?",
+    "a": "Progesterone",
+    "d": [
+     "Prolactin",
+     "Oxytocin",
+     "Testosterone"
+    ],
+    "why": "Her table: progesterone builds the alveoli (the milk factories) in pregnancy. Prolactin fills them with milk after birth.",
+    "step": 5
+   },
+   {
+    "q": "Which hormone builds the breast ducts (the pipes)?",
+    "a": "Oestrogen",
+    "d": [
+     "Progesterone",
+     "Oxytocin",
+     "Prolactin"
+    ],
+    "why": "Her table: oestrogen builds the ducts (ductal growth and fat deposition), starting at puberty.",
+    "step": 5
+   }
+  ]
+ },
+ {
+  "id": "gametogenesis",
+  "sys": "repro",
+  "title": "Making sperm and eggs",
+  "marks": 4,
+  "ask": "Describe the gamete production process in males and females. What hormone from the brain drives this? (4 marks)",
+  "hook": "SPERM: from puberty, non-stop, 1 cell → 4 sperm. EGG: starts before birth, pauses (prophase I), one a month from puberty, finishes meiosis II only when a sperm gets in → 1 egg. Both driven by FSH.",
+  "steps": [
+   "**Spermatogenesis** happens in the **seminiferous tubules** of the **testes**, **continuously** from **puberty** on.",
+   "**Spermatogonia (2n)** divide by **mitosis** → **primary spermatocytes (2n)** → **meiosis I** → **secondary spermatocytes (n)** → **meiosis II** → **spermatids (n)** → **spermiogenesis** (they lose cytoplasm and grow a tail) → **4 sperm**.",
+   "**Oogenesis** starts in **fetal life**: **oogonia** divide by mitosis into **primary oocytes**, which begin **meiosis I** and then **arrest in prophase I** until puberty (about 2 million at birth).",
+   "From **puberty**, each month **one** primary oocyte completes **meiosis I** → a **secondary oocyte** (plus the first polar body), which **arrests in metaphase II** and is **ovulated**.",
+   "**Meiosis II is completed only if a sperm enters** the oocyte, giving **1 ovum** (plus a second polar body). Egg production **ends at menopause**.",
+   "Both are driven by **FSH** (follicle-stimulating hormone) from the **anterior pituitary**, together with **LH**."
+  ],
+  "order": false,
+  "traps": [
+   "One primary spermatocyte → 4 sperm; one primary oocyte → only 1 egg (the rest are polar bodies).",
+   "Eggs start BEFORE BIRTH; sperm start at PUBERTY.",
+   "The egg finishes meiosis II only AFTER a sperm enters it."
+  ],
+  "her": [
+   "describe the gamete production process in males and females"
+  ],
+  "src": "Her 2026 Male Repro deck slides 31-35 (spermatogenesis in the seminiferous tubules from puberty: mitosis of spermatogonia, meiosis to spermatids, spermiogenesis); 2026 Repro Female deck slides 26-29 (oogenesis: 2 million primary oocytes arrested in prophase I at birth; one a month at puberty; secondary oocyte arrests in metaphase II and is ovulated; meiosis II completes after sperm penetration: one ovum and a polar body); 2025 GONADS deck slides 5 and 8-9 (FSH; 2n → n); her 'Answers for 12' page Q16 (4 vs 1 gametes, puberty vs fetal development, ends at menopause); her student-marked SAQ answer on gamete production (FSH).",
+  "mcq": [
+   {
+    "q": "Where does spermatogenesis happen?",
+    "a": "Seminiferous tubules of the testes",
+    "d": [
+     "The head of the epididymis",
+     "The seminal vesicles behind the bladder",
+     "The vas deferens in the spermatic cord"
+    ],
+    "why": "Sperm are made in the seminiferous tubules. The epididymis is where they mature.",
+    "step": 0
+   },
+   {
+    "q": "How many sperm come from one primary spermatocyte?",
+    "a": "Four",
+    "d": [
+     "One",
+     "Two",
+     "Eight"
+    ],
+    "why": "Meiosis I and II split one primary spermatocyte into four spermatids, which become four sperm.",
+    "step": 1
+   },
+   {
+    "q": "Which cell division turns primary spermatocytes into spermatids?",
+    "a": "Meiosis",
+    "d": [
+     "Mitosis",
+     "Binary fission",
+     "Budding"
+    ],
+    "why": "Primary spermatocytes go through meiosis I and II to make haploid spermatids. Mitosis only makes more spermatogonia.",
+    "step": 1
+   },
+   {
+    "q": "When does oogenesis begin?",
+    "a": "Before birth, in fetal life",
+    "d": [
+     "At puberty",
+     "At the first period",
+     "After fertilisation"
+    ],
+    "why": "Her deck: oogenesis begins before birth; a woman's egg supply is set at birth.",
+    "step": 2
+   },
+   {
+    "q": "At which stage do primary oocytes wait until puberty?",
+    "a": "Prophase of meiosis I",
+    "d": [
+     "Metaphase of meiosis II",
+     "Telophase of mitosis",
+     "Anaphase of meiosis II"
+    ],
+    "why": "Her deck: primary oocytes begin meiosis I but stall in prophase I. The secondary oocyte later stalls at metaphase II.",
+    "step": 2
+   },
+   {
+    "q": "What cell is released at ovulation?",
+    "a": "Secondary oocyte",
+    "d": [
+     "Primary oocyte",
+     "Mature ovum",
+     "Oogonium"
+    ],
+    "why": "Her deck: the secondary oocyte arrests in metaphase II and is ovulated. It only becomes an ovum if a sperm enters.",
+    "step": 3
+   },
+   {
+    "q": "When does the egg complete meiosis II?",
+    "a": "Only after a sperm enters it",
+    "d": [
+     "Just before ovulation",
+     "At the start of puberty",
+     "During fetal development"
+    ],
+    "why": "Her deck: if penetrated by sperm, the secondary oocyte completes meiosis II, giving one large ovum and a tiny polar body.",
+    "step": 4
+   },
+   {
+    "q": "Which pituitary hormone drives the development of sperm and eggs?",
+    "a": "FSH",
+    "d": [
+     "Prolactin",
+     "Oxytocin",
+     "ADH"
+    ],
+    "why": "Her answer: FSH from the brain drives the development of sperm and eggs. FSH = follicle-stimulating hormone.",
+    "step": 5
+   }
+  ]
+ },
+ {
+  "id": "cycles",
+  "sys": "repro",
+  "title": "The ovarian and uterine cycles",
+  "marks": 6,
+  "ask": "Describe the phases of the ovarian and uterine cycles in the female and how the hormones link them. (6 marks)",
+  "hook": "OVARY: grow (FSH, oestrogen) → pop (LH surge) → yellow body (progesterone) → white scar. UTERUS: shed (progesterone falls) → rebuild (oestrogen) → get ready (progesterone). Day 1 = the first day of the period.",
+  "steps": [
+   "**Ovarian cycle, follicular phase (days 1-14)**: **FSH** from the anterior pituitary makes a follicle grow (primordial → primary → secondary → **Graafian**), and its granulosa cells secrete **oestrogen**.",
+   "**Ovulation (mid-cycle, about day 14)**: an **LH surge** makes the Graafian follicle **rupture** and release the **secondary oocyte**.",
+   "**Luteal phase (days 14-28)**: the ruptured follicle becomes the **corpus luteum**, which secretes **progesterone** (and oestrogen). With **no pregnancy** it breaks down after about 10 days into the **corpus albicans**.",
+   "**Uterine cycle, menstrual phase (days 1-5)**: **progesterone falls**, the **spiral arteries** spasm, and the **stratum functionalis** of the endometrium is **shed**.",
+   "**Proliferative phase (days 6-14)**: rising **oestrogen** from the growing follicle **rebuilds** the endometrium.",
+   "**Secretory phase (days 15-28)**: **progesterone** from the corpus luteum turns the endometrium into a gland-rich lining **ready for implantation**. If no embryo implants, progesterone falls and menstruation starts again."
+  ],
+  "order": true,
+  "traps": [
+   "Follicular phase = FSH + oestrogen; luteal phase = corpus luteum + progesterone.",
+   "The proliferative phase is driven by OESTROGEN, the secretory phase by PROGESTERONE.",
+   "Only the stratum FUNCTIONALIS is shed; the stratum basalis stays and grows a new one."
+  ],
+  "src": "Her 2026 Repro Female deck slides 11 and 30-33 (follicle stages; follicular phase days 1-14 regulated by FSH and LH; granulosa cells produce oestrogen; ovulation; corpus luteum secretes progesterone and oestrogen, degenerates in 10 days to the corpus albicans; uterine cycle: menstrual days 1-5 as progesterone falls and spiral arteries spasm, proliferative days 6-14 under oestrogen, secretory days 15-28 under progesterone), slide 16 (stratum functionalis shed, basalis regrows it); 2025 GONADS deck slides 3-5 (FSH, LH, Graafian follicle, corpus luteum, corpus albicans). She posted no model answer for this question, so this one is built from her decks alone.",
+  "mcq": [
+   {
+    "q": "Which hormone starts a follicle growing in the follicular phase?",
+    "a": "FSH",
+    "d": [
+     "LH",
+     "Progesterone",
+     "Prolactin"
+    ],
+    "why": "FSH (follicle-stimulating hormone) makes a primordial follicle develop into a Graafian follicle.",
+    "step": 0
+   },
+   {
+    "q": "What do the granulosa cells of the growing follicle secrete?",
+    "a": "Oestrogen",
+    "d": [
+     "Progesterone",
+     "Testosterone",
+     "Oxytocin"
+    ],
+    "why": "Her deck: the granulosa follicle cells release oestrogen. Progesterone comes later, from the corpus luteum.",
+    "step": 0
+   },
+   {
+    "q": "What triggers ovulation?",
+    "a": "A surge of LH",
+    "d": [
+     "A surge of FSH",
+     "A fall in oestrogen",
+     "A rise in prolactin"
+    ],
+    "why": "LH (luteinising hormone) makes the Graafian follicle burst and release the secondary oocyte.",
+    "step": 1
+   },
+   {
+    "q": "What does the corpus luteum mainly secrete?",
+    "a": "Progesterone",
+    "d": [
+     "FSH",
+     "LH",
+     "Prolactin"
+    ],
+    "why": "Her deck: the corpus luteum secretes progesterone and oestrogen. FSH and LH come from the pituitary.",
+    "step": 2
+   },
+   {
+    "q": "If there is no pregnancy, what does the yellow body left after ovulation become?",
+    "a": "The corpus albicans",
+    "d": [
+     "A new Graafian follicle",
+     "A primary follicle",
+     "The placenta"
+    ],
+    "why": "Her deck: with no pregnancy the corpus luteum degenerates in about 10 days, leaving a white scar, the corpus albicans.",
+    "step": 2
+   },
+   {
+    "q": "What happens in the menstrual phase?",
+    "a": "The stratum functionalis is shed",
+    "d": [
+     "The stratum basalis is shed",
+     "The endometrium thickens",
+     "A follicle ruptures"
+    ],
+    "why": "Progesterone falls, the spiral arteries spasm, and the functional layer sloughs off. The basalis stays and regrows it.",
+    "step": 3
+   },
+   {
+    "q": "Which hormone rebuilds the endometrium in the proliferative phase?",
+    "a": "Oestrogen",
+    "d": [
+     "Progesterone",
+     "LH",
+     "Oxytocin"
+    ],
+    "why": "Her deck: in the proliferative phase the endometrium rebuilds itself under the influence of oestrogen.",
+    "step": 4
+   },
+   {
+    "q": "What gets the endometrium ready for implantation in the secretory phase?",
+    "a": "Progesterone from the corpus luteum",
+    "d": [
+     "Oestrogen from the Graafian follicle",
+     "FSH from the anterior pituitary",
+     "LH from the posterior pituitary"
+    ],
+    "why": "Her deck: the endometrium prepares for implantation under the influence of progesterone.",
+    "step": 5
+   }
+  ]
+ },
+ {
+  "id": "male-female-table",
+  "sys": "repro",
+  "title": "Male vs female: the comparison table",
+  "marks": 6,
+  "ask": "Tabulate the differences between the male and female reproductive systems, looking at: the function of LH, the function of FSH, the timing of gamete production, the size of the gametes, the timing of meiosis and the mobility of the gametes. (6 marks)",
+  "hook": "Six rows, two columns, one line each. LH: ovulation vs Leydig → testosterone. FSH: follicles vs sperm. Timing: before birth to menopause vs puberty to death. Size: biggest vs smallest cell. Meiosis: stop-start, 1 egg vs non-stop, 4 sperm. Moving: carried vs swims.",
+  "steps": [
+   "**LH**: in females it **triggers ovulation** (and forms the corpus luteum); in males it stimulates the **Leydig cells** to make **testosterone**.",
+   "**FSH**: in females it stimulates **follicle development**; in males it stimulates **spermatogenesis** (through the Sertoli cells).",
+   "**Timing of gamete production**: females start in **fetal life** and release eggs from **puberty to menopause**; males start at **puberty** and continue **for life**.",
+   "**Size**: the egg is the **largest** body cell (lots of cytoplasm); the sperm is the **smallest** (almost no cytoplasm).",
+   "**Meiosis**: in males it is **continuous** and one spermatocyte gives **4 sperm**; in females it **stops and starts** (arrests in prophase I and metaphase II) and one oocyte gives **1 egg** plus polar bodies.",
+   "**Mobility**: sperm are **motile** (they swim with a tail); the egg **cannot move** itself and is carried along the fallopian tube by **cilia** and peristalsis."
+  ],
+  "order": false,
+  "traps": [
+   "LH → Leydig cells → TESTOSTERONE. Her student-marked feedback slips and says 'estrogen'; her Male Repro deck (slides 13 and 38) says testosterone.",
+   "Millions of sperm a month vs one egg a month.",
+   "Only the sperm moves itself. A table row with the same word in both columns scores nothing: make each row a contrast."
+  ],
+  "her": [
+   "tabulate the differences between the male and female"
+  ],
+  "src": "Her student-marked SAQ question (6 marks) and its six rows; her 2026 Male Repro deck slide 13 (Leydig cells produce testosterone; Sertoli cells produce inhibin), slide 38 (testosterone made by Leydig cells in response to LH); 2025 GONADS deck slides 5 and 12 (FSH and LH in the ovary; largest vs smallest cell, millions vs one per month); 2026 Repro Female deck slides 14 and 26-31 (cilia carry the oocyte; meiosis arrests; LH and ovulation); her 'Answers for 12' page Q16.",
+  "mcq": [
+   {
+    "q": "In males, what does LH stimulate?",
+    "a": "Leydig cells to make testosterone",
+    "d": [
+     "Sertoli cells to make inhibin",
+     "Leydig cells to make oestrogen",
+     "Seminal vesicles to make fluid"
+    ],
+    "why": "Her deck: Leydig cells make testosterone in response to LH. 'Oestrogen' is a slip in her student-marked feedback.",
+    "step": 0
+   },
+   {
+    "q": "In females, what does the LH surge cause?",
+    "a": "Ovulation",
+    "d": [
+     "Menstruation",
+     "Milk let-down",
+     "Follicle recruitment"
+    ],
+    "why": "The mid-cycle LH surge makes the Graafian follicle rupture: ovulation.",
+    "step": 0
+   },
+   {
+    "q": "In males, FSH mainly stimulates...",
+    "a": "Spermatogenesis",
+    "d": [
+     "Erection",
+     "Testosterone release",
+     "Ejaculation"
+    ],
+    "why": "FSH drives sperm production (through the Sertoli cells). Testosterone release is LH's job.",
+    "step": 1
+   },
+   {
+    "q": "Which statement about the timing of gamete production is true?",
+    "a": "Eggs start in fetal life; sperm at puberty",
+    "d": [
+     "Sperm start in fetal life; eggs at puberty",
+     "Both begin together at puberty",
+     "Both begin before birth"
+    ],
+    "why": "Oogenesis starts before birth and ends at menopause; spermatogenesis starts at puberty and continues for life.",
+    "step": 2
+   },
+   {
+    "q": "Which is the largest cell in the human body?",
+    "a": "The egg",
+    "d": [
+     "The sperm",
+     "A red blood cell",
+     "A skin cell"
+    ],
+    "why": "Her GONADS deck: the egg is the largest body cell with lots of cytoplasm; the sperm is the smallest.",
+    "step": 3
+   },
+   {
+    "q": "Meiosis of one primary oocyte produces how many eggs?",
+    "a": "One",
+    "d": [
+     "Two",
+     "Four",
+     "Eight"
+    ],
+    "why": "Only one ovum is made; the other products are small polar bodies. One spermatocyte gives four sperm.",
+    "step": 4
+   },
+   {
+    "q": "How does the egg travel along the fallopian tube?",
+    "a": "Cilia and peristalsis carry it",
+    "d": [
+     "It swims with its own tail",
+     "It is pulled along by sperm",
+     "Gravity alone moves it down"
+    ],
+    "why": "The egg is not motile. Her deck: beating cilia and peristalsis carry the oocyte toward the uterus.",
+    "step": 5
+   }
+  ]
+ },
+ {
+  "id": "male-hormones",
+  "sys": "repro",
+  "title": "Hormonal control of spermatogenesis + testosterone",
+  "marks": 5,
+  "ask": "Describe the hormonal control of spermatogenesis, and the physiological effects of testosterone during puberty. (5 marks)",
+  "hook": "GnRH → FSH + LH. LH → LEYDIG → Testosterone (L-T). FSH → SERTOLI → nurse the sperm + inhibin (S-I). Testosterone switches off GnRH/LH; inhibin switches off FSH. At puberty: hair, voice, muscle, bone, libido.",
+  "steps": [
+   "The **hypothalamus** releases **GnRH**, which makes the **anterior pituitary** release **FSH** and **LH**.",
+   "**LH** stimulates the **Leydig (interstitial) cells** to make **testosterone**, a lipid-soluble hormone made from **cholesterol**. Testosterone **enhances spermatogenesis**.",
+   "**FSH** acts on the **Sertoli (sustentacular) cells**, which **nourish** the developing sperm and support spermatogenesis.",
+   "**Negative feedback**: **testosterone** inhibits the **hypothalamus (GnRH)** and **anterior pituitary (LH)**; **inhibin** from the Sertoli cells inhibits **FSH**, keeping the **sperm count** steady.",
+   "At puberty testosterone grows the **reproductive organs** to adult size and brings the **secondary sex characteristics**: **pubic, axillary and facial hair**, a **deeper voice**, a bigger chest, and thicker, oilier skin.",
+   "It also increases **bone density** and **skeletal muscle mass**, and it is the basis of **libido** in both males and females."
+  ],
+  "order": true,
+  "same": [
+   [
+    1,
+    2
+   ],
+   [
+    4,
+    5
+   ]
+  ],
+  "traps": [
+   "LEYDIG = testosterone (driven by LH). SERTOLI = nourish sperm + inhibin (driven by FSH). Do not swap them.",
+   "Inhibin controls FSH (sperm numbers); testosterone controls GnRH and LH.",
+   "Give the hormone chain in order: GnRH → FSH and LH → the testes."
+  ],
+  "her": [
+   "what are the functions of the sex hormone testosterone"
+  ],
+  "src": "Her 2026 Male Repro deck slide 13 (Leydig cells produce testosterone, negative feedback on the anterior pituitary (LH) and hypothalamus (GnRH); Sertoli cells produce inhibin, maintain sperm count, negative feedback on FSH, supply nutrients to sperm), slide 38 (testosterone: lipid soluble, from cholesterol, made in response to LH, enhances spermatogenesis, grows the organs), slide 39 (secondary sex characteristics; libido in both sexes); 2025 GONADS deck slide 8 (Leydig makes testosterone; Sertoli feeds sperm, inhibin controls sperm numbers); her student-marked SAQ answer on testosterone.",
+  "mcq": [
+   {
+    "q": "Which hormone from the hypothalamus starts the chain?",
+    "a": "GnRH",
+    "d": [
+     "TRH",
+     "CRH",
+     "ADH"
+    ],
+    "why": "GnRH (gonadotropin-releasing hormone) tells the anterior pituitary to release FSH and LH.",
+    "step": 0
+   },
+   {
+    "q": "Which cells make testosterone?",
+    "a": "Leydig (interstitial) cells",
+    "d": [
+     "Sertoli (sustentacular) cells",
+     "Spermatogonia of the tubules",
+     "Epididymal lining cells"
+    ],
+    "why": "Her deck: the interstitial cells of Leydig produce testosterone, in response to LH.",
+    "step": 1
+   },
+   {
+    "q": "What is testosterone made from?",
+    "a": "Cholesterol",
+    "d": [
+     "Amino acids",
+     "Glucose",
+     "Iodine"
+    ],
+    "why": "Her deck: testosterone is a lipid-soluble hormone synthesised by Leydig cells from cholesterol.",
+    "step": 1
+   },
+   {
+    "q": "Which cells nourish the developing sperm?",
+    "a": "Sertoli (sustentacular) cells",
+    "d": [
+     "Leydig (interstitial) cells",
+     "Spermatids",
+     "Prostate cells"
+    ],
+    "why": "Her deck: Sertoli cells supply nutrients to sperm cells and make inhibin.",
+    "step": 2
+   },
+   {
+    "q": "What does inhibin do?",
+    "a": "Reduces FSH to keep sperm count steady",
+    "d": [
+     "Raises LH to make more testosterone",
+     "Blocks the release of oxytocin",
+     "Switches the Leydig cells off"
+    ],
+    "why": "Her deck: inhibin from Sertoli cells maintains sperm count by negative feedback on FSH.",
+    "step": 3
+   },
+   {
+    "q": "Which is a testosterone-driven secondary sex characteristic?",
+    "a": "Deepening of the voice",
+    "d": [
+     "Widening of the pelvis",
+     "Growth of the breasts",
+     "Fat laid down on the hips"
+    ],
+    "why": "Her deck lists hair, a deeper voice, chest growth, thicker skin, denser bones and bigger muscles. The distractors are oestrogen effects.",
+    "step": 4
+   },
+   {
+    "q": "Testosterone increases which of these?",
+    "a": "Bone density and muscle mass",
+    "d": [
+     "Fat on the hips and breasts",
+     "Thickness of cervical mucus",
+     "Milk production in the breast"
+    ],
+    "why": "Her deck: bones grow and increase in density, and skeletal muscles increase in size and mass.",
+    "step": 5
+   }
+  ]
+ },
+ {
+  "id": "ovary-hormones",
+  "sys": "repro",
+  "title": "Oestrogen, progesterone and the pill",
+  "marks": 5,
+  "ask": "Describe the physiological effects of oestrogen and progesterone, including the female secondary sex characteristics, and explain how the contraceptive pill prevents pregnancy. (5 marks)",
+  "hook": "OESTROGEN builds: organs, breasts (ducts), hips, pelvis, hair, the new lining. PROGESTERONE prepares: the lining for a baby, the breasts' milk factories. THE PILL (oestrogen + progestin): no ovulation, a mucus plug, a thin lining.",
+  "steps": [
+   "**Oestrogen** (from the follicle's granulosa cells) rises at **puberty**: it **promotes oogenesis and follicle growth** and grows the **uterine tubes, uterus and vagina** to adult size (the vaginal mucosa thickens and the genitalia mature).",
+   "Oestrogen's **secondary sex characteristics**: **breast growth**, **fat laid down** on the **hips and breasts**, a **wider, lighter pelvis**, and **axillary and pubic hair**.",
+   "Oestrogen also **rebuilds the endometrium** in the **proliferative phase**.",
+   "**Progesterone** (from the **corpus luteum**) prepares the **endometrium for implantation** in the **secretory phase**, and in pregnancy develops the breast **lobules and alveoli**.",
+   "The **contraceptive pill** contains synthetic **oestrogen and progestin** (a synthetic progesterone), combined or alone.",
+   "The pill prevents pregnancy in three ways: it **stops ovulation**, **thickens the cervical mucus** so sperm cannot get into the uterus, and **thins the endometrium** so a fertilised egg cannot implant."
+  ],
+  "order": false,
+  "traps": [
+   "Oestrogen = ducts, fat, pelvis, the proliferative phase. Progesterone = alveoli, the secretory phase, pregnancy.",
+   "The pill works THREE ways. Name all three for full marks.",
+   "Progestin is the SYNTHETIC form of progesterone."
+  ],
+  "src": "Her 2026 Repro Female deck slide 35 (extra-uterine effects of oestrogens: oogenesis and follicle growth, tubes, uterus and vagina grow, breasts, fat on hips and breasts, wider and lighter pelvis, axillary and pubic hair), slide 33 (proliferative phase under oestrogen, secretory under progesterone), slide 24 (progesterone develops lobules and alveoli), slide 37 (oral contraceptives: oestrogen and progestin; prevent ovulation, thicken cervical mucus, thin the endometrium).",
+  "mcq": [
+   {
+    "q": "Which hormone rises at puberty and grows the uterus and vagina to adult size?",
+    "a": "Oestrogen",
+    "d": [
+     "Progesterone",
+     "Prolactin",
+     "Oxytocin"
+    ],
+    "why": "Her deck: oestrogen levels rise during puberty and the uterine tubes, uterus and vagina grow larger and become functional.",
+    "step": 0
+   },
+   {
+    "q": "Which of these is an oestrogen-driven secondary sex characteristic?",
+    "a": "Widening of the pelvis",
+    "d": [
+     "Deepening of the voice",
+     "Growth of facial hair",
+     "Increase in muscle mass"
+    ],
+    "why": "Her deck: widening and lightening of the pelvis. The distractors are testosterone effects.",
+    "step": 1
+   },
+   {
+    "q": "In which uterine phase does oestrogen rebuild the lining?",
+    "a": "Proliferative",
+    "d": [
+     "Secretory",
+     "Menstrual",
+     "Luteal"
+    ],
+    "why": "Days 6-14, the proliferative phase: the endometrium rebuilds under oestrogen.",
+    "step": 2
+   },
+   {
+    "q": "After ovulation, where does progesterone mainly come from?",
+    "a": "The corpus luteum",
+    "d": [
+     "The Graafian follicle",
+     "The anterior pituitary",
+     "The corpus albicans"
+    ],
+    "why": "The corpus luteum secretes progesterone. The corpus albicans is its scar and makes nothing.",
+    "step": 3
+   },
+   {
+    "q": "What is progestin?",
+    "a": "A synthetic form of progesterone",
+    "d": [
+     "A natural form of oestrogen",
+     "A pituitary hormone",
+     "An enzyme that kills sperm"
+    ],
+    "why": "Her deck: the pill contains oestrogen and progestin, the synthetic form of progesterone.",
+    "step": 4
+   },
+   {
+    "q": "Which is NOT one of the ways the pill prevents pregnancy?",
+    "a": "Killing sperm in the vagina",
+    "d": [
+     "Preventing ovulation",
+     "Thickening cervical mucus",
+     "Thinning the endometrium"
+    ],
+    "why": "Her deck lists three ways: preventing ovulation, thickening cervical mucus and thinning the endometrium. It does not kill sperm.",
+    "step": 5
+   },
+   {
+    "q": "How does thicker cervical mucus help prevent pregnancy?",
+    "a": "It stops or slows sperm entering the uterus",
+    "d": [
+     "It stops the egg leaving the ovary",
+     "It stops the embryo implanting",
+     "It destroys the egg in the tube"
+    ],
+    "why": "Her deck: thickened mucus over the cervix can prevent or slow sperm entry into the uterus.",
+    "step": 5
+   }
+  ]
+ }
+]
