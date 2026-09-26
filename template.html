@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HS2 · Paper Sim — Module 3</title>
+<title>HS2 Test 3 · Paper Sim</title>
 <meta name="robots" content="noindex,nofollow">
 <style>
 /* ── estate tokens (house.css contract, dark default) ─────────────── */
@@ -296,6 +296,28 @@ a{color:var(--primary)}
 .lch{flex:0 0 auto;color:var(--muted-fg);font-size:1.3rem;line-height:1}
 .shead{display:flex;align-items:center;gap:10px;margin:0 0 12px}
 .shead h2{margin:0;font-size:1.1rem;flex:1}
+/* the tool's own name and colour (26 Sep 2026): four Paper Sims share one layout, so the title card on home, the stripe
+   along the header and the tab icon are what tell them apart. --tool is set from TOOL at load. */
+header{border-top:4px solid var(--tool)}
+.idcard{display:flex;align-items:center;gap:12px;margin:0 0 12px;padding:12px 14px;border-radius:var(--radius);
+  background:color-mix(in srgb,var(--tool) 15%,var(--card));border:1px solid color-mix(in srgb,var(--tool) 45%,var(--border))}
+.idic{flex:0 0 48px;height:48px;border-radius:12px;background:var(--tool);display:flex;align-items:center;justify-content:center;font-size:1.55rem}
+.idtx{min-width:0}
+.idtx small{display:block;font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:color-mix(in srgb,var(--tool) 62%,var(--fg))}
+.idtx b{display:block;font-size:1.45rem;line-height:1.15;margin:2px 0 3px;font-weight:800}
+.idtx>span{display:block;font-size:.8rem;color:var(--muted-fg);line-height:1.3}
+/* phone: the title card and the rows tighten so home still fits one 375x812 screen */
+@media(max-width:560px){
+  .idcard{padding:9px 12px;gap:10px;margin-bottom:8px}
+  .idic{flex-basis:40px;height:40px;border-radius:10px;font-size:1.3rem}
+  .idtx b{font-size:1.25rem;margin:1px 0 2px}
+  .idtx small,.idtx>span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .lrow{padding:6px 12px;margin-bottom:5px}
+  .lic{flex-basis:36px;height:36px}
+  .lsec{margin:8px 4px 4px}
+  .hero{padding-top:9px;padding-bottom:9px}
+  .bnote{padding:6px 10px;margin-bottom:8px;line-height:1.35}
+}
 .shead .btn{padding:6px 12px;flex:0 0 auto}
 .card .lead{margin:0 0 4px;color:var(--muted-fg);font-size:.9rem;line-height:1.5}
 /* each screen's full explanation, folded under its one-line lead (self-explaining, but out of the way) */
@@ -322,7 +344,7 @@ a{color:var(--primary)}
 </head>
 <body>
 <header>
-  <h1>HS2 · Paper Sim</h1>
+  <h1>HS2 Test 3 · Paper Sim</h1>
   <span class="d" id="countdown"></span>
   <a class="btn ghost" href="https://jeremyspm.github.io/hs2-m3-videos.html" target="_blank" rel="noopener" title="Every Dr Matt &amp; Dr Mike video, by topic">▶</a>
   <button class="btn ghost" id="themeBtn" title="theme">◐</button>
@@ -410,6 +432,16 @@ function paintCountdown(){
   el.onclick = askSitting;
 }
 const $ = s => document.querySelector(s);
+/* this tool's identity: the four Paper Sims share one layout, so the name, colour and tab icon are what tell them apart */
+const TOOL = {kick:'Health Science 2 · 722.541', name:'HS2 Test 3', sub:'Module 3 · reproduction, genetics &amp; the senses · 65 min', icon:'🧬', hue:'#0d9488'};
+function paintTool(){
+  document.documentElement.style.setProperty('--tool', TOOL.hue);
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="${TOOL.hue}"/><text x="32" y="45" font-size="38" text-anchor="middle">${TOOL.icon}</text></svg>`;
+  let l = document.querySelector('link[rel=icon]');
+  if(!l){ l = document.createElement('link'); l.rel = 'icon'; document.head.appendChild(l); }
+  l.href = 'data:image/svg+xml,' + encodeURIComponent(svg);
+}
+const idCard = () => `<div class="idcard"><span class="idic" aria-hidden="true">${TOOL.icon}</span><span class="idtx"><small>${TOOL.kick}</small><b>${TOOL.name}</b><span>${TOOL.sub}</span></span></div>`;
 const esc = s => String(s??'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const shuffle = a => { a=a.slice(); for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]} return a };
 const SYS = {repro:'Reproduction', gen:'Genetics', senses:'Special senses, light & sound', mixed:'Mixed'};
@@ -655,12 +687,13 @@ function launcher(){
   const seen = CLOSED.filter(q=>S.seen[q.id]).length, nm = Object.keys(S.miss).length;
   const nL = SAQD.filter(x=>sqS(x.id).lock).length, fs = focusStats(), last = S.scores[S.scores.length-1];
   const row = (scr,ic,t,s) => `<button class="lrow" data-scr="${scr}"><span class="lic" aria-hidden="true">${ic}</span><span class="ltx"><b>${t}</b><small>${s}</small></span><span class="lch" aria-hidden="true">›</span></button>`;
-  return `<button class="hero" data-hero="${up.k}"><span><small>${up.e}</small><b>${up.t}</b></span><span class="go" aria-hidden="true">▶</span></button>
-  <div class="lsec">Write</div>
-  ${row('saq','✍️','SAQ trainer',`${nL} of ${SAQD.length} locked · Test 3 is 30% written`)}
+  return `${idCard()}
+  <button class="hero" data-hero="${up.k}"><span><small>${up.e}</small><b>${up.t}</b></span><span class="go" aria-hidden="true">▶</span></button>
   <div class="lsec">Practise</div>
   ${row('learn','📖','Learn as you go',`${seen} of ${CLOSED.length} seen${r&&r.ids&&r.ids.length?' · a run is waiting':' · marks itself as you go'}`)}
-  ${row('pick','🗂','Pick my rep',`${DATA.quizzes.length} of her quizzes${S.pick.length?` · ${S.pick.length} ticked`:' · tick any, run them as one'}`)}
+  ${row('pick','🗂','Pick my rep',`${DATA.quizzes.length} quizzes${S.pick.length?` · ${S.pick.length} ticked`:' · tick any, run them as one'}`)}
+  <div class="lsec">Write</div>
+  ${row('saq','✍️','SAQ trainer',`${nL} of ${SAQD.length} locked · Test 3 is 30% written`)}
   <div class="lsec">Test yourself</div>
   ${row('mock','⏱','Mock test',last?`Last ${last.got}/${last.tot} · ${Math.round(100*last.got/last.tot)}% · ${S.scores.length} sat`:'No sittings yet · mini ~15 min or full 65 min')}
   ${row('miss','🔁','My misses',nm?`${nm} in the pile`:'Empty so far · wrong answers land here')}
@@ -1731,7 +1764,7 @@ document.addEventListener('keydown',e=>{
   if(SQR.cur.picked==null&&/^[1-4]$/.test(e.key)){ const b=document.querySelector(`.sopt[data-o="${+e.key-1}"]`); if(b){e.preventDefault();b.click()} }
 });
 /* ── chrome ────────────────────────────────────────────────────────── */
-paintCountdown();
+paintCountdown(); paintTool();
 $('#themeBtn').onclick=()=>{const r=document.documentElement;
   const to=r.dataset.theme==='light'?'':'light';
   to?r.dataset.theme='light':delete r.dataset.theme;SV('theme',to)};
@@ -1748,7 +1781,7 @@ $('#helpBtn').onclick=()=>{$('#help').innerHTML=`
   the top is the tool picking for you: a Learn run you stopped partway comes first, then the first SAQ you have not locked
   (the ⭐ ones lead the list), and once every SAQ is locked, a mini mock test. Leaving a mock test or an SAQ paper with the back
   button asks first; a Learn run is saved as you go, so it just stops.</p>
-  <h3>SAQ Trainer (Write, at the top of home)</h3>
+  <h3>SAQ trainer (the ✍️ row under Write)</h3>
   <p>Practice for the written questions, which are 30% of Test 3. The list is the written questions she has already set for Module 3:
   her student-marked SAQ quiz, the two test case studies, pedigree charts (her words: <i>will be tested</i>) and the topics on her
   "Help with Module 3 topics" board; ⭐ marks those signals, so do them first. She marks <b>half a mark per fact</b> (her
