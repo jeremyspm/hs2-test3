@@ -294,6 +294,18 @@ a{color:var(--primary)}
 .ltx b{display:block;font-size:.97rem;font-weight:650}
 .ltx small{display:block;font-size:.8rem;color:var(--muted-fg);line-height:1.35;margin-top:1px}
 .lch{flex:0 0 auto;color:var(--muted-fg);font-size:1.3rem;line-height:1}
+/* a link card to a companion tool (HS2 Genetics Trainer, 29 Sep 2026): a row that leaves the sim, so it wears that tool's colour */
+a.lrow{text-decoration:none}
+.lrow.xtool{border-style:dashed;border-color:color-mix(in srgb,#db2777 55%,var(--border))}
+.lrow.xtool .lic{background:color-mix(in srgb,#db2777 22%,var(--muted))}
+/* phone: the link card is one slim line, and the rows tighten a little, so home still fits one 375x812 screen */
+@media(max-width:560px){
+  #view .lrow.xtool{padding:3px 12px;min-height:44px}
+  #view .lrow.xtool .lic{flex-basis:30px;height:30px;font-size:1rem}
+  #view .lrow.xtool small{display:none}
+  #view .lrow{margin-bottom:3px}
+  #view .lsec{margin:4px 4px 2px}
+}
 .shead{display:flex;align-items:center;gap:10px;margin:0 0 12px}
 .shead h2{margin:0;font-size:1.1rem;flex:1}
 /* the tool's own name and colour (26 Sep 2026): four Paper Sims share one layout, so the title card on home, the stripe
@@ -692,6 +704,7 @@ function launcher(){
   <div class="lsec">Practise</div>
   ${row('learn','📖','Learn as you go',`${seen} of ${CLOSED.length} seen${r&&r.ids&&r.ids.length?' · a run is waiting':' · marks itself as you go'}`)}
   ${row('pick','🗂','Pick my rep',`${DATA.quizzes.length} quizzes${S.pick.length?` · ${S.pick.length} ticked`:' · tick any, run them as one'}`)}
+  <a class="lrow xtool" href="../hs2-genetics/"><span class="lic" aria-hidden="true">🌳</span><span class="ltx"><b>Genetics Trainer</b><small>Endless pedigrees, Punnett squares and karyotypes in her shapes</small></span><span class="lch" aria-hidden="true">↗</span></a>
   <div class="lsec">Write</div>
   ${row('saq','✍️','SAQ trainer',`${nL} of ${SAQD.length} locked · Test 3 is 30% written`)}
   <div class="lsec">Test yourself</div>
