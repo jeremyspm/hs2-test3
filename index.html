@@ -294,15 +294,30 @@ a{color:var(--primary)}
 .ltx b{display:block;font-size:.97rem;font-weight:650}
 .ltx small{display:block;font-size:.8rem;color:var(--muted-fg);line-height:1.35;margin-top:1px}
 .lch{flex:0 0 auto;color:var(--muted-fg);font-size:1.3rem;line-height:1}
-/* a link card to a companion tool (HS2 Genetics Trainer, 29 Sep 2026): a row that leaves the sim, so it wears that tool's colour */
+/* a link card to a companion tool (HS2 Genetics Trainer, 29 Sep 2026): a row that leaves the sim, so it wears that tool's colour.
+   Since 2 Oct 2026 it is a featured card (his pick "B, exactly like B"; the same .lrow.fb block as the META sims' template):
+   a taller card in its own colour (--hl, with --hl2 for the gradient), a kicker line, a pill button and specks drifting up */
 a.lrow{text-decoration:none}
-.lrow.xtool{border-style:dashed;border-color:color-mix(in srgb,#db2777 55%,var(--border))}
-.lrow.xtool .lic{background:color-mix(in srgb,#db2777 22%,var(--muted))}
-/* phone: the link card is one slim line, and the rows tighten a little, so home still fits one 375x812 screen */
+.lrow.fb{position:relative;overflow:hidden;padding:14px;gap:14px;border-color:color-mix(in srgb,var(--hl) 60%,var(--border));
+  background:radial-gradient(120% 140% at 0% 0%,color-mix(in srgb,var(--hl) 34%,var(--card)),var(--card) 70%)}
+.lrow.fb:hover{border-color:var(--hl)}
+.fb .lic{flex-basis:52px;height:52px;border-radius:14px;font-size:1.6rem;background:linear-gradient(135deg,var(--hl),var(--hl2));
+  box-shadow:0 6px 18px -6px var(--hl)}
+.fb .ltx b{font-size:1.05rem}
+.fb .kick{display:block;font-size:.68rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--hl2)}
+.fb .go{flex:0 0 auto;font-size:.8rem;font-weight:700;padding:7px 12px;border-radius:99px;background:var(--hl);color:#fff;white-space:nowrap}
+.fb .dot{position:absolute;width:4px;height:4px;border-radius:50%;background:#fff;opacity:0;pointer-events:none;animation:fbrise 4s linear infinite}
+.fb .d1{left:62%}.fb .d2{left:74%;animation-delay:1.3s;width:3px;height:3px}
+.fb .d3{left:86%;animation-delay:2.6s}.fb .d4{left:55%;animation-delay:3.3s;width:2px;height:2px}
+@keyframes fbrise{0%{bottom:-4px;opacity:0}20%{opacity:.9}100%{bottom:100%;opacity:0}}
+:root[data-theme=light] .fb .kick{color:color-mix(in srgb,var(--hl) 80%,#000)}
+:root[data-theme=light] .fb .dot{background:var(--hl)}
+@media(prefers-reduced-motion:reduce){.fb .dot{animation:none}}
+/* phone: the rows tighten a little, so home still fits one 375x812 screen */
 @media(max-width:560px){
-  #view .lrow.xtool{padding:3px 12px;min-height:44px}
-  #view .lrow.xtool .lic{flex-basis:30px;height:30px;font-size:1rem}
-  #view .lrow.xtool small{display:none}
+  #view .lrow.fb{padding:9px 12px}
+  #view .lrow.fb small{display:none}   /* kicker, name and pill stay; the line under the name is what the screen can't spare */
+  #view .fb .lic{flex-basis:46px;height:46px}
   #view .lrow{margin-bottom:3px}
   #view .lsec{margin:4px 4px 2px}
 }
@@ -704,7 +719,7 @@ function launcher(){
   <div class="lsec">Practise</div>
   ${row('learn','📖','Learn as you go',`${seen} of ${CLOSED.length} seen${r&&r.ids&&r.ids.length?' · a run is waiting':' · marks itself as you go'}`)}
   ${row('pick','🗂','Pick my rep',`${DATA.quizzes.length} quizzes${S.pick.length?` · ${S.pick.length} ticked`:' · tick any, run them as one'}`)}
-  <a class="lrow xtool" href="../hs2-genetics/"><span class="lic" aria-hidden="true">🌳</span><span class="ltx"><b>Genetics Trainer</b><small>Endless pedigrees, Punnett squares and karyotypes in her shapes</small></span><span class="lch" aria-hidden="true">↗</span></a>
+  <a class="lrow fb" href="../hs2-genetics/" style="--hl:#db2777;--hl2:#a78bfa"><span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span><span class="dot d4"></span><span class="lic" aria-hidden="true">🌳</span><span class="ltx"><span class="kick">✨ Endless practice</span><b>Genetics Trainer</b><small>Pedigrees, Punnett squares and karyotypes in her shapes</small></span><span class="go" aria-hidden="true">Open ↗</span></a>
   <div class="lsec">Write</div>
   ${row('saq','✍️','SAQ trainer',`${nL} of ${SAQD.length} locked · Test 3 is 30% written`)}
   <div class="lsec">Test yourself</div>
