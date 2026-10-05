@@ -219,6 +219,121 @@
   ]
  },
  {
+  "id": "lactation-table",
+  "sys": "repro",
+  "star": true,
+  "title": "Case 11, Q5: tick the hormone table",
+  "marks": 5,
+  "ask": "Complete the following table about the roles of hormones in breast development, milk production and release by ticking the appropriate boxes (progesterone, oestrogen, prolactin, oxytocin): stimulates growth of milk ducts and glands · increases blood flow to the breasts · stimulate development of the lobules and alveoli · stimulates milk production and the development of mammary glands · stimulates milk ejection by making the myoepithelial cells around the milk ducts contract, squeezing the milk towards the nipple. (5 marks)",
+  "hook": "OESTROGEN builds the PIPES, PROGESTERONE builds the FACTORIES, PROLACTIN FILLS them, OXYTOCIN opens the TAPS.",
+  "steps": [
+   "**Stimulates growth of milk ducts and glands** → tick **oestrogen** (her deck: ductal growth, the lactiferous ducts, from puberty).",
+   "**Increases blood flow to the breasts** → tick **oestrogen**. This tick is the tool's: her answer is not posted yet (her Lactation case quiz opens Thu 8 Oct).",
+   "**Stimulate development of the lobules and alveoli** → tick **progesterone** (in pregnancy).",
+   "**Stimulates milk production and the development of mammary glands** → tick **prolactin** (during lactation).",
+   "**Stimulates milk ejection** by making the **myoepithelial cells** contract → tick **oxytocin** (let-down, at feeding time)."
+  ],
+  "short": {
+   "hook": "PIPES (oestrogen), FACTORIES (progesterone), FILL (prolactin), TAPS (oxytocin).",
+   "groups": [
+    {
+     "q": "Breast development",
+     "facts": [
+      {
+       "t": "Ducts and glands grow: **oestrogen**",
+       "of": 0
+      },
+      {
+       "t": "Blood flow to the breasts: **oestrogen** (the tool's tick)",
+       "of": 1
+      },
+      {
+       "t": "Lobules and alveoli: **progesterone**",
+       "of": 2
+      }
+     ]
+    },
+    {
+     "q": "Milk production and release",
+     "facts": [
+      {
+       "t": "Milk production: **prolactin**",
+       "of": 3
+      },
+      {
+       "t": "Ejection, the **myoepithelial cells** squeeze: **oxytocin**",
+       "of": 4
+      }
+     ]
+    }
+   ]
+  },
+  "order": false,
+  "traps": [
+   "PROGESTERONE develops the lobules and alveoli; OESTROGEN grows the ducts. Swapping these two is the easy lost mark.",
+   "PROlactin PROduces milk; OXYtocin ejects it (let-down).",
+   "The blood-flow row is the one her files don't answer yet: check her key when her Lactation case quiz opens (Thu 8 Oct)."
+  ],
+  "src": "Case Study Booklet A, case 11, question 5 (her workbook's table, the five rows verbatim; not starred, but case 11 is one of the two test cases she names). Answer: her 2026 Repro Female deck slide 24 (her table: estrogen = ductal growth & fat deposition, lactiferous ducts, puberty; progesterone = lobule & alveoli development, pregnancy; prolactin = milk production, lactation; oxytocin = milk ejection (let-down), feeding time; and her hooks: estrogen builds ducts (the 'pipes'), progesterone builds alveoli (the 'milk factories'), prolactin fills the factories, oxytocin opens the taps). The blood-flow tick is the tool's: none of her files, and not Patton's chapters we hold, answers it yet. The marks are the tool's estimate (one a row).",
+  "mcq": [
+   {
+    "q": "Which hormone stimulates growth of the milk ducts?",
+    "a": "Oestrogen",
+    "d": [
+     "Progesterone",
+     "Prolactin",
+     "Oxytocin"
+    ],
+    "why": "Her deck slide 24: estrogen = ductal growth. It builds the 'pipes'.",
+    "step": 0
+   },
+   {
+    "q": "Which hormone gets the tick for 'increases blood flow to the breasts'? (the tool's tick; her key is not posted yet)",
+    "a": "Oestrogen",
+    "d": [
+     "Oxytocin",
+     "Prolactin",
+     "Progesterone"
+    ],
+    "why": "The tool's tick, not hers: none of her files answers this row. Check it against her Lactation case quiz key when it opens.",
+    "step": 1
+   },
+   {
+    "q": "Which hormone develops the lobules and alveoli in pregnancy?",
+    "a": "Progesterone",
+    "d": [
+     "Oestrogen",
+     "Oxytocin",
+     "Prolactin"
+    ],
+    "why": "Her deck: progesterone builds the alveoli, the 'milk factories', in pregnancy.",
+    "step": 2
+   },
+   {
+    "q": "Which hormone stimulates milk production?",
+    "a": "Prolactin",
+    "d": [
+     "Oxytocin",
+     "Oestrogen",
+     "Progesterone"
+    ],
+    "why": "Her deck: prolactin fills the factories (makes milk) during lactation.",
+    "step": 3
+   },
+   {
+    "q": "Which hormone makes the myoepithelial cells contract for let-down?",
+    "a": "Oxytocin",
+    "d": [
+     "Prolactin",
+     "Progesterone",
+     "Oestrogen"
+    ],
+    "why": "Her deck: oxytocin = milk ejection (let-down) at feeding time. It opens the taps.",
+    "step": 4
+   }
+  ]
+ },
+ {
   "id": "gametogenesis",
   "sys": "repro",
   "title": "Making sperm and eggs",

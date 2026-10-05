@@ -96,10 +96,20 @@ The build fails if a hosted slide is not rendered or a hosted figure was not mad
 
 The red card at the top of home, ported from hs2-test2 (`saq.mjs` + `saq-lint.mjs` + the template's SAQ CSS and script block;
 `saq-lint.mjs` and `resplice.mjs` are byte-identical to test2's). Test 3 is 37 Q / **30% written** (her Assessment Overview), and
-Module 3 has no "POSSIBLE SAQ" list, so the 21 questions are her own signals: the two cases she names for Test 3 (**11 Lactation**,
+Module 3 has no "POSSIBLE SAQ" list, so the 25 questions (21 until 6 Oct) are her own signals: the two cases she names for Test 3 (**11 Lactation**,
 **L Noise-induced hearing loss**, both booklet questions verbatim), pedigree charts ("WILL BE TESTED"), the help-board topics
 (glaucoma/cataract, conduction vs sensorineural, Huntington's), then the rest of her student-marked SAQ quiz 211104.
-Content: `content/saq-senses.json` (9) · `saq-gen.json` (6) · `saq-repro.json` (6), 161 drill questions, lint 0 flags.
+Content: `content/saq-senses.json` (12) · `saq-gen.json` (6) · `saq-repro.json` (7), 191 drill questions, lint 0 flags.
+**6 Oct 2026 — the last Module 3 gaps:** each test case's question 5, which the trainer had skipped — case L's otosclerosis
+(`nihl-otosclerosis`: conduction deafness, the ossicles, the middle ear, "ossicles become attached to walls of middle ear -
+interfere with vibrations" from her Ear learning page, her deck slides 62-63, her MCQ key) and case 11's hormone tick-table
+(`lactation-table`: her Repro Female deck slide 24). The "increases blood flow to the breasts" row is answered nowhere in her
+files: the tool ticks oestrogen and says so in the step, the trap and the drill — re-check it against her Lactation case quiz key
+when it opens (Thu 8 Oct). Plus her two chemical-senses outcomes, never asked by her quizzes (`taste`, `smell`, her LO words
+verbatim), from her LEARNING PAGE 1 (headed "GUSTATION & OLFACTION (10 marks)"), her AM 11 answers and her MCQ key; the
+taste-bud and olfactory-epithelium cell lists are Patton ch. 24, the reading her page sets, and the src says so. The checklist's
+taste and smell rows now point to them. The two new case items are starred but are NOT `-case` ids, so the full mock still
+forces only the two case SAQs and the new four rotate in with the rest.
 
 Module 3 only: `her` on an SAQ names her OWN model answer in `content/her-answers.json` by its key prefix; `saq.mjs` fails the
 build unless it matches exactly one, and the page shows it under the tool's answer, word for word (19 links). Where her quiz
@@ -110,7 +120,7 @@ her quiz key: constricts), LH on Leydig cells (feedback: estrogen; Male Repro de
 written questions are added and closed ones dropped until the written share is nearest 30%. The written ones are SAQ Trainer
 questions (`mkSaqQ`): both test cases every sitting, then the rest least-seen first. The closed deal is the nearest-to-average of
 eight least-seen deals, so a deal heavy in 8-mark matchings cannot swing a sitting to 10 written questions. 300 simulated deals:
-always 37 Q and both cases; share median 30.0% (p10 28.4%, p90 31.7%); 4-7 written (mostly 5-6); all 21 SAQs rotate in. Her
+always 37 Q and both cases; share median 30.0% (p10 28.4%, p90 31.7%); 4-7 written (mostly 5-6); all 21 SAQs rotate in (25 since 6 Oct). Her
 closed quiz items carry more marks than the real paper's (~1 each), so the mock's written load (median 28 marks) is heavier
 than the real 15: it errs hard on purpose.
 Driven at 375 px on 26 Sep: all 21 read → drill (a wrong pick requeues, then clears) → order where set → write → mark → score; the

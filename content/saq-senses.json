@@ -213,6 +213,160 @@
   ]
  },
  {
+  "id": "nihl-otosclerosis",
+  "sys": "senses",
+  "star": true,
+  "title": "Case L, Q5: otosclerosis",
+  "marks": 4,
+  "ask": "A CT scan of Jack's ears shows no signs of otosclerosis. What kind of deafness would otosclerosis have caused, what specific structure of the ear is damaged by that condition, in what part of the ear is this structure(s) found and how does this damage impact hearing? (4 marks)",
+  "hook": "Otosclerosis = the OSSICLES stick to the middle-ear wall → they can't VIBRATE → the sound never reaches the inner ear → CONDUCTION deafness. Jack's noise damage is the other kind.",
+  "steps": [
+   "Otosclerosis would cause **conduction deafness**: something **inhibits sound conduction to the internal ear**. Her deck lists **otosclerosis** with ear wax, a perforated eardrum and middle-ear infections.",
+   "The damaged structures are the **ossicles**, the three ear bones: **malleus**, **incus** and **stapes** (her deck: osteosclerosis of the ossicles). Patton: otosclerosis causes structural irregularities in the **stapes**.",
+   "The ossicles are found in the **middle ear**, where they **transfer vibrations from the tympanum (eardrum) to the oval window**; the stapes pushes against the **oval window**.",
+   "In otosclerosis the **ossicles become attached to the walls of the middle ear**, which **interferes with the vibrations**: the ossicles can no longer **amplify** the sound onto the oval window, so the sound is not conducted to the inner ear.",
+   "The **inner ear and its hair cells are not damaged**, so sound can still be **conducted through vibrations of the skull bones**: unlike Jack's noise damage, which is sensorineural."
+  ],
+  "short": {
+   "hook": "OSSICLES STUCK → no VIBRATION → CONDUCTION deafness.",
+   "groups": [
+    {
+     "q": "What kind of deafness?",
+     "facts": [
+      {
+       "t": "**Conduction deafness**: sound cannot reach the **internal ear**",
+       "of": 0
+      }
+     ]
+    },
+    {
+     "q": "Which structure, and where?",
+     "facts": [
+      {
+       "t": "The **ossicles**: **malleus**, **incus**, **stapes**",
+       "of": 1
+      },
+      {
+       "t": "Patton: irregularities in the **stapes**",
+       "of": 1
+      },
+      {
+       "t": "They sit in the **middle ear**",
+       "of": 2
+      },
+      {
+       "t": "They pass the vibrations on to the **oval window**",
+       "of": 2
+      }
+     ]
+    },
+    {
+     "q": "How does it affect hearing?",
+     "facts": [
+      {
+       "t": "The ossicles become **attached to the walls of the middle ear**",
+       "of": 3
+      },
+      {
+       "t": "That **interferes with the vibrations**: they cannot **amplify** the sound",
+       "of": 3
+      },
+      {
+       "t": "Inner ear and **hair cells** are fine: the **skull bones** still conduct",
+       "of": 4
+      }
+     ]
+    }
+   ]
+  },
+  "order": false,
+  "traps": [
+   "Otosclerosis is CONDUCTION deafness (a middle-ear problem), not sensorineural. Her MCQ key: sensorineural deafness results from everything EXCEPT damage to the ossicles.",
+   "Name the SPECIFIC structure: the ossicles (the stapes above all), not just 'the middle ear'.",
+   "The ossicles are in the MIDDLE ear; the organ of Corti and its hair cells (Jack's damage) are in the INNER ear."
+  ],
+  "src": "Case Study Booklet A, case L, question 5 (her workbook's words; not starred, but case L is one of the two test cases she names). Answer: her Physiology of the Special Senses deck slides 62-63 (conduction deafness: impaired sound conduction to the inner ear; osteosclerosis of the ossicles; middle ear infections & otosclerosis; sound conducted through vibrations of skull bones), the same list on Emma's SS3 deck slide 16; her LEARNING PAGE 3 SPECIAL SENSES - The Ear ('Otosclerosis when ossicles become attached to walls of middle ear - interfere with vibrations'; the middle ear's 3 ossicles transfer vibrations from tympanum to oval window; the stapes pushes against the oval window); her Answers to Module 3 MCQs key (the ossicles amplify the sound waves onto the oval window; sensorineural deafness results from all of these EXCEPT damage to the ossicles); Patton ch. 24, her set reading (otosclerosis: structural irregularities in the stapes). The marks are the tool's estimate.",
+  "mcq": [
+   {
+    "q": "What kind of deafness would otosclerosis cause?",
+    "a": "Conduction deafness",
+    "d": [
+     "Sensorineural deafness",
+     "Noise-induced deafness",
+     "Cortical deafness"
+    ],
+    "why": "Her deck lists otosclerosis under conduction deafness: something stops sound being conducted to the inner ear.",
+    "step": 0
+   },
+   {
+    "q": "Which specific structures does otosclerosis damage?",
+    "a": "The ossicles, above all the stapes",
+    "d": [
+     "The hair cells of the organ of Corti",
+     "The semicircular canals",
+     "The cochlear nerve"
+    ],
+    "why": "Her deck: osteosclerosis of the ossicles. Patton: structural irregularities in the stapes. Hair cells are what loud noise destroys.",
+    "step": 1
+   },
+   {
+    "q": "In which part of the ear are the ossicles found?",
+    "a": "The middle ear",
+    "d": [
+     "The outer ear",
+     "The inner ear",
+     "The vestibule"
+    ],
+    "why": "Her Ear page: the middle ear's three ossicles (malleus, incus, stapes) transfer vibrations from the tympanum to the oval window.",
+    "step": 2
+   },
+   {
+    "q": "Which structure does the stapes push against?",
+    "a": "The oval window",
+    "d": [
+     "The round window",
+     "The tympanic membrane",
+     "The basilar membrane"
+    ],
+    "why": "Her MCQ key: the stapes connects with the internal ear via the oval window.",
+    "step": 2
+   },
+   {
+    "q": "How does otosclerosis stop sound reaching the inner ear?",
+    "a": "The ossicles stick and cannot vibrate",
+    "d": [
+     "The hair cells bend until they break off",
+     "Fluid builds up behind the eardrum",
+     "Wax blocks the ear canal"
+    ],
+    "why": "Her Ear page: the ossicles become attached to the walls of the middle ear and interfere with vibrations. Broken hair cells are noise damage, fluid is glue ear, wax is a blocked canal.",
+    "step": 3
+   },
+   {
+    "q": "Which job of the ossicles does otosclerosis take away?",
+    "a": "Amplifying sound onto the oval window",
+    "d": [
+     "Turning vibration into nerve impulses",
+     "Detecting rotation of the head",
+     "Equalising pressure in the middle ear"
+    ],
+    "why": "Her MCQ key: the middle ear ossicles serve to amplify the sound waves onto the oval window. Turning vibration into impulses is the hair cells' job; pressure is the Eustachian tube's.",
+    "step": 3
+   },
+   {
+    "q": "In conduction deafness, how can sound still reach the inner ear?",
+    "a": "Through vibrations of the skull bones",
+    "d": [
+     "Through the round window only",
+     "Through the Eustachian tube",
+     "Through the vestibular nerve"
+    ],
+    "why": "Her deck slide 63, under conduction deafness: sound conducted through vibrations of skull bones. The inner ear itself still works.",
+    "step": 4
+   }
+  ]
+ },
+ {
   "id": "glaucoma-cataract",
   "sys": "senses",
   "star": true,
@@ -1362,6 +1516,362 @@
     ],
     "why": "Her deck: the vestibular branch of VIII runs mainly to the brain stem and cerebellum, and also to the cortex.",
     "step": 5
+   }
+  ]
+ },
+ {
+  "id": "taste",
+  "sys": "senses",
+  "title": "Taste: the taste buds and taste sensation",
+  "marks": 5,
+  "ask": "Briefly describe the structure of the taste buds and discuss the physiology of taste sensation. (5 marks)",
+  "hook": "PAPILLAE hold the BUDS; GUSTATORY cells taste chemicals dissolved in SALIVA; nerves VII, IX, X → brainstem → thalamus → INSULA and frontal lobe.",
+  "steps": [
+   "Taste (**gustation**) is a **chemical sense**: taste buds are **chemoreceptors**, stimulated by **chemical substances in solution** (chemicals dissolved in the **saliva**).",
+   "The tongue carries **papillae**: **fungiform** (mushroom shape), **vallate** (surrounded by a moat), **filiform** (threadform) and **foliate** (leaflike); the **taste buds** are specialised structures **on the papillae**.",
+   "Each taste bud is a cluster of **gustatory cells** (50-125 chemoreceptors) inside a **supporting** epithelial capsule; their **gustatory hairs** project into the **taste pore**.",
+   "Five tastes: **sweet**, **sour**, **salty**, **bitter** and **umami** (savoury).",
+   "Taste impulses travel in cranial nerves: **facial (VII)** from the anterior 2/3, **glossopharyngeal (IX)** from the posterior 1/3, **vagus (X)** from the extreme posterior.",
+   "They go to the **brainstem**, then up to the **thalamus**, the **insula** and the **frontal lobe**; the amygdala and hypothalamus add the emotional response and appetite.",
+   "**Flavour** = taste + smell: chewing releases aroma molecules that travel from the back of the mouth into the **nasal cavity**, and the orbitofrontal cortex combines them."
+  ],
+  "short": {
+   "hook": "BUDS on PAPILLAE → CHEMICALS in saliva → VII / IX / X → INSULA.",
+   "groups": [
+    {
+     "q": "Structure of the taste buds",
+     "facts": [
+      {
+       "t": "Taste buds sit **on the papillae** of the tongue",
+       "of": 1
+      },
+      {
+       "t": "Papillae: **fungiform**, **vallate**, **filiform**, **foliate**",
+       "of": 1
+      },
+      {
+       "t": "Each bud: **gustatory cells** in a **supporting** capsule",
+       "of": 2
+      },
+      {
+       "t": "**Gustatory hairs** poke into the **taste pore**",
+       "of": 2
+      }
+     ]
+    },
+    {
+     "q": "Taste sensation",
+     "facts": [
+      {
+       "t": "A **chemical sense**: **chemoreceptors**, chemicals dissolved in **saliva**",
+       "of": 0
+      },
+      {
+       "t": "Five tastes: **sweet**, **sour**, **salty**, **bitter**, **umami**",
+       "of": 3
+      },
+      {
+       "t": "**Facial (VII)** front 2/3; **glossopharyngeal (IX)** back 1/3; **vagus (X)**",
+       "of": 4
+      },
+      {
+       "t": "→ **brainstem** → **thalamus** → **insula** and **frontal lobe**",
+       "of": 5
+      },
+      {
+       "t": "**Flavour** = taste + smell: aroma rises into the **nasal cavity**",
+       "of": 6
+      }
+     ]
+    }
+   ]
+  },
+  "order": false,
+  "traps": [
+   "Taste buds are CHEMOreceptors, not photoreceptors or mechanoreceptors (one of her page's true/false statements is 'Taste buds are photoreceptors').",
+   "Filiform papillae carry NO taste buds (Patton): they give texture. Taste buds sit on the fungiform, vallate and foliate papillae.",
+   "Facial nerve (VII) = the FRONT two-thirds; glossopharyngeal (IX) = the BACK third."
+  ],
+  "src": "Her learning outcome, word for word (Hearing and Equilibrium deck slide 1, LO 5; her Module 3.3 outcomes page; Module Three Learning Checklist item 1). Answer: her LEARNING PAGE 1 SPECIAL SENSES - Chemical Senses: Taste (Gustation) and Smell (Olfaction), headed 'MODULE 3.3: GUSTATION & OLFACTION (10 marks)' (the five tastes; the four papillae; taste buds on the papillae; nerves VII anterior 2/3, IX posterior 1/3, X extreme posterior, to the brainstem, thalamus, insula and frontal lobe; amygdala and hypothalamus; flavour, retronasal olfaction, the orbitofrontal cortex); her Answers for AM 11 (the five taste receptor types; the facial and glossopharyngeal nerves); her 2026 NS2 deck (taste: insula, frontal lobes); her Answers to Module 3 MCQs key (olfactory and gustatory receptors are stimulated by chemical substances in solution; smell and taste are both chemoreception). The taste-bud structure line (gustatory cells, supporting capsule, gustatory hairs, taste pore) and 'dissolved in the saliva' are Patton ch. 24, the reading her page sets: none of her own files describes the inside of a taste bud. The marks are the tool's estimate.",
+  "mcq": [
+   {
+    "q": "What kind of receptor is a taste bud?",
+    "a": "Chemoreceptor",
+    "d": [
+     "Photoreceptor",
+     "Mechanoreceptor",
+     "Thermoreceptor"
+    ],
+    "why": "Her MCQ key: smell and taste are both chemoreception, stimulated by chemical substances in solution.",
+    "step": 0
+   },
+   {
+    "q": "Where are most taste buds found?",
+    "a": "On the papillae of the tongue",
+    "d": [
+     "In the roof of the nasal cavity",
+     "Inside the salivary glands",
+     "On the epiglottis only"
+    ],
+    "why": "Her page: taste buds are specialised structures on the papillae on the tongue.",
+    "step": 1
+   },
+   {
+    "q": "Which papilla is surrounded by a moat?",
+    "a": "Vallate",
+    "d": [
+     "Fungiform",
+     "Filiform",
+     "Foliate"
+    ],
+    "why": "Her page: fungiform = mushroom shape, vallate = surrounded by a moat, filiform = threadform, foliate = leaflike.",
+    "step": 1
+   },
+   {
+    "q": "What are the receptor cells inside a taste bud called?",
+    "a": "Gustatory cells",
+    "d": [
+     "Olfactory cells",
+     "Hair cells",
+     "Myoepithelial cells"
+    ],
+    "why": "Patton (her set reading): each taste bud holds 50-125 gustatory cells, whose gustatory hairs poke into the taste pore.",
+    "step": 2
+   },
+   {
+    "q": "Where do the gustatory hairs project?",
+    "a": "Into the taste pore",
+    "d": [
+     "Into the olfactory bulb",
+     "Against the tectorial membrane",
+     "Through the cribriform plate"
+    ],
+    "why": "Patton (her set reading): the gustatory hairs project into an opening called the taste pore.",
+    "step": 2
+   },
+   {
+    "q": "Which list is the five tastes?",
+    "a": "Sweet, sour, salty, bitter, umami",
+    "d": [
+     "Sweet, sour, salty, bitter, spicy",
+     "Sweet, sour, salty, hot, umami",
+     "Sweet, salty, bitter, fatty, cold"
+    ],
+    "why": "Her AM 11 answer: sweet, sour, bitter, salty and umami (meaty/savoury). Spicy and hot are heat and pain, not tastes.",
+    "step": 3
+   },
+   {
+    "q": "Which nerve carries taste from the front two-thirds of the tongue?",
+    "a": "Facial nerve (VII)",
+    "d": [
+     "Glossopharyngeal nerve (IX)",
+     "Vagus nerve (X)",
+     "Olfactory nerve (I)"
+    ],
+    "why": "Her page: facial (VII) anterior 2/3, glossopharyngeal (IX) posterior 1/3, vagus (X) extreme posterior.",
+    "step": 4
+   },
+   {
+    "q": "Where in the brain is taste perceived?",
+    "a": "The insula and the frontal lobe",
+    "d": [
+     "The occipital lobe",
+     "The cerebellum",
+     "The primary olfactory cortex"
+    ],
+    "why": "Her page and NS2 deck: taste goes brainstem → thalamus → insula and frontal lobe.",
+    "step": 5
+   },
+   {
+    "q": "Why does food taste of very little with a blocked nose?",
+    "a": "Flavour needs smell as well as taste",
+    "d": [
+     "Taste buds need air to work",
+     "Nerve VII runs through the nose",
+     "Saliva is made in the nasal cavity"
+    ],
+    "why": "Her page: flavour = taste buds + olfactory receptors; chewing sends aroma molecules up into the nasal cavity.",
+    "step": 6
+   }
+  ]
+ },
+ {
+  "id": "smell",
+  "sys": "senses",
+  "title": "Smell: the olfactory epithelium and olfaction",
+  "marks": 5,
+  "ask": "Briefly describe the structure of the olfactory epithelium and discuss the physiology of olfaction. (5 marks)",
+  "hook": "ROOF of the nose → the odourant DISSOLVES in mucus → binds a RECEPTOR → through the CRIBRIFORM plate (nerve I) → the BULB → the TEMPORAL lobe.",
+  "steps": [
+   "The **olfactory epithelium** (olfactory mucosa) lies in the **roof of the nasal cavity**; we **sniff** because most inhaled air does not reach it, it sits so high in the nose.",
+   "It holds the **olfactory receptor neurons** (chemoreceptors) with their **olfactory cilia**, plus **supporting cells** and **basal cells**; the basal cells **replace** the receptor neurons regularly.",
+   "**Odourants** are inhaled into the nasal cavity and **dissolve in the mucus** covering the olfactory mucosa, then **bind the receptors** on the olfactory receptor neurons, starting a signal.",
+   "The receptor neurons' axons pass through the **cribriform plate** as **cranial nerve I**, the **olfactory nerve**, and **synapse in the olfactory bulb**.",
+   "The **olfactory bulbs** lie inferior to the **frontal lobe** and superior to the nasal cavity; the **olfactory tract** carries the signal on to the thalamic and olfactory areas of the brain.",
+   "The **primary olfactory cortex** in the **temporal lobe** identifies odours; the **amygdala** (emotional memories) and **hippocampus** (memories of odours) tie smell to emotion and memory.",
+   "Complete loss of smell is **anosmia**; partial loss is **hyposmia**."
+  ],
+  "short": {
+   "hook": "ROOF → MUCUS → RECEPTOR → CRIBRIFORM (I) → BULB → TEMPORAL.",
+   "groups": [
+    {
+     "q": "Structure of the olfactory epithelium",
+     "facts": [
+      {
+       "t": "In the **roof of the nasal cavity**: you **sniff** to reach it",
+       "of": 0
+      },
+      {
+       "t": "**Olfactory receptor neurons** with **olfactory cilia**",
+       "of": 1
+      },
+      {
+       "t": "plus **supporting cells** and **basal cells**, which **replace** the neurons",
+       "of": 1
+      }
+     ]
+    },
+    {
+     "q": "Olfaction",
+     "facts": [
+      {
+       "t": "Odourants **dissolve in the mucus**, then **bind the receptors**",
+       "of": 2
+      },
+      {
+       "t": "Axons through the **cribriform plate**: **cranial nerve I**",
+       "of": 3
+      },
+      {
+       "t": "They **synapse in the olfactory bulb**",
+       "of": 3
+      },
+      {
+       "t": "Bulbs under the **frontal lobe**; the **olfactory tract** carries on",
+       "of": 4
+      },
+      {
+       "t": "**Primary olfactory cortex**, in the **temporal lobe**, names the smell",
+       "of": 5
+      },
+      {
+       "t": "**Amygdala** (emotion), **hippocampus** (memory)",
+       "of": 5
+      },
+      {
+       "t": "Total loss: **anosmia**; partial: **hyposmia**",
+       "of": 6
+      }
+     ]
+    }
+   ]
+  },
+  "order": false,
+  "traps": [
+   "Smell is cranial nerve I (olfactory), not II: II is the optic nerve. One of her page's true/false statements says 'the second cranial nerve'.",
+   "The receptive structures are the olfactory receptor CELLS and their CILIA, not the basal or supporting cells (her MCQ key).",
+   "The olfactory epithelium is in the ROOF of the nasal cavity, which is why you sniff to get air up to it."
+  ],
+  "src": "Her learning outcome, word for word (Hearing and Equilibrium deck slide 1, LO 6; her Module 3.3 outcomes page; Module Three Learning Checklist item 2). Answer: her LEARNING PAGE 1 SPECIAL SENSES - Chemical Senses: Taste (Gustation) and Smell (Olfaction), headed 'MODULE 3.3: GUSTATION & OLFACTION (10 marks)' (olfactory region in the roof of the nose; fibres through the cribriform plate as CN I to the olfactory bulb; the olfactory tract; primary olfactory cortex in the temporal lobe; amygdala and hippocampus; hyposmia and anosmia); her Answers for AM 11 (the olfactory bulbs lie inferior to the frontal lobe and superior to the nasal cavity; odourants dissolve into the mucus over the olfactory mucosa and bind the receptors; anosmia); her 2026 RESP 1 deck (olfactory mucosa in the roof of the nasal cavity); her Answers to Module 3 MCQs key (the receptive structures for smell are the olfactory receptor cells and cilia). The cell list of the epithelium (supporting and basal cells, replaced regularly) and the sniffing line are Patton ch. 24, the reading her page sets. The marks are the tool's estimate.",
+  "mcq": [
+   {
+    "q": "Where is the olfactory epithelium?",
+    "a": "In the roof of the nasal cavity",
+    "d": [
+     "On the floor of the nasal cavity",
+     "In the nasopharynx",
+     "In the maxillary sinus"
+    ],
+    "why": "Her page: the olfactory region is in the roof of the nose. It sits so high that you sniff to get air up to it.",
+    "step": 0
+   },
+   {
+    "q": "What are the receptive structures for smell?",
+    "a": "Olfactory receptor cells and cilia",
+    "d": [
+     "Basal cells of the olfactory epithelium",
+     "Supporting cells of the olfactory epithelium",
+     "Olfactory nerve fibres"
+    ],
+    "why": "Her MCQ key, word for word: olfactory receptor cells and cilia.",
+    "step": 1
+   },
+   {
+    "q": "What must an odourant do before it can bind a receptor?",
+    "a": "Dissolve in the nasal mucus",
+    "d": [
+     "Travel in the blood to the brain",
+     "Bend the hairs against a membrane",
+     "Pass through the cribriform plate"
+    ],
+    "why": "Her AM 11 answer: odourants dissolve into the mucus that covers the olfactory mucosa, then bind the receptors.",
+    "step": 2
+   },
+   {
+    "q": "Which cranial nerve carries smell?",
+    "a": "Olfactory nerve (I)",
+    "d": [
+     "Optic nerve (II)",
+     "Trigeminal nerve (V)",
+     "Vestibulocochlear nerve (VIII)"
+    ],
+    "why": "Her page: the olfactory nerve is cranial nerve I. Her true/false statement offers the second cranial nerve, the optic nerve, as the trap.",
+    "step": 3
+   },
+   {
+    "q": "Which bone do the olfactory axons pass through?",
+    "a": "The cribriform plate",
+    "d": [
+     "The sella turcica",
+     "The hard palate",
+     "The zygomatic arch"
+    ],
+    "why": "Her page: the fibres go through the cribriform plate as cranial nerve I to the olfactory bulb.",
+    "step": 3
+   },
+   {
+    "q": "Where do the olfactory bulbs lie?",
+    "a": "Below the frontal lobe",
+    "d": [
+     "Inside the temporal lobe",
+     "In the medulla of the brainstem",
+     "Behind the eyes in the orbit"
+    ],
+    "why": "Her AM 11 answer: inferior to the frontal lobe, superior to the nasal cavity and the base of the cranium.",
+    "step": 4
+   },
+   {
+    "q": "Where is the primary olfactory cortex?",
+    "a": "The temporal lobe",
+    "d": [
+     "The occipital lobe",
+     "The parietal lobe",
+     "The cerebellum"
+    ],
+    "why": "Her page: the primary olfactory cortex, in the temporal lobe, identifies odours.",
+    "step": 5
+   },
+   {
+    "q": "Why can a smell bring back a strong memory?",
+    "a": "Smell links to the hippocampus and amygdala",
+    "d": [
+     "Smell signals go straight to the occipital lobe",
+     "The smell receptors store the memory",
+     "The olfactory bulb is part of the cerebellum"
+    ],
+    "why": "Her page: the amygdala processes emotional memories of smells; the hippocampus forms memories related to odours.",
+    "step": 5
+   },
+   {
+    "q": "What is a complete loss of smell called?",
+    "a": "Anosmia",
+    "d": [
+     "Hyposmia",
+     "Ageusia",
+     "Tinnitus"
+    ],
+    "why": "Her page and AM 11 answer: anosmia = complete loss; hyposmia = partial loss.",
+    "step": 6
    }
   ]
  },

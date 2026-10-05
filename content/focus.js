@@ -116,9 +116,9 @@ export const FOCUS = [
   ask:'True/false, "choose the two correct answers", a three-blank drop-down definition, and two written questions with her own answers ("Why do rainbows form?", "What is the difference between refraction and reflection when it comes to light?").',
   cap:'Definitions with her examples.' },
 { id:'taste', sys:'senses', crit:'Special senses 12', t:'Taste',
-  done:'Taste is about 80 % smell — which is why food tastes flat with a blocked nose.', ask:'One MCQ in the whole bank.', cap:'Her criterion says "briefly describe the structure of the taste buds"; her quizzes never ask it.' },
+  done:'Describe the taste buds (on the papillae; gustatory cells whose gustatory hairs reach the taste pore) and the path of taste: chemicals dissolved in saliva → nerves VII, IX, X → brainstem → thalamus → insula and frontal lobe. Taste is about 80 % smell — which is why food tastes flat with a blocked nose.', ask:'One MCQ in the whole bank, so the SAQ trainer carries it: "Taste: the taste buds and taste sensation" (6 Oct 2026). Her learning page is headed "GUSTATION & OLFACTION (10 marks)".', cap:'Her criterion says "briefly describe the structure of the taste buds"; her quizzes never ask it. Do the Taste SAQ once.' },
 { id:'smell', sys:'senses', crit:'Special senses 13', t:'Smell (olfaction)',
-  done:'Know that the olfactory epithelium in the roof of the nasal cavity holds the receptors.', ask:'Not asked: none of her 23 quizzes has a question on it.', cap:'On her criteria list, absent from her bank. Read it once.' },
+  done:'Know the olfactory epithelium in the roof of the nasal cavity (receptor cells and their cilia) and the path: odourant dissolves in the mucus → binds a receptor → cribriform plate, nerve I → olfactory bulb → olfactory cortex in the temporal lobe. Complete loss of smell = anosmia.', ask:'None of her 23 quizzes has a question on it, so the SAQ trainer carries it: "Smell: the olfactory epithelium and olfaction" (6 Oct 2026). Her learning page is headed "GUSTATION & OLFACTION (10 marks)".', cap:'On her criteria list, absent from her bank. Do the Smell SAQ once.' },
 
 /* ══════════ REPRODUCTIVE SYSTEMS ══════════ */
 { id:'repro-male', sys:'repro', crit:'Reproductive 1 · 2', t:'Male organs, ducts and the path the sperm take', rev:'deck · slides 5–6',

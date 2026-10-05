@@ -5,6 +5,9 @@
    content/saq-senses.json = special senses · content/saq-gen.json = genetics · content/saq-repro.json = reproduction
    The page shows them in ORDER below: her own signals first (the two cases, pedigrees, her help-board topics), then
    the rest of her student-marked SAQ quiz.
+   6 Oct 2026: the last two questions of her two test cases (case L Q5 otosclerosis, case 11 Q5 the hormone tick-table; the
+   blood-flow tick is the tool's and says so) and her two chemical-senses outcomes (taste, smell: her learning page is headed
+   "GUSTATION & OLFACTION (10 marks)"), so nothing in Module 3's checklist is left without a written question.
    Module 3 only: `her` names her OWN model answers (content/her-answers.json, lifted word for word from the feedback on
    her quiz) by the start of their key; each must match exactly one, and the page shows them under the tool's answer.
    Every gate is a hard failure: a drill question with its answer missing, a duplicate option, a mark point no question
@@ -12,8 +15,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const ORDER = ['nihl-case', 'lactation-case', 'pedigree', 'glaucoma-cataract', 'huntingtons',
-  'hearing', 'ear-regions', 'eye-layers', 'accommodation', 'refraction-errors', 'equilibrium', 'waves',
+const ORDER = ['nihl-case', 'nihl-otosclerosis', 'lactation-case', 'lactation-table', 'pedigree', 'glaucoma-cataract', 'huntingtons',
+  'hearing', 'ear-regions', 'eye-layers', 'accommodation', 'refraction-errors', 'equilibrium', 'taste', 'smell', 'waves',
   'punnett', 'inheritance-patterns', 'karyotype', 'gene-tech',
   'gametogenesis', 'cycles', 'male-female-table', 'male-hormones', 'ovary-hormones'];
 
