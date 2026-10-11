@@ -21,6 +21,8 @@ import { QTOPIC } from './content/qtopic.js';
 import { QROW } from './content/qrow.js';
 import { rowOf } from './content/topics.js';
 import { KAHOOTS } from './content/kahoots.js';
+import { WORKSHEET } from './content/worksheet.js';
+import { DECKQS } from './content/deck-qs.js';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 /* HER OWN model answers, lifted verbatim from the quiz_comment blocks of his graded captures by extract-her-answers.mjs */
@@ -44,6 +46,8 @@ const QUIZ = {
   /* Module 3, captured 21 Sep 2026 from his own graded attempts. Systems: repro · gen(etics) · senses (special senses + light & sound) · mixed */
   210994:['repro','Reproduction MC (30 mk)'],211054:['repro','Formative: Female Reproduction'],211071:['repro','Formative: Male Reproduction'],
   211050:['repro','Cases: Fertility Quiz'],
+  /* captured 12 Oct 2026: her case 11 quiz (the Lactation test case), his graded attempt */
+  211084:['repro','Case 11: Lactation (12 mk)'],
   211014:['gen','Pedigree Pop Quiz'],211017:['gen','Patterns of Inheritance'],211029:['gen','Formative: Genetics MC'],
   211041:['gen','Formative: Genotypes & Phenotypes'],211053:['gen','Pedigree Charts'],211062:['gen','Formative: Genetics Vocabulary'],
   211086:['gen','Karyotypes & Pedigree Review'],211087:['gen','Genetics Basics & Punnett Squares'],211091:['gen','Formative: Genetic Exercises'],
@@ -126,7 +130,7 @@ const stripImgRefs = (s) => s
   .replace(/Minimize embedded content\.?/gi, ' ')
   .replace(/\s+/g, ' ').trim();
 
-const questions = [], held = [], quizzes = [];
+const questions = [], held = [], quizzes = [], fails0 = [];
 const saqUsed = new Set();
 const structFails = []; let nInline = 0;
 const overridesUsed = new Set();
@@ -287,6 +291,31 @@ for (const z of bank.quizzes) {
   if (kept) quizzes.push({ id: fid, name: qname, sys: qsys, n: kept });
 }
 
+/* ── her eye & ear worksheet WITH her answers (content/worksheet.js) and her 2024 deck's worked examples (content/deck-qs.js):
+   her prompts, her figures, her keys — part of her bank ── */
+for (const W of [WORKSHEET, DECKQS]) {
+  const escH = s => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  let kept = 0;
+  for (const it of W.items) {
+    if (!FOCUS.some(f => f.id === it.row)) fails0.push(`worksheet ${it.k}: row ${it.row} is not a focus row`);
+    const base = { quiz: W.quiz, sys: W.sys, imgs: it.imgs || [], row: it.row };
+    if (it.type === 'match') {
+      const pairs = it.pairs.map(([left, right]) => ({ left, right }));
+      questions.push({ ...base, id: qid(W.quiz, it.q, pairs), type: 'match', q: it.q, qh: '<p>' + escH(it.q) + '</p>', qt: it.q, pairs, pts: pairs.length });
+    } else if (it.type === 'cloze') {
+      const blanks = it.blanks.map(([correct, options]) => ({ label: null, options, correct, ctx: '' }));
+      if (blanks.some(b => !b.options.includes(b.correct))) fails0.push(`worksheet ${it.k}: a blank's key is not among its options`);
+      const t = plainText(it.qh);
+      questions.push({ ...base, id: qid(W.quiz, t, blanks.map(b => b.correct)), type: 'cloze', bk: 'dd', q: t, qh: it.qh, qt: t, blanks, pts: blanks.length });
+    } else if (it.type === 'mcq') {
+      if (!it.opts.includes(it.key)) fails0.push(`worksheet ${it.k}: key not among its options`);
+      questions.push({ ...base, id: qid(W.quiz, it.q, [it.key]), type: 'mcq', q: it.q, qh: '<p>' + escH(it.q) + '</p>', qt: it.q, opts: it.opts, key: [it.key], pts: 1 });
+    } else { fails0.push(`worksheet ${it.k}: unknown type ${it.type}`); continue; }
+    kept++;
+  }
+  quizzes.push({ id: W.quiz, name: W.name, sys: W.sys, n: kept });
+}
+
 /* ── the Kahoots (content/kahoots.js): their OWN category, never her quiz bank ──
    Each ships flagged `kh` with its source line; the page keeps them out of every whole-bank deal, the mocks, the misses pile and
    her counts. They go in `questions` only so a run, a resume and the dedupe treat them like any other question. */
@@ -371,7 +400,7 @@ fs.writeFileSync(path.join(HERE, 'slides-todo.json'),
 let nHl = 0; const hlUsed = new Set();
 for (const q of questions) if (QTOPIC[q.id]) { q.hl = QTOPIC[q.id]; nHl++; hlUsed.add(q.id); }
 /* ── gates ─────────────────────────────────────────────────────────── */
-const fails = [...khFails];
+const fails = [...fails0, ...khFails];
 for (const [qid, t] of Object.entries(QTOPIC)) {
   if (!hlUsed.has(qid)) fails.push('qtopic entry matched NO question: ' + qid);
   if (!HELPLINE[t]) fails.push(`qtopic topic has no helpline section: ${t} (${qid})`);
@@ -403,7 +432,7 @@ const TYPE_RANK = { mcq: 0, tf: 0, multi: 1, match: 2, cloze: 3, essay: 4 };
 const ASSIGN = {}, dumpText = q => [q.q, (Array.isArray(q.key) ? q.key : q.key != null ? [q.key] : []).join(' | '), (q.pairs || []).map(p => (p.left || '') + ' => ' + (p.right || '')).join(' | '), (q.blanks || []).map(x => x.correct).join(' | '), q.saq ? q.saq.steps.join(' ') : ''].join(' ## ').replace(/\s+/g, ' ');
 const khRow = {};      /* a Kahoot question lands on a row only as a count (the 🎮 chip): never in its questions, marks, tier or Learn button */
 for (const q of questions.filter(q => q.kh)) { const r = rowOf({ id: q.id, t: dumpText(q) }); if (r && FOCUS.some(f => f.id === r)) (khRow[r] = khRow[r] || new Set()).add(norm(q.q) + '|' + q.key.join('|')); }
-for (const q of questions.filter(q => !q.kh)) { const r = rowOf({ id: q.id, t: dumpText(q) }); if (!r) { fails.push('question on NO focus row: ' + q.id + ' "' + q.q.slice(0, 60) + '"'); continue; } if (!FOCUS.some(f => f.id === r)) { fails.push('topics.js names a row that focus.js does not have: ' + r); continue; } (ASSIGN[r] = ASSIGN[r] || []).push(q.id); }
+for (const q of questions.filter(q => !q.kh)) { const r = q.row || rowOf({ id: q.id, t: dumpText(q) }); if (!r) { fails.push('question on NO focus row: ' + q.id + ' "' + q.q.slice(0, 60) + '"'); continue; } if (!FOCUS.some(f => f.id === r)) { fails.push('topics.js names a row that focus.js does not have: ' + r); continue; } (ASSIGN[r] = ASSIGN[r] || []).push(q.id); }
 const sigOf = q => q.type + '|' + norm(q.q) + '|' + JSON.stringify(q.key || q.pairs || (q.blanks || []).map(b => b.correct));      /* the SAME repeat rule the Learn-by-row button uses below, so a row's count and its button agree */
 for (const f of FOCUS) { const qs = (ASSIGN[f.id] || []).map(id => questions.find(q => q.id === id)), uniq = new Map(); for (const q of qs) if (!uniq.has(sigOf(q))) uniq.set(sigOf(q), q);
   f.all = qs.length; f.n = uniq.size; f.pts = +[...uniq.values()].reduce((a, q) => a + (q.pts || 0), 0).toFixed(1); f.qz = new Set(qs.map(q => q.quiz)).size; f.saq = [...uniq.values()].filter(q => q.type === 'essay' || q.type === 'cloze').length;

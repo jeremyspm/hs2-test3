@@ -161,5 +161,5 @@ export const FOCUS = [
 { id:'repro-pregnancy', sys:'repro', crit:'not in her criteria — but in her quizzes', t:'Fertilisation and early pregnancy',
   done:'Fertilisation happens in the Fallopian tube. Her key names the OUTER layer round the egg, from the follicle, the "zona radiata" (and lists "zona pelucida" as a wrong option — her figures call the same layer corona radiata); calcium is her mineral for penetration. Most likely to conceive around ovulation. The corpus luteum makes progesterone, oestrogen and relaxin for the first three months; pregnancy removes the hormone drop at the end of the cycle.',
   ask:'Her Fertility cases quiz: a four-blank drop-down under the fertilisation video, "which three hormones", and how pregnancy changes the hormone graph.',
-  cap:'Her Module 3 criteria never mention fertilisation or pregnancy; her quizzes ask it four times. Lactation is a Test 3 CASE STUDY topic — check Canvas.' },
+  cap:'Her Module 3 criteria never mention fertilisation or pregnancy; her quizzes ask it four times. Lactation is a Test 3 case study (case 11): her Lactation case quiz (captured 12 Oct) is in here — breast parts on her diagram, the hormones of breast development, four one-liners.' },
 ];

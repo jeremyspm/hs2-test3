@@ -1,0 +1,93 @@
+/* HER EYE & EAR WORKSHEET, WITH HER ANSWERS — "eye worksheet WITH answers.pptx" (HS2 Canvas files, posted with her Lab 6
+   special-senses material). Mined 12 Oct 2026. Every prompt, description and figure is hers; every key is the answer she
+   typed on her own copy (slide 2: number and letter answers over her eye figure; slide 3: the 17-row "name of part" table and
+   the coloured lines for each condition; slide 5: her Figure 2 of eye conditions; slide 6: her numbered ear figure, labelled,
+   with outer / middle / inner ear shaded; slide 7: her organ of Corti sheet, order and blanks filled in).
+   The figures shipped are her worksheet's own pictures WITHOUT her answer boxes (the slide's embedded image, rendered from
+   EMF; the eye figure cropped out of slide 2's table): WS-eye-diagram.png, WS-ear-diagram.jpg, WS-corti.png in the capture
+   images folder.
+   What is the tool's, and says so on the page: the one-line framing at the start of each stem; splitting her long tables into
+   two questions; the wording of the condition answers where she drew a line instead of writing (pink eye, refractive errors);
+   and the drop-down distractors in the organ of Corti blanks (her sheet has blank lines, not choices).
+   Only numbers she answered are asked: her figure's 3, 4, 5, 8 and 18 carry no answer of hers, so they are not asked.
+   Her letter grid skips D (an empty cell on her sheet). Her organ of Corti order is hers as written (perilymph in scala
+   TYMPANI at step 2). `row` = the checklist row each sits on, read by hand (the topic router filed the conditions under
+   genetics and the ear figure under balance). */
+export const WORKSHEET = {
+  quiz: 'ws-senses', name: 'Her eye & ear worksheet (her answers)', sys: 'senses',
+  items: [
+    { k: 'eye-num-front', row: 'eye-anatomy', type: 'match', imgs: ['WS-eye-diagram.png'],
+      q: 'Her eye worksheet: match each number on her diagram to its part. Front of the eye (side view 1, 2, 11, 15, 16, 17; front view 9, 10).',
+      pairs: [['1', 'Cornea'], ['2', 'Pupil'], ['9', 'Pupil'], ['10', 'Iris'], ['11', 'Ciliary muscles'], ['15', 'Aqueous humour'], ['16', 'Sclera'], ['17', 'Conjunctiva']] },
+    { k: 'eye-num-back', row: 'eye-anatomy', type: 'match', imgs: ['WS-eye-diagram.png'],
+      q: 'Her eye worksheet: match each number on her diagram to its part. Back of the eye (side view 6, 7, 12, 13, 14, 19).',
+      pairs: [['6', 'Optic nerve'], ['7', 'Retina'], ['12', 'Choroid'], ['13', 'Blind spot (where the optic nerve leaves)'], ['14', 'Vitreous humour'], ['19', 'Fovea (indented, only cones)']] },
+    { k: 'eye-letters-1', row: 'eye-anatomy', type: 'match',
+      q: 'Her eye worksheet, "Link the descriptions, labels and diagram": match each description to its part (A to I).',
+      pairs: [['A. White of the eye that protects and give rounded shape', 'Sclera'],
+        ['B. Controls amount of light entering the eye by getting smaller (in light) and larger (when dark)', 'Pupil'],
+        ['C. Light is first bent here', 'Cornea'], ['E. Coloured part of the eye', 'Iris'],
+        ['F. A clear fluid at front of the eye', 'Aqueous humour'], ['G. Manipulates the shape of the lens', 'Ciliary muscles'],
+        ['H. Image is formed here', 'Retina'],
+        ['I. Coloured image is formed here – directly in line with pupil for sharp colour image in bright light', 'Fovea']] },
+    { k: 'eye-letters-2', row: 'eye-anatomy', type: 'match',
+      q: 'Her eye worksheet, "Link the descriptions, labels and diagram": match each description to its part (J to Q).',
+      pairs: [['J. Part of retina without rods or cones – no image is formed here', 'Blind spot'],
+        ['K. A series of nerve cells that leave the eye', 'Optic nerve'], ['L. Maintains shape of eye and provides nutrients', 'Vitreous humour'],
+        ['M. Dark pigment prevents light from being reflected around inside eyeball', 'Choroid'],
+        ['N. Membrane covering the front of the eye – infected when we have pink eyes', 'Conjunctiva'],
+        ['O. Black layer between retina and sclera', 'Choroid'], ['P. Clear window at the front of the eye, continuous with sclera', 'Cornea'],
+        ['Q. Contains rods and cones (photoreceptors) that convert light into electrical impulses (action potentials) to be sent to the brain', 'Retina']] },
+    { k: 'eye-table-1', row: 'eye-anatomy', type: 'match',
+      q: 'Her eye worksheet table, "Description / function — name of part" (rows 1 to 8): match each description to the part.',
+      pairs: [['A thin protective covering of epithelial cells that protects the cornea against damage by friction (tears from the tear glands lubricates the surface of this epithelium)', 'Conjunctiva'],
+        ['The transparent, curved front of the eye which helps to bend the light rays which enter the eye. Can be transplanted.', 'Cornea'],
+        ['An opaque, white, fibrous, protective outer structure. Spherical shape of eye is maintained by pressure of liquid inside. Provides attachment surfaces for eye muscles.', 'Sclera'],
+        ['Has a network of blood vessels to supply nutrients to the cells and remove waste products. Pigments make it black, preventing reflection of light within eyeball.', 'Choroid'],
+        ['It has suspensory ligaments to hold lens in place. Secretes aqueous humour, contains ciliary muscles that enable lens to change shape to focus on near and distant objects (accommodation).', 'Ciliary body'],
+        ['A hole in the middle of iris where light can go through. In bright light it constricts and in dim light it dilates.', 'Pupil'],
+        ['Transparent, flexible, biconvex, curved structure that focuses incoming light rays onto the retina using its refractive properties', 'Lens'],
+        ['A pigmented muscular structure consisting of an inner ring of circular muscle and an outer layer of radial muscle. It helps to control the amount of light entering the eye (prevents damage to the retina if too much light enters; ensures that enough light enters to allow proper image to form).', 'Iris']] },
+    { k: 'eye-table-2', row: 'eye-anatomy', type: 'match',
+      q: 'Her eye worksheet table, "Description / function — name of part" (rows 9 to 17): match each description to the part.',
+      pairs: [['Layer of sensory neurons: photoreceptors (rod and cone cells) that respond to light found here', 'Retina'],
+        ['Impulses pass along this part to the occipital lobe of brain that controls vision', 'Optic nerve'],
+        ['A retina part directly opposite the pupil with only cone cells. It is responsible for good visual acuity (good resolution) in bright light.', 'Fovea (macula)'],
+        ['Where the bundle of sensory fibres form the optic nerve that leaves the eye; it contains no light-sensitive receptors.', 'Blind spot'],
+        ['A transparent, jelly-like mass located behind the lens.', 'Vitreous humour'],
+        ['Helps to maintain the shape of the posterior chamber of the eyeball', 'Vitreous humour'],
+        ['Helps to maintain the shape of the anterior chamber of the eyeball', 'Aqueous humour'],
+        ['The bundle of sensory fibres that leaves the eye and takes nervous impulses to the occipital lobe of brain.', 'Optic nerve'],
+        ['A spot on the retina where only cones occur. Colour and acute vision.', 'Fovea']] },
+    { k: 'eye-conditions', row: 'eye-imbalances', type: 'match',
+      q: 'Her eye worksheet, "Show the parts affected" and her Figure 2 (eye conditions): match each condition to what goes wrong.',
+      pairs: [['Pink eye (conjunctivitis)', 'The conjunctiva is infected'],
+        ['Myopia', 'Lens too strong or eye too long'], ['Hyperopia', 'Lens too weak or eye too short'],
+        ['Refractive errors', 'The cornea and lens bend the light wrongly'],
+        ['Glaucoma', 'Aqueous humour builds up: increased pressure inside the eye damages the optic nerve'],
+        ['Cataract', 'Cloudy lens'], ['Retinal detachment', 'The retina tears and detaches']] },
+    { k: 'ear-num-1', row: 'ear-anatomy', type: 'match', imgs: ['WS-ear-diagram.jpg'],
+      q: 'Her ear worksheet ("Hearing and Balance"): match numbers 1 to 7 on her diagram to their parts.',
+      pairs: [['1', 'Tympanic membrane'], ['2', 'External ear'], ['3', 'Pinna'], ['4', 'External auditory meatus'], ['5', 'Cartilage'], ['6', 'Ear lobe'], ['7', 'Ossicles (malleus, incus, stapes)']] },
+    { k: 'ear-num-2', row: 'ear-anatomy', type: 'match', imgs: ['WS-ear-diagram.jpg'],
+      q: 'Her ear worksheet ("Hearing and Balance"): match numbers 8 to 14 on her diagram to their parts.',
+      pairs: [['8', 'Semicircular canals'], ['9', 'Cochlea'], ['10', 'Vestibular nerve'], ['11', 'Auditory nerve'], ['12', 'Eustachian tube'], ['13', 'Middle ear cavity'], ['14', 'Temporal bone']] },
+    { k: 'ear-regions', row: 'ear-anatomy', type: 'match',
+      q: 'Her ear worksheet shades the outer, middle and inner ear: which part of the ear is each structure in?',
+      pairs: [['Pinna', 'Outer ear'], ['Ear lobe', 'Outer ear'], ['External auditory meatus', 'Outer ear'], ['Cerumen (ear wax)', 'Outer ear'],
+        ['Ossicles (malleus, incus, stapes)', 'Middle ear'], ['Eustachian tube', 'Middle ear'], ['Middle ear cavity', 'Middle ear'],
+        ['Semicircular canals', 'Inner ear'], ['Cochlea', 'Inner ear']] },
+    { k: 'corti-order', row: 'ear-hearing', type: 'match', imgs: ['WS-corti.png'],
+      q: 'Her organ of Corti sheet, "transducing mechanical energy to electrical energy": put the events in order (her order, step 1 first).',
+      pairs: [['Step 1', 'Movement of oval window'], ['Step 2', 'Movement of perilymph in scala tympani'], ['Step 3', 'Movement of basilar membrane'],
+        ['Step 4', 'Movement of endolymph in scala media'], ['Step 5', 'Bending of the sensory hairs when the gel-like tectorial membrane moves'],
+        ['Step 6', 'Hair cells transmit impulses along the cochlear nerve'], ['Step 7', 'Auditory cortex in temporal lobe']] },
+    { k: 'corti-fluids', row: 'ear-hearing', type: 'cloze', imgs: ['WS-corti.png'],
+      qh: '<p>Her organ of Corti sheet, the blanks she filled in:</p><p><b>Perilymph:</b> in scala tympani and scala [[BLANK:0]]: [[BLANK:1]] potassium.</p><p><b>Endolymph:</b> in scala [[BLANK:2]]. [[BLANK:3]] potassium.</p><p>Neurotransmitter [[BLANK:4]] is released when calcium and potassium flow into the top of the hair cells. The neurotransmitter [sends] a neural impulse to the [[BLANK:5]] of the brain.</p>',
+      blanks: [['vestibuli', ['vestibuli', 'media', 'tympani']], ['Low', ['Low', 'High']], ['media', ['media', 'vestibuli', 'tympani']], ['High', ['High', 'Low']],
+        ['Glutamate', ['Glutamate', 'Acetylcholine', 'Dopamine', 'Noradrenaline']], ['Auditory cortex', ['Auditory cortex', 'Visual cortex', 'Cerebellum', 'Motor cortex']]] },
+    { k: 'pitch', row: 'ear-hearing', type: 'match', imgs: ['WS-corti.png'],
+      q: 'Her organ of Corti sheet: which hair cells do low and high-pitched sounds affect?',
+      pairs: [['Low sounds', 'Longer, more floppy fibres'], ['High-pitched sounds', 'Shorter, stiffer hair cells']] },
+  ],
+};

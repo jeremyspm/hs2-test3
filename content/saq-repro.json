@@ -227,8 +227,8 @@
   "ask": "Complete the following table about the roles of hormones in breast development, milk production and release by ticking the appropriate boxes (progesterone, oestrogen, prolactin, oxytocin): stimulates growth of milk ducts and glands · increases blood flow to the breasts · stimulate development of the lobules and alveoli · stimulates milk production and the development of mammary glands · stimulates milk ejection by making the myoepithelial cells around the milk ducts contract, squeezing the milk towards the nipple. (5 marks)",
   "hook": "OESTROGEN builds the PIPES, PROGESTERONE builds the FACTORIES, PROLACTIN FILLS them, OXYTOCIN opens the TAPS.",
   "steps": [
-   "**Stimulates growth of milk ducts and glands** → tick **oestrogen** (her deck: ductal growth, the lactiferous ducts, from puberty).",
-   "**Increases blood flow to the breasts** → tick **oestrogen**. This tick is the tool's: her answer is not posted yet (her Lactation case quiz opens Thu 8 Oct).",
+   "**Stimulates growth of milk ducts and glands** → tick **oestrogen** AND **progesterone**: her deck gives the ducts to oestrogen (from puberty), and her Lactation case quiz keys the lactiferous ducts and the alveoli as developing “under the influence of progesterone”.",
+   "**Increases blood flow to the breasts** → tick **oestrogen**. This tick is the tool's: none of her files answers it, and her Lactation case quiz does not ask it.",
    "**Stimulate development of the lobules and alveoli** → tick **progesterone** (in pregnancy).",
    "**Stimulates milk production and the development of mammary glands** → tick **prolactin** (during lactation).",
    "**Stimulates milk ejection** by making the **myoepithelial cells** contract → tick **oxytocin** (let-down, at feeding time)."
@@ -240,7 +240,7 @@
      "q": "Breast development",
      "facts": [
       {
-       "t": "Ducts and glands grow: **oestrogen**",
+       "t": "Ducts and glands grow: **oestrogen** + **progesterone**",
        "of": 0
       },
       {
@@ -270,33 +270,44 @@
   },
   "order": false,
   "traps": [
-   "PROGESTERONE develops the lobules and alveoli; OESTROGEN grows the ducts. Swapping these two is the easy lost mark.",
+   "PROGESTERONE develops the lobules and alveoli; OESTROGEN grows the ducts (her deck). Her Lactation quiz also puts the ducts under progesterone, so the ducts-and-glands row takes both ticks.",
    "PROlactin PROduces milk; OXYtocin ejects it (let-down).",
-   "The blood-flow row is the one her files don't answer yet: check her key when her Lactation case quiz opens (Thu 8 Oct)."
+   "The blood-flow row is the one her files never answer (her Lactation case quiz does not ask it): the oestrogen tick is the tool's."
   ],
-  "src": "Case Study Booklet A, case 11, question 5 (her workbook's table, the five rows verbatim; not starred, but case 11 is one of the two test cases she names). Answer: her 2026 Repro Female deck slide 24 (her table: estrogen = ductal growth & fat deposition, lactiferous ducts, puberty; progesterone = lobule & alveoli development, pregnancy; prolactin = milk production, lactation; oxytocin = milk ejection (let-down), feeding time; and her hooks: estrogen builds ducts (the 'pipes'), progesterone builds alveoli (the 'milk factories'), prolactin fills the factories, oxytocin opens the taps). The blood-flow tick is the tool's: none of her files, and not Patton's chapters we hold, answers it yet. The marks are the tool's estimate (one a row).",
+  "src": "Case Study Booklet A, case 11, question 5 (her workbook's table, the five rows verbatim; not starred, but case 11 is one of the two test cases she names). Answer: her 2026 Repro Female deck slide 24 (her table: estrogen = ductal growth & fat deposition, lactiferous ducts, puberty; progesterone = lobule & alveoli development, pregnancy; prolactin = milk production, lactation; oxytocin = milk ejection (let-down), feeding time; and her hooks: estrogen builds ducts (the 'pipes'), progesterone builds alveoli (the 'milk factories'), prolactin fills the factories, oxytocin opens the taps). Her MODULE 3.1 Lactation case quiz (captured 12 Oct 2026, Q3) keys the lactiferous ducts (6) and the alveoli (3) as developing “under the influence of progesterone”, estrogen as “primary breast development during puberty” and progesterone as “further breast development during pregnancy”: hence two ticks on the first row. The blood-flow tick is the tool's: none of her files (that quiz included), and not Patton's chapters we hold, answers it. The marks are the tool's estimate (one a row).",
   "mcq": [
    {
-    "q": "Which hormone stimulates growth of the milk ducts?",
+    "q": "Her deck (slide 24) gives the growth of the milk DUCTS to which hormone?",
     "a": "Oestrogen",
     "d": [
-     "Progesterone",
      "Prolactin",
-     "Oxytocin"
+     "Oxytocin",
+     "Progesterone"
     ],
-    "why": "Her deck slide 24: estrogen = ductal growth. It builds the 'pipes'.",
+    "why": "Her deck slide 24: estrogen = ductal growth, the 'pipes'. Her Lactation quiz adds progesterone for the ducts too, which is why that row takes two ticks.",
     "step": 0
    },
    {
-    "q": "Which hormone gets the tick for 'increases blood flow to the breasts'? (the tool's tick; her key is not posted yet)",
+    "q": "Which hormone gets the tick for 'increases blood flow to the breasts'? (the tool's tick: none of her files answers it)",
     "a": "Oestrogen",
     "d": [
      "Oxytocin",
      "Prolactin",
      "Progesterone"
     ],
-    "why": "The tool's tick, not hers: none of her files answers this row. Check it against her Lactation case quiz key when it opens.",
+    "why": "The tool's tick, not hers: none of her files answers this row, and her Lactation case quiz does not ask it.",
     "step": 1
+   },
+   {
+    "q": "Her Lactation case quiz says the lactiferous ducts and the alveoli develop under the influence of which hormone?",
+    "a": "Progesterone",
+    "d": [
+     "Oestrogen",
+     "Prolactin",
+     "Oxytocin"
+    ],
+    "why": "Her MODULE 3.1 Lactation quiz, Q3: both develop “under the influence of progesterone” (oestrogen = primary breast development at puberty).",
+    "step": 0
    },
    {
     "q": "Which hormone develops the lobules and alveoli in pregnancy?",
