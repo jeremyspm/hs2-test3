@@ -52,11 +52,11 @@ a.btn{text-decoration:none}
 .qlist{display:flex;flex-direction:column;gap:6px;margin-top:8px}
 /* a quiz row: tag + name, then count + Learn + Sit as one group that drops to a
    second line at phone width instead of squeezing the name into four lines */
-.qrow{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;border:1px solid var(--border);
+.qrow,.khrow{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;border:1px solid var(--border);
   border-radius:var(--radius);padding:8px 10px;background:var(--muted)}
-.qrow b{flex:1 1 150px;font-size:.86rem;font-weight:600}
-.qrow .m{color:var(--muted-fg);font-size:.76rem;white-space:nowrap}
-.qrow .acts{margin-left:auto;display:flex;gap:6px;align-items:center}
+.qrow b,.khrow b{flex:1 1 150px;font-size:.86rem;font-weight:600}
+.qrow .m,.khrow .m{color:var(--muted-fg);font-size:.76rem;white-space:nowrap}
+.qrow .acts,.khrow .acts{margin-left:auto;display:flex;gap:6px;align-items:center}
 .sysrow{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 2px}
 /* quiz selection: tick any rows (or a whole system) and the bottom bar runs them as one */
 .qrow{cursor:pointer}
@@ -104,6 +104,9 @@ a.btn{text-decoration:none}
 .fwhy{font-size:.8rem;line-height:1.5;color:var(--muted-fg);margin:0 0 4px}
 @media(max-width:400px){ .ft{font-size:.88rem} .fdet{font-size:.82rem} }
 .tag{font-size:.72rem;padding:2px 8px;border-radius:99px;background:var(--accent);color:var(--muted-fg)}
+.tag.kh{background:hsl(280 60% 60% / .16);color:hsl(280 70% 72%)}
+.khsrc{font-size:.78rem;color:var(--muted-fg);margin:2px 0 6px}
+.khnote{font-size:.82rem;margin:8px 0 0;padding:7px 10px;border-radius:8px;background:hsl(280 60% 60% / .10);border-left:3px solid hsl(280 70% 72%)}
 .tag.repro{color:hsl(335 85% 72%)}.tag.gen{color:hsl(268 80% 74%)}.tag.senses{color:hsl(38 92% 62%)}
 .tag.mixed{color:var(--muted-fg)}
 /* sitting */
@@ -145,8 +148,8 @@ input.inl{min-width:7ch}
 .mk .verdict{font-weight:700;margin:0 0 4px}
 .mk.right .verdict{color:var(--ok)} .mk.wrong .verdict{color:var(--danger)} .mk.saq{border-color:var(--primary)}
 .pip.ok{background:var(--ok);border-color:var(--ok)} .pip.bad{background:var(--danger);border-color:var(--danger)}
-.qrow .btn{padding:6px 10px;font-size:.8rem}
-.qrow .btn.learn{border-color:var(--primary);color:var(--primary)}
+.qrow .btn,.khrow .btn{padding:6px 10px;font-size:.8rem}
+.qrow .btn.learn,.khrow .btn.learn{border-color:var(--primary);color:var(--primary)}
 .blankrow{display:flex;flex-direction:column;gap:4px;margin:8px 0}
 .blankrow label{font-size:.82rem;color:var(--muted-fg)}
 select,input[type=text],textarea{font:inherit;color:var(--fg);background:var(--muted);
@@ -474,7 +477,9 @@ const shuffle = a => { a=a.slice(); for(let i=a.length-1;i>0;i--){const j=Math.r
 const SYS = {repro:'Reproduction', gen:'Genetics', senses:'Special senses, light & sound', mixed:'Mixed'};
 
 /* ── dealing ───────────────────────────────────────────────────────── */
-const CLOSED = DATA.questions.filter(q=>!q.saq);
+/* the Kahoots (q.kh) are their own lower-yield category: never in a whole-bank deal, a system set, a mock or the misses pile */
+const CLOSED = DATA.questions.filter(q=>!q.saq&&!q.kh);
+const KHQ = DATA.questions.filter(q=>q.kh), KH = DATA.kahoots||[];
 function pickN(pool, n, excl){
   const fresh = pool.filter(q=>!excl.has(q.id));
   /* Least-seen first: rank = times dealt, so nothing repeats an (n+1)th time
@@ -584,7 +589,7 @@ function focusCard(){
     });
     if(f.hl)  chips.push('<span class="fchip hl">🆘 on her helpline</span>');
     if(f.rev) chips.push(`<span class="fchip rev">🗓 revision ${esc(f.rev)}</span>`);
-    if(f.kh)  chips.push(`<span class="fchip kh">🎮 ${f.kh} in her Kahoots</span>`);
+    if(f.kh)  chips.push(`<span class="fchip kh">🎮 ${f.kh} in the Kahoots</span>`);
     if(f.saq) chips.push(`<span class="fchip saq">✍️ ${f.saq} written / dropdown</span>`);
     return `<div class="frow${on?' on':''}" style="--tc:${FTIER[f.tier].c}" data-fid="${f.id}">
       <input type="checkbox" class="fchk" ${on?'checked':''} aria-label="I can do this: ${esc(f.t)}">
@@ -718,7 +723,7 @@ function launcher(){
   <button class="hero" data-hero="${up.k}"><span><small>${up.e}</small><b>${up.t}</b></span><span class="go" aria-hidden="true">▶</span></button>
   <div class="lsec">Practise</div>
   ${row('learn','📖','Learn as you go',`${seen} of ${CLOSED.length} seen${r&&r.ids&&r.ids.length?' · a run is waiting':' · marks itself as you go'}`)}
-  ${row('pick','🗂','Pick my rep',`${DATA.quizzes.length} quizzes${S.pick.length?` · ${S.pick.length} ticked`:' · tick any, run them as one'}`)}
+  ${row('pick','🗂','Pick my rep',`${DATA.quizzes.length} quizzes${KH.length?` + ${KH.length} Kahoots`:''}${S.pick.length?` · ${S.pick.length} ticked`:KH.length?' · tick any':' · tick any, run them as one'}`)}
   <a class="lrow fb" href="../hs2-genetics/" style="--hl:#db2777;--hl2:#a78bfa"><span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span><span class="dot d4"></span><span class="lic" aria-hidden="true">🌳</span><span class="ltx"><span class="kick">✨ Endless practice</span><b>Genetics Trainer</b><small>Pedigrees, Punnett squares and karyotypes in her shapes</small></span><span class="go" aria-hidden="true">Open ↗</span></a>
   <div class="lsec">Write</div>
   ${row('saq','✍️','SAQ trainer',`${nL} of ${SAQD.length} locked · Test 3 is 30% written`)}
@@ -768,7 +773,20 @@ function pickScreen(){
       <div class="qrow${S.pick.includes(z.id)?' on':''}" data-z="${z.id}"><input type="checkbox" class="pk" ${S.pick.includes(z.id)?'checked':''} aria-label="tick ${esc(z.name)}"><span class="tag ${z.sys}">${z.sys}</span><b>${esc(z.name)}</b>
       <span class="acts"><span class="m">${z.n} Q</span><button class="btn ghost learn" data-quiz="${z.id}" data-learn="1">Learn</button><button class="btn ghost" data-quiz="${z.id}">Sit</button></span></div>`).join('')}
     </div>
-  </div>`;
+  </div>
+  ${KH.length?`<div class="lsec">🎮 Kahoots · lower yield</div>
+  <div class="card">
+    <p class="lead">Quick one-mark Kahoots on Module 3, kept apart from her quizzes: ${KHQ.length} questions. Do them after her quizzes, not instead.</p>
+    <details class="how"><summary>How this works</summary>
+      <p>These are the Kahoots Canvas links for Module 3: three of hers (“MODULE 3 KAHOOT” page) and Emma’s <i>Prep for exam</i> (linked from Anatomy Mondays and the exam helpline). They are quick recall questions, easier than her quizzes, so they stay out of everything else in this tool: Learn as you go, the Repro / Genetics / Senses sets, the mock tests, your misses pile and the counts on the checklist (a checklist row only says how many Kahoot questions land on it). Every Kahoot question is tagged 🎮 Kahoot. Each one opens as a Learn run and marks itself when you press Check.</p>
+      <p>Their pictures are Kahoot stock photos, so none are shown here. ${KH.reduce((n,k)=>n+k.held.length,0)} questions needed their picture to make sense and are left out. One option is corrected: her “Nitrous oxide” now reads <b>Nitric oxide</b>, as on her own revision deck, and the question says so once you check it. Emma’s <i>Module 2&amp;3 Part 2</i> is not included: its Module 3 questions are all in her <i>Prep for exam</i>, and the other two are Module 2.</p>
+    </details>
+    <button class="btn primary wide" data-kh="all">${S.n==='all'||howMany(KHQ.length)===KHQ.length?`Learn all ${KHQ.length} Kahoot questions`:`Learn ${howMany(KHQ.length)} Kahoot questions`} · least-seen first</button>
+    <div class="qlist">${KH.map(k=>`
+      <div class="khrow"><span class="tag kh">🎮</span><b>${esc(k.name)}</b>
+      <span class="acts"><span class="m">${k.n} Q</span><button class="btn ghost learn" data-kh="${k.id}">Learn</button></span></div>`).join('')}
+    </div>
+  </div>`:''}`;
 }
 function mockScreen(){
   const nm = Object.keys(S.miss).length;
@@ -809,6 +827,7 @@ function bindView(){
   document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>start(b.dataset.go,!!b.dataset.learn));
   document.querySelectorAll('[data-quiz]').forEach(b=>b.onclick=()=>start('quiz:'+b.dataset.quiz,!!b.dataset.learn));
   document.querySelectorAll('[data-sys]').forEach(b=>b.onclick=()=>start('sys:'+b.dataset.sys,!!b.dataset.learn));
+  document.querySelectorAll('[data-kh]').forEach(b=>b.onclick=()=>start('kh:'+b.dataset.kh,true));      /* a Kahoot is Learn only: it never reaches the score chart */
   document.querySelectorAll('[data-n]').forEach(b=>b.onclick=()=>{S.n=b.dataset.n==='all'?'all':+b.dataset.n;SV('n',S.n);const y=window.scrollY;home();window.scrollTo(0,y)});
   const rb=$('#resumeB'); if(rb) rb.onclick=resumeLearn;
   /* a tap anywhere on a quiz row ticks it — except on its own Learn / Sit buttons */
@@ -901,6 +920,10 @@ function start(mode,learn=false){
     /* a focus row's own questions (content/qrow.js, read by hand), in the row's order */
     const byId=new Map(DATA.questions.map(q=>[q.id,q]));
     deck=((f&&f.qs)||[]).map(id=>byId.get(id)).filter(Boolean);label=f?f.t:'topic'}
+  else if(mode.startsWith('kh:')){const id=mode.slice(3), k=KH.find(x=>x.id===id);
+    if(id==='all'){const rank=q=>(S.seen[q.id]||0)+Math.random();
+      deck=KHQ.map(q=>[q,rank(q)]).sort((a,b)=>a[1]-b[1]).slice(0,howMany(KHQ.length)).map(x=>x[0]);label=`${deck.length} Kahoot questions`}
+    else{deck=KHQ.filter(q=>q.quiz===id);label=k?k.name:'Kahoot'}}
   else if(mode.startsWith('sys:')){const s=mode.slice(4), pool=CLOSED.filter(q=>q.sys===s).length;
     deck=dealSys(s,howMany(pool));label=`${deck.length===pool?'all ':''}${deck.length} ${s}`}
   if(!deck||!deck.length){alert('Nothing to deal here yet.');return}
@@ -999,11 +1022,12 @@ function renderQ(){
   const open=chk&&learnOpen(q,chk);
   $('#view').innerHTML=`<div class="card">
     <div class="qhead"><span class="n">Q${SIT.i+1}/${SIT.deck.length}</span>
-      <span class="tag ${q.sys}">${q.sys}</span><span class="tag">${q.pts} mk</span>${SIT.learn?'<span class="tag" style="color:var(--ok)">learn</span>':''}
+      <span class="tag ${q.sys}">${q.sys}</span>${q.kh?'<span class="tag kh">🎮 Kahoot</span>':`<span class="tag">${q.pts} mk</span>`}${SIT.learn?'<span class="tag" style="color:var(--ok)">learn</span>':''}
       <span class="timer" id="timer"></span>
       <button class="btn ghost" id="exitB" title="${SIT.learn?'stop learning':'abandon mock test'}" style="padding:2px 10px">✕</button></div>
+    ${q.kh?`<div class="khsrc">${esc(q.khSrc)} · not one of her Canvas quizzes</div>`:''}
     ${inlineBlanks?body:''}<div class="stem${q.qh?' rich':''}">${stemHTML}</div>${imgs}${inlineBlanks?'':body}
-    ${chk?learnMkHTML(q,chk):''}${SIT.learn&&!open?learnChipsHTML(q):''}
+    ${chk?learnMkHTML(q,chk):''}${chk&&q.khNote?`<div class="khnote">${esc(q.khNote)}</div>`:''}${SIT.learn&&!open?learnChipsHTML(q):''}
     <div class="pips">${SIT.deck.map((_,i)=>{const id=SIT.deck[i].id,c=SIT.learn&&SIT.chk[id];
       const cls=c?(c.r?(c.r.got>=c.r.tot&&SIT.ans[id]?'ok':'bad'):'done'):(SIT.ans[id]?'done':'');
       return `<span class="pip ${cls} ${i===SIT.i?'cur':''}"></span>`}).join('')}</div>
@@ -1045,6 +1069,7 @@ function learnChipsHTML(q){
   for(const r of q.refs)chips.push(`<button class="qa" data-act="${r.k}">${REF[r.k].ic} ${REF[r.k].lbl}${r.k==='patton'?' p. '+r.pp:''}</button>`);
   if(hasHer(q))chips.push('<button class="qa" data-act="hl">✅ Her worked answer</button>');
   const hint=chips.length?(SIT.chk[q.id]?'':'<span class="hint">open before or after you answer</span>')
+    :q.kh?(SIT.chk[q.id]?'':'<span class="hint">a Kahoot question: no slide or video is matched to these, the answer shows on Check</span>')
     :(DATA.questions.some(x=>x.vid||(x.refs&&x.refs.length))
       ?'<span class="hint">nothing of hers or Patton’s states this one outright — the answer shows on Check</span>'
       :'<span class="hint">her slides and the videos have not been matched to this module yet — the answer shows on Check</span>');
@@ -1058,7 +1083,7 @@ function learnCheck(){
   const r=markQ(q,a), peeked=!!SIT.peek[q.id];
   SIT.chk[q.id]={r,peeked,ticks:[]};
   S.seen[q.id]=(S.seen[q.id]||0)+1;
-  if(r){ if(!a||r.got<r.tot)S.miss[q.id]=(S.miss[q.id]||0)+1; else if(!peeked&&S.miss[q.id])delete S.miss[q.id]; }
+  if(r&&!q.kh){ if(!a||r.got<r.tot)S.miss[q.id]=(S.miss[q.id]||0)+1; else if(!peeked&&S.miss[q.id])delete S.miss[q.id]; }
   SV('miss',S.miss);SV('seen',S.seen);
   renderQ();
   const m=document.querySelector('.mk');if(m)window.scrollTo({top:m.getBoundingClientRect().top+window.scrollY-64,behavior:'smooth'});
@@ -1103,7 +1128,7 @@ function learnDone(){
   const closed=rows.filter(x=>x.chk&&x.chk.r);
   const first=closed.filter(x=>SIT.ans[x.q.id]&&x.chk.r.got>=x.chk.r.tot&&!x.chk.peeked);
   const peek=closed.filter(x=>SIT.ans[x.q.id]&&x.chk.r.got>=x.chk.r.tot&&x.chk.peeked);
-  const missed=closed.filter(x=>!SIT.ans[x.q.id]||x.chk.r.got<x.chk.r.tot);
+  const missed=closed.filter(x=>!SIT.ans[x.q.id]||x.chk.r.got<x.chk.r.tot), khOnly=SIT.deck.every(q=>q.kh);
   const saqs=rows.filter(x=>x.chk&&!x.chk.r);
   const skipped=rows.filter(x=>!x.chk).length;
   const btn=(k,lbl)=>`<button class="qa" data-act="${k}">${lbl}</button>`;
@@ -1119,7 +1144,7 @@ function learnDone(){
       ${saqs.length?`<span class="tag">${saqs.length} written, self-marked</span>`:''}
       ${skipped?`<span class="tag">${skipped} not checked</span>`:''}
     </div>
-    <div class="note">Learn mode never goes on the score chart — that line is for mock tests sat without help. ${missed.length?`The ${missed.length} you missed or skipped ${missed.length===1?'is':'are'} in your misses pile now (“Learn my misses” / “Redo my misses”); `:''}a right answer after a peek leaves the pile as it was.</div>
+    <div class="note">Learn mode never goes on the score chart — that line is for mock tests sat without help. ${khOnly?`Kahoot questions stay out of your misses pile (they are the lower-yield extra), so run this Kahoot again to retry ${missed.length?'the ones you missed':'it'}.`:missed.length?`The ${missed.length} you missed or skipped ${missed.length===1?'is':'are'} in your misses pile now (“Learn my misses” / “Redo my misses”); `:''}${khOnly?'':'a right answer after a peek leaves the pile as it was.'}</div>
     ${missed.map(({q,chk})=>row(q,chk.r.got>0&&SIT.ans[q.id]?'partial':'wrong',SIT.ans[q.id]?`${+chk.r.got.toFixed(1)}/${chk.r.tot}`:'skip')).join('')}
     ${peek.map(({q})=>row(q,'partial','peek')).join('')}
     ${saqs.map(({q,chk})=>row(q,'saq',`✍ ${+(chk.ticks.length*q.pts/q.saq.steps.length).toFixed(1)}/${q.pts}`)).join('')}
@@ -1160,7 +1185,7 @@ function mark(){
     const r=markQ(q,SIT.ans[q.id]);
     S.seen[q.id]=(S.seen[q.id]||0)+1;
     if(r){got+=r.got;tot+=r.tot;
-      if(r.got<r.tot)S.miss[q.id]=(S.miss[q.id]||0)+1;
+      if(q.kh){}else if(r.got<r.tot)S.miss[q.id]=(S.miss[q.id]||0)+1;
       else if(S.miss[q.id])delete S.miss[q.id];
       rows.push({q,r})}
     else rows.push({q,r:null,saq:true});
@@ -1831,6 +1856,9 @@ $('#helpBtn').onclick=()=>{$('#help').innerHTML=`
   extracted from the graded pages — nothing invented. Written questions have <b>model answers written by
   this tool</b> (Canvas publishes none); they follow her one-mark-per-step marking style and each names
   its source deck. Warm-up chains are scaffolds built from her decks, not her material.</p>
+  <p>Separate from those: ${DATA.stats.kh||0} questions from ${(DATA.kahoots||[]).length} Module 3 <b>Kahoots</b> linked on Canvas (three of hers, one of Emma’s),
+  under <b>Pick my rep</b> in their own section and tagged 🎮 Kahoot. They are lower yield, so they never enter the whole-bank sets,
+  the mock tests, the misses pile or the checklist counts.</p>
   <h3>Learn mode</h3>
   <p><b>Learn as you go</b> (and the <b>Learn</b> button beside each quiz) marks every question the moment you
   press Check and shows the answer, her slide or notes, the Patton passage and the matched video right there —

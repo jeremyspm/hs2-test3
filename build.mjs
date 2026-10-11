@@ -20,6 +20,7 @@ import { loadSaq, saqJSON } from './saq.mjs';
 import { QTOPIC } from './content/qtopic.js';
 import { QROW } from './content/qrow.js';
 import { rowOf } from './content/topics.js';
+import { KAHOOTS } from './content/kahoots.js';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 /* HER OWN model answers, lifted verbatim from the quiz_comment blocks of his graded captures by extract-her-answers.mjs */
@@ -286,6 +287,28 @@ for (const z of bank.quizzes) {
   if (kept) quizzes.push({ id: fid, name: qname, sys: qsys, n: kept });
 }
 
+/* ── the Kahoots (content/kahoots.js): their OWN category, never her quiz bank ──
+   Each ships flagged `kh` with its source line; the page keeps them out of every whole-bank deal, the mocks, the misses pile and
+   her counts. They go in `questions` only so a run, a resume and the dedupe treat them like any other question. */
+const kahoots = [], khFails = [];
+for (const k of KAHOOTS) {
+  let kept = 0; const khHeld = [];
+  for (const it of k.items) {
+    if (it.hold) { khHeld.push({ n: it.n, why: it.hold, q: it.q.slice(0, 80) }); continue; }
+    if (!it.key.length || !it.key.every(x => it.opts.includes(x))) { khFails.push(`${k.quiz} Q${it.n}: key not among its options`); continue; }
+    if (it.type !== 'multi' && it.key.length !== 1) { khFails.push(`${k.quiz} Q${it.n}: ${it.key.length} keys on a one-answer question`); continue; }
+    /* system = the checklist row it lands on (the router alone left 11 as 'mixed': "distant object", "dynamic equilibrium"…) */
+    const khR = rowOf({ id: '', t: [it.q, it.key.join(' | '), '', '', ''].join(' ## ') });
+    const sys = (FOCUS.find(f => f.id === khR) || {}).sys || routeSys(it.q + ' ' + it.key.join(' '));
+    questions.push({ id: qid(k.quiz, it.q, it.key), quiz: k.quiz, sys, pts: 1, q: it.q, imgs: [], kh: 1,
+      khSrc: `${k.name}, Q${it.n}`, ...(it.note ? { khNote: it.note } : {}),
+      qh: '<p>' + it.q.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])) + '</p>', qt: it.q,
+      type: it.type, opts: it.opts, key: it.key });
+    kept++;
+  }
+  kahoots.push({ id: k.quiz, name: k.name, by: k.by, title: k.title, url: k.url, n: kept, held: khHeld });
+}
+
 /* ── the explain layer: video + judged text references per question ── */
 const videos = loadVideos(path.join(HERE, 'content'));
 const vmatches = loadVideoMatches(path.join(HERE, 'content'), videos);
@@ -322,7 +345,8 @@ for (const q of questions) {
   if (prefs.length) { q.prefs = prefs; nPartQ++; nPartRefs += prefs.length; pmUsed.add(q.id); }
 }
 console.log(`references per part: ${nPartRefs} parts referenced over ${nPartQ} multi-part questions`);
-console.log(`explain layer: ${nVid}/${questions.length} questions matched a video (${Math.round(100 * nVid / questions.length)}%); ` +
+const nHerQ = questions.filter(q => !q.kh).length;
+console.log(`explain layer: ${nVid}/${nHerQ} of her questions matched a video (${Math.round(100 * nVid / nHerQ)}%); ` +
   `${nRef} carry a judged reference (${nSlide} her slide images + ${nSlideText} slides quoted as text, ${nHer} her prose, ${nCourse} course files, ${nPat} Patton excerpts; ${nPatOnly} Patton-only) — from ${videos.length} videos`);
 /* plus the slides hosted for Flesh & Bone's "Her figure" buttons (content/hosted-figs.json): no question uses them, the trainer
    hot-links them, so a missing one is a broken button in another repo — fail here instead. */
@@ -347,7 +371,7 @@ fs.writeFileSync(path.join(HERE, 'slides-todo.json'),
 let nHl = 0; const hlUsed = new Set();
 for (const q of questions) if (QTOPIC[q.id]) { q.hl = QTOPIC[q.id]; nHl++; hlUsed.add(q.id); }
 /* ── gates ─────────────────────────────────────────────────────────── */
-const fails = [];
+const fails = [...khFails];
 for (const [qid, t] of Object.entries(QTOPIC)) {
   if (!hlUsed.has(qid)) fails.push('qtopic entry matched NO question: ' + qid);
   if (!HELPLINE[t]) fails.push(`qtopic topic has no helpline section: ${t} (${qid})`);
@@ -368,7 +392,7 @@ for (let i = questions.length - 1; i >= 0; i--) {
 }
 if (dropped) console.log('deduped', dropped, 'identical duplicate captures');
 /* the shipped bank as plain text, for the topic tagger (tag-topics.mjs) and for reading by eye — never shipped */
-fs.writeFileSync(path.join(HERE, 'bank-dump.json'), JSON.stringify(questions.map(q => ({ id: q.id, quiz: q.quiz, sys: q.sys, type: q.type, pts: q.pts, t: [q.q, (Array.isArray(q.key) ? q.key : q.key != null ? [q.key] : []).join(' | ')      /* the CORRECT answer only: distractors would drag a question onto the wrong row */, (q.pairs || []).map(p => (p.left || '') + ' => ' + (p.right || '')).join(' | '), (q.blanks || []).map(x => x.correct).join(' | '), q.saq ? q.saq.steps.join(' ') : ''].join(' ## ').replace(/\s+/g, ' ') })), null, 0));
+fs.writeFileSync(path.join(HERE, 'bank-dump.json'), JSON.stringify(questions.filter(q => !q.kh).map(q => ({ id: q.id, quiz: q.quiz, sys: q.sys, type: q.type, pts: q.pts, t: [q.q, (Array.isArray(q.key) ? q.key : q.key != null ? [q.key] : []).join(' | ')      /* the CORRECT answer only: distractors would drag a question onto the wrong row */, (q.pairs || []).map(p => (p.left || '') + ' => ' + (p.right || '')).join(' | '), (q.blanks || []).map(x => x.correct).join(' | '), q.saq ? q.saq.steps.join(' ') : ''].join(' ## ').replace(/\s+/g, ' ') })), null, 0));
 /* "Learn her N questions on this": each focus row named in content/qrow.js carries `qs`,
    the ids it deals. Gated both ways like every other join; exact repeats (one question
    captured in two quizzes) are dropped so the button's count is what he will actually sit,
@@ -377,11 +401,14 @@ const TYPE_RANK = { mcq: 0, tf: 0, multi: 1, match: 2, cloze: 3, essay: 4 };
 /* THE FOCUS CHECKLIST IS COUNTED HERE, never by hand. content/topics.js puts each shipped question on ONE row (a row = one of her
    numbered criteria); a question with no row, or a row that is not in focus.js, fails the build. */
 const ASSIGN = {}, dumpText = q => [q.q, (Array.isArray(q.key) ? q.key : q.key != null ? [q.key] : []).join(' | '), (q.pairs || []).map(p => (p.left || '') + ' => ' + (p.right || '')).join(' | '), (q.blanks || []).map(x => x.correct).join(' | '), q.saq ? q.saq.steps.join(' ') : ''].join(' ## ').replace(/\s+/g, ' ');
-for (const q of questions) { const r = rowOf({ id: q.id, t: dumpText(q) }); if (!r) { fails.push('question on NO focus row: ' + q.id + ' "' + q.q.slice(0, 60) + '"'); continue; } if (!FOCUS.some(f => f.id === r)) { fails.push('topics.js names a row that focus.js does not have: ' + r); continue; } (ASSIGN[r] = ASSIGN[r] || []).push(q.id); }
+const khRow = {};      /* a Kahoot question lands on a row only as a count (the 🎮 chip): never in its questions, marks, tier or Learn button */
+for (const q of questions.filter(q => q.kh)) { const r = rowOf({ id: q.id, t: dumpText(q) }); if (r && FOCUS.some(f => f.id === r)) (khRow[r] = khRow[r] || new Set()).add(norm(q.q) + '|' + q.key.join('|')); }
+for (const q of questions.filter(q => !q.kh)) { const r = rowOf({ id: q.id, t: dumpText(q) }); if (!r) { fails.push('question on NO focus row: ' + q.id + ' "' + q.q.slice(0, 60) + '"'); continue; } if (!FOCUS.some(f => f.id === r)) { fails.push('topics.js names a row that focus.js does not have: ' + r); continue; } (ASSIGN[r] = ASSIGN[r] || []).push(q.id); }
 const sigOf = q => q.type + '|' + norm(q.q) + '|' + JSON.stringify(q.key || q.pairs || (q.blanks || []).map(b => b.correct));      /* the SAME repeat rule the Learn-by-row button uses below, so a row's count and its button agree */
 for (const f of FOCUS) { const qs = (ASSIGN[f.id] || []).map(id => questions.find(q => q.id === id)), uniq = new Map(); for (const q of qs) if (!uniq.has(sigOf(q))) uniq.set(sigOf(q), q);
   f.all = qs.length; f.n = uniq.size; f.pts = +[...uniq.values()].reduce((a, q) => a + (q.pts || 0), 0).toFixed(1); f.qz = new Set(qs.map(q => q.quiz)).size; f.saq = [...uniq.values()].filter(q => q.type === 'essay' || q.type === 'cloze').length;
-  if (f.tier !== 0) f.tier = f.pts >= 30 ? 1 : f.pts >= 12 ? 2 : 3; }
+  if (f.tier !== 0) f.tier = f.pts >= 30 ? 1 : f.pts >= 12 ? 2 : 3;
+  if (khRow[f.id]) f.kh = khRow[f.id].size; }
 const byId = new Map(questions.map(q => [q.id, q]));
 const rowQs = {}; let nRowQ = 0;
 for (const [rid, ids] of Object.entries({ ...ASSIGN, ...QROW })) {
@@ -428,13 +455,13 @@ const reached = new Set();
 for (const q of questions) if (q.vid) { reached.add(q.vid.id); if (q.vid.alt) reached.add(q.vid.alt.id); }
 const DATA = {
   built: new Date().toISOString().slice(0, 10),
-  stats: { n: questions.length, held: held.length, videos: videos.length, videosReached: reached.size,
+  stats: { n: questions.filter(q => !q.kh).length, kh: questions.filter(q => q.kh).length, held: held.length, videos: videos.length, videosReached: reached.size,
     videosFill: videos.filter(v => v.ch).length,
-    withVideo: questions.filter(q => q.vid).length,
-    withRef: nRef, withHer: questions.filter(q => q.refs && q.refs.some(r => r.k === 'slide' || r.k === 'her')).length, withCourse: nCourse,
+    withVideo: questions.filter(q => q.vid && !q.kh).length,
+    withRef: nRef, withHer: questions.filter(q => !q.kh && q.refs && q.refs.some(r => r.k === 'slide' || r.k === 'her')).length, withCourse: nCourse,
     withPatton: nPat, pattonOnly: nPatOnly, partQ: nPartQ, partRefs: nPartRefs, withHl: nHl },
   quizzes: quizzes.sort((a, b) => a.sys.localeCompare(b.sys) || a.name.localeCompare(b.name)),
-  questions, chains: CHAINS, case7: CASE7, focus: focusOut, helpline: HELPLINE, held,
+  questions, kahoots, chains: CHAINS, case7: CASE7, focus: focusOut, helpline: HELPLINE, held,
 };
 const tpl = fs.readFileSync(path.join(HERE, 'template.html'), 'utf8');
 /* An unbalanced <details> fails silently: a stray </details> closed the focus checklist right after its intro, so
@@ -478,6 +505,7 @@ for (const f of used) fs.copyFileSync(path.join(CAP, 'images', f), path.join(IMG
 fs.writeFileSync(path.join(HERE, 'held.json'), JSON.stringify(held, null, 1));
 const by = {}; for (const q of questions) by[q.sys] = (by[q.sys] || 0) + 1;
 const byT = {}; for (const q of questions) byT[q.type] = (byT[q.type] || 0) + 1;
-console.log('bank:', questions.length, 'questions ·', quizzes.length, 'quizzes ·', used.size, 'images ·', held.length, 'held');
+console.log('kahoots:', kahoots.map(k => k.id + ' ' + k.n).join(' · '), '· on checklist rows:', Object.values(khRow).reduce((a, s) => a + s.size, 0));
+console.log('bank:', questions.length, 'questions (' + questions.filter(q => q.kh).length + ' Kahoot) ·', quizzes.length, 'quizzes ·', used.size, 'images ·', held.length, 'held');
 console.log('by system:', JSON.stringify(by), '\nby type:', JSON.stringify(byT));
 console.log('index.html', (fs.statSync(path.join(HERE, 'index.html')).size / 1024 | 0) + ' KB');

@@ -136,3 +136,21 @@ so it fails on a CRLF checkout).
    already carries both cases as written questions.
 3. The ovarian/uterine cycle essay needs a model answer (she posted none): the SAQ Trainer's `cycles` entry is one, sourced
    from her deck; wire it to that essay in `saq-answers.js` if wanted.
+
+## Kahoots — their own category (12 Oct 2026)
+
+His call: the Kahoots are lower yield, so they get their own section, not a place in her bank. `content/kahoots.js` (built by
+`gen-kahoots.py` from each Kahoot's public data) holds the four Module 3 Kahoots Canvas links: her three (Module 2 & 3 revision,
+Module 3 practice, Basic genetics; account Han123_123) and Emma's Prep for exam (Anatomy Mondays + the exam helpline). 116 of 119
+ship; 3 need their (Getty stock) picture and are held in the file with the reason. One option is corrected: her "Nitrous oxide"
+reads Nitric oxide (her revision deck, slide 6), and the question shows both once checked. Emma's "Module 2&3 Part 2" is left
+out: its Module 3 questions are all in her Prep for exam, the other two are Module 2 reflexes. Canvas links "Basic genetics"
+with the id's last character missing (…cd24660 → …cd246601).
+
+In the build each ships flagged `kh` with its source line. The page keeps them out of everything else: `CLOSED` (Learn the whole
+bank, Repro / Genetics / Senses, both mocks), the misses pile (a Kahoot miss is never written), the checklist's questions,
+marks, tiers and Learn buttons, and her stats (`stats.n` stays her 402). They live under Pick my rep in a "🎮 Kahoots · lower
+yield" section (Learn only, never the score chart), every card is tagged 🎮 Kahoot, and a checklist row only gets a
+"🎮 N in the Kahoots" chip (`f.kh`, unique questions). A Kahoot's system is the checklist row it lands on (the router alone left
+11 as "mixed"). Checked 12 Oct at 375 px: home height unchanged (901), no horizontal scroll, no console errors; 200 deals each of
+the full mock, the mini mock and the Genetics set held 0 Kahoot questions.
