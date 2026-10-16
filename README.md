@@ -32,6 +32,25 @@ Nothing needs re-saving. Every "missing" figure that still exists on Canvas was 
    handoff called gone from Canvas) was missed by a src-first regex. `inlineSfImages` v2 cuts each tag out with a quote-aware scan.
 hs2-test2 and hs2-paper-m1 now carry the same reader, byte for byte (M1 got 14 figures back; hs2-test2 had nothing left to find).
 
+## Figures restored from their sources (16 Oct 2026)
+
+His single-file saves keep a blank `src=data:,` for any picture still loading, so 14 of her questions shipped short a figure
+(12 of them text-only on `NO_IMAGE_OK`). The Canvas API archive (`canvas-harvest/CanvasArchive/2026/…/quizzes`, each quiz's
+`questions.json`) kept every question's ORIGINAL `<img src>`, which traced each one. `content/recovered.js` says, per question:
+- **her picture back** (11 questions, 12 files `REC-*` in the capture's `images/`): live link where it still answers (Wikimedia's
+  autosomal-dominant chart, the inverted-image lens), else the Internet Archive's copy of that exact URL (erect penis
+  cross-section, fertilisation, Edwards syndrome, the dominance flowers, the ABO genotype table, Britannica's sound-waves ear,
+  4 of the 9 Leeds micrographs). Plus her organ of Corti and tonotopic-map figures, in the capture all along but inside a
+  text-only panel above 211022 Q9-13, now on the two questions they illustrate.
+- **her own slide where the picture is gone** (4): vasectomy (Male Repro 8; the A–E letters were only on the lost picture),
+  NIHL "study the images" (Hearing 6), eye defects (Light & Seeing 14 + 16), the mitochondrial pedigree (Intro to Genetics 39).
+  Each says so under the figure; never a picture of ours. Slides ship as `img/slides/*.jpg` and are named `slides/…` in `imgs`.
+- **her table** (1): 211091's blood-group question says "They are:" over a picture that never loaded; the same question in
+  211041 carries that table as text, copied in.
+Gates: an entry matching no question, a missing file or slide, an anchor not found exactly once, or a `NO_IMAGE_OK` row whose
+question now carries a restored picture fails the build. Six rows left `NO_IMAGE_OK`. `Male-Repro-3-26.jpg` is no longer used
+here (the erection question now has its own figure, so it loses that slide ref) but stays: hs2-final hot-links it.
+
 ## Three more traps found 21 Sep 2026 (evening), all fixed
 
 - **A stray dot marked the answer (24 live questions).** An answer whose Canvas text is under 3 characters is read from its title:

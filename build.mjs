@@ -23,6 +23,7 @@ import { rowOf } from './content/topics.js';
 import { KAHOOTS } from './content/kahoots.js';
 import { WORKSHEET } from './content/worksheet.js';
 import { DECKQS } from './content/deck-qs.js';
+import { RECOVERED } from './content/recovered.js';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 /* HER OWN model answers, lifted verbatim from the quiz_comment blocks of his graded captures by extract-her-answers.mjs */
@@ -74,8 +75,9 @@ const EXCLUDE = [
 const NO_IMAGE_OK = [
   /* Module 3 — each row read by eye on 21 Sep 2026. His single-file saves inline only the images that had LOADED; these
      did not, and each question below is fully answerable from its own words. Anything that truly needs its figure
-     (pedigrees, karyotypes, label-the-diagram) stays HELD until that page is re-saved with the image showing. */
-  { quiz: '210994', k: '13 in a female which of the following structures houses the oocytes' },   // MCQ; decoration
+     (pedigrees, karyotypes, label-the-diagram) stays HELD until that page is re-saved with the image showing.
+     16 Oct 2026: six rows went when their pictures were restored from source (content/recovered.js); a row whose question
+     carries a restored picture fails the build. */
   { quiz: '210994', k: '22 a woman who wants to ensure conception' },   // MCQ on the LH surge; decoration
   { quiz: '210994', k: 'fertilization process virtual reality' },   // drop-downs under an embedded YouTube video; the "image" is its thumbnail
   { quiz: '211011', k: 'anatomy and function of the eye' },   // matching under an embedded video; every pair is a self-contained description
@@ -83,15 +85,11 @@ const NO_IMAGE_OK = [
   { quiz: '211011', k: 'ear anatomy inside the ear' },   // matching under an embedded video; every pair is a self-contained description
   { quiz: '211011', k: 'sound waves travel as vibrations of particles' },   // T/F from the sentence itself
   { quiz: '211011', k: 'ear wax is made by' },   // fill-in from the sentence itself
-  { quiz: '211022', k: 'sounds with low frequencies' },   // statement about the basilar membrane; the tonotopic figure ships with the neighbouring question
   { quiz: '211041', k: 'blood types are inherited by different combinations' },   // her genotype table is TEXT in the stem; the image was a decoration
-  { quiz: '211091', k: 'blood types are inherited by different combinations' },   // same question in the second quiz
-  { quiz: '211120', k: 'erection is a process' },   // ordering question; every step is written out
-  { quiz: '211120', k: 'complete the sentences using the appropriate items from the drop box' },   // her sperm table: every blank sits in a worded sentence
-  { quiz: '211120', k: 'mix and match a b o blood types' },   // matching; every pair is self-contained
-  { quiz: '211121', k: 'fill the spaces using words from the drop down menu the lens in the eye' },   // drop-downs in worded sentences
+  { quiz: '211091', k: 'blood types are inherited by different combinations' },   // same question in the second quiz; it now carries her 211041 table as text (content/recovered.js)
   /* GONE FROM CANVAS (he re-opened each on 21 Sep 2026: access denied / dead link), so no save can bring the figure back.
-     Each ships because every part is named in its own words; never with a picture of ours in its place. */
+     Each ships because every part is named in its own words; never with a picture of ours in its place. Since 16 Oct 2026 each
+     shows HER OWN slide of the same thing, labelled as hers (content/recovered.js); her picture itself is still gone. */
   { quiz: '211071', k: 'in the diagram the place where a vasectomy' },   // drop-downs: each letter carries its name in the prose ("cutting A (the ___)", "from B … and from the prostate", "the gland with citric acid")
   { quiz: '211120', k: 'study the images and choose the correct answer noise induced hearing loss' },   // MCQ: the stem describes the damage in full; options pair structure + type
   { quiz: '211121', k: 'mix and match the conditions with the cause of the defect' },   // matching: each cause is a self-contained sentence (image in front of / behind / on the retina)
@@ -164,7 +162,9 @@ for (const z of bank.quizzes) {
     if (okNoImg) noImgOkUsed.add(okNoImg);
     if (okNoImg && imgs.length) noImgOkStale.push(`no-image-ok row is stale, the question ships its figure: ${fid} "${okNoImg.k}"`);
     const needsImg = !okNoImg && (/\[\[IMG/.test(stemRaw) || /\b(image|diagram|picture|micrograph|labell?ed|figure) (above|below|shown)\b/i.test(stem));
-    if (needsImg && !imgs.length) { held.push({ quiz: qname, why: 'image did not survive capture', q: stem.slice(0, 80) }); return; }
+    /* her picture restored from its source (content/recovered.js) is added after this loop: it counts as her figure here */
+    const restored = RECOVERED.some(r => r.quiz === fid && r.rec && norm(stem).startsWith(r.k));
+    if (needsImg && !imgs.length && !restored) { held.push({ quiz: qname, why: 'image did not survive capture', q: stem.slice(0, 80) }); return; }
     const sys = qsys === 'mixed' ? routeSys(stem + ' ' + (q.answers || []).map(a => a.text).join(' ')) : qsys;
     const base = { id: qid(fid, stem, q.key), quiz: fid, sys, pts: +q.points || 1, q: stem, imgs };
     /* structured stem: only images this question actually ships may be placed inline;
@@ -338,6 +338,52 @@ for (const k of KAHOOTS) {
   kahoots.push({ id: k.quiz, name: k.name, by: k.by, title: k.title, url: k.url, n: kept, held: khHeld });
 }
 
+/* ── figures that had not loaded when his pages were saved (content/recovered.js): her picture back from its source, her own
+   slide where the picture is gone, or her own table from the same question in another quiz. Applied BEFORE the explain layer,
+   so a question that now carries a figure follows the one-figure rule like any other. A slide stand-in ships as
+   img/slides/<slug>-<n>.jpg (rendered by compress-slides.py) and is named in q.imgs as "slides/…". ── */
+const usedSlides = new Set();
+const recFails = [], recRestored = new Set();
+for (const r of RECOVERED) {
+  const hits = questions.filter(q => q.quiz === r.quiz && !q.kh && norm(q.q).startsWith(r.k));
+  if (!hits.length) { recFails.push(`recovered entry matched NO question: ${r.quiz} "${r.k}"`); continue; }
+  const slides = r.slide ? (Array.isArray(r.slide[0]) ? r.slide : [r.slide]) : [];
+  const files = [...(r.rec || []), ...slides.map(([slug, n]) => `slides/${slug}-${n}.jpg`)];
+  for (const f of r.rec || []) if (!fs.existsSync(path.join(CAP, 'images', f))) recFails.push(`recovered figure missing from the capture: ${f}`);
+  for (const [slug, n] of slides) {
+    const png = path.join(CAP, 'slides', slug, `slide-${n}.png`);
+    if (!fs.existsSync(png)) recFails.push(`recovered slide not rendered: ${slug} #${n}`);
+    else usedSlides.add(JSON.stringify([png, `${slug}-${n}.jpg`]));
+  }
+  let insert = files.map(f => `<p>[[IMG:${f}]]</p>`).join('');
+  if (r.tableFrom) {
+    const src = questions.find(q => q.quiz === r.tableFrom && norm(q.q).startsWith(r.k));
+    /* her table = the first <div class="tbl"> through its matching </div>, cut by counting div depth */
+    const at = src ? src.qh.indexOf('<div class="tbl">') : -1;
+    let tbl = null;
+    if (at >= 0) {
+      const re = /<(\/?)div\b[^>]*>/g; re.lastIndex = at; let d = 0, m;
+      while ((m = re.exec(src.qh))) { d += m[1] ? -1 : 1; if (!d) { tbl = src.qh.slice(at, m.index + m[0].length); break; } }
+    }
+    if (!tbl) { recFails.push(`recovered table: no table in ${r.tableFrom} "${r.k}"`); continue; }
+    insert = tbl;
+  }
+  for (const q of hits) {
+    if (files.some(f => q.imgs.includes(f))) { recFails.push(`recovered figure already ships: ${q.id}`); continue; }
+    q.imgs = [...q.imgs, ...files];
+    const anchor = r.before || r.after;
+    if (r.top) q.qh = insert + q.qh;
+    else if (anchor) {
+      if (q.qh.split(anchor).length !== 2) { recFails.push(`recovered anchor not found exactly once in ${q.id}: ${anchor}`); continue; }
+      q.qh = q.qh.replace(anchor, () => r.before ? insert + anchor : anchor + insert);
+    } else if (r.tableFrom) { recFails.push(`recovered table needs an anchor: ${q.id}`); continue; }
+    q.qt = plainText(q.qh);
+    q.fignote = r.note;
+    if (r.rec) recRestored.add(q.id);
+  }
+}
+console.log(`recovered figures: ${RECOVERED.filter(r => r.rec).length} questions get her picture back, ${RECOVERED.filter(r => r.slide).length} her slide in its place, ${RECOVERED.filter(r => r.tableFrom).length} her table`);
+
 /* ── the explain layer: video + judged text references per question ── */
 const videos = loadVideos(path.join(HERE, 'content'));
 const vmatches = loadVideoMatches(path.join(HERE, 'content'), videos);
@@ -346,7 +392,7 @@ const pmatches = loadPartRefs(path.join(HERE, 'content'));
 let nPartQ = 0, nPartRefs = 0; const pmUsed = new Set();
 const SLIDESRC = path.join(CAP, 'slides');
 let nVid = 0, nRef = 0, nSlide = 0, nSlideText = 0, nHer = 0, nCourse = 0, nPat = 0, nPatOnly = 0;
-const usedSlides = new Set(), vmUsed = new Set(), rmUsed = new Set();
+const vmUsed = new Set(), rmUsed = new Set();      /* usedSlides is declared above, with the recovered slides already in it */
 for (const q of questions) {
   const v = matchVideo(q, videos, vmatches); if (v) { q.vid = v; nVid++; vmUsed.add(q.id); }
   const refs = [];
@@ -457,7 +503,11 @@ for (const [rid, ids] of Object.entries({ ...ASSIGN, ...QROW })) {
   nRowQ += rowQs[rid].length;
 }
 const focusOut = FOCUS.map(f => rowQs[f.id] ? { ...f, qs: rowQs[f.id] } : f);
-for (const q of questions) for (const f of q.imgs) if (!fs.existsSync(path.join(CAP, 'images', f))) fails.push('missing image file ' + f);
+for (const q of questions) for (const f of q.imgs) if (!f.startsWith('slides/') && !fs.existsSync(path.join(CAP, 'images', f))) fails.push('missing image file ' + f);
+fails.push(...recFails);
+/* a NO_IMAGE_OK row whose question now carries her restored picture is stale, like one whose figure came back. (A slide
+   stand-in or a copied table keeps its row: her own picture is still missing there.) */
+for (const e of NO_IMAGE_OK) for (const q of questions) if (q.quiz === e.quiz && recRestored.has(q.id) && norm(q.q).startsWith(e.k)) fails.push(`no-image-ok row is stale, her figure is restored (content/recovered.js): ${e.quiz} "${e.k}"`);
 for (const c of CHAINS) if (c.beads.filter(b => b.t).length < 4) fails.push('chain too short: ' + c.id);
 /* every blank-type question must carry every one of its blanks inline, once, in the
    stem the student sees — a blank the key has but the stem lacks is the exact bug this
@@ -528,7 +578,7 @@ console.log(`SAQ trainer: ${SAQ_ALL.length} questions · ${SAQ_ALL.reduce((n, x)
 /* images ship beside the page */
 const IMGDIR = path.join(HERE, 'img');
 fs.mkdirSync(IMGDIR, { recursive: true });
-const used = new Set(questions.flatMap(q => q.imgs));
+const used = new Set(questions.flatMap(q => q.imgs).filter(f => !f.startsWith('slides/')));      /* a slide stand-in is rendered by compress-slides.py */
 for (const f of used) fs.copyFileSync(path.join(CAP, 'images', f), path.join(IMGDIR, f));
 
 fs.writeFileSync(path.join(HERE, 'held.json'), JSON.stringify(held, null, 1));
