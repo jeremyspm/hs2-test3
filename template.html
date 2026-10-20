@@ -396,7 +396,7 @@ a.lrow{text-decoration:none}
 </head>
 <body>
 <header>
-  <a class="btn ghost back" href="https://jeremyspm.github.io/" title="All the BN2 study tools">‹ All tools</a>
+  <a class="btn ghost back" href="https://jeremyspm.github.io/#hs2/t3" title="Back to HS2 Test 3 on the BN2 study tools">‹ HS2 Test 3</a>
   <h1>HS2 Test 3 · Paper Sim</h1>
   <span class="d" id="countdown"></span>
   <a class="btn ghost" href="https://jeremyspm.github.io/hs2-m3-videos.html" target="_blank" rel="noopener" title="Every Dr Matt &amp; Dr Mike video, by topic">▶</a>
@@ -847,7 +847,10 @@ function bindView(){
   bindSaq();
   document.querySelectorAll('[data-scr]').forEach(b=>b.onclick=()=>nav(b.dataset.scr));
   const hb=$('[data-hero]'); if(hb) hb.onclick=()=>HERO[hb.dataset.hero]();
-  const bk=$('#homeB'); if(bk) bk.onclick=()=>{ if(history.state&&history.state.scr&&!history.state.sit) history.back(); else nav('') };
+  /* 20 Oct 2026: opened straight at a screen (the hub's Rep / Write buttons do that), ‹ Home goes back to the
+     exam's side on the hub, not to this page's menu. Arrived from the menu, it still goes back to the menu. */
+  const bk=$('#homeB'); if(bk) bk.onclick=()=>{ if(history.state&&history.state.scr&&!history.state.sit) history.back();
+    else location.assign('https://jeremyspm.github.io/#hs2/t3/'+(['saq','mock'].includes(curScr())?'write':'rep')) };
   document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>start(b.dataset.go,!!b.dataset.learn));
   document.querySelectorAll('[data-quiz]').forEach(b=>b.onclick=()=>start('quiz:'+b.dataset.quiz,!!b.dataset.learn));
   document.querySelectorAll('[data-sys]').forEach(b=>b.onclick=()=>start('sys:'+b.dataset.sys,!!b.dataset.learn));
